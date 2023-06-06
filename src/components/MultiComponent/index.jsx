@@ -1,14 +1,14 @@
+import { ExpandLess, ExpandMore } from "@mui/icons-material";
 import {
+  Collapse,
   List,
   ListItemButton,
   ListItemIcon,
   ListItemText,
-  Collapse,
 } from "@mui/material";
-import { ExpandLess, ExpandMore } from "@mui/icons-material";
-import { listIconStyle, listButtonStyle, listItemText } from "../Styles/Styles";
-import MultiComponents from "../MultiComponents";
+import { Fragment } from "react";
 import NestedComponent from "../NestedComponent";
+import { listButtonStyle, listIconStyle, listItemText } from "../Styles/Styles";
 
 const MultiComponent = ({
   open,
@@ -21,7 +21,7 @@ const MultiComponent = ({
   handleNavigation,
 }) => {
   return (
-    <>
+    <Fragment key={item.id}>
       <List>
         <ListItemButton
           sx={{ ...listButtonStyle, px: open ? 2.5 : 5.3 }}
@@ -44,24 +44,24 @@ const MultiComponent = ({
           )}
         </ListItemButton>
         <Collapse in={openCategory} timeout={"auto"} unmountOnExit>
-          {item.multicomponents?.map((innerItem) => {
+          {item.multicomponents.map((innerItem) => {
             return (
-              <>
+              <Fragment key={innerItem.key}>
                 <NestedComponent
-                  key={innerItem.id}
                   open={open}
                   handleSubCategory={handleSubCategory}
                   handleCategory={handleCategory}
                   openSubcategory={openSubcategory}
                   item={innerItem}
                   handleNavigation={handleNavigation}
+                  closeSideBar={closeSideBar}
                 />
-              </>
+              </Fragment>
             );
           })}
         </Collapse>
       </List>
-    </>
+    </Fragment>
   );
 };
 export default MultiComponent;

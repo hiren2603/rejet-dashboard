@@ -6,7 +6,7 @@ import {
   useTheme,
   useMediaQuery,
 } from "@mui/material";
-import { Menu } from "@mui/icons-material";
+import MenuIcon from "@mui/icons-material/Menu";
 import MuiAppBar from "@mui/material/AppBar";
 import { styled } from "@mui/material/styles";
 import Logo from "../../assets/logo.png";
@@ -58,7 +58,7 @@ const Topbar = ({ open, drawerwidth, setOpen }) => {
                   }}
                 >
                   <IconButton onClick={setOpen}>
-                    <Menu />
+                    <MenuIcon />
                   </IconButton>
                 </Box>
               </>

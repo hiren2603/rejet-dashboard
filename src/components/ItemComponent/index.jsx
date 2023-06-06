@@ -1,3 +1,5 @@
+import { Fragment } from "react";
+import { Link } from "react-router-dom";
 import {
   ListItem,
   ListItemButton,
@@ -6,9 +8,9 @@ import {
 } from "@mui/material";
 import { listIconStyle, listItemText } from "../Styles/Styles";
 
-const ItemComponent = ({ open, item, closeSideBar, handleNavigation }) => {
+const ItemComponent = ({ open, item, closeSideBar, handleNavigation, key }) => {
   return (
-    <>
+    <Link to={item.link} key={key}>
       <ListItem sx={{ display: "block" }} disablePadding>
         <ListItemButton
           sx={{
@@ -17,25 +19,30 @@ const ItemComponent = ({ open, item, closeSideBar, handleNavigation }) => {
             px: 2.5,
             "&:hover": {
               background: "linear-gradient(145deg, #E31E25, #E31E25);",
-              boxShadow: "inset 0px 0px 0px black, inset 0px 0px 9px black",
+              WebkitBoxShadow:
+                "inset 0px 0px 0px black, inset 0px 0px 4px black",
               transition: "0.2s ease-in-out",
               transform: "scale(1.1)",
             },
           }}
           onClick={() => {
             closeSideBar();
-            handleNavigation(item.link);
           }}
         >
           <ListItemIcon sx={{ ...listIconStyle, mr: open ? 3 : "auto" }}>
             {item.icon}
           </ListItemIcon>
-          <ListItemText sx={{ ...listItemText, opacity: open ? 1 : 0 }}>
+          <ListItemText
+            sx={{
+              ...listItemText,
+              opacity: open ? 1 : 0,
+            }}
+          >
             {item.key}
           </ListItemText>
         </ListItemButton>
       </ListItem>
-    </>
+    </Link>
   );
 };
 export default ItemComponent;

@@ -6,7 +6,7 @@ import CallIcon from "@mui/icons-material/Call";
 import ProductSvg from "./ProductSvg";
 import EWestSvg from "./EWestSvg";
 
-export const menuList = [
+export const NavigationList = [
   {
     key: "Home",
     link: "/",
@@ -40,7 +40,7 @@ export const menuList = [
         nestedcomponents: [
           {
             key: "RE200+",
-            link: "/products/inkjet/re200",
+            link: "/products/inkjet/re200+",
             icon: <ProductSvg />,
             id: 13,
           },
@@ -124,7 +124,7 @@ export const menuList = [
   },
   {
     key: "Applications",
-    link: "/application",
+    link: "/applications",
     icon: <AppRegistrationIcon />,
     id: 4,
     multicomponent: false,
@@ -132,7 +132,7 @@ export const menuList = [
   },
   {
     key: "E-west Mgmt.",
-    link: "/e-west-management",
+    link: "/ewest-management",
     icon: <EWestSvg />,
     id: 5,
     multicomponent: false,

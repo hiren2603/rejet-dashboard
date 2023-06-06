@@ -1,5 +1,5 @@
 export const headerTitle = {
-  fontWeight: 570,
+  fontWeight: 600,
   fontSize: "22px",
   color: "#c0c0c0",
 };
@@ -7,8 +7,8 @@ export const headerTitle = {
 export const headerDivider = {
   backgroundColor: "#c9c9c9",
   height: "2px",
-  marginTop: "5px",
-  margin: "1rem 0",
+  // marginTop: "5px",
+  // margin: "1rem 0",
 };
 
 export const footerDivider = {

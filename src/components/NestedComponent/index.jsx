@@ -5,25 +5,26 @@ import {
   ListItemIcon,
   ListItemText,
 } from "@mui/material";
+import { Fragment } from "react";
 import InnerComponent from "../InnerComponent";
 import { listIconStyle, listItemText } from "../Styles/Styles";
 
 const NestedComponent = ({
   open,
   handleSubCategory,
-  handleCategory,
   openSubcategory,
   item,
   handleNavigation,
+  closeSideBar,
 }) => {
   return (
-    <>
+    <Fragment key={item.id}>
       <ListItemButton
         sx={{
           ml: 2,
           "&:hover": {
             background: "linear-gradient(145deg, #E31E25, #E31E25);",
-            boxShadow: "inset 0px 0px 0px black, inset 0px 0px 9px black",
+            WebkitBoxShadow: "inset 0px 0px 0px black, inset 0px 0px 4px black",
             transition: "0.2s ease-in-out",
             transform: "scale(1.1)",
           },
@@ -55,10 +56,11 @@ const NestedComponent = ({
             key={innerItem.id}
             item={innerItem}
             handleNavigatiion={handleNavigation}
+            closeSideBar={closeSideBar}
           />
         ))}
       </Collapse>
-    </>
+    </Fragment>
   );
 };
 

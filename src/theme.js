@@ -31,7 +31,7 @@ export const theme = createTheme({
             width: "5px",
           },
           "&::-webkit-scrollbar-track": {
-            "-webkit-box-shadow": "inset 0 0 6px rgba(255,255,255,0.00)",
+            WebkitBoxShadow: "inset 0 0 6px rgba(255,255,255,0.00)",
             backgroundColor: colors.red[400],
           },
           "&::-webkit-scrollbar-thumb": {

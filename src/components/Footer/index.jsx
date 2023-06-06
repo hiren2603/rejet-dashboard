@@ -1,5 +1,5 @@
 import Logo from "../../assets/logo.png";
-import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
+import { LocationOn } from "@mui/icons-material";
 import {
   Box,
   Stack,
@@ -17,6 +17,7 @@ import {
   resQuickLinkStyle,
   mainStackStyle,
 } from "./style";
+import CustomDivider from "../CustomDivider";
 
 const Footer = ({ drawerwidth, open }) => {
   const theme = useTheme();
@@ -63,18 +64,8 @@ const Footer = ({ drawerwidth, open }) => {
           }
         >
           <Stack sx={smallSize ? { alignItems: "center" } : { gap: 3 }}>
-            <Typography sx={headerTitle}>
-              Quick Links
-              <Divider
-                sx={{
-                  backgroundColor: "#c9c9c9",
-                  height: "2px",
-                  marginTop: "5px",
-                  margin: "1rem 0",
-                  ...(smallSize ? { width: "100%" } : { width: "80%" }),
-                }}
-              />
-            </Typography>
+            <Typography sx={headerTitle}>Quick Links</Typography>
+            <CustomDivider />
             <Box sx={smallSize ? resQuickLinkStyle : quickLinkStyle}>
               <Typography>Home</Typography>
               <Typography>About</Typography>
@@ -85,10 +76,8 @@ const Footer = ({ drawerwidth, open }) => {
           </Stack>
 
           <Stack sx={smallSize ? { alignItems: "center" } : { gap: 3 }}>
-            <Typography sx={headerTitle}>
-              Products
-              <Divider sx={headerDivider} />
-            </Typography>
+            <Typography sx={headerTitle}>Products</Typography>
+            <CustomDivider />
             <Box sx={smallSize ? resQuickLinkStyle : quickLinkStyle}>
               <Typography>Inkjet</Typography>
               <Typography>Co2</Typography>
@@ -100,19 +89,8 @@ const Footer = ({ drawerwidth, open }) => {
           </Stack>
 
           <Stack sx={smallSize ? { alignItems: "center" } : { gap: 3 }}>
-            <Typography sx={headerTitle}>
-              Contanct Us
-              <Divider
-                sx={{
-                  backgroundColor: "#c9c9c9",
-                  height: "2px",
-                  marginTop: "5px",
-                  margin: "1rem 0",
-                  ...(smallSize ? { width: "100%" } : { width: "70%" }),
-                }}
-              />
-            </Typography>
-
+            <Typography sx={headerTitle}>Contanct Us</Typography>
+            <CustomDivider />
             <Box sx={smallSize ? resQuickLinkStyle : quickLinkStyle}>
               <Typography>Call : 99099 81123</Typography>
               <Typography>E-mail : info@rejettech.com</Typography>
@@ -123,27 +101,17 @@ const Footer = ({ drawerwidth, open }) => {
                   alignItems: "center",
                 }}
               >
-                <LocationOnOutlinedIcon />
+                <LocationOn />
                 Find Us On Map
               </Typography>
             </Box>
           </Stack>
 
           <Stack sx={smallSize ? { alignItems: "center" } : { gap: 3 }}>
-            <Typography sx={headerTitle}>
-              Location
-              <Divider
-                sx={{
-                  backgroundColor: "#c9c9c9",
-                  height: "2px",
-                  marginTop: "5px",
-                  margin: "1rem 0",
-                  ...(smallSize ? { width: "100%" } : { width: "40%" }),
-                }}
-              />
-            </Typography>
+            <Typography sx={headerTitle}>Location</Typography>
+            <CustomDivider />
             <Box sx={smallSize ? resQuickLinkStyle : quickLinkStyle}>
-              <img src={Logo} alt="logo" height={35} width={100} />
+              <img src={Logo} alt="logo" height={45} width={130} />
               <Typography>Plot No. 36, Suvery No. 277/,</Typography>
               <Typography>Opp. Kaneria Oil Industries,</Typography>
               <Typography>Rani Industrial Area,</Typography>
