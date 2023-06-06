@@ -8,6 +8,7 @@ import {
   useMediaQuery,
   useTheme,
   styled,
+  easing,
 } from "@mui/material";
 import {
   headerTitle,

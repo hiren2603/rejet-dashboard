@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import {
   About,
@@ -21,11 +22,13 @@ import { Layout } from "./components/Shared";
 import { theme } from "./theme";
 
 const App = () => {
+  const [drawerwidth] = useState(200);
+  const [open, setOpen] = useState(false);
   return (
     <>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Layout>
+        <Layout drawerwidth={drawerwidth} open={open} setOpen={setOpen}>
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

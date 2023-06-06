@@ -4,11 +4,10 @@ import Sidebar from "../Sidebar";
 import Footer from "../Footer";
 import { Box, useTheme } from "@mui/material";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, drawerwidth, open, setOpen }) => {
+  console.log(open);
   const theme = useTheme();
   const isSmallScreen = theme.breakpoints.down("sm");
-  const [drawerwidth] = useState(200);
-  const [open, setOpen] = useState(false);
   const [openCategory, setOpenCategory] = useState(false);
   const [openSubCategory, setOpenSubCategory] = useState({
     inkjet: false,
@@ -78,12 +77,16 @@ const Layout = ({ children }) => {
         />
         <Box
           sx={{
-            width: `calc(100% - (${theme.spacing(8)} + 1px))`,
+            display: "flex",
+            flexDirection: "column",
             marginTop: "10vh",
-            paddingLeft: "60px",
+            paddingLeft: open ? `${drawerwidth}px` : `${theme.spacing(8)}`,
+            width: open
+              ? `calc(100% - ${drawerwidth}px)`
+              : `calc(100% - (${theme.spacing(10)}))`,
             ...(!isSmallScreen &&
               open && {
-                paddingLeft: `${drawerwidth}px`,
+                marginLeft: `${drawerwidth}px`,
                 width: `calc(100% - ${drawerwidth}px)`,
               }),
             ...(isSmallScreen &&
