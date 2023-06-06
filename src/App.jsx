@@ -11,9 +11,9 @@ import {
   Desktop,
   Fiber,
   Uv,
-  Handy,
-  One,
-  OneOne,
+  TpHandy,
+  TpOne,
+  TpOneOne,
   EwestMgmt,
 } from "./pages";
 import { ThemeProvider, CssBaseline } from "@mui/material";
@@ -37,6 +37,9 @@ const App = () => {
               <Route path="/products/laser/fiber" element={<Fiber />} />
               <Route path="/products/laser/uv" element={<Uv />} />
               <Route path="/products/laser/desktop" element={<Desktop />} />
+              <Route path="/products/tij/tp01" element={<TpOne />} />
+              <Route path="/products/tij/tp01.1" element={<TpOneOne />} />
+              <Route path="/products/tij/handy" element={<TpHandy />} />
             </Route>
             <Route path="/applications" element={<Applications />} />
             <Route path="/ewest-management" element={<EwestMgmt />} />
