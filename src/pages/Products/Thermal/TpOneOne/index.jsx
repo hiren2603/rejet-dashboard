@@ -1,7 +1,7 @@
 import React from "react";
 
-const OneOne = () => {
+const TpOneOne = () => {
   return <div>OneOne</div>;
 };
 
-export default OneOne;
+export default TpOneOne;
