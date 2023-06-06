@@ -9,7 +9,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import MuiAppBar from "@mui/material/AppBar";
 import { styled } from "@mui/material/styles";
-import Logo from "../../assets/logo.png";
+import Logo from "../../../assets/logo.png";
 
 const Topbar = ({ open, drawerwidth, setOpen }) => {
   const theme = useTheme();

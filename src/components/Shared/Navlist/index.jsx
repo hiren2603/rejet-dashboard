@@ -1,7 +1,7 @@
 import { List } from "@mui/material";
 import { Fragment } from "react";
 import { redirect } from "react-router-dom";
-import { NavigationList } from "../../helpers/NavigationList";
+import { NavigationList } from "../../../helpers/NavigationList";
 import ItemComponent from "../ItemComponent";
 import MultiComponent from "../MultiComponent";
 

@@ -17,7 +17,7 @@ import {
   EwestMgmt,
 } from "./pages";
 import { ThemeProvider, CssBaseline } from "@mui/material";
-import { Layout } from "./components";
+import { Layout } from "./components/Shared";
 import { theme } from "./theme";
 
 const App = () => {
