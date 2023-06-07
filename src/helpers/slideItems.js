@@ -1,20 +1,24 @@
+import inkjet from "../../public/slides/inkjet_w.png";
+import laser from "../../public/slides/laser_w.png";
+import thermal from "../../public/slides/thermal_w.png";
+
 export const slideItems = [
   {
     id: 0,
     title: "Inkjet ",
     info: " Printers",
-    bg: "../assets/slides/inkjet_w.png",
+    bg: inkjet,
   },
   {
     id: 1,
     title: "Laser ",
     info: " Machine",
-    bg: "../assets/slides/laser_w.png",
+    bg: laser,
   },
   {
     id: 2,
     title: " Thermal ",
     info: " Printers",
-    bg: "../assets/slides/thermal_w.png",
+    bg: thermal,
   },
 ];

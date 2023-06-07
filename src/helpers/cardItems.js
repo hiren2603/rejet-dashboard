@@ -1,11 +1,10 @@
-import laser from "../public/assets/products/fiber.png";
-import inkjet from "../public/assets/products/inkjet.png";
-import thermal from "../public/assets/products/thermal.png";
+import inkjet from "../assets/products/inkjet.png";
+import fiber from "../assets/products/fiber.png";
+import thermal from "../assets/products/thermal.png";
 
 export const cardItems = [
   {
     id: 11,
-    // image: "/assets/products/inkjet.png",
     image: inkjet,
     button: "Inkjet",
     link: "/products/inkjet",
@@ -13,8 +12,7 @@ export const cardItems = [
   },
   {
     id: 12,
-    // image: "/assets/products/laser.png",
-    image: laser,
+    image: fiber,
     button: "Laser",
     link: "/products/laser/fiber",
     text: "Know More",

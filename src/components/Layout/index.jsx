@@ -78,17 +78,17 @@ const Layout = ({ children }) => {
         />
         <Box
           sx={{
-            width: `calc(100% - (${theme.spacing(8)} + 1px))`,
+            width: `calc(100% - (${theme.spacing(7)} + 1px))`,
             marginTop: "10vh",
-            paddingLeft: "60px",
+            marginLeft: "60px",
             ...(!isSmallScreen &&
               open && {
-                paddingLeft: `${drawerwidth}px`,
+                marginLeft: `${drawerwidth}`,
                 width: `calc(100% - ${drawerwidth}px)`,
               }),
             ...(isSmallScreen &&
               open && {
-                // marginLeft: "0",
+                marginLeft: "0",
                 width: "100%",
               }),
           }}
