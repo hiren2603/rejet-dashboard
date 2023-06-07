@@ -1,4 +1,4 @@
-import Logo from "../../assets/logo.png";
+import Logo from "../../../assets/logo.png";
 import { LocationOn } from "@mui/icons-material";
 import {
   Box,
@@ -8,6 +8,7 @@ import {
   useMediaQuery,
   useTheme,
   styled,
+  easing,
 } from "@mui/material";
 import {
   headerTitle,

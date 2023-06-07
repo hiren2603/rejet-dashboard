@@ -1,5 +1,5 @@
 import React from "react";
-import { Slider, ProductCard } from "../../components";
+import ProductCard from "../../components/ProductCard";
 
 const Home = () => {
   return (
