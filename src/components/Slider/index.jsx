@@ -1,27 +1,34 @@
-import { useState, useRef, useEffect } from "react";
-import { slideItems } from "../../helpers/slideItems";
-import { Box, useTheme } from "@mui/material";
+import React, { useState, useRef, useEffect } from "react";
+import { Box, Grid, Stack, Typography } from "@mui/material";
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
-import { sliderWrapper } from "./style";
+import { SlideItems } from "../../helpers/SlideItems";
+import {
+  iconContainerStyle,
+  leftIconContainer,
+  rightIconContainer,
+  slideStyle,
+  imageTitleStyle,
+  imageTypeStyle,
+} from "./style";
 
-const delay = 2500;
+const delay = 2000;
 const Slider = () => {
-  const length = 2;
-  const theme = useTheme();
-  const [slideIdx, setSlideIdx] = useState(0);
+  const length = SlideItems.length;
+  const [slideId, setSlideId] = useState(1);
   const timeoutRef = useRef(null);
 
-  const resetTimeout = () => {
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-  };
-
+  // Timing Function
+  function resetTimeout() {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+  }
   useEffect(() => {
     resetTimeout();
-
     timeoutRef.current = setTimeout(
       () =>
-        setSlideIdx((prevSlideIdx) =>
-          prevSlideIdx === length ? 0 : prevSlideIdx + 1
+        setSlideId((prevSlideId) =>
+          prevSlideId === length ? 1 : prevSlideId + 1
         ),
       delay
     );
@@ -29,41 +36,51 @@ const Slider = () => {
     return () => {
       resetTimeout();
     };
-  }, [slideIdx, length]);
+  }, [slideId, length]);
 
   const nextSlide = () => {
-    if (slideIdx === length) {
-      setSlideIdx(0);
+    if (slideId === length) {
+      setSlideId(1);
+      console.log(slideId);
     } else {
-      setSlideIdx(slideIdx + 1);
+      setSlideId(slideId + 1);
     }
   };
   const prevSlide = () => {
-    if (slideIdx === 0) {
-      setSlideIdx(length);
+    if (slideId === 1) {
+      console.log(slideId);
+      setSlideId(length);
     } else {
-      setSlideIdx(slideIdx - 1);
+      setSlideId(slideId - 1);
     }
   };
+
   return (
-    <>
-      <Box sx={sliderWrapper}>
-        <Box onClick={prevSlide}>
-          <ChevronLeft />
-        </Box>
-        {slideItems.map((slide) => {
-          <>
-            <Box
-              key={slide.id}
-              sx={{ backgroundImage: `url(${slide.bg})` }}
-            ></Box>
-          </>;
-        })}
-        <Box onClick={nextSlide}>
-          <ChevronRight />
-        </Box>
+    <Stack direction="row">
+      <Box sx={{ ...iconContainerStyle, ...leftIconContainer }}>
+        <ChevronLeft onClick={prevSlide} />
       </Box>
-    </>
+      {SlideItems.map((slide) => {
+        return (
+          <Box
+            key={slide.id}
+            sx={{
+              ...slideStyle,
+              display: slide.id == slideId ? "flex" : "none",
+              backgroundImage: `url(${slide.bg})`,
+            }}
+          >
+            <Typography sx={imageTitleStyle}>{slide.title}</Typography>
+            <Typography variant="span" sx={imageTypeStyle}>
+              {slide.info}
+            </Typography>
+          </Box>
+        );
+      })}
+      <Box sx={{ ...iconContainerStyle, ...rightIconContainer }}>
+        <ChevronRight onClick={nextSlide} />
+      </Box>
+    </Stack>
   );
 };
 export default Slider;

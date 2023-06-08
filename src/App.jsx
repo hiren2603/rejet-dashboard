@@ -20,6 +20,7 @@ import {
 import { ThemeProvider, CssBaseline } from "@mui/material";
 import { Layout } from "./components/Shared";
 import { theme } from "./theme";
+import ErrorPage from "./pages/ErrorPage";
 
 const App = () => {
   const [drawerwidth] = useState(200);
@@ -32,7 +33,7 @@ const App = () => {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/products">
+            <Route>
               <Route path="/products/inkjet/re200+" element={<Re200plus />} />
               <Route path="/products/inkjet/re224" element={<Re224 />} />
               <Route path="/products/inkjet/re225" element={<Re225 />} />
@@ -47,6 +48,7 @@ const App = () => {
             <Route path="/applications" element={<Applications />} />
             <Route path="/ewest-management" element={<EwestMgmt />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<ErrorPage />} />
           </Routes>
         </Layout>
       </ThemeProvider>
