@@ -1,0 +1,23 @@
+.card__img {
+  transition: all 0.5s ease;
+  height: 300px;
+  width: 80%;
+}
+
+.card__img:hover {
+  transform: scale(1.2);
+  transition: all 0.5s ease;
+}
+
+.show {
+  position: absolute;
+  display: none;
+}
+.card__img:hover + .show {
+  position: absolute;
+  display: flex;
+  color: rgb(0, 0, 0);
+  opacity: 1;
+  font-size: 22px;
+  font-weight: 500;
+}
