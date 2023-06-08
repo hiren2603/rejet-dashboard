@@ -1,3 +1,6 @@
+import { styled } from "@mui/material";
+import { theme } from "../../theme";
+
 export const cardSection = {
   // width: "90vw",
   justifySelf: "center",
@@ -16,11 +19,11 @@ export const cardRow = {
 };
 
 export const cardContainer = {
+  position: "relative",
   alignItems: "center",
   justifyContent: "center",
   borderRadius: "3px",
   boxShadow: "2px 2px 20px 1px #b6b6b6",
-  cursor: "pointer",
   height: "400px",
   width: { lg: "25%", sm: "80%" },
 };
@@ -50,3 +53,36 @@ export const cardBtnContainer = {
     transition: "all 0.3s ease",
   },
 };
+
+export const showMoreText = {
+  position: "absolute",
+  visibility: "visible",
+  color: theme.palette.error.main,
+  opacity: 1,
+  fontSize: "22px",
+  fontWeight: 500,
+  cursor: "pointer",
+};
+export const hideMoreText = {
+  visibility: "hidden",
+  position: "absolute",
+};
+
+export const cardButtonStyle = {
+  color: "#ffffff",
+  overflowX: "hidden",
+  fontSize: "18px",
+  fontWeight: 600,
+  textTransform: "uppercase",
+  borderRadius: "3px",
+};
+
+export const CardImageComponent = styled("img")({
+  transition: "all 0.5s ease",
+  height: "300px",
+  width: "80%",
+  "&:hover": {
+    transform: "scale(1.2)",
+    transition: "all 0.5s ease",
+  },
+});
