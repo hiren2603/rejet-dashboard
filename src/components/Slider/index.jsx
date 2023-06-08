@@ -56,7 +56,7 @@ const Slider = () => {
   };
 
   return (
-    <Stack direction="row">
+    <Stack direction="row" sx={{ position: "relative" }}>
       <Box sx={{ ...iconContainerStyle, ...leftIconContainer }}>
         <ChevronLeft onClick={prevSlide} />
       </Box>

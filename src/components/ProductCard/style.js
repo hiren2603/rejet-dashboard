@@ -1,5 +1,5 @@
 export const cardSection = {
-  width: "90vw",
+  // width: "90vw",
   justifySelf: "center",
   alignItems: "center",
   justifyContent: "center",
@@ -10,7 +10,7 @@ export const cardRow = {
   flex: 1,
   alignItems: "center",
   justifyContent: "space-evenly",
-  width: { lg: "100%", sm: "100%" },
+  // width: { lg: "100%", sm: "100%" },
   height: { sm: "auto" },
   flexWrap: { sm: "wrap" },
 };
