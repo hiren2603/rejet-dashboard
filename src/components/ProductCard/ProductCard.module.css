@@ -21,3 +21,23 @@
   font-size: 22px;
   font-weight: 500;
 }
+
+.card__button {
+  color: #fff;
+  overflow-x: hidden;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+@media only screen and (max-width: 600px) {
+  .card__img {
+    height: 300px;
+    width: 80%;
+  }
+
+  .card__btn__container {
+    height: 50px;
+  }
+}

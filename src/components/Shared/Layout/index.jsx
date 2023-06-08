@@ -80,7 +80,7 @@ const Layout = ({ children, drawerwidth, open, setOpen }) => {
             display: "flex",
             flexDirection: "column",
             marginTop: "10vh",
-            paddingLeft: open ? `${drawerwidth}px` : `${theme.spacing(8)}`,
+            // paddingLeft: open ? `${drawerwidth}px` : `${theme.spacing(8)}`,
             width: open
               ? `calc(100% - ${drawerwidth}px)`
               : `calc(100% - (${theme.spacing(10)}))`,
