@@ -1,0 +1,5 @@
+.slide {
+  display: inline-flex;
+  justify-content: space-between;
+  border-radius: 10px;
+}
