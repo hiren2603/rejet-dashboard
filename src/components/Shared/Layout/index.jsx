@@ -5,7 +5,6 @@ import Footer from "../Footer";
 import { Box, useTheme } from "@mui/material";
 
 const Layout = ({ children, drawerwidth, open, setOpen }) => {
-  console.log(open);
   const theme = useTheme();
   const isSmallScreen = theme.breakpoints.down("sm");
   const [openCategory, setOpenCategory] = useState(false);
@@ -81,9 +80,7 @@ const Layout = ({ children, drawerwidth, open, setOpen }) => {
             flexDirection: "column",
             marginTop: "10vh",
             paddingLeft: open ? `${drawerwidth}px` : `${theme.spacing(8)}`,
-            width: open
-              ? `calc(100% - ${drawerwidth}px)`
-              : `calc(100% - (${theme.spacing(10)}))`,
+            width: open ? `calc(100% - ${drawerwidth}px)` : `100%`,
             ...(!isSmallScreen &&
               open && {
                 marginLeft: `${drawerwidth}px`,
