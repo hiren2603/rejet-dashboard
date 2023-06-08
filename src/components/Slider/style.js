@@ -34,7 +34,7 @@ export const iconContainerStyle = {
   justifyContent: "center",
   background: "#fcfcfc",
   position: "absolute",
-  top: "35%",
+  top: "24%",
   height: "2.5rem",
   width: "2.5rem",
   borderRadius: "50%",

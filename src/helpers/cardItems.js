@@ -19,7 +19,6 @@ export const cardItems = [
   },
   {
     id: 13,
-    // image: "/assets/images/thermal.png",
     image: thermal,
     button: "Thermal",
     link: "/products/thermal",
