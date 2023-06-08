@@ -1,5 +1,5 @@
 export const cardSection = {
-  width: "90vw",
+  // width: "90vw",
   justifySelf: "center",
   alignItems: "center",
   justifyContent: "center",
