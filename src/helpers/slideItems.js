@@ -4,19 +4,19 @@ import thermal from "../../public/slides/thermal_w.png";
 
 export const SlideItems = [
   {
-    id: 0,
+    id: 1,
     title: "Inkjet ",
     info: " Printers",
     bg: inkjet,
   },
   {
-    id: 1,
+    id: 2,
     title: "Laser ",
     info: " Machine",
     bg: laser,
   },
   {
-    id: 2,
+    id: 3,
     title: " Thermal ",
     info: " Printers",
     bg: thermal,
