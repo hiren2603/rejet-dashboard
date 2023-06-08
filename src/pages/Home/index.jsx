@@ -1,9 +1,9 @@
 import React from "react";
 import Slider from "../../components/Slider";
-import { Grid } from "@mui/material";
 import ProductCard from "../../components/ProductCard";
 import Info from "../../components/Info";
 import Brands from "../../components/Brands";
+import Form from "../../components/Form";
 
 const Home = () => {
   return (
@@ -11,7 +11,8 @@ const Home = () => {
       <Slider />
       <ProductCard />
       <Info />
-      {/* <Brands /> */}
+      <Brands />
+      <Form />
     </>
   );
 };

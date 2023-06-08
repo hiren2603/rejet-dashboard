@@ -48,7 +48,7 @@ const Brands = () => {
           marginTop={"4rem"}
         >
           <Typography sx={brandsTitle}>Our Clients</Typography>
-          <Divider />
+          <Divider sx={{ backgroundColor: "#000000", alignSelf: "center" }} />
         </Stack>
 
         <Box sx={slideShow}>

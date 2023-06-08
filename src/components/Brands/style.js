@@ -1,5 +1,5 @@
 export const brandsSectionContainer = {
-  width: "90vw",
+  // width: "90vw",
   height: "100%",
   margin: "0rem 3rem",
 };
