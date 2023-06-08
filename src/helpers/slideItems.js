@@ -1,6 +1,6 @@
-import inkjet from "../../public/slides/inkjet_w.png";
-import laser from "../../public/slides/laser_w.png";
-import thermal from "../../public/slides/thermal_w.png";
+import inkjet from "../assets/slides/inkjet_w.png";
+import laser from "../assets/slides/laser_w.png";
+import thermal from "../assets/slides/thermal_w.png";
 
 export const SlideItems = [
   {

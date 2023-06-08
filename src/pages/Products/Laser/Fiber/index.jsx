@@ -1,7 +1,7 @@
 import React from "react";
 
-const Co2 = () => {
-  return <div>Co2</div>;
+const Fiber = () => {
+  return <div>Fiber</div>;
 };
 
-export default Co2;
+export default Fiber;

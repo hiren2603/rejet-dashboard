@@ -15,10 +15,26 @@ import {
   cardContainer,
   cardImgContainer,
   cardBtnContainer,
+  CardImageComponent,
+  showMoreText,
+  hideMoreText,
+  cardButtonStyle,
 } from "./style";
 import Classes from "./ProductCard.module.css";
+import { useState } from "react";
 
 const ProductCard = () => {
+  const [hoverState, setHoverState] = useState({ id: 0, isHover: false });
+
+  const showTexteHandler = (id) => {
+    console.log(id);
+    setHoverState({ id: id, isHover: true });
+  };
+  const hideTextHandler = (id) => {
+    console.log(id);
+    setHoverState({ id: id, isHover: false });
+  };
+
   return (
     <>
       <Stack flexDirection="row" sx={cardSection}>
@@ -26,35 +42,35 @@ const ProductCard = () => {
           flexDirection={{ lg: "row", md: "row", sm: "column" }}
           sx={cardRow}
         >
-          {cardItems?.map((cardDetails) => {
+          {cardItems.map((cardDetails) => {
             return (
-              <>
-                <Stack
-                  direction="column"
-                  key={cardDetails.id}
-                  sx={cardContainer}
-                >
-                  <Stack sx={cardImgContainer}>
-                    <img
-                      className={Classes.card__img}
-                      src={cardDetails.image}
-                      alt="item"
-                    />
-                    <Link to={cardDetails.link} className={Classes.show}>
-                      View More
-                    </Link>
-                  </Stack>
-
-                  <Stack sx={cardBtnContainer}>
-                    <Link
-                      to={cardDetails.link}
-                      className={Classes.card__button}
-                    >
-                      {cardDetails.button}
-                    </Link>
-                  </Stack>
+              <Stack
+                direction="column"
+                key={cardDetails.id}
+                sx={cardContainer}
+                onMouseOver={() => showTexteHandler(cardDetails.id)}
+                onMouseLeave={() => hideTextHandler(cardDetails.id)}
+              >
+                <Stack sx={cardImgContainer}>
+                  <CardImageComponent src={cardDetails.image} alt="item" />
+                  <Link
+                    to={cardDetails.link}
+                    style={
+                      hoverState.isHover && hoverState.id == cardDetails.id
+                        ? showMoreText
+                        : hideMoreText
+                    }
+                  >
+                    View More
+                  </Link>
                 </Stack>
-              </>
+
+                <Stack sx={cardBtnContainer}>
+                  <Link to={cardDetails.link} style={cardButtonStyle}>
+                    {cardDetails.button}
+                  </Link>
+                </Stack>
+              </Stack>
             );
           })}
         </Stack>
