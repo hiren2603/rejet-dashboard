@@ -7,6 +7,7 @@ import {
   slideShow,
   slideShowSlider,
   slideImgContainer,
+  BrandImage,
 } from "./style";
 import classes from "./Brands.module.css";
 
@@ -61,7 +62,7 @@ const Brands = () => {
             {brands?.map((brand, index) => (
               <>
                 <Box key={index} sx={slideImgContainer}>
-                  <img src={brand} alt="clients" className={classes.slide} />
+                  <BrandImage src={brand} alt="clients" />
                 </Box>
               </>
             ))}

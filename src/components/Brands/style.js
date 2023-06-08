@@ -1,3 +1,11 @@
+import { styled } from "@mui/material";
+
+export const BrandImage = styled("img")({
+  display: "inline-flex",
+  justifyContent: "space-between",
+  borderRadius: "10px",
+});
+
 export const brandsSectionContainer = {
   // width: "90vw",
   height: "100%",
