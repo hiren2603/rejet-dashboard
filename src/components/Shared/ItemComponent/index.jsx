@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import {
   ListItem,
@@ -7,8 +7,11 @@ import {
   ListItemText,
 } from "@mui/material";
 import { listIconStyle, listItemText } from "../Styles/Styles";
+import { LayoutContext } from "../../../Context";
 
-const ItemComponent = ({ open, item, closeSideBar, handleNavigation, key }) => {
+const ItemComponent = ({ item, closeSideBar, handleNavigation, key }) => {
+  const { open } = useContext(LayoutContext);
+
   return (
     <Link to={item.link} key={key}>
       <ListItem sx={{ display: "block" }} disablePadding>

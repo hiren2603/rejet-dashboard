@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Topbar from "../Topbar";
 import Sidebar from "../Sidebar";
 import Footer from "../Footer";
 import { Box, useTheme } from "@mui/material";
+import { LayoutContext } from "../../../Context";
 
-const Layout = ({ children, drawerwidth, open, setOpen }) => {
+const Layout = ({ children }) => {
   const theme = useTheme();
+  const { open, setOpen, drawerwidth } = useContext(LayoutContext);
   const isSmallScreen = theme.breakpoints.down("sm");
   const [openCategory, setOpenCategory] = useState(false);
   const [openSubCategory, setOpenSubCategory] = useState({
@@ -64,9 +66,6 @@ const Layout = ({ children, drawerwidth, open, setOpen }) => {
       >
         <Topbar open={open} drawerwidth={drawerwidth} setOpen={handleDrawer} />
         <Sidebar
-          open={open}
-          drawerwidth={drawerwidth}
-          setOpen={setOpen}
           handleDrawerOpen={handleDrawer}
           closeSideBar={closeSideBar}
           handleCategory={handleCategory}

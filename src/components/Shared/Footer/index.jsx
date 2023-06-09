@@ -19,9 +19,12 @@ import {
   mainStackStyle,
 } from "./style";
 import CustomDivider from "../CustomDivider";
+import { useContext } from "react";
+import { LayoutContext } from "../../../Context";
 
-const Footer = ({ drawerwidth, open }) => {
+const Footer = () => {
   const theme = useTheme();
+  const { drawerwidth, open } = useContext(LayoutContext);
   const smallSize = useMediaQuery(theme.breakpoints.down("sm"));
   const FooterContainer = styled("div")(({ theme }) => ({
     width: `100%`,

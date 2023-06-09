@@ -9,9 +9,10 @@ import {
 } from "@mui/material";
 import { CloseSharp } from "@mui/icons-material";
 import Navlist from "../Navlist";
+import { useContext } from "react";
+import { LayoutContext } from "../../../Context";
 
 const PersistSidebar = ({
-  open,
   closeSideBar,
   handleDrawerOpen,
   handleCategory,
@@ -20,6 +21,7 @@ const PersistSidebar = ({
   openSubCategory,
 }) => {
   const theme = useTheme();
+  const { open } = useContext(LayoutContext);
   const DrawerHeader = styled("div")(({ theme }) => ({
     display: "flex",
     backgroundColor: theme.palette.error.main,

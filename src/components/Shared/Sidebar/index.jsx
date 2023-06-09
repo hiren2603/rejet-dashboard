@@ -13,10 +13,10 @@ import {
 } from "@mui/material";
 import Navlist from "../Navlist";
 import PersistSidebar from "../PersistSidebar";
+import { useContext } from "react";
+import { LayoutContext } from "../../../Context";
 
 const Sidebar = ({
-  open,
-  drawerwidth,
   closeSideBar,
   handleDrawerOpen,
   handleCategory,
@@ -25,6 +25,7 @@ const Sidebar = ({
   openSubCategory,
 }) => {
   const theme = useTheme();
+  const { open, drawerwidth } = useContext(LayoutContext);
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const openedMixin = (theme) => ({
     width: drawerwidth,

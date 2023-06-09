@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { brands } from "../../helpers/clientsData";
-import { Grid, Typography, Divider, Stack, Box } from "@mui/material";
+import { Typography, Divider, Stack, Box } from "@mui/material";
 import {
   brandsSectionContainer,
   brandsTitle,
@@ -9,7 +9,6 @@ import {
   slideImgContainer,
   BrandImage,
 } from "./style";
-import classes from "./Brands.module.css";
 
 const delay = 2500;
 const length = 15;
@@ -34,40 +33,38 @@ const Brands = () => {
     };
   }, [index]);
   return (
-    <>
+    <Stack
+      direction="column"
+      alignItems={"center"}
+      justifyContent={"center"}
+      justifySelf={"center"}
+      sx={brandsSectionContainer}
+    >
       <Stack
-        direction="column"
+        flexDirection={"column"}
+        justifyContent="center"
         alignItems={"center"}
-        justifyContent={"center"}
-        justifySelf={"center"}
-        sx={brandsSectionContainer}
+        marginTop={"4rem"}
       >
-        <Stack
-          flexDirection={"column"}
-          justifyContent="center"
-          alignItems={"center"}
-          marginTop={"4rem"}
-        >
-          <Typography sx={brandsTitle}>Our Clients</Typography>
-          <Divider sx={{ backgroundColor: "#000000", alignSelf: "center" }} />
-        </Stack>
-
-        <Box sx={slideShow}>
-          <Box
-            sx={{
-              ...slideShowSlider,
-              transform: `translateX(${-index * 210}px)`,
-            }}
-          >
-            {brands?.map((brand, index) => (
-              <Box key={index} sx={slideImgContainer}>
-                <BrandImage src={brand} alt="clients" />
-              </Box>
-            ))}
-          </Box>
-        </Box>
+        <Typography sx={brandsTitle}>Our Clients</Typography>
+        <Divider sx={{ backgroundColor: "#000000", alignSelf: "center" }} />
       </Stack>
-    </>
+
+      <Box sx={slideShow}>
+        <Box
+          sx={{
+            ...slideShowSlider,
+            transform: `translateX(${-index * 210}px)`,
+          }}
+        >
+          {brands?.map((brand, index) => (
+            <Box key={index} sx={slideImgContainer}>
+              <BrandImage src={brand} alt="clients" />
+            </Box>
+          ))}
+        </Box>
+      </Box>
+    </Stack>
   );
 };
 export default Brands;
