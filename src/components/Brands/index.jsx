@@ -9,7 +9,6 @@ import {
   slideImgContainer,
   BrandImage,
 } from "./style";
-import classes from "./Brands.module.css";
 
 const delay = 2500;
 const length = 15;

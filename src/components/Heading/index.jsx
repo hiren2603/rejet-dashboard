@@ -9,6 +9,7 @@ const Heading = ({ name, type }) => {
         sx={{ borderBottom: "1px solid #000000", pb: "0.5rem" }}
         alignItems="center"
         justifyContent="center"
+        direction={{ lg: "row", md: "column", sm: "column" }}
       >
         <Grid item lg={9}>
           <Typography sx={headingText}>
@@ -20,12 +21,10 @@ const Heading = ({ name, type }) => {
           </Typography>
         </Grid>
 
-        <Grid item>
+        <Grid item sm={2}>
           <Button variant="contained" color="error">
             Download Broucher
           </Button>
-          {/* <DownloadButton />
-           */}
         </Grid>
       </Grid>
     </>
