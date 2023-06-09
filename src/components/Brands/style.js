@@ -7,9 +7,10 @@ export const BrandImage = styled("img")({
 });
 
 export const brandsSectionContainer = {
-  // width: "90vw",
+  width: "90%",
   height: "100%",
-  margin: "0rem 3rem",
+  margin: "auto",
+  // margin: "0rem 3rem",
 };
 
 export const brandsTitle = {

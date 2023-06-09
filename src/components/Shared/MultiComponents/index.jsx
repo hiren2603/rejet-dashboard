@@ -6,8 +6,12 @@ import {
   ListItemText,
 } from "@mui/material";
 import { listIconStyle } from "../Styles/Styles";
+import { useContext } from "react";
+import { LayoutContext } from "../../../Context";
 
 const MultiComponents = ({ open, closeSideBar, item }) => {
+  const { open } = useContext(LayoutContext);
+
   return (
     <>
       <List disablePadding>

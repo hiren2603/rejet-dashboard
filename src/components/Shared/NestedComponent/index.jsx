@@ -5,18 +5,19 @@ import {
   ListItemIcon,
   ListItemText,
 } from "@mui/material";
-import { Fragment } from "react";
+import { Fragment, useContext } from "react";
 import InnerComponent from "../InnerComponent";
 import { listIconStyle, listItemText } from "../Styles/Styles";
+import { LayoutContext } from "../../../Context";
 
 const NestedComponent = ({
-  open,
   handleSubCategory,
   openSubcategory,
   item,
   handleNavigation,
   closeSideBar,
 }) => {
+  const { open } = useContext(LayoutContext);
   return (
     <Fragment key={item.id}>
       <ListItemButton

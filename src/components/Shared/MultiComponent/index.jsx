@@ -6,12 +6,12 @@ import {
   ListItemIcon,
   ListItemText,
 } from "@mui/material";
-import { Fragment } from "react";
+import { Fragment, useContext } from "react";
 import NestedComponent from "../NestedComponent";
 import { listButtonStyle, listIconStyle, listItemText } from "../Styles/Styles";
+import { LayoutContext } from "../../../Context";
 
 const MultiComponent = ({
-  open,
   item,
   openCategory,
   openSubcategory,
@@ -20,6 +20,7 @@ const MultiComponent = ({
   handleCategory,
   handleNavigation,
 }) => {
+  const { open } = useContext(LayoutContext);
   return (
     <Fragment key={item.id}>
       <List>

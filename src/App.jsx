@@ -21,15 +21,17 @@ import { ThemeProvider, CssBaseline } from "@mui/material";
 import { Layout } from "./components/Shared";
 import { theme } from "./theme";
 import ErrorPage from "./pages/ErrorPage";
+import { LayoutContext } from "./Context";
+// import { LayoutContextProvider } from "./Context";
 
 const App = () => {
   const [drawerwidth] = useState(200);
   const [open, setOpen] = useState(false);
   return (
-    <>
-      <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
+      <LayoutContext.Provider value={{ open, setOpen, drawerwidth }}>
         <CssBaseline />
-        <Layout drawerwidth={drawerwidth} open={open} setOpen={setOpen}>
+        <Layout>
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -51,8 +53,8 @@ const App = () => {
             <Route path="*" element={<ErrorPage />} />
           </Routes>
         </Layout>
-      </ThemeProvider>
-    </>
+      </LayoutContext.Provider>
+    </ThemeProvider>
   );
 };
 

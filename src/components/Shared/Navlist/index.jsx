@@ -1,12 +1,12 @@
 import { List } from "@mui/material";
-import { Fragment } from "react";
+import { Fragment, useContext } from "react";
 import { redirect } from "react-router-dom";
 import { NavigationList } from "../../../helpers/NavigationList";
 import ItemComponent from "../ItemComponent";
 import MultiComponent from "../MultiComponent";
+import { LayoutContext } from "../../../Context";
 
 const Navlist = ({
-  open,
   closeSideBar,
   openCategory,
   openSubCategory,
@@ -17,7 +17,7 @@ const Navlist = ({
     console.log(linkText);
     redirect(`${linkText}`);
   };
-
+  const { open } = useContext(LayoutContext);
   return (
     <>
       <List>
