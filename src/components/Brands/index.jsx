@@ -60,35 +60,13 @@ const Brands = () => {
             }}
           >
             {brands?.map((brand, index) => (
-              <>
-                <Box key={index} sx={slideImgContainer}>
-                  <BrandImage src={brand} alt="clients" />
-                </Box>
-              </>
+              <Box key={index} sx={slideImgContainer}>
+                <BrandImage src={brand} alt="clients" />
+              </Box>
             ))}
           </Box>
         </Box>
       </Stack>
-      {/* <Grid container alignItems="center" justifyContent="center">
-        <Grid item lg={3} alignItems="center" justifyContent="center">
-          <Typography>Our Clients</Typography>
-          <Divider />
-        </Grid>
-
-        <Grid item container>
-          <Grid
-            item
-            container
-            sx={{ transform: `translateX(${-index * 210}px` }}
-          >
-            {brands?.map((brands, index) => (
-              <Grid item>
-                <img src={brands} alt="clients" />
-              </Grid>
-            ))}
-          </Grid>
-        </Grid>
-      </Grid> */}
     </>
   );
 };

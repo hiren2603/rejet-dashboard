@@ -2,20 +2,25 @@ import { styled } from "@mui/material";
 import { theme } from "../../theme";
 
 export const cardSection = {
-  // width: "90vw",
+  width: "90%",
   justifySelf: "center",
+  display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  margin: { lg: "3rem 4rem", sm: "1rem 0" },
+  marginTop: "3rem",
+  marginLeft: "auto",
+  marginRight: "auto",
+  // margin: { lg: "3rem auto", md: "3rem auto", sm: "3rem 0" },
 };
 
 export const cardRow = {
-  flex: 1,
+  // flex: 1,
+  margin: "auto",
   alignItems: "center",
-  justifyContent: "space-evenly",
-  // width: { lg: "100%", sm: "100%" },
-  height: { sm: "auto" },
+  justifyContent: "space-between",
+  height: { md: "100%", sm: "auto" },
   flexWrap: { sm: "wrap" },
+  width: "90%",
 };
 
 export const cardContainer = {
@@ -24,15 +29,15 @@ export const cardContainer = {
   justifyContent: "center",
   borderRadius: "3px",
   boxShadow: "2px 2px 20px 1px #b6b6b6",
-  height: "400px",
-  width: { lg: "25%", sm: "80%" },
+  height: { lg: "500px", md: "400px", sm: "500px" },
+  width: { lg: "30%", md: "30%", sm: "80%" },
 };
 
 export const cardImgContainer = {
   alignItems: "center",
   justifyContent: "center",
   width: "100%",
-  height: "100%",
+  height: "450px",
   transition: "all 0.5s ease",
   "&:hover": {
     backgroundColor: "#ffe7e7",
@@ -79,7 +84,7 @@ export const cardButtonStyle = {
 
 export const CardImageComponent = styled("img")({
   transition: "all 0.5s ease",
-  height: "300px",
+  height: "75%",
   width: "80%",
   "&:hover": {
     transform: "scale(1.2)",
