@@ -1,26 +1,17 @@
-import {
-  Box,
-  useTheme,
-  styled,
-  Paper,
-  Stack,
-  useMediaQuery,
-  Grid,
-} from "@mui/material";
+import { Grid, Paper, Stack } from "@mui/material";
 import { Link } from "react-router-dom";
 import { cardItems } from "../../helpers/cardItems";
 import {
-  cardSection,
-  cardRow,
+  CardImageComponent,
+  cardBtnContainer,
+  cardButtonStyle,
   cardContainer,
   cardImgContainer,
-  cardBtnContainer,
-  CardImageComponent,
-  showMoreText,
+  cardRow,
+  cardSection,
   hideMoreText,
-  cardButtonStyle,
+  showMoreText,
 } from "./style";
-import Classes from "./ProductCard.module.css";
 import { useState } from "react";
 
 const ProductCard = () => {
@@ -36,46 +27,44 @@ const ProductCard = () => {
   };
 
   return (
-    <>
-      <Stack flexDirection="row" sx={cardSection}>
-        <Stack
-          flexDirection={{ lg: "row", md: "row", sm: "column" }}
-          sx={cardRow}
-        >
-          {cardItems.map((cardDetails) => {
-            return (
-              <Stack
-                direction="column"
-                key={cardDetails.id}
-                sx={cardContainer}
-                onMouseOver={() => showTexteHandler(cardDetails.id)}
-                onMouseLeave={() => hideTextHandler(cardDetails.id)}
-              >
-                <Stack sx={cardImgContainer}>
-                  <CardImageComponent src={cardDetails.image} alt="item" />
-                  <Link
-                    to={cardDetails.link}
-                    style={
-                      hoverState.isHover && hoverState.id == cardDetails.id
-                        ? showMoreText
-                        : hideMoreText
-                    }
-                  >
-                    View More
-                  </Link>
-                </Stack>
-
-                <Stack sx={cardBtnContainer}>
-                  <Link to={cardDetails.link} style={cardButtonStyle}>
-                    {cardDetails.button}
-                  </Link>
-                </Stack>
+    <Stack sx={cardSection}>
+      <Stack
+        flexDirection={{ lg: "row", md: "row", sm: "column" }}
+        sx={cardRow}
+      >
+        {cardItems.map((cardDetails) => {
+          return (
+            <Stack
+              direction="column"
+              key={cardDetails.id}
+              sx={cardContainer}
+              onMouseOver={() => showTexteHandler(cardDetails.id)}
+              onMouseLeave={() => hideTextHandler(cardDetails.id)}
+            >
+              <Stack sx={cardImgContainer}>
+                <CardImageComponent src={cardDetails.image} alt="item" />
+                <Link
+                  to={cardDetails.link}
+                  style={
+                    hoverState.isHover && hoverState.id == cardDetails.id
+                      ? showMoreText
+                      : hideMoreText
+                  }
+                >
+                  View More
+                </Link>
               </Stack>
-            );
-          })}
-        </Stack>
+
+              <Stack sx={cardBtnContainer}>
+                <Link to={cardDetails.link} style={cardButtonStyle}>
+                  {cardDetails.button}
+                </Link>
+              </Stack>
+            </Stack>
+          );
+        })}
       </Stack>
-    </>
+    </Stack>
   );
 };
 export default ProductCard;

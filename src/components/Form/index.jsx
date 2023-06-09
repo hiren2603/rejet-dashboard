@@ -8,7 +8,6 @@ const Form = () => {
         <Grid item lg={2} alignItems="center">
           <Typography sx={titleStyle}>Get In Touch</Typography>
         </Grid>
-
         <Grid
           item
           container
@@ -45,7 +44,7 @@ const Form = () => {
               sx={contactInput}
             />
           </Grid>
-          <Grid item lg={9}>
+          <Grid item lg={12}>
             <TextField
               placeholder="Message"
               rows={4}
