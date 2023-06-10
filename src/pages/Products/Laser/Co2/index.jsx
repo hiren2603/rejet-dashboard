@@ -3,7 +3,14 @@ import LaserImg from "../../../../assets/products/co2.png";
 import Samples from "../../../../assets/samples/co2_samples.png";
 import ProductButton from "../../../../components/ProductButton";
 import Heading from "../../../../components/Heading";
-import { Grid, Typography, List, Card, ListItemText } from "@mui/material";
+import {
+  Grid,
+  Typography,
+  List,
+  Card,
+  ListItemText,
+  Stack,
+} from "@mui/material";
 import {
   productHeading,
   modelHeading,
@@ -25,234 +32,141 @@ const Co2 = () => {
         container
         alignItems="center"
         justifyContent={"center"}
-        sx={{ margin: "4rem 0" }}
+        spacing={2}
+        sx={{ mt: { xs: "1rem" } }}
       >
-        <Typography sx={productHeading}>Co2 Laser Marking System</Typography>
-        <Heading name={"PETMARK"} type={"Flying Laser"} />
+        <Typography sx={productHeading}>co2 laser marking system</Typography>
+        <Heading name="PETMARK" type="FLYING LASER" />
 
         <Grid
           item
           container
-          sx={{ marginTop: "3rem" }}
-          columnGap={10}
-          alignItems={"center"}
-          justifyContent={"center"}
           direction={{ lg: "row", md: "column-reverse", sm: "column-reverse" }}
+          alignItems={"center"}
+          justifyContent="center"
+          sx={{ marginTop: "3rem" }}
+          columnSpacing={5}
         >
-          <Grid item container lg={6} rowSpacing={4}>
-            <Grid item conatiner>
-              <Card elevation={7} sx={{ p: "1rem" }}>
-                <Typography sx={modelHeading}>
-                  {Co2laserData[0].model}
-                </Typography>
-                <Grid container alignItems={"center"}>
-                  <Grid item lg={7}>
-                    <Typography sx={headings}>Laser Power :</Typography>
-                  </Grid>
-                  <Grid item>{Co2laserData[0].power}</Grid>
-                </Grid>
+          {/* Product details and specifications section */}
+          <Grid item container direction="column" lg={7} md={1} rowSpacing={5}>
+            {/* Product Details */}
+            {Co2laserData?.map((item) => {
+              return (
+                <Grid item container lg={10}>
+                  <Card key={item.id} elevation={7} sx={{ p: "1rem" }}>
+                    <Typography sx={modelHeading}>{item.model}</Typography>
 
-                <Grid container alignItems={"center"}>
-                  <Grid item lg={7}>
-                    <Typography sx={headings}>Marking Speed :</Typography>
-                  </Grid>
-                  <Grid item>{Co2laserData[0].mark_speed}</Grid>
-                </Grid>
+                    <Grid item container alignItems={{ lg: "center" }}>
+                      <Grid item lg={5} xs={6}>
+                        <Typography sx={headings}>
+                          {item.power.heading}:
+                        </Typography>
+                      </Grid>
+                      <Grid item>{item.power.content}</Grid>
+                    </Grid>
 
-                <Grid container alignItems={"center"}>
-                  <Grid item lg={7}>
-                    <Typography sx={headings}>Marking Area :</Typography>
-                  </Grid>
-                  <Grid item>{Co2laserData[0].mark_area}</Grid>
-                </Grid>
+                    <Grid item container alignItems={"center"}>
+                      <Grid item lg={5} xs={6}>
+                        <Typography sx={headings}>
+                          {item.mark_speed.heading}:
+                        </Typography>
+                      </Grid>
+                      <Grid item>{item.mark_speed.content}</Grid>
+                    </Grid>
 
-                <Grid container alignItems={"center"}>
-                  <Grid item lg={7} alignSelf={"flex-start"}>
-                    <Typography sx={headings}>Machine Speed :</Typography>
-                  </Grid>
-                  <Grid item lg={4}>
-                    {Co2laserData[0].machine_speeed}
-                  </Grid>
-                </Grid>
-              </Card>
-            </Grid>
+                    <Grid item container alignItems={"center"}>
+                      <Grid item lg={5} xs={6}>
+                        <Typography sx={headings}>
+                          {item.mark_area.heading}:
+                        </Typography>
+                      </Grid>
+                      <Grid item>{item.mark_area.content}</Grid>
+                    </Grid>
 
-            <Grid item container>
-              <Card elevation={7} sx={{ p: "1rem" }}>
-                <Typography sx={modelHeading}>
-                  {Co2laserData[1].model}
-                </Typography>
-                <Grid container alignItems={"center"}>
-                  <Grid item lg={7}>
-                    <Typography sx={headings}>Laser Power :</Typography>
-                  </Grid>
-                  <Grid item>{Co2laserData[1].power}</Grid>
+                    <Grid item container alignItems={"center"}>
+                      <Grid item lg={5} xs={6}>
+                        <Typography sx={headings}>
+                          {item.machine_speed.heading}:
+                        </Typography>
+                      </Grid>
+                      <Grid item lg={5} xs={6}>
+                        {item.machine_speed.content}
+                      </Grid>
+                    </Grid>
+                  </Card>
                 </Grid>
+              );
+            })}
 
-                <Grid container alignItems={"center"}>
-                  <Grid item lg={7}>
-                    <Typography sx={headings}>Marking Speed :</Typography>
-                  </Grid>
-                  <Grid item>{Co2laserData[1].mark_speed}</Grid>
-                </Grid>
-
-                <Grid container alignItems={"center"}>
-                  <Grid item lg={7}>
-                    <Typography sx={headings}>Marking Area :</Typography>
-                  </Grid>
-                  <Grid item>{Co2laserData[1].mark_area}</Grid>
-                </Grid>
-
-                <Grid container alignItems={"center"}>
-                  <Grid item lg={7} alignSelf={"flex-start"}>
-                    <Typography sx={headings}>Machine Speed :</Typography>
-                  </Grid>
-                  <Grid item lg={4}>
-                    {Co2laserData[1].machine_speeed}
-                  </Grid>
-                </Grid>
-              </Card>
-            </Grid>
-
-            <Grid item container rowSpacing={1}>
-              <Typography sx={modelHeading}>Specifications</Typography>
-              <Grid item container alignItems={"center"}>
-                <Grid item lg={7}>
-                  <Typography>Laser Type :</Typography>
-                </Grid>
-                <Grid item>{commonSpace[0].type}</Grid>
-              </Grid>
-
-              <Grid item container alignItems={"center"}>
-                <Grid item lg={7}>
-                  <Typography>Electrical Requirement :</Typography>
-                </Grid>
-                <Grid item>{commonSpace[0].power_supply}</Grid>
-              </Grid>
-
-              <Grid item container alignItems={"center"}>
-                <Grid item lg={7}>
-                  <Typography>Operating Temprature :</Typography>
-                </Grid>
-                <Grid item>{commonSpace[0].temp}</Grid>
-              </Grid>
-
-              <Grid item container alignItems={"center"}>
-                <Grid item lg={7}>
-                  <Typography>Humidity :</Typography>
-                </Grid>
-                <Grid item>{commonSpace[0].humidity}</Grid>
-              </Grid>
-
-              <Grid item container alignItems={"center"}>
-                <Grid item lg={7}>
-                  <Typography>Wave Length :</Typography>
-                </Grid>
-                <Grid item>{commonSpace[0].wave_length}</Grid>
-              </Grid>
-
-              <Grid item container alignItems={"center"}>
-                <Grid item lg={7}>
-                  <Typography>Laser Source :</Typography>
-                </Grid>
-                <Grid item>{commonSpace[0].laser_source}</Grid>
-              </Grid>
-
-              <Grid item container alignItems={"center"}>
-                <Grid item lg={7}>
-                  <Typography>Depth of Engraving :</Typography>
-                </Grid>
-                <Grid item>{commonSpace[0].depth}</Grid>
-              </Grid>
-
-              <Grid item container alignItems={"center"}>
-                <Grid item lg={7} alignSelf={"flex-start"}>
-                  <Typography>Marking Format :</Typography>
-                </Grid>
-                <Grid item lg={5}>
-                  {commonSpace[0].format}
-                </Grid>
-              </Grid>
-
-              <Grid item container alignItems={"center"}>
-                <Grid item lg={7}>
-                  <Typography>Language Ability :</Typography>
-                </Grid>
-                <Grid item>{commonSpace[0].languages}</Grid>
-              </Grid>
-
-              <Grid item container alignItems={"center"}>
-                <Grid item lg={7}>
-                  <Typography>Gross Power :</Typography>
-                </Grid>
-                <Grid item>{commonSpace[0].gross_pow}</Grid>
-              </Grid>
-
-              <Grid item container alignItems={"center"}>
-                <Grid item lg={7}>
-                  <Typography>Gross Weight :</Typography>
-                </Grid>
-                <Grid item>{commonSpace[0].weight}</Grid>
-              </Grid>
-            </Grid>
-          </Grid>
-
-          {/* Part 2 */}
-          <Grid
-            item
-            container
-            lg={4}
-            direction="column"
-            rowGap={9}
-            justifyContent={{ sm: "center" }}
-            alignItems={{ sm: "center" }}
-          >
-            <Grid
-              item
-              justifySelf={"flex-start"}
-              sx={{
-                height: "50%",
-              }}
-              sm={5}
-            >
-              <ProductImg src={LaserImg} />
-              {/* <ProductButton /> */}
-            </Grid>
-
+            {/* Specification */}
             <Grid
               item
               container
-              direction="column"
-              rowSpacing={8}
-              alignItems="center"
-              justifyContent="flex-start"
+              rowSpacing={1}
+              lg={4}
+              justifyContent={{ xs: "center", lg: "flex-start" }}
             >
-              <Typography sx={modelHeading} textAlign={"start"}>
-                Print Samples
-              </Typography>
-              <img src={Samples} />
+              <Typography sx={modelHeading}>Specifications</Typography>
+              {commonSpace?.map((item) => {
+                return (
+                  <Grid
+                    item
+                    container
+                    key={item.id}
+                    alignItems={"center"}
+                    columnSpacing={7}
+                    justifyContent={{ xs: "center" }}
+                  >
+                    <Grid
+                      item
+                      lg={5}
+                      xs={6.7}
+                      justifyContent={{ xs: "flex-start" }}
+                      alignItems={{ xs: "flex-start" }}
+                    >
+                      <Typography sx={{ fontWeight: "580" }}>
+                        {item.title} :
+                      </Typography>
+                    </Grid>
+                    <Grid item lg={7} xs={5}>
+                      {item.content}
+                    </Grid>
+                  </Grid>
+                );
+              })}
+            </Grid>
+          </Grid>
 
-              <Grid item>
-                <Typography sx={modelHeading}>Applicable Products</Typography>
-                {applications?.map((item, index) => {
-                  return (
-                    <>
-                      <List key={index}>{item}</List>
-                    </>
-                  );
-                })}
-              </Grid>
+          {/* Print Samples, Image and Applicable Products */}
+          <Grid item container direction={"column"} lg={4} rowSpacing={4}>
+            <Grid item container direction={"column"} xs={1}>
+              <img src={LaserImg} alt="Laser" width={300} />
+            </Grid>
+
+            <Grid item xs={12}>
+              <Typography sx={modelHeading}>Print Samples</Typography>
+              <ProductImg src={Samples} />
+            </Grid>
+
+            <Grid item>
+              <Typography sx={modelHeading}>Applicable Products</Typography>
+              {applications?.map((item, index) => {
+                return (
+                  <>
+                    <List key={index}>{item}</List>
+                  </>
+                );
+              })}
             </Grid>
           </Grid>
         </Grid>
 
-        <Grid item lg={10.8} sx={{ mt: "1rem" }}>
+        {/* Benifits */}
+        <Grid item lg={11}>
           <Typography sx={modelHeading}>Benifits</Typography>
-          <List>
-            <ListItemText>{benifits[0].marking}</ListItemText>
-            <ListItemText>{benifits[0].efficiency}</ListItemText>
-            <ListItemText>{benifits[0].power}</ListItemText>
-          </List>
+          <List>{benifits[0].marking}</List>
+          <List>{benifits[0].efficiency}</List>
+          <List>{benifits[0].power}</List>
         </Grid>
       </Grid>
     </>
