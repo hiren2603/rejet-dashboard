@@ -36,6 +36,7 @@ const ProductCard = () => {
           return (
             <Stack
               direction="column"
+              mb={4}
               key={cardDetails.id}
               sx={cardContainer}
               onMouseOver={() => showTexteHandler(cardDetails.id)}

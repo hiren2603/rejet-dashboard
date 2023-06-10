@@ -33,22 +33,11 @@ const Brands = () => {
     };
   }, [index]);
   return (
-    <Stack
-      direction="column"
-      alignItems={"center"}
-      justifyContent={"center"}
-      justifySelf={"center"}
-      sx={brandsSectionContainer}
-    >
-      <Stack
-        flexDirection={"column"}
-        justifyContent="center"
-        alignItems={"center"}
-        marginTop={"4rem"}
-      >
+    <Stack sx={brandsSectionContainer}>
+      <Stack marginTop={"4rem"}>
         <Typography sx={brandsTitle}>Our Clients</Typography>
-        <Divider sx={{ backgroundColor: "#000000", alignSelf: "center" }} />
       </Stack>
+      <Divider />
 
       <Box sx={slideShow}>
         <Box

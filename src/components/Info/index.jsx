@@ -7,21 +7,31 @@ import CustomDivider from "../Shared/CustomDivider";
 const Info = () => {
   return (
     <>
-      <Grid container justifyContent={"center"} mt={2} spacing={2}>
-        <Grid item lg={10}>
+      <Grid container justifyContent={"center"} mt={2} spacing={4}>
+        <Grid item lg={10} md={10} sm={10} xs={10}>
           <Typography sx={infoTitle}>Who we are?</Typography>
           <Divider />
         </Grid>
-        <Grid item lg={4} sm={10}>
+        <Grid item lg={4} md={5} sm={10} xs={10}>
           <img
             src={certificate}
             alt="certificate"
-            height={500}
-            width={400}
-            style={{ boxShadow: "2px 2px 2px 10px #2f377a" }}
+            height={"100%"}
+            width={"100%"}
+            style={{
+              boxShadow: "2px 2px 2px 10px #2f377a",
+            }}
           />
         </Grid>
-        <Grid item lg={6} alignItems="center" justifyContent={"center"}>
+        <Grid
+          item
+          lg={6}
+          md={5}
+          sm={10}
+          xs={10}
+          alignItems="center"
+          justifyContent={"center"}
+        >
           <Typography sx={infoContent}>
             Our story began in 2011. Back then we were roadster and service
             provider of Continuous ink jet printer with a single area of the

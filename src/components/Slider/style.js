@@ -9,15 +9,15 @@ export const slideStyle = {
   backgroundColor: "#00000080",
   backgroundBlendMode: "overlay",
   height: "90vh",
-  width: "100vw",
+  width: "100%",
 };
 
 export const imageTitleStyle = {
-  fontSize: "90px",
   textTransform: "uppercase",
   color: "#f31f25",
   textShadow: "2px 2px 2px rgba(0, 0, 0, 0.5)",
   fontWeight: "900",
+  fontSize: { lg: "90px", md: "70px", sm: "50px", xs: "30px" },
 };
 
 export const imageTypeStyle = {
@@ -25,7 +25,7 @@ export const imageTypeStyle = {
   color: "white",
   textShadow: "4px 2px 2px rgba(255, 0, 0, 0.781)",
   fontWeight: 900,
-  fontSize: "90px",
+  fontSize: { lg: "90px", md: "70px", sm: "50px", xs: "30px" },
 };
 
 export const iconContainerStyle = {
@@ -41,7 +41,7 @@ export const iconContainerStyle = {
   cursor: "pointer",
 };
 export const leftIconContainer = {
-  marginLeft: "10px",
+  left: "10px",
 };
 
 export const rightIconContainer = {

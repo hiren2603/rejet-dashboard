@@ -55,7 +55,6 @@ const PersistSidebar = ({
         <Divider />
         <Box>
           <Navlist
-            open={open}
             closeSideBar={closeSideBar}
             openCategory={openCategory}
             openSubCategory={openSubCategory}

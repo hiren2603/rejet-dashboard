@@ -30,7 +30,7 @@ export const cardContainer = {
   borderRadius: "3px",
   boxShadow: "2px 2px 20px 1px #b6b6b6",
   height: { lg: "500px", md: "400px", sm: "500px" },
-  width: { lg: "30%", md: "30%", sm: "80%" },
+  width: { lg: "30%", md: "30%", sm: "100%", xs: "100%" },
 };
 
 export const cardImgContainer = {

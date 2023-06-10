@@ -2,13 +2,13 @@ import { useContext, useState } from "react";
 import Topbar from "../Topbar";
 import Sidebar from "../Sidebar";
 import Footer from "../Footer";
-import { Box, useTheme } from "@mui/material";
+import { Box, useMediaQuery, useTheme } from "@mui/material";
 import { LayoutContext } from "../../../Context";
 
 const Layout = ({ children }) => {
   const theme = useTheme();
   const { open, setOpen, drawerwidth } = useContext(LayoutContext);
-  const isSmallScreen = theme.breakpoints.down("sm");
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const [openCategory, setOpenCategory] = useState(false);
   const [openSubCategory, setOpenSubCategory] = useState({
     inkjet: false,
@@ -78,16 +78,15 @@ const Layout = ({ children }) => {
             display: "flex",
             flexDirection: "column",
             marginTop: "10vh",
-            paddingLeft: open ? `${drawerwidth}px` : `${theme.spacing(8)}`,
-            width: open ? `calc(100% - ${drawerwidth}px)` : `100%`,
+            marginLeft: !isSmallScreen && theme.spacing(8),
             ...(!isSmallScreen &&
               open && {
                 marginLeft: `${drawerwidth}px`,
-                width: `calc(100% - ${drawerwidth}px)`,
+                width: `calc(100% - (${drawerwidth}px))`,
               }),
             ...(isSmallScreen &&
               open && {
-                // marginLeft: "0",
+                margin: "0px",
                 width: "100%",
               }),
           }}

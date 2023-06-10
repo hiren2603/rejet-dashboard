@@ -10,5 +10,5 @@ export const titleStyle = {
 };
 
 export const button = {
-  width: "110px",
+  width: "150px",
 };
