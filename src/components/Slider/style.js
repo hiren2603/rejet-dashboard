@@ -1,3 +1,5 @@
+import { styled } from "@mui/material";
+
 export const slideStyle = {
   display: "flex",
   alignItems: "center",
@@ -12,19 +14,20 @@ export const slideStyle = {
   width: "100%",
 };
 
-export const imageTitleStyle = {
+export const SlideTitle = styled("span")({
   textTransform: "uppercase",
-  color: "#f31f25",
   textShadow: "2px 2px 2px rgba(0, 0, 0, 0.5)",
   fontWeight: "900",
+});
+
+export const imageTitleStyle = {
+  color: "#f31f25",
   fontSize: { lg: "90px", md: "70px", sm: "50px", xs: "30px" },
 };
 
 export const imageTypeStyle = {
-  textTransform: "uppercase",
   color: "white",
   textShadow: "4px 2px 2px rgba(255, 0, 0, 0.781)",
-  fontWeight: 900,
   fontSize: { lg: "90px", md: "70px", sm: "50px", xs: "30px" },
 };
 

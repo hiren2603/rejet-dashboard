@@ -9,6 +9,7 @@ import {
   slideStyle,
   imageTitleStyle,
   imageTypeStyle,
+  SlideTitle,
 } from "./style";
 
 const delay = 2000;
@@ -70,9 +71,9 @@ const Slider = () => {
               backgroundImage: `url(${slide.bg})`,
             }}
           >
-            <Typography sx={imageTitleStyle}>{slide.title}</Typography>
-            <Typography variant="span" sx={imageTypeStyle}>
-              {slide.info}
+            <Typography>
+              <SlideTitle sx={imageTitleStyle}>{slide.title} </SlideTitle>{" "}
+              <SlideTitle sx={imageTypeStyle}>{slide.info}</SlideTitle>
             </Typography>
           </Box>
         );
