@@ -1,18 +1,16 @@
+import { Button, Divider, Grid, Typography } from "@mui/material";
 import certificate from "../../assets/certificate.png";
-import { Grid, Typography, Stack, Button, Divider } from "@mui/material";
-import { Link } from "react-router-dom";
-import { infoTitle, infoContent } from "./style";
-import CustomDivider from "../Shared/CustomDivider";
+import { infoContent, infoTitle } from "./style";
 
 const Info = () => {
   return (
     <>
-      <Grid container justifyContent={"center"} mt={2} spacing={4}>
+      <Grid container justifyContent={"center"} spacing={4}>
         <Grid item lg={10} md={10} sm={10} xs={10}>
           <Typography sx={infoTitle}>Who we are?</Typography>
           <Divider />
         </Grid>
-        <Grid item lg={4} md={5} sm={10} xs={10}>
+        <Grid item lg={5} md={5} sm={10} xs={10}>
           <img
             src={certificate}
             alt="certificate"
@@ -25,7 +23,7 @@ const Info = () => {
         </Grid>
         <Grid
           item
-          lg={6}
+          lg={5}
           md={5}
           sm={10}
           xs={10}

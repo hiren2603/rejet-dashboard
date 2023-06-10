@@ -1,4 +1,4 @@
-import { Grid, Typography, Button, styled } from "@mui/material";
+import { Grid, Typography, Button, styled, Divider } from "@mui/material";
 import { InnerText, headingText, DownloadButton } from "./style";
 
 const Heading = ({ name, type }) => {
@@ -27,6 +27,7 @@ const Heading = ({ name, type }) => {
           </Button>
         </Grid>
       </Grid>
+      <Divider component="hr" role="presentation" />
     </>
   );
 };

@@ -28,10 +28,7 @@ const ProductCard = () => {
 
   return (
     <Stack sx={cardSection}>
-      <Stack
-        flexDirection={{ lg: "row", md: "row", sm: "column" }}
-        sx={cardRow}
-      >
+      <Stack flexDirection={{ lg: "row", md: "row", sm: "row" }} sx={cardRow}>
         {cardItems.map((cardDetails) => {
           return (
             <Stack

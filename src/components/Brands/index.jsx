@@ -34,7 +34,7 @@ const Brands = () => {
   }, [index]);
   return (
     <Stack sx={brandsSectionContainer}>
-      <Stack marginTop={"4rem"}>
+      <Stack>
         <Typography sx={brandsTitle}>Our Clients</Typography>
       </Stack>
       <Divider />

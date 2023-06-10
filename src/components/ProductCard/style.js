@@ -10,7 +10,6 @@ export const cardSection = {
   marginTop: "3rem",
   marginLeft: "auto",
   marginRight: "auto",
-  // margin: { lg: "3rem auto", md: "3rem auto", sm: "3rem 0" },
 };
 
 export const cardRow = {
@@ -19,8 +18,7 @@ export const cardRow = {
   alignItems: "center",
   justifyContent: "space-between",
   height: { md: "100%", sm: "auto" },
-  flexWrap: { sm: "wrap" },
-  width: "90%",
+  width: { lg: "90%", sm: "95%" },
 };
 
 export const cardContainer = {
@@ -29,14 +27,14 @@ export const cardContainer = {
   justifyContent: "center",
   borderRadius: "3px",
   boxShadow: "2px 2px 20px 1px #b6b6b6",
-  height: { lg: "500px", md: "400px", sm: "500px" },
-  width: { lg: "30%", md: "30%", sm: "100%", xs: "100%" },
+  height: { lg: "500px", md: "400px", sm: "300px", xs: "350px" },
+  width: { lg: "30%", md: "30%", sm: "30%", xs: "100%" },
 };
 
 export const cardImgContainer = {
   alignItems: "center",
   justifyContent: "center",
-  width: "100%",
+  width: { lg: "100%", xs: "80%" },
   height: "450px",
   transition: "all 0.5s ease",
   "&:hover": {

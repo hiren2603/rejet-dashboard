@@ -25,23 +25,22 @@ const Co2 = () => {
         container
         alignItems="center"
         justifyContent={"center"}
-        sx={{ margin: "4rem 0" }}
+        width={"90%"}
+        sx={{ margin: "4rem auto" }}
       >
         <Typography sx={productHeading}>Co2 Laser Marking System</Typography>
         <Heading name={"PETMARK"} type={"Flying Laser"} />
-
         <Grid
-          item
           container
           sx={{ marginTop: "3rem" }}
-          columnGap={10}
-          alignItems={"center"}
-          justifyContent={"center"}
+          // columnGap={10}
+          // alignItems={"center"}
+          // justifyContent={"center"}
           direction={{ lg: "row", md: "column-reverse", sm: "column-reverse" }}
         >
-          <Grid item container lg={6} rowSpacing={4}>
-            <Grid item conatiner>
-              <Card elevation={7} sx={{ p: "1rem" }}>
+          <Grid item lg={6} rowSpacing={4}>
+            <Grid conatiner>
+              <Card elevation={2} sx={{ p: "1rem" }}>
                 <Typography sx={modelHeading}>
                   {Co2laserData[0].model}
                 </Typography>
@@ -77,7 +76,7 @@ const Co2 = () => {
               </Card>
             </Grid>
 
-            <Grid item container>
+            <Grid container>
               <Card elevation={7} sx={{ p: "1rem" }}>
                 <Typography sx={modelHeading}>
                   {Co2laserData[1].model}
@@ -114,58 +113,58 @@ const Co2 = () => {
               </Card>
             </Grid>
 
-            <Grid item container rowSpacing={1}>
+            <Grid container rowSpacing={1}>
               <Typography sx={modelHeading}>Specifications</Typography>
-              <Grid item container alignItems={"center"}>
+              <Grid container alignItems={"center"}>
                 <Grid item lg={7}>
                   <Typography>Laser Type :</Typography>
                 </Grid>
                 <Grid item>{commonSpace[0].type}</Grid>
               </Grid>
 
-              <Grid item container alignItems={"center"}>
+              <Grid container alignItems={"center"}>
                 <Grid item lg={7}>
                   <Typography>Electrical Requirement :</Typography>
                 </Grid>
                 <Grid item>{commonSpace[0].power_supply}</Grid>
               </Grid>
 
-              <Grid item container alignItems={"center"}>
+              <Grid container alignItems={"center"}>
                 <Grid item lg={7}>
                   <Typography>Operating Temprature :</Typography>
                 </Grid>
                 <Grid item>{commonSpace[0].temp}</Grid>
               </Grid>
 
-              <Grid item container alignItems={"center"}>
+              <Grid container alignItems={"center"}>
                 <Grid item lg={7}>
                   <Typography>Humidity :</Typography>
                 </Grid>
                 <Grid item>{commonSpace[0].humidity}</Grid>
               </Grid>
 
-              <Grid item container alignItems={"center"}>
+              <Grid container alignItems={"center"}>
                 <Grid item lg={7}>
                   <Typography>Wave Length :</Typography>
                 </Grid>
                 <Grid item>{commonSpace[0].wave_length}</Grid>
               </Grid>
 
-              <Grid item container alignItems={"center"}>
+              <Grid container alignItems={"center"}>
                 <Grid item lg={7}>
                   <Typography>Laser Source :</Typography>
                 </Grid>
                 <Grid item>{commonSpace[0].laser_source}</Grid>
               </Grid>
 
-              <Grid item container alignItems={"center"}>
+              <Grid container alignItems={"center"}>
                 <Grid item lg={7}>
                   <Typography>Depth of Engraving :</Typography>
                 </Grid>
                 <Grid item>{commonSpace[0].depth}</Grid>
               </Grid>
 
-              <Grid item container alignItems={"center"}>
+              <Grid container alignItems={"center"}>
                 <Grid item lg={7} alignSelf={"flex-start"}>
                   <Typography>Marking Format :</Typography>
                 </Grid>
@@ -174,21 +173,21 @@ const Co2 = () => {
                 </Grid>
               </Grid>
 
-              <Grid item container alignItems={"center"}>
+              <Grid container alignItems={"center"}>
                 <Grid item lg={7}>
                   <Typography>Language Ability :</Typography>
                 </Grid>
                 <Grid item>{commonSpace[0].languages}</Grid>
               </Grid>
 
-              <Grid item container alignItems={"center"}>
+              <Grid container alignItems={"center"}>
                 <Grid item lg={7}>
                   <Typography>Gross Power :</Typography>
                 </Grid>
                 <Grid item>{commonSpace[0].gross_pow}</Grid>
               </Grid>
 
-              <Grid item container alignItems={"center"}>
+              <Grid container alignItems={"center"}>
                 <Grid item lg={7}>
                   <Typography>Gross Weight :</Typography>
                 </Grid>
@@ -199,9 +198,7 @@ const Co2 = () => {
 
           {/* Part 2 */}
           <Grid
-            item
             container
-            lg={4}
             direction="column"
             rowGap={9}
             justifyContent={{ sm: "center" }}
@@ -220,7 +217,7 @@ const Co2 = () => {
             </Grid>
 
             <Grid
-              item
+              // item
               container
               direction="column"
               rowSpacing={8}
@@ -235,11 +232,7 @@ const Co2 = () => {
               <Grid item>
                 <Typography sx={modelHeading}>Applicable Products</Typography>
                 {applications?.map((item, index) => {
-                  return (
-                    <>
-                      <List key={index}>{item}</List>
-                    </>
-                  );
+                  return <List key={index}>{item}</List>;
                 })}
               </Grid>
             </Grid>

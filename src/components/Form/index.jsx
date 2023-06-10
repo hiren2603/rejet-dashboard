@@ -8,6 +8,8 @@ const Form = () => {
       sx={{
         width: { lg: "85%", md: "85%", sm: "85%", xs: "85%" },
         m: "auto",
+        mt: 0,
+        mb: 0,
       }}
     >
       <Grid item lg={12} md={12} sm={12} xs={12}>

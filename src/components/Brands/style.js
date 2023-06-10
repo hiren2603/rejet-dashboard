@@ -9,13 +9,14 @@ export const BrandImage = styled("img")({
 export const brandsSectionContainer = {
   width: "85%",
   height: "100%",
-  margin: "auto",
+  margin: "0 auto",
+  marginTop: "2rem",
 };
 
 export const brandsTitle = {
   color: "#000000",
   fontWeight: "500",
-  textShadow: "2px 2px 2px #5b5b5b70",
+  // textShadow: "2px 2px 2px #5b5b5b70",
   fontSize: "36px",
 };
 
@@ -38,7 +39,7 @@ export const slideImgContainer = {
   marginLeft: "1rem",
   backgroundColor: "#ffffff",
   borderRadius: "10px",
-  boxShadow: "2px 2px 10px 1px rgba(24, 24, 24, 0.514)",
+  boxShadow: "2px 2px 5px 1px rgba(24, 24, 24, 0.514)",
   height: "200px",
   "&:hover": {
     transform: "scale(1.1)",
