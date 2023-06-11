@@ -8,7 +8,6 @@ export const productHeading = {
   textShadow: "2px 2px 2px #c0c0c0",
   fontWeight: "600",
   marginBottom: "2rem",
-  // display: { xs: "none" },
 };
 
 export const modelHeading = {
@@ -27,7 +26,7 @@ export const modelDetails = {
 
 export const headings = {
   color: "#000000",
-  fontWeight: "540",
+  fontWeight: "580",
   fontSize: "17px",
 };
 export const ProductImg = styled("img")({

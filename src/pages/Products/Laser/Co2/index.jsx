@@ -3,14 +3,7 @@ import LaserImg from "../../../../assets/products/co2.png";
 import Samples from "../../../../assets/samples/co2_samples.png";
 import ProductButton from "../../../../components/ProductButton";
 import Heading from "../../../../components/Heading";
-import {
-  Grid,
-  Typography,
-  List,
-  Card,
-  ListItemText,
-  Stack,
-} from "@mui/material";
+import { Grid, Typography, List, Card } from "@mui/material";
 import {
   productHeading,
   modelHeading,
@@ -30,12 +23,14 @@ const Co2 = () => {
     <>
       <Grid
         container
+        width={"90%"}
+        sx={{ margin: "0 auto" }}
         alignItems="center"
-        justifyContent={"center"}
-        spacing={2}
-        sx={{ mt: { xs: "1rem" } }}
+        justifyContent="center"
       >
-        <Typography sx={productHeading}>co2 laser marking system</Typography>
+        <Typography sx={productHeading} align="center">
+          co2 laser marking system
+        </Typography>
         <Heading name="PETMARK" type="FLYING LASER" />
 
         <Grid
@@ -44,7 +39,7 @@ const Co2 = () => {
           alignItems={"center"}
           justifyContent="center"
           sx={{ marginTop: "3rem" }}
-          columnSpacing={5}
+          columnSpacing={17}
         >
           {/* Product details and specifications section */}
           <Grid item container direction="column" lg={7} md={1} rowSpacing={5}>
@@ -119,7 +114,7 @@ const Co2 = () => {
                     <Grid
                       item
                       lg={5}
-                      xs={6.7}
+                      xs={6}
                       justifyContent={{ xs: "flex-start" }}
                       alignItems={{ xs: "flex-start" }}
                     >
@@ -127,7 +122,7 @@ const Co2 = () => {
                         {item.title} :
                       </Typography>
                     </Grid>
-                    <Grid item lg={7} xs={5}>
+                    <Grid item lg={7} xs={6}>
                       {item.content}
                     </Grid>
                   </Grid>
@@ -161,7 +156,7 @@ const Co2 = () => {
         </Grid>
 
         {/* Benifits */}
-        <Grid item lg={11}>
+        <Grid item lg>
           <Typography sx={modelHeading}>Benifits</Typography>
           <List>{benifits[0].marking}</List>
           <List>{benifits[0].efficiency}</List>
