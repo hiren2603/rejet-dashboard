@@ -10,7 +10,7 @@ const Heading = ({ name, type }) => {
         justifyContent="center"
         direction={{ lg: "row", md: "column", sm: "column" }}
       >
-        <Grid item lg={9.8} md={9}>
+        <Grid item lg={9.6} md={9}>
           <Typography sx={headingText}>
             <InnerText>
               {name}

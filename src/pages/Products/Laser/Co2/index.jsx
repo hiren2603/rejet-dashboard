@@ -3,7 +3,7 @@ import LaserImg from "../../../../assets/products/co2.png";
 import Samples from "../../../../assets/samples/co2_samples.png";
 import ProductButton from "../../../../components/ProductButton";
 import Heading from "../../../../components/Heading";
-import { Grid, Typography, List, Card } from "@mui/material";
+import { Grid, Typography, List, Card, Stack } from "@mui/material";
 import {
   productHeading,
   modelHeading,
@@ -32,114 +32,91 @@ const Co2 = () => {
           co2 laser marking system
         </Typography>
         <Heading name="PETMARK" type="FLYING LASER" />
-
         <Grid
           container
-          direction={{ lg: "row", md: "column-reverse", sm: "column-reverse" }}
-          alignItems={"center"}
-          justifyContent="center"
-          sx={{ marginTop: "3rem" }}
-          columnSpacing={17}
+          item
+          direction={"row"}
+          columnGap={7}
+          sx={{ mt: "3rem" }}
         >
-          {/* Product details and specifications section */}
-          <Grid item container direction="column" lg={7} md={1} rowSpacing={5}>
-            {/* Product Details */}
-            {Co2laserData?.map((item) => {
-              return (
-                <Grid item container lg={10}>
-                  <Card key={item.id} elevation={7} sx={{ p: "1rem" }}>
-                    <Typography sx={modelHeading}>{item.model}</Typography>
-
-                    <Grid item container alignItems={{ lg: "center" }}>
-                      <Grid item lg={5} xs={6}>
-                        <Typography sx={headings}>
-                          {item.power.heading}:
-                        </Typography>
-                      </Grid>
-                      <Grid item>{item.power.content}</Grid>
-                    </Grid>
-
-                    <Grid item container alignItems={"center"}>
-                      <Grid item lg={5} xs={6}>
-                        <Typography sx={headings}>
-                          {item.mark_speed.heading}:
-                        </Typography>
-                      </Grid>
-                      <Grid item>{item.mark_speed.content}</Grid>
-                    </Grid>
-
-                    <Grid item container alignItems={"center"}>
-                      <Grid item lg={5} xs={6}>
-                        <Typography sx={headings}>
-                          {item.mark_area.heading}:
-                        </Typography>
-                      </Grid>
-                      <Grid item>{item.mark_area.content}</Grid>
-                    </Grid>
-
-                    <Grid item container alignItems={"center"}>
-                      <Grid item lg={5} xs={6}>
-                        <Typography sx={headings}>
-                          {item.machine_speed.heading}:
-                        </Typography>
-                      </Grid>
-                      <Grid item lg={5} xs={6}>
-                        {item.machine_speed.content}
-                      </Grid>
-                    </Grid>
-                  </Card>
-                </Grid>
-              );
-            })}
-
-            {/* Specification */}
-            <Grid
-              item
-              container
-              rowSpacing={1}
-              lg={4}
-              justifyContent={{ xs: "center", lg: "flex-start" }}
-            >
-              <Typography sx={modelHeading}>Specifications</Typography>
-              {commonSpace?.map((item) => {
-                return (
-                  <Grid
-                    item
-                    container
-                    key={item.id}
-                    alignItems={"center"}
-                    columnSpacing={7}
-                    justifyContent={{ xs: "center" }}
-                  >
-                    <Grid
-                      item
-                      lg={5}
-                      xs={6}
-                      justifyContent={{ xs: "flex-start" }}
-                      alignItems={{ xs: "flex-start" }}
-                    >
-                      <Typography sx={{ fontWeight: "580" }}>
-                        {item.title} :
+          <Grid container item direction={"column"} rowGap={3} lg={6} md={6}>
+            {Co2laserData?.map((item) => (
+              <Grid item>
+                <Card elevation={7} sx={{ p: "1rem" }}>
+                  <Typography sx={modelHeading}>{item.model}</Typography>
+                  <Grid item container>
+                    <Grid item lg={7} md={6} sm={6} xs={6}>
+                      <Typography sx={headings}>
+                        {item.power.heading}:
                       </Typography>
                     </Grid>
-                    <Grid item lg={7} xs={6}>
-                      {item.content}
+                    <Grid item>{item.power.content}</Grid>
+                  </Grid>
+
+                  <Grid item container>
+                    <Grid item lg={7} md={6} sm={6} xs={6}>
+                      <Typography sx={headings}>
+                        {item.mark_speed.heading}:
+                      </Typography>
+                    </Grid>
+                    <Grid item>{item.mark_speed.content}</Grid>
+                  </Grid>
+
+                  <Grid item container>
+                    <Grid item lg={7} md={6} sm={6} xs={6}>
+                      <Typography sx={headings}>
+                        {item.mark_area.heading}:
+                      </Typography>
+                    </Grid>
+                    <Grid item>{item.mark_area.content}</Grid>
+                  </Grid>
+
+                  <Grid item container>
+                    <Grid item lg={7} md={6} sm={6} xs={6}>
+                      <Typography sx={headings}>
+                        {item.machine_speed.heading}:
+                      </Typography>
+                    </Grid>
+                    <Grid item lg={4} md={6} sm={6} xs={6}>
+                      {item.machine_speed.content}
                     </Grid>
                   </Grid>
-                );
-              })}
+                </Card>
+              </Grid>
+            ))}
+
+            <Grid item>
+              <img src={LaserImg} alt="Laser" width={200} />
             </Grid>
           </Grid>
 
-          {/* Print Samples, Image and Applicable Products */}
-          <Grid item container direction={"column"} lg={4} rowSpacing={4}>
-            <Grid item container direction={"column"} xs={1}>
-              <img src={LaserImg} alt="Laser" width={300} />
+          <Grid
+            container
+            item
+            direction={"column"}
+            lg={5}
+            md={5}
+            rowSpacing={4}
+          >
+            <Grid container item lg={5}>
+              <Typography sx={modelHeading}>Specifications</Typography>
+              {commonSpace?.map((item) => (
+                <Grid container item key={item.id} sx={{ m: "2px 0" }}>
+                  <Grid item lg={6} md={7} sm={6} xs={7}>
+                    <Typography sx={{ fontWeight: "580" }}>
+                      {item.title}:
+                    </Typography>
+                  </Grid>
+                  <Grid item lg={6} md={5} sm={5} xs={5}>
+                    {item.content}
+                  </Grid>
+                </Grid>
+              ))}
             </Grid>
 
-            <Grid item xs={12}>
+            <Grid item lg={2} md={1} sm={2} xs={2}>
               <Typography sx={modelHeading}>Print Samples</Typography>
-              <ProductImg src={Samples} />
+              <ProductImg src={Samples} width={400} />
             </Grid>
 
             <Grid item>
@@ -155,8 +132,7 @@ const Co2 = () => {
           </Grid>
         </Grid>
 
-        {/* Benifits */}
-        <Grid item lg>
+        <Grid item lg md>
           <Typography sx={modelHeading}>Benifits</Typography>
           <List>{benifits[0].marking}</List>
           <List>{benifits[0].efficiency}</List>
