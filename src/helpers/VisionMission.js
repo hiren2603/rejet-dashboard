@@ -1,7 +1,7 @@
-import mission from "../public/assets/vision/mission.svg";
-import team from "../public/assets/vision/team.svg";
-import values from "../public/assets/vision/values.svg";
-import vision from "../public/assets/vision/vision.svg";
+import mission from "../assets/vision/mission.svg";
+import team from "../assets/vision/team.svg";
+import values from "../assets/vision/values.svg";
+import vision from "../assets/vision/vision.svg";
 
 export const visions = [
   {
