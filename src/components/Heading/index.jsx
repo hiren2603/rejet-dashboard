@@ -31,7 +31,12 @@ const Heading = ({ name, type }) => {
         </Grid>
       </Grid>
       <Divider
-        sx={{ width: "100%", backgroundColor: "#000000", alignItems: "center" }}
+        sx={{
+          width: "100%",
+          backgroundColor: "#000000",
+          alignItems: "center",
+          mt: "10px",
+        }}
       />
     </>
   );
