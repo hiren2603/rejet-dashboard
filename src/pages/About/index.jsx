@@ -1,35 +1,26 @@
-import { Button, Grid, Typography } from "@mui/material";
-import certificate from "../../assets/certificate.png";
-import makeInIndia from "../../assets/makeinindia.png";
+import {
+  Button,
+  Card,
+  CardMedia,
+  Divider,
+  Grid,
+  Typography,
+} from "@mui/material";
+import certificate from "../../assets/certificates/cert.jpg";
+import makeInIndia from "../../assets/certificates/makeinindia.png";
+import quality from "../../assets/certificates/quality.png";
+import satisfaction from "../../assets/certificates/satisfaction.png";
+import certificates from "../../assets/certificates/cert_list.png";
 import PageHeading from "../../components/PageHeading";
 import { aboutUs } from "../../helpers/aboutUs";
+import Vision from "../../components/Vision";
+import { BrandImage } from "../../components/Brands/style";
 
 const About = () => {
   return (
-    <Grid container width="90%" sx={{ m: "0 auto", mt: 5 }} columnGap={0}>
+    <Grid container width="90%" sx={{ m: "0 auto", mt: 5 }}>
       <PageHeading heading="About Us" />
-      <Grid item lg={5} md={5} pt={4} position="relative">
-        <img
-          src={certificate}
-          alt="certificate"
-          style={{
-            height: "65%",
-            width: "80%",
-            boxShadow: "2px 2px 2px 2px #2f377a",
-            position: "absolute",
-          }}
-        />
-        <img
-          src={makeInIndia}
-          alt="certificate"
-          style={{
-            position: "absolute",
-            left: 0,
-            bottom: "0",
-          }}
-        />
-      </Grid>
-      <Grid item lg={7} md={7} pt={2}>
+      <Grid item lg={12} md={12} sm={12} pt={2}>
         {aboutUs.map((para) => {
           return (
             <Typography
@@ -54,10 +45,40 @@ const About = () => {
             </Typography>
           );
         })}
-        <Button variant="contained" color="error" sx={{ marginTop: "1rem" }}>
-          Know More
-        </Button>
       </Grid>
+      <Grid
+        container
+        item
+        lg={12}
+        md={12}
+        sm={12}
+        pt={4}
+        gap={2}
+        alignItems="center"
+        justifyContent="space-between"
+      >
+        <Grid item lg={12} md={12} sm={12} xs={12}>
+          <Typography variant="h4" align="left" mb={2}>
+            Why Choose Us
+          </Typography>
+        </Grid>
+        <Grid item>
+          <BrandImage src={certificates} alt="certificate" />
+        </Grid>
+        {/* <Grid item lg={2} md={2} align="center">
+          <BrandImage src={certificate} alt="certificate" />
+        </Grid>
+        <Grid item lg={3} md={2} align="center">
+          <BrandImage src={quality} alt="quality" />
+        </Grid>
+        <Grid item lg={3} md={2} align="center">
+          <BrandImage src={makeInIndia} alt=" make in india" />
+        </Grid>
+        <Grid item lg={3} md={2} align="center">
+          <BrandImage src={satisfaction} alt=" satisfaction" />
+        </Grid> */}
+      </Grid>
+      <Vision />
     </Grid>
   );
 };

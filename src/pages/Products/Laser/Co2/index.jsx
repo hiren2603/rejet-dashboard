@@ -31,24 +31,24 @@ const Co2 = () => {
       <Heading name="PETMARK" type="FLYING LASER" />
 
       <Grid
-        item
         container
+        item
         direction={{ lg: "row", md: "column-reverse", sm: "column-reverse" }}
         alignItems={"center"}
-        justifyContent="center"
+        // justifyContent="center"
         sx={{ marginTop: "3rem" }}
         // columnSpacing={5}
       >
         {/* Product details and specifications section */}
-        <Grid item container direction="column" lg={7} md={1} rowSpacing={5}>
+        <Grid container item direction="column" lg={7} md={1} rowSpacing={5}>
           {/* Product Details */}
           {Co2laserData?.map((item) => {
             return (
-              <Grid container key={item.id} mb={2}>
+              <Grid container item key={item.id} mb={2}>
                 <Card key={item.id} elevation={7} sx={{ p: "1rem" }}>
                   <Typography sx={modelHeading}>{item.model}</Typography>
 
-                  <Grid item container alignItems={{ lg: "center" }}>
+                  <Grid container item alignItems={{ lg: "center" }}>
                     <Grid item lg={5} xs={6}>
                       <Typography sx={headings}>
                         {item.power.heading}:
