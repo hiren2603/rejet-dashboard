@@ -21,130 +21,83 @@ const Fiber = () => {
     <>
       <Grid
         container
-        sx={{ margin: "4rem 0" }}
+        width={"90%"}
+        sx={{ margin: "0 auto" }}
         alignItems={"center"}
         justifyContent={"center"}
       >
-        <Typography sx={productHeading}>Fiber Laser Marking System</Typography>
-        <Heading name={"BETABEAM"} type={"FIBER LASER"} />
+        <Typography sx={productHeading} align="center">
+          fiber laser marking system
+        </Typography>
+        <Heading name="BETABEAM" type="FIBER LASER" />
 
-        {/* Parent grid for Product specifications and other details like Image and Print Samples */}
-        <Grid item container>
-          {/* Product Image, Print Samples and Applicable products section grid */}
-          <Grid item container>
-            {/* Product Image and Product Button container */}
-            <Grid item container direction="column" alignItems="center">
-              <img src={laserImg} />
-              <Grid item>
-                <ProductButton />
-              </Grid>
+        <Grid container item direction="row" sx={{ mt: "3rem" }} columnGap={5}>
+          <Grid
+            container
+            item
+            direction="column"
+            alignItems={"flex-start"}
+            justifyContent={"center"}
+            lg={6}
+            md={6}
+            rowGap={4}
+          >
+            <Grid
+              item
+              alignSelf={"center"}
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+              lg={4}
+            >
+              <ProductImg src={laserImg} />
+              <ProductButton />
             </Grid>
 
-            {/* Print Samples */}
-            <Grid item>
+            <Grid item lg={1}>
               <Typography sx={modelHeading}>Print Samples</Typography>
-              <ProductImg src={printSample} />
+              <ProductImg src={printSample} width={390} height={170} />
             </Grid>
 
-            {/* Applicable Products */}
-            <Grid item>
+            <Grid item lg>
               <Typography sx={modelHeading}>Applicable Products</Typography>
               {applications?.map((item, index) => {
-                return (
-                  <>
-                    <List key={index}>{item}</List>
-                  </>
-                );
+                return <List key={index}>{item}</List>;
               })}
             </Grid>
           </Grid>
 
-          {/* Product Specifications details grid */}
-          <Grid item container>
-            <Typography sx={modelHeading}>{fiberData[0].model}</Typography>
-            <Grid item gridTemplateColumns={"1fr 1fr"}>
-              <Typography sx={listHeading}>Laser Model :</Typography>
-              <Typography>{fiberData[0].model}</Typography>
-            </Grid>
-
-            <Grid item gridTemplateColumns={"1fr 1fr"}>
-              <Typography sx={listHeading}>Laser Type :</Typography>
-              <Typography>{fiberData[0].type}</Typography>
-            </Grid>
-
-            <Grid item gridTemplateColumns={"1fr 1fr"}>
-              <Typography sx={listHeading}>Laser Power :</Typography>
-              <Typography>{fiberData[0].power}</Typography>
-            </Grid>
-
-            <Grid item gridTemplateColumns={"1fr 1fr"}>
-              <Typography sx={listHeading}>Electrical Requirement :</Typography>
-              <Typography>{fiberData[0].electrical_req}</Typography>
-            </Grid>
-
-            <Grid item gridTemplateColumns={"1fr 1fr"}>
-              <Typography sx={listHeading}>Load :</Typography>
-              <Typography>{fiberData[0].load}</Typography>
-            </Grid>
-
-            <Grid item gridTemplateColumns={"1fr 1fr"}>
-              <Typography sx={listHeading}>Temprature :</Typography>
-              <Typography>{fiberData[0].temp}</Typography>
-            </Grid>
-
-            <Grid item gridTemplateColumns={"1fr 1fr"}>
-              <Typography sx={listHeading}>Humidity :</Typography>
-              <Typography>{fiberData[0].humidity}</Typography>
-            </Grid>
-
-            <Grid item gridTemplateColumns={"1fr 1fr"}>
-              <Typography sx={listHeading}>Wavelengths :</Typography>
-              <Typography>{fiberData[0].wavelength}</Typography>
-            </Grid>
-
-            <Grid item gridTemplateColumns={"1fr 1fr"}>
-              <Typography sx={listHeading}>Depth Of Engraving :</Typography>
-              <Typography>{fiberData[0].depth}</Typography>
-            </Grid>
-
-            <Grid item gridTemplateColumns={"1fr 1fr"}>
-              <Typography sx={listHeading}>Laser Source :</Typography>
-              <Typography>{fiberData[0].source}</Typography>
-            </Grid>
-
-            <Grid item gridTemplateColumns={"1fr 1fr"}>
-              <Typography sx={listHeading}>Laser Guide :</Typography>
-              <Typography>{fiberData[0].laser_guide}</Typography>
-            </Grid>
-
-            <Grid item gridTemplateColumns={"1fr 1fr"}>
-              <Typography sx={listHeading}>Marking Speed :</Typography>
-              <Typography>{fiberData[0].mark_speed}</Typography>
-            </Grid>
-
-            <Grid item gridTemplateColumns={"1fr 1fr"}>
-              <Typography sx={listHeading}>Marking Area :</Typography>
-              <Typography>{fiberData[0].mark_area}</Typography>
-            </Grid>
-
-            <Grid item gridTemplateColumns={"1fr 1fr"}>
-              <Typography sx={listHeading}>Machine Speed :</Typography>
-              <Typography>{fiberData[0].machine_speeed}</Typography>
-            </Grid>
-
-            <Grid item gridTemplateColumns={"1fr 1fr"}>
-              <Typography sx={listHeading}>Marking Formate :</Typography>
-              <Typography>{fiberData[0].format}</Typography>
-            </Grid>
-
-            <Grid item gridTemplateColumns={"1fr 1fr"}>
-              <Typography sx={listHeading}>Language Support :</Typography>
-              <Typography>{fiberData[0].language}</Typography>
-            </Grid>
+          <Grid container item lg={5} md={5}>
+            <Typography sx={modelHeading}>Specifications</Typography>
+            {fiberData?.map((item) => (
+              <Grid
+                container
+                item
+                key={item.id}
+                sx={{ m: { sm: "2px 0", xs: "2px 0" } }}
+              >
+                <Grid item lg={6} md={7} sm={6} xs={7}>
+                  <Typography sx={{ fontWeight: "580" }}>
+                    {item.title}
+                  </Typography>
+                </Grid>
+                <Grid item lg={6} md={5} sm={6} xs={5}>
+                  {item.content}
+                </Grid>
+              </Grid>
+            ))}
           </Grid>
         </Grid>
 
-        {/* Features Grid */}
+        <Grid item lg md>
+          <Typography sx={modelHeading}>Features</Typography>
+          {features?.map((item) => {
+            return <List key={item}>{item}</List>;
+          })}
+        </Grid>
       </Grid>
     </>
   );

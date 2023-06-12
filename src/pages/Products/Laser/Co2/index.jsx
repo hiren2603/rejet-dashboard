@@ -122,11 +122,7 @@ const Co2 = () => {
             <Grid item>
               <Typography sx={modelHeading}>Applicable Products</Typography>
               {applications?.map((item, index) => {
-                return (
-                  <>
-                    <List key={index}>{item}</List>
-                  </>
-                );
+                return <List key={index}>{item}</List>;
               })}
             </Grid>
           </Grid>
