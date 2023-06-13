@@ -24,7 +24,7 @@ const Vision = () => {
           flexDirection: "column",
         }}
       >
-        <Typography variant="h4" align="center">
+        <Typography variant="h4" align="left">
           Vision & Mission
         </Typography>
         <Divider textAlign="center" />
@@ -35,21 +35,27 @@ const Vision = () => {
             raised
             sx={{
               display: "flex",
-              flexDirection: { lg: "row", md: "column", sm: "column" },
+              flexDirection: {
+                lg: "row",
+                md: "column",
+                sm: "column",
+                xs: "column",
+              },
               alignItems: "center",
               justifyContent: "center",
-              height: { lg: 250, md: 400, sm: 500 },
+              height: { lg: 250, md: 400, sm: 450, xs: 400 },
               padding: 2,
             }}
           >
             <CardMedia
               component="img"
               sx={{
-                width: { lg: 200, md: "inherit", sm: "inherit" },
-                height: { lg: 200, md: 180, sm: 180 },
+                width: { lg: 200, md: "inherit", sm: "inherit", xs: "inherit" },
+                height: { lg: 200, md: 180, sm: 180, xs: 160 },
                 display: "flex",
                 flexDirection: "row",
                 alignItems: "center",
+                p: { sm: 2 },
               }}
               image={v.image}
               alt="vision img"
