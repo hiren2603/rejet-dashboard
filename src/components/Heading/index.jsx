@@ -7,15 +7,14 @@ const Heading = ({ name, type }) => {
       <Grid
         container
         alignItems="center"
-        justifyContent={{
-          lg: "center",
-          md: "space-between",
-          sm: "space-evenly",
-          xs: "center",
+        justifyContent="space-between"
+        direction={{
+          lg: "row",
+          md: "column",
+          sm: "column",
         }}
-        direction={{ lg: "row", md: "row", sm: "row" }}
       >
-        <Grid item lg={9.6} md={8} sm={8}>
+        <Grid item lg={9} md={9}>
           <Typography sx={headingText}>
             <InnerText>
               {name}
@@ -26,12 +25,11 @@ const Heading = ({ name, type }) => {
         </Grid>
 
         <Grid item>
-          <Button variant="contained" color="error" sx={{ height: "50px" }}>
+          <Button variant="contained" color="error">
             Download Broucher
           </Button>
         </Grid>
       </Grid>
-      <Divider component="hr" role="presentation" />
       <Divider
         sx={{
           width: "100%",
