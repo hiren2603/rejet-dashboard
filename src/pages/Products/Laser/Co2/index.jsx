@@ -1,7 +1,7 @@
-import { Card, Grid, List, Typography } from "@mui/material";
 import React from "react";
 import LaserImg from "../../../../assets/products/co2.png";
 import Samples from "../../../../assets/samples/co2_samples.png";
+import ProductButton from "../../../../components/ProductButton";
 import Heading from "../../../../components/Heading";
 import { Grid, Typography, List, Card, Stack } from "@mui/material";
 import {
@@ -13,11 +13,10 @@ import {
 } from "./style";
 import {
   Co2laserData,
+  commonSpace,
   applications,
   benifits,
-  commonSpace,
 } from "../../../../helpers/co2Data";
-// import { ProductImg, headings, modelHeading, productHeading } from "./style";
 
 const Co2 = () => {
   return (
@@ -42,7 +41,7 @@ const Co2 = () => {
         >
           <Grid container item direction={"column"} rowGap={3} lg={6} md={6}>
             {Co2laserData?.map((item) => (
-              <Grid item>
+              <Grid item key={item.id}>
                 <Card elevation={7} sx={{ p: "1rem" }}>
                   <Typography sx={modelHeading}>{item.model}</Typography>
                   <Grid item container>
@@ -53,42 +52,6 @@ const Co2 = () => {
                     </Grid>
                     <Grid item>{item.power.content}</Grid>
                   </Grid>
-    <Grid
-      container
-      alignItems="center"
-      justifyContent="space-between"
-      width="90%"
-      sx={{ m: "0 auto", mt: 5 }}
-    >
-      <Typography sx={productHeading}>co2 laser marking system</Typography>
-      <Heading name="PETMARK" type="FLYING LASER" />
-
-      <Grid
-        container
-        item
-        direction={{ lg: "row", md: "column-reverse", sm: "column-reverse" }}
-        alignItems={"center"}
-        // justifyContent="center"
-        sx={{ marginTop: "3rem" }}
-        // columnSpacing={5}
-      >
-        {/* Product details and specifications section */}
-        <Grid container item direction="column" lg={7} md={1} rowSpacing={5}>
-          {/* Product Details */}
-          {Co2laserData?.map((item) => {
-            return (
-              <Grid container item key={item.id} mb={2}>
-                <Card key={item.id} elevation={7} sx={{ p: "1rem" }}>
-                  <Typography sx={modelHeading}>{item.model}</Typography>
-
-                  <Grid container item alignItems={{ lg: "center" }}>
-                    <Grid item lg={5} xs={6}>
-                      <Typography sx={headings}>
-                        {item.power.heading}:
-                      </Typography>
-                    </Grid>
-                    <Grid item>{item.power.content}</Grid>
-                  </Grid>
 
                   <Grid item container>
                     <Grid item lg={7} md={6} sm={6} xs={6}>
@@ -98,25 +61,9 @@ const Co2 = () => {
                     </Grid>
                     <Grid item>{item.mark_speed.content}</Grid>
                   </Grid>
-                  <Grid item container alignItems={"center"}>
-                    <Grid item lg={5} xs={6}>
-                      <Typography sx={headings}>
-                        {item.mark_speed.heading}:
-                      </Typography>
-                    </Grid>
-                    <Grid item>{item.mark_speed.content}</Grid>
-                  </Grid>
 
                   <Grid item container>
                     <Grid item lg={7} md={6} sm={6} xs={6}>
-                      <Typography sx={headings}>
-                        {item.mark_area.heading}:
-                      </Typography>
-                    </Grid>
-                    <Grid item>{item.mark_area.content}</Grid>
-                  </Grid>
-                  <Grid item container alignItems={"center"}>
-                    <Grid item lg={5} xs={6}>
                       <Typography sx={headings}>
                         {item.mark_area.heading}:
                       </Typography>
@@ -142,20 +89,6 @@ const Co2 = () => {
               <img src={LaserImg} alt="Laser" width={200} />
             </Grid>
           </Grid>
-                  <Grid item container alignItems={"center"}>
-                    <Grid item lg={5} xs={6}>
-                      <Typography sx={headings}>
-                        {item.machine_speed.heading}:
-                      </Typography>
-                    </Grid>
-                    <Grid item lg={5} xs={6}>
-                      {item.machine_speed.content}
-                    </Grid>
-                  </Grid>
-                </Card>
-              </Grid>
-            );
-          })}
 
           <Grid
             container
@@ -181,10 +114,10 @@ const Co2 = () => {
               ))}
             </Grid>
 
-          <Grid item lg={2} md={1} sm={2} xs={2}>
-            <Typography sx={modelHeading}>Print Samples</Typography>
-            <ProductImg src={Samples} width={400} />
-          </Grid>
+            <Grid item lg={2} md={1} sm={2} xs={2}>
+              <Typography sx={modelHeading}>Print Samples</Typography>
+              <ProductImg src={Samples} width={400} />
+            </Grid>
 
             <Grid item>
               <Typography sx={modelHeading}>Applicable Products</Typography>
@@ -194,14 +127,6 @@ const Co2 = () => {
             </Grid>
           </Grid>
         </Grid>
-          <Grid item>
-            <Typography sx={modelHeading}>Applicable Products</Typography>
-            {applications?.map((item, index) => {
-              return <List key={index}>{item}</List>;
-            })}
-          </Grid>
-        </Grid>
-      </Grid>
 
         <Grid item lg md>
           <Typography sx={modelHeading}>Benifits</Typography>
@@ -211,14 +136,6 @@ const Co2 = () => {
         </Grid>
       </Grid>
     </>
-      {/* Benifits */}
-      <Grid item lg>
-        <Typography sx={modelHeading}>Benifits</Typography>
-        <List>{benifits[0].marking}</List>
-        <List>{benifits[0].efficiency}</List>
-        <List>{benifits[0].power}</List>
-      </Grid>
-    </Grid>
   );
 };
 

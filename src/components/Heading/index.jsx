@@ -14,8 +14,7 @@ const Heading = ({ name, type }) => {
           sm: "column",
         }}
       >
-        <Grid item>
-        <Grid item lg={9.6} md={9}>
+        <Grid item lg={9} md={9}>
           <Typography sx={headingText}>
             <InnerText>
               {name}
