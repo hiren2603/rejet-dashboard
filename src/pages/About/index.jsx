@@ -41,7 +41,7 @@ const About = () => {
         })}
       </Grid>
       <Grid container my={2}>
-        <Stack width={"100%"}>
+        <Stack width={"inherit"}>
           <Typography variant="h4" align="left" mb={2}>
             Why Choose Us
           </Typography>

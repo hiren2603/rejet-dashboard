@@ -7,7 +7,7 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-import { visions } from "@/helpers/VisionMission";
+import { visions } from "../../helpers/VisionMission";
 
 const Vision = () => {
   return (
@@ -43,15 +43,15 @@ const Vision = () => {
               },
               alignItems: "center",
               justifyContent: "center",
-              height: { lg: 250, md: 400, sm: 450, xs: 400 },
+              height: { lg: 250, md: 400, sm: 450 },
               padding: 2,
             }}
           >
             <CardMedia
               component="img"
               sx={{
-                width: { lg: 200, md: "inherit", sm: "inherit", xs: "inherit" },
-                height: { lg: 200, md: 180, sm: 180, xs: 160 },
+                width: { lg: 200, md: "inherit", sm: "inherit" },
+                height: { lg: 200, md: 180, sm: 180 },
                 display: "flex",
                 flexDirection: "row",
                 alignItems: "center",
