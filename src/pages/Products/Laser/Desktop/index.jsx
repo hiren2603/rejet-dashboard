@@ -60,8 +60,17 @@ const Desktop = () => {
           </Grid>
 
           <Grid container item direction={"column"} lg={3} md={2} rowGap={4}>
-            <Grid item alignSelf={"center"}>
+            <Grid
+              item
+              alignSelf={"center"}
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+              }}
+            >
               <ProductImg src={desktopImg} />
+              <ProductButton />
             </Grid>
 
             <Grid item alignSelf={{ sm: "center" }}>

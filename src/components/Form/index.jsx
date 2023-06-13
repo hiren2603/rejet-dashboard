@@ -1,5 +1,5 @@
 import { Typography, Grid, TextField, Button, Divider } from "@mui/material";
-import { contactInput, titleStyle, button } from "./style";
+import { contactInput, titleStyle, buttonStyle } from "./style";
 
 const Form = () => {
   return (
@@ -53,7 +53,7 @@ const Form = () => {
         textAlign="center"
         justifyContent="center"
       >
-        <Button color="error" variant="contained" size="large" sx={button}>
+        <Button color="error" variant="contained" size="large" sx={buttonStyle}>
           SEND
         </Button>
       </Grid>

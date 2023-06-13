@@ -25,8 +25,31 @@ const Uv = () => {
         direction={"row"}
         sx={{ mt: "3rem" }}
         rowGap={{ sx: 3 }}
-        columnGap={5}
+        columnGap={6}
       >
+        <Grid container item direction={"column"} lg={4} md={5} rowGap={3}>
+          <Grid
+            item
+            alignSelf={"center"}
+            sx={{ display: "flex", flexDirection: "column" }}
+          >
+            <ProductImg src={uvImage} />
+            <ProductButton />
+          </Grid>
+
+          <Grid item>
+            <Typography sx={modelHeading}>Print Samples</Typography>
+            <ProductImg src={sample} width={390} height={170} />
+          </Grid>
+
+          <Grid item>
+            <Typography sx={modelHeading}>Applicable Products</Typography>
+            {uvApps?.map((item, index) => {
+              return <List key={index}>{item}</List>;
+            })}
+          </Grid>
+        </Grid>
+
         <Grid container item direction={"column"} lg={7} md={6} rowGap={9}>
           <Grid container item>
             <Typography sx={modelHeading}>Specifications</Typography>
@@ -48,25 +71,6 @@ const Uv = () => {
             <Typography sx={modelHeading}>Features</Typography>
             {uvFeatures?.map((item) => {
               return <List key={item}>{item}</List>;
-            })}
-          </Grid>
-        </Grid>
-
-        <Grid container item direction={"column"} lg={3} md={3} rowGap={3}>
-          <Grid item alignSelf={"center"}>
-            <ProductImg src={uvImage} />
-            {/* <ProductButton /> */}
-          </Grid>
-
-          <Grid item>
-            <Typography sx={modelHeading}>Print Samples</Typography>
-            <ProductImg src={sample} width={390} height={170} />
-          </Grid>
-
-          <Grid item>
-            <Typography sx={modelHeading}>Applicable Products</Typography>
-            {uvApps?.map((item, index) => {
-              return <List key={index}>{item}</List>;
             })}
           </Grid>
         </Grid>

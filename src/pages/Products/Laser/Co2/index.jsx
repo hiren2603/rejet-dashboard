@@ -28,7 +28,10 @@ const Co2 = () => {
         alignItems="center"
         justifyContent="center"
       >
-        <Typography sx={productHeading} align="center">
+        <Typography
+          sx={{ ...productHeading, visibility: { xs: "none", lg: "visible" } }}
+          align="center"
+        >
           co2 laser marking system
         </Typography>
         <Heading name="PETMARK" type="FLYING LASER" />
@@ -39,6 +42,36 @@ const Co2 = () => {
           columnGap={7}
           sx={{ mt: "3rem" }}
         >
+          <Grid
+            container
+            item
+            direction={"column"}
+            lg={5}
+            md={5}
+            rowSpacing={10}
+          >
+            <Grid
+              item
+              alignSelf={"center"}
+              sx={{ display: "flex", flexDirection: "column" }}
+            >
+              <img src={LaserImg} alt="Laser" width={200} />
+              <ProductButton />
+            </Grid>
+
+            <Grid item lg={2} md={1} sm={2} xs={2}>
+              <Typography sx={modelHeading}>Print Samples</Typography>
+              <ProductImg src={Samples} width={400} height={10} />
+            </Grid>
+
+            <Grid item>
+              <Typography sx={modelHeading}>Applicable Products</Typography>
+              {applications?.map((item, index) => {
+                return <List key={index}>{item}</List>;
+              })}
+            </Grid>
+          </Grid>
+
           <Grid container item direction={"column"} rowGap={3} lg={6} md={6}>
             {Co2laserData?.map((item) => (
               <Grid item key={item.id}>
@@ -85,19 +118,6 @@ const Co2 = () => {
               </Grid>
             ))}
 
-            <Grid item>
-              <img src={LaserImg} alt="Laser" width={200} />
-            </Grid>
-          </Grid>
-
-          <Grid
-            container
-            item
-            direction={"column"}
-            lg={5}
-            md={5}
-            rowSpacing={4}
-          >
             <Grid container item lg={5}>
               <Typography sx={modelHeading}>Specifications</Typography>
               {commonSpace?.map((item) => (
@@ -112,18 +132,6 @@ const Co2 = () => {
                   </Grid>
                 </Grid>
               ))}
-            </Grid>
-
-            <Grid item lg={2} md={1} sm={2} xs={2}>
-              <Typography sx={modelHeading}>Print Samples</Typography>
-              <ProductImg src={Samples} width={400} />
-            </Grid>
-
-            <Grid item>
-              <Typography sx={modelHeading}>Applicable Products</Typography>
-              {applications?.map((item, index) => {
-                return <List key={index}>{item}</List>;
-              })}
             </Grid>
           </Grid>
         </Grid>
