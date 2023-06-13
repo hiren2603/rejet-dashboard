@@ -7,7 +7,8 @@ export const Co2laserData = [
     mark_area: { content: "100mm X 100mm", heading: "Marking Area" },
     machine_speed: {
       content: "150 to 450 m/min (Depends on Application)",
-      heading: "Machine Speed",
+      // heading: "Machine Speed",
+      heading: "Speed",
     },
   },
   {
@@ -18,7 +19,8 @@ export const Co2laserData = [
     mark_area: { content: "200mm X 200mm", heading: "Marking Area" },
     machine_speed: {
       content: "250 to 700 m/min (Depends on Application)",
-      heading: "Machine Speed",
+      // heading: "Machine Speed",
+      heading: "Speed",
     },
   },
 ];
