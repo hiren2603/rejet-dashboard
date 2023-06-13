@@ -16,12 +16,12 @@ import {
   TpOne,
   TpOneOne,
   EwestMgmt,
-} from "./pages";
+} from "@/pages";
 import { ThemeProvider, CssBaseline } from "@mui/material";
-import { Layout } from "./components/Shared";
-import { theme } from "./theme";
-import ErrorPage from "./pages/ErrorPage";
-import { LayoutContext } from "./Context";
+import { Layout } from "@/components/Shared";
+import { theme } from "@/theme";
+import ErrorPage from "@/pages/ErrorPage";
+import { LayoutContext } from "@/Context";
 // import { LayoutContextProvider } from "./Context";
 
 const App = () => {

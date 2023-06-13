@@ -1,11 +1,11 @@
 import { Box, Divider, Grid, Stack, Typography } from "@mui/material";
-import certificate from "../../assets/certificates/cert.jpg";
-import makeInIndia from "../../assets/certificates/makeinindia.png";
-import quality from "../../assets/certificates/quality.png";
-import satisfaction from "../../assets/certificates/satisfaction.png";
-import PageHeading from "../../components/PageHeading";
-import { aboutUs } from "../../helpers/aboutUs";
-import Vision from "../../components/Vision";
+import certificate from "@/assets/certificates/cert.jpg";
+import makeInIndia from "@/assets/certificates/makeinindia.png";
+import quality from "@/assets/certificates/quality.png";
+import satisfaction from "assets/certificates/satisfaction.png";
+import PageHeading from "@/components/PageHeading";
+import { aboutUs } from "@/helpers/aboutUs";
+import Vision from "@/components/Vision";
 import { gridItemStyle } from "./style";
 
 const About = () => {

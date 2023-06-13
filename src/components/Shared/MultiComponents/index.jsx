@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import {
   List,
   ListItem,
@@ -5,9 +6,8 @@ import {
   ListItemIcon,
   ListItemText,
 } from "@mui/material";
-import { listIconStyle } from "../Styles/Styles";
-import { useContext } from "react";
-import { LayoutContext } from "../../../Context";
+import { listIconStyle } from "../Styles";
+import { LayoutContext } from "@/Context";
 
 const MultiComponents = ({ open, closeSideBar, item }) => {
   const { open } = useContext(LayoutContext);

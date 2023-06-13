@@ -1,11 +1,9 @@
-import React from "react";
-import { Grid, Typography, List } from "@mui/material";
-import Heading from "../../../../components/Heading";
-import ProductButton from "../../../../components/ProductButton";
-import uvImage from "../../../../assets/products/uv.png";
-import sample from "../../../../assets/samples/uv_samples.png";
-import { productHeading, modelHeading, ProductImg } from "./style";
-import { uvData, uvFeatures, uvApps } from "../../../../helpers/uvData";
+import uvImage from "@/assets/products/uv.png";
+import sample from "@/assets/samples/uv_samples.png";
+import Heading from "@/components/Heading";
+import { uvApps, uvData, uvFeatures } from "@/helpers/uvData";
+import { Grid, List, Typography } from "@mui/material";
+import { ProductImg, modelHeading, productHeading } from "./style";
 
 const Uv = () => {
   return (

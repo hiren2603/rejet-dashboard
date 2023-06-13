@@ -3,7 +3,7 @@ import Topbar from "../Topbar";
 import Sidebar from "../Sidebar";
 import Footer from "../Footer";
 import { Box, useMediaQuery, useTheme } from "@mui/material";
-import { LayoutContext } from "../../../Context";
+import { LayoutContext } from "@/Context";
 
 const Layout = ({ children }) => {
   const theme = useTheme();

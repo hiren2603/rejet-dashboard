@@ -1,6 +1,7 @@
-import { Grid, Paper, Stack } from "@mui/material";
+import { useState } from "react";
+import { Stack } from "@mui/material";
 import { Link } from "react-router-dom";
-import { cardItems } from "../../helpers/cardItems";
+import { cardItems } from "@/helpers/cardItems";
 import {
   CardImageComponent,
   cardBtnContainer,
@@ -12,7 +13,6 @@ import {
   hideMoreText,
   showMoreText,
 } from "./style";
-import { useState } from "react";
 
 const ProductCard = () => {
   const [hoverState, setHoverState] = useState({ id: 0, isHover: false });

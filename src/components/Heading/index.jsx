@@ -1,5 +1,5 @@
 import { Grid, Typography, Button, Divider } from "@mui/material";
-import { InnerText, headingText, DownloadButton } from "./style";
+import { InnerText, headingText } from "./style";
 
 const Heading = ({ name, type }) => {
   return (

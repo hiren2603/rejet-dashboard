@@ -7,8 +7,8 @@ import {
 } from "@mui/material";
 import { Fragment, useContext } from "react";
 import InnerComponent from "../InnerComponent";
-import { listIconStyle, listItemText } from "../Styles/Styles";
-import { LayoutContext } from "../../../Context";
+import { listIconStyle, listItemText } from "../Styles";
+import { LayoutContext } from "@/Context";
 
 const NestedComponent = ({
   handleSubCategory,

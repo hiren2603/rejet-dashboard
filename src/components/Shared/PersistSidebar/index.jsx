@@ -10,7 +10,7 @@ import {
 import { CloseSharp } from "@mui/icons-material";
 import Navlist from "../Navlist";
 import { useContext } from "react";
-import { LayoutContext } from "../../../Context";
+import { LayoutContext } from "@/Context";
 
 const PersistSidebar = ({
   closeSideBar,

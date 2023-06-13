@@ -1,20 +1,11 @@
 import React from "react";
-import Heading from "../../../../components/Heading";
-import ProductButton from "../../../../components/ProductButton";
+import Heading from "@/components/Heading";
+import ProductButton from "@/components/ProductButton";
 import { Typography, Grid, List } from "@mui/material";
-import {
-  productHeading,
-  ProductImg,
-  modelHeading,
-  listHeading,
-} from "../Fiber/style";
-import laserImg from "../../../../assets/products/fiber.png";
-import printSample from "../../../../assets/samples/fiber_sample.png";
-import {
-  fiberData,
-  features,
-  applications,
-} from "../../../../helpers/fiberData";
+import { productHeading, ProductImg, modelHeading } from "./style";
+import laserImg from "@/assets/products/fiber.png";
+import printSample from "@/assets/samples/fiber_sample.png";
+import { fiberData, features, applications } from "@/helpers/fiberData";
 
 const Fiber = () => {
   return (

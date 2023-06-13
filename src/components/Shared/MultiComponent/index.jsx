@@ -1,3 +1,4 @@
+import { Fragment, useContext } from "react";
 import { ExpandLess, ExpandMore } from "@mui/icons-material";
 import {
   Collapse,
@@ -6,10 +7,9 @@ import {
   ListItemIcon,
   ListItemText,
 } from "@mui/material";
-import { Fragment, useContext } from "react";
 import NestedComponent from "../NestedComponent";
-import { listButtonStyle, listIconStyle, listItemText } from "../Styles/Styles";
-import { LayoutContext } from "../../../Context";
+import { listButtonStyle, listIconStyle, listItemText } from "../Styles";
+import { LayoutContext } from "@/Context";
 
 const MultiComponent = ({
   item,

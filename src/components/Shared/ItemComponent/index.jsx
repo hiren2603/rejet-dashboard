@@ -6,7 +6,7 @@ import {
   ListItemIcon,
   ListItemText,
 } from "@mui/material";
-import { listIconStyle, listItemText } from "../Styles/Styles";
+import { listIconStyle, listItemText } from "../Styles";
 import { LayoutContext } from "../../../Context";
 
 const ItemComponent = ({ item, closeSideBar, handleNavigation, key }) => {

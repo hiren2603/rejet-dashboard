@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { brands } from "../../helpers/clientsData";
+import { brands } from "@/helpers/clientsData";
 import { Typography, Divider, Stack, Box } from "@mui/material";
 import {
   brandsSectionContainer,

@@ -1,8 +1,8 @@
 import React from "react";
-import LaserImg from "../../../../assets/products/co2.png";
-import Samples from "../../../../assets/samples/co2_samples.png";
-import ProductButton from "../../../../components/ProductButton";
-import Heading from "../../../../components/Heading";
+import LaserImg from "@/assets/products/co2.png";
+import Samples from "@/assets/samples/co2_samples.png";
+import ProductButton from "@/components/ProductButton";
+import Heading from "@/components/Heading";
 import { Grid, Typography, List, Card, Stack } from "@mui/material";
 import {
   productHeading,

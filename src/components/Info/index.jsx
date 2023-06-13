@@ -1,5 +1,5 @@
 import { Button, Divider, Grid, Typography } from "@mui/material";
-import certificate from "../../assets/certificate.png";
+import certificate from "@/assets/certificate.png";
 import { infoContent, infoTitle } from "./style";
 
 const Info = () => {

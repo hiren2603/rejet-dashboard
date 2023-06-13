@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
-import { SlideItems } from "../../helpers/SlideItems";
+import { SlideItems } from "@/helpers/SlideItems";
 import {
   iconContainerStyle,
   leftIconContainer,

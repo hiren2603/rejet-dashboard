@@ -1,5 +1,5 @@
 import { List, ListItem, ListItemButton, ListItemText } from "@mui/material";
-import { listItemText } from "../Styles/Styles";
+import { listItemText } from "../Styles";
 import { Link } from "react-router-dom";
 
 const InnerComponent = ({ item, handleNavigation, closeSideBar }) => {

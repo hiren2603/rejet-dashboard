@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { styled } from "@mui/material";
 
 const ProductButton = () => {
-  const CustomLink = styled("Button")({
+  const CustomLink = styled("button")({
     marginBottom: "1rem",
     color: "#E31E25",
     padding: "0.5rem 1rem",

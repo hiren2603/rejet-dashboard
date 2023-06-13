@@ -4,7 +4,7 @@ import { redirect } from "react-router-dom";
 import { NavigationList } from "../../../helpers/NavigationList";
 import ItemComponent from "../ItemComponent";
 import MultiComponent from "../MultiComponent";
-import { LayoutContext } from "../../../Context";
+import { LayoutContext } from "@/Context";
 
 const Navlist = ({
   closeSideBar,
