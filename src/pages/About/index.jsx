@@ -62,10 +62,7 @@ const About = () => {
             Why Choose Us
           </Typography>
         </Grid>
-        <Grid item>
-          <BrandImage src={certificates} alt="certificate" />
-        </Grid>
-        {/* <Grid item lg={2} md={2} align="center">
+        <Grid item lg={2} md={2} align="center">
           <BrandImage src={certificate} alt="certificate" />
         </Grid>
         <Grid item lg={3} md={2} align="center">
@@ -76,7 +73,7 @@ const About = () => {
         </Grid>
         <Grid item lg={3} md={2} align="center">
           <BrandImage src={satisfaction} alt=" satisfaction" />
-        </Grid> */}
+        </Grid>
       </Grid>
       <Vision />
     </Grid>
