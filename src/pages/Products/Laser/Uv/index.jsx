@@ -4,6 +4,7 @@ import Heading from "@/components/Heading";
 import { uvApps, uvData, uvFeatures } from "@/helpers/uvData";
 import { Grid, List, Typography } from "@mui/material";
 import { ProductImg, modelHeading, productHeading } from "./style";
+import ProductButton from "@/components/ProductButton";
 
 const Uv = () => {
   return (
