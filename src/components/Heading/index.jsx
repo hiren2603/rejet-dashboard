@@ -7,10 +7,15 @@ const Heading = ({ name, type }) => {
       <Grid
         container
         alignItems="center"
-        justifyContent="center"
-        direction={{ lg: "row", md: "column", sm: "column" }}
+        justifyContent={{
+          lg: "center",
+          md: "space-between",
+          sm: "space-evenly",
+          xs: "center",
+        }}
+        direction={{ lg: "row", md: "row", sm: "row" }}
       >
-        <Grid item lg={9.6} md={9}>
+        <Grid item lg={9.6} md={8} sm={8}>
           <Typography sx={headingText}>
             <InnerText>
               {name}

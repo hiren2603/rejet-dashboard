@@ -9,6 +9,6 @@ export const titleStyle = {
   fontSize: "36px",
 };
 
-export const button = {
+export const buttonStyle = {
   width: "150px",
 };

@@ -77,7 +77,9 @@ const Fiber = () => {
                 container
                 item
                 key={item.id}
-                sx={{ m: { sm: "2px 0", xs: "2px 0" } }}
+                sx={{
+                  m: { sm: "2px 0", xs: "2px 0", lg: "0px", md: "0px" },
+                }}
               >
                 <Grid item lg={6} md={7} sm={6} xs={7}>
                   <Typography sx={{ fontWeight: "580" }}>
