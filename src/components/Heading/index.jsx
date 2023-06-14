@@ -8,6 +8,7 @@ const Heading = ({ name, type }) => {
         container
         alignItems="center"
         justifyContent="space-between"
+        // justifyContent="center"
         direction={{
           lg: "row",
           md: "column",
