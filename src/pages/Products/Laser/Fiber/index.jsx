@@ -6,10 +6,15 @@ import { productHeading, ProductImg, modelHeading } from "./style";
 import laserImg from "@/assets/products/fiber.png";
 import printSample from "@/assets/samples/fiber_sample.png";
 import { fiberData, features, applications } from "@/helpers/fiberData";
+import Head from "@/components/Head";
 
 const Fiber = () => {
   return (
     <>
+      <Head
+        title="Fiber Laser"
+        description="Radhe Enterprise Fiber Laser Page"
+      />
       <Grid
         container
         width={"90%"}

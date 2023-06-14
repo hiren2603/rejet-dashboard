@@ -16,11 +16,13 @@ import {
   commonSpace,
   applications,
   benifits,
-} from "../../../../helpers/co2Data";
+} from "helpers/co2Data";
+import Head from "@/components/Head";
 
 const Co2 = () => {
   return (
     <>
+      <Head title="Co2" description="Radhe Enterprise Co2 Page" />
       <Grid
         container
         width={"90%"}

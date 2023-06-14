@@ -1,18 +1,19 @@
-import desktopImg from "../../../../assets/products/desktop.png";
-import samples from "../../../../assets/samples/desktop_samples.png";
+import desktopImg from "assets/products/desktop.png";
+import samples from "assets/samples/desktop_samples.png";
 import { Grid, Typography, List } from "@mui/material";
 import { productHeading, modelHeading, ProductImg } from "./style";
-import Heading from "../../../../components/Heading";
-import ProductButton from "../../../../components/ProductButton";
-import {
-  desktopData,
-  features,
-  applications,
-} from "../../../../helpers/desktopData";
+import Heading from "@/components/Heading";
+import ProductButton from "@/components/ProductButton";
+import { desktopData, features, applications } from "helpers/desktopData";
+import Head from "@/components/Head";
 
 const Desktop = () => {
   return (
     <>
+      <Head
+        title="Desktop Laser"
+        description="Radhe Enterprise Desktop Laser Page"
+      />
       <Grid
         container
         width={"90%"}

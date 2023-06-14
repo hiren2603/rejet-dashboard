@@ -5,6 +5,7 @@ import { uvApps, uvData, uvFeatures } from "@/helpers/uvData";
 import { Grid, List, Typography } from "@mui/material";
 import { ProductImg, modelHeading, productHeading } from "./style";
 import ProductButton from "@/components/ProductButton";
+import Head from "@/components/Head";
 
 const Uv = () => {
   return (
@@ -15,6 +16,7 @@ const Uv = () => {
       alignItems={"center"}
       justifyContent={"center"}
     >
+      <Head title="Uv Laser" description="Radhe Enterprise Uv Laser Page" />
       <Typography sx={productHeading} align="center">
         uv laser marking system
       </Typography>

@@ -4,13 +4,15 @@ import makeInIndia from "@/assets/certificates/makeinindia.png";
 import quality from "@/assets/certificates/quality.png";
 import satisfaction from "assets/certificates/satisfaction.png";
 import PageHeading from "@/components/PageHeading";
-import { aboutUs } from "helpers/aboutUs";
+import Head from "@/components/Head";
 import Vision from "@/components/Vision";
+import { aboutUs } from "helpers/aboutUs";
 import { gridItemStyle } from "./style";
 
 const About = () => {
   return (
     <Stack width="90%" sx={{ m: "0 auto", mt: 5 }}>
+      <Head title="About" description="Radhe Enterprise About Page" />
       <PageHeading heading="About Us" />
       <Grid container pt={2}>
         {aboutUs.map((para) => {
