@@ -18,11 +18,9 @@ const ProductCard = () => {
   const [hoverState, setHoverState] = useState({ id: 0, isHover: false });
 
   const showTexteHandler = (id) => {
-    console.log(id);
     setHoverState({ id: id, isHover: true });
   };
   const hideTextHandler = (id) => {
-    console.log(id);
     setHoverState({ id: id, isHover: false });
   };
 
