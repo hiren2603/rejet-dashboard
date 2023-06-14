@@ -29,7 +29,7 @@ export const quickLinkStyle = {
 export const resQuickLinkStyle = {
   display: "flex",
   flexDirection: "column",
-  gap: 0.7,
+  gap: 1,
   color: "#c0c0c0",
   letterSpacing: "1px",
   fontSize: "20px",

@@ -93,7 +93,7 @@ const Layout = ({ children }) => {
         >
           {children}
         </Box>
-        <Footer drawerwidth={drawerwidth} open={open} />
+        <Footer />
       </Box>
     </>
   );
