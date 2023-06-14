@@ -22,7 +22,7 @@ const Footer = () => {
   const { drawerwidth, open } = useContext(LayoutContext);
 
   const footerColumnStyle = {
-    alignItems: isSmallScreen && "center",
+    alignItems: "center",
     gap: midScreen ? 4 : 2,
   };
 
@@ -55,8 +55,11 @@ const Footer = () => {
         <Stack
           direction={isSmallScreen ? "column" : "row"}
           sx={{
+            width: "90%",
+            m: "0 auto",
             display: "flex",
-            justifyContent: midScreen ? "space-between" : "space-evenly",
+            justifyContent: "space-between",
+            gap: 1,
           }}
         >
           <Stack sx={footerColumnStyle}>
@@ -85,7 +88,7 @@ const Footer = () => {
           </Stack>
 
           <Stack sx={footerColumnStyle}>
-            <Typography align={midScreen ? "center" : "start"} sx={headerTitle}>
+            <Typography align={midScreen ? "center" : "left"} sx={headerTitle}>
               Contanct Us
             </Typography>
             <CustomDivider />
