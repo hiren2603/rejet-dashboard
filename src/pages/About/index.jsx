@@ -4,7 +4,7 @@ import makeInIndia from "@/assets/certificates/makeinindia.png";
 import quality from "@/assets/certificates/quality.png";
 import satisfaction from "assets/certificates/satisfaction.png";
 import PageHeading from "@/components/PageHeading";
-import { aboutUs } from "@/helpers/aboutUs";
+import { aboutUs } from "helpers/aboutUs";
 import Vision from "@/components/Vision";
 import { gridItemStyle } from "./style";
 

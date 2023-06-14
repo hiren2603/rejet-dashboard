@@ -50,7 +50,7 @@ const Vision = () => {
             <CardMedia
               component="img"
               sx={{
-                width: { lg: 200, md: "inherit", sm: "inherit" },
+                width: { lg: "inherit", md: "inherit", sm: "inherit" },
                 height: { lg: 200, md: 180, sm: 180 },
                 display: "flex",
                 flexDirection: "row",
