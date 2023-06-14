@@ -10,7 +10,7 @@ const CustomDivider = () => {
         backgroundColor: "#c9c9c9",
         height: "2px",
         width: "100%",
-        // ...(smallSize ? { width: "100%" } : { width: "100%" }),
+        // ...(smallSize ? { width: "100%" } : { width: "70%" }),
       }}
     />
   );

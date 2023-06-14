@@ -1,76 +1,68 @@
-import Logo from "../../../assets/logo.png";
 import { LocationOn } from "@mui/icons-material";
 import {
   Box,
+  Divider,
   Stack,
   Typography,
-  Divider,
   useMediaQuery,
   useTheme,
-  styled,
-  easing,
 } from "@mui/material";
-import {
-  headerTitle,
-  headerDivider,
-  footerDivider,
-  quickLinkStyle,
-  resQuickLinkStyle,
-  mainStackStyle,
-} from "./style";
-import CustomDivider from "../CustomDivider";
+import { styled } from "@mui/material/styles";
+import MuiPaper from "@mui/material/Paper";
 import { useContext } from "react";
 import { LayoutContext } from "../../../Context";
+import Logo from "../../../assets/logo.png";
+import CustomDivider from "../CustomDivider";
+import { headerTitle, quickLinkStyle, resQuickLinkStyle } from "./style";
 
 const Footer = () => {
   const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const midScreen = useMediaQuery(theme.breakpoints.down("md"));
   const { drawerwidth, open } = useContext(LayoutContext);
-  const smallSize = useMediaQuery(theme.breakpoints.down("sm"));
-  const FooterContainer = styled("div")(({ theme }) => ({
-    width: `100%`,
+
+  const footerColumnStyle = {
+    alignItems: isSmallScreen && "center",
+    gap: midScreen ? 4 : 2,
+  };
+
+  const FooterContainer = styled(MuiPaper, {
+    shouldForwardProp: (prop) => prop !== open,
+  })(({ theme }) => ({
+    width: isSmallScreen ? "100%" : `calc(100% - (${theme.spacing(8)}))`,
+    marginLeft: !isSmallScreen ? "4rem" : 0,
     padding: "20px 4px",
-    gap: 1,
-    backgroundColor: "#000000",
-    bottom: "0px",
-    color: "white",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    // ...(open && {
-    //   width: smallSize ? "105%" : `calc(100% - ${drawerwidth}px)`,
-    //   marginLeft: smallSize ? "193px" : "0px",
-    // }),
-
-    ...(smallSize &&
-      open && {
-        width: "100%",
-        marginLeft: "0",
+    backgroundColor: "#000000",
+    transition: theme.transitions.create(["width", "margin"], {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+    ...(open && {
+      marginLeft: !isSmallScreen ? drawerwidth : 0,
+      width: isSmallScreen ? "100%" : `calc(100% - ${drawerwidth}px)`,
+      transition: theme.transitions.create(["width", "margin"], {
+        easing: theme.transitions.easing.sharp,
+        duration: theme.transitions.duration.enteringScreen,
       }),
-    ...(!smallSize &&
-      open && {
-        marginLeft: drawerwidth,
-        width: `calc(100% - ${drawerwidth}px)`,
-      }),
-    // ...(open && {
-    //   marginLeft: smallSize ? "0px" : `${drawerwidth}`,
-    //   width: smallSize ? "100%" : `calc(100% - ${drawerwidth}px)`,
-    // }),
+    }),
   }));
   return (
     <>
-      <FooterContainer>
+      <FooterContainer square>
         <Stack
-          direction={smallSize ? "column" : "row"}
-          sx={
-            smallSize
-              ? { alignItems: "center", justifyContent: "center", gap: 2 }
-              : { alignItems: "flex-start", justifyContent: "space-evenly" }
-          }
+          direction={isSmallScreen ? "column" : "row"}
+          sx={{
+            display: "flex",
+            justifyContent: midScreen ? "space-between" : "space-evenly",
+          }}
         >
-          <Stack sx={smallSize ? { alignItems: "center" } : { gap: 3 }}>
+          <Stack sx={footerColumnStyle}>
             <Typography sx={headerTitle}>Quick Links</Typography>
             <CustomDivider />
-            <Box sx={smallSize ? resQuickLinkStyle : quickLinkStyle}>
+            <Box sx={isSmallScreen ? resQuickLinkStyle : quickLinkStyle}>
               <Typography>Home</Typography>
               <Typography>About</Typography>
               <Typography>Applications</Typography>
@@ -79,10 +71,10 @@ const Footer = () => {
             </Box>
           </Stack>
 
-          <Stack sx={smallSize ? { alignItems: "center" } : { gap: 3 }}>
+          <Stack sx={footerColumnStyle}>
             <Typography sx={headerTitle}>Products</Typography>
             <CustomDivider />
-            <Box sx={smallSize ? resQuickLinkStyle : quickLinkStyle}>
+            <Box sx={isSmallScreen ? resQuickLinkStyle : quickLinkStyle}>
               <Typography>Inkjet</Typography>
               <Typography>Co2</Typography>
               <Typography>Fiber</Typography>
@@ -92,10 +84,12 @@ const Footer = () => {
             </Box>
           </Stack>
 
-          <Stack sx={smallSize ? { alignItems: "center" } : { gap: 3 }}>
-            <Typography sx={headerTitle}>Contanct Us</Typography>
+          <Stack sx={footerColumnStyle}>
+            <Typography align={midScreen ? "center" : "start"} sx={headerTitle}>
+              Contanct Us
+            </Typography>
             <CustomDivider />
-            <Box sx={smallSize ? resQuickLinkStyle : quickLinkStyle}>
+            <Box sx={isSmallScreen ? resQuickLinkStyle : quickLinkStyle}>
               <Typography>Call : 99099 81123</Typography>
               <Typography>E-mail : info@rejettech.com</Typography>
               <Typography
@@ -111,10 +105,10 @@ const Footer = () => {
             </Box>
           </Stack>
 
-          <Stack sx={smallSize ? { alignItems: "center" } : { gap: 3 }}>
+          <Stack sx={footerColumnStyle}>
             <Typography sx={headerTitle}>Location</Typography>
             <CustomDivider />
-            <Box sx={smallSize ? resQuickLinkStyle : quickLinkStyle}>
+            <Box sx={isSmallScreen ? resQuickLinkStyle : quickLinkStyle}>
               <img src={Logo} alt="logo" height={45} width={130} />
               <Typography>Plot No. 36, Suvery No. 277/,</Typography>
               <Typography>Opp. Kaneria Oil Industries,</Typography>

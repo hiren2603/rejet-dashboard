@@ -1,3 +1,4 @@
+import Head from "@/components/Head";
 import React from "react";
 import Video from "@/components/Video";
 import { Grid, Typography } from "@mui/material";
@@ -13,9 +14,16 @@ const Applications = () => {
     playerVars: { autoplay: 0, origin: window.location.origin },
   };
   return (
+    (
     <>
       <Grid container>
-        <Typography>Applications of RE200 Inkjet Printers</Typography>
+        <Typography>
+      <Head
+        title="Applications"
+        description="Radhe Enterprise Application Page"
+      />
+      Applications
+     of RE200 Inkjet Printers</Typography>
         {videoData?.map((item) => {
           return (
             <Grid item key={item.id}>
@@ -33,6 +41,7 @@ const Applications = () => {
         })} */}
       </Grid>
     </>
+  )
   );
 };
 
