@@ -1,46 +1,67 @@
 import Head from "@/components/Head";
-import { Divider, Grid, Typography } from "@mui/material";
-import { sectionHeadingStyle } from "./style";
+import { Box, Divider, Grid, Typography } from "@mui/material";
+import { sectionHeadingStyle, subHeadingStyles } from "./style";
 import PageHeading from "@/components/PageHeading";
-import { HO, BRANCHES } from "helpers/contact";
+import { HO, BRANCHES, INQUIRY } from "helpers/contact";
+import { Fragment } from "react";
 
 const Contact = () => {
   return (
-    <Grid container sx={{ width: "90%", mx: "auto", mt: 5 }}>
+    <Grid container sx={{ width: "90%", m: "0 auto", mt: 5 }}>
       <Head title="Contact" description="Radhe Enterprise Contact Page" />
-      <PageHeading heading="Contact Us" />
-      <Grid item my={2} md={7}>
-        <Typography variant="h5" sx={sectionHeadingStyle}>
-          Locations
-        </Typography>
-        <Divider sx={{ mr: "2rem" }} />
+      {/* <PageHeading heading="Contact Us" /> */}
+      <Grid container item md={8} sm={12} xs={12}>
+        <Grid item md={12} sm={12} xs={12}>
+          <Typography variant="h5" sx={sectionHeadingStyle}>
+            Locations
+          </Typography>
+          <Divider />
+        </Grid>
+        <Grid item md={8} sm={12} xs={12}>
+          <Typography variant="h5" sx={subHeadingStyles} mb={2}>
+            {HO.head}
+          </Typography>
+          <img src={HO.image} alt="company_logo" width="auto" />
+          <Typography fontWeight={600} lineHeight={2}>
+            {HO.address}
+          </Typography>
+        </Grid>
+        <Grid item md={4} sm={12} xs={12}>
+          <Typography variant="h5" sx={subHeadingStyles} mb={2}>
+            {BRANCHES.head}
+          </Typography>
+          {BRANCHES.branchList.map((branch) => (
+            <Typography fontWeight={600} lineHeight={2} key={branch.id}>
+              {branch.name}
+            </Typography>
+          ))}
+        </Grid>
       </Grid>
-      <Grid item md={5} my={2}>
+      <Grid item md={4} sm={12} xs={12}>
         <Typography variant="h5" sx={sectionHeadingStyle}>
           Inquiry
         </Typography>
         <Divider />
+        <Grid item>
+          {INQUIRY.map((item) => (
+            <Box key={item.id} sx={{ display: "flex", alignItems: "center" }}>
+              <item.icon
+                sx={{
+                  mr: "1rem",
+                  color:
+                    item.id === 1 ? "green" : item.id === 2 ? "red" : "blue",
+                }}
+              />
+              <Typography component="span" fontWeight={600} lineHeight={2}>
+                {item.key}:
+              </Typography>
+              <Typography component="span" fontWeight={600} lineHeight={2}>
+                {item.text}
+              </Typography>
+            </Box>
+          ))}
+        </Grid>
       </Grid>
-      <Grid item md={5}>
-        <Typography variant="h5" sx={sectionHeadingStyle} mb={2}>
-          {HO.head}
-        </Typography>
-        <img src={HO.image} alt="company_logo" />
-        <Typography fontWeight={600} lineHeight={2}>
-          {HO.address}
-        </Typography>
-      </Grid>
-      <Grid item md={5}>
-        <Typography variant="h5" sx={sectionHeadingStyle} mb={2}>
-          {BRANCHES.head}
-        </Typography>
-        {BRANCHES.branchList.map((branch) => (
-          <Typography fontWeight={600} lineHeight={2} key={branch.id}>
-            {branch.name}
-          </Typography>
-        ))}
-      </Grid>
-      <Grid item md={5}></Grid>
     </Grid>
   );
 };

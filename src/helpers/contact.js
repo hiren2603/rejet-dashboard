@@ -39,7 +39,19 @@ export const INQUIRY = [
   {
     id: 1,
     key: "Call",
-    icon: "",
+    icon: WhatsAppIcon,
     text: "+91 99099-81123",
+  },
+  {
+    id: 2,
+    key: "Email",
+    icon: MailOutlineIcon,
+    text: "info@rejettech.com",
+  },
+  {
+    id: 3,
+    key: "Web",
+    icon: LanguageIcon,
+    text: "www.rejettech.com",
   },
 ];
