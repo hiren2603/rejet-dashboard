@@ -76,7 +76,7 @@ const Layout = ({ children }) => {
         <Box
           sx={{
             display: "flex",
-            // flexDirection: "column",
+            flexDirection: "column",
             marginTop: "10vh",
             marginLeft: !isSmallScreen && theme.spacing(8),
             ...(!isSmallScreen &&

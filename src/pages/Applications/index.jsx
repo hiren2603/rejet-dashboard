@@ -1,8 +1,8 @@
 import Head from "@/components/Head";
 import { Grid, Typography } from "@mui/material";
 import { videoData } from "helpers/videoData";
-import YouTube from "react-youtube";
-import { productHeading } from "./style";
+import Video from "@/components/Video";
+import { productHeading, VideoWrapper } from "./style";
 
 const Applications = () => {
   const opts = {
@@ -16,7 +16,8 @@ const Applications = () => {
         container
         alignItems="center"
         justifyContent={"center"}
-        sx={{ width: "80%", margin: "auto" }}
+        sx={{ margin: "auto" }}
+        direction={"column"}
       >
         <Grid item lg>
           <Typography textAlign={"center"} sx={productHeading}>
@@ -28,25 +29,9 @@ const Applications = () => {
           </Typography>
         </Grid>
 
-        <Grid item container columns={3}>
-          {videoData?.map((item) => {
-            // var id = getYouTubeID(item.sourceId);
-            return (
-              <Grid
-                item
-                key={item.id}
-                lg={1}
-                sx={{ alignSelf: "center", borderRadius: "3px" }}
-              >
-                <YouTube
-                  videoId={item.sourceId}
-                  opts={opts}
-                  style={{ borderRadius: "20px" }}
-                />
-              </Grid>
-            );
-          })}
-        </Grid>
+        <VideoWrapper>
+          <Video />
+        </VideoWrapper>
       </Grid>
     </>
   );

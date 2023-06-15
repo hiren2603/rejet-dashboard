@@ -120,7 +120,7 @@ const Co2 = () => {
               </Grid>
             ))}
 
-            <Grid container item lg={5}>
+            <Grid container item lg={5} justifySelf={"flex-end"}>
               <Typography sx={modelHeading}>Specifications</Typography>
               {commonSpace?.map((item) => (
                 <Grid container item key={item.id} sx={{ m: "2px 0" }}>
