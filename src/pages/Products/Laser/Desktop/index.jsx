@@ -17,11 +17,17 @@ const Desktop = () => {
       <Grid
         container
         width={"90%"}
-        sx={{ margin: "0 auto" }}
         alignItems={"center"}
         justifyContent={"center"}
+        sx={{ margin: "0 auto" }}
       >
-        <Typography sx={productHeading} align="center">
+        <Typography
+          sx={{
+            ...productHeading,
+            display: { lg: "flex", md: "flex", sm: "flex", xs: "none" },
+          }}
+          align="center"
+        >
           desktop laser marking system
         </Typography>
         <Heading name="PLUTO" type="FLYING LASER" />
