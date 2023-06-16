@@ -17,7 +17,13 @@ const Uv = () => {
       justifyContent={"center"}
     >
       <Head title="Uv Laser" description="Radhe Enterprise Uv Laser Page" />
-      <Typography sx={productHeading} align="center">
+      <Typography
+        sx={{
+          ...productHeading,
+          display: { lg: "flex", md: "flex", sm: "flex", xs: "none" },
+        }}
+        align="center"
+      >
         uv laser marking system
       </Typography>
       <Heading name="UV" type="FLYING LASER" />

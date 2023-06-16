@@ -22,7 +22,13 @@ const Fiber = () => {
         alignItems={"center"}
         justifyContent={"center"}
       >
-        <Typography sx={productHeading} align="center">
+        <Typography
+          sx={{
+            ...productHeading,
+            display: { lg: "flex", md: "flex", sm: "flex", xs: "none" },
+          }}
+          align="center"
+        >
           fiber laser marking system
         </Typography>
         <Heading name="BETABEAM" type="FIBER LASER" />
@@ -85,7 +91,7 @@ const Fiber = () => {
                 }}
               >
                 <Grid item lg={6} md={7} sm={6} xs={7}>
-                  <Typography sx={{ fontWeight: "580" }}>
+                  <Typography sx={{ fontWeight: "600" }}>
                     {item.title}
                   </Typography>
                 </Grid>

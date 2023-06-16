@@ -31,7 +31,10 @@ const Co2 = () => {
         justifyContent="center"
       >
         <Typography
-          sx={{ ...productHeading, visibility: { xs: "none", lg: "visible" } }}
+          sx={{
+            ...productHeading,
+            display: { lg: "flex", md: "flex", sm: "flex", xs: "none" },
+          }}
           align="center"
         >
           co2 laser marking system
@@ -43,7 +46,7 @@ const Co2 = () => {
           direction={"row"}
           columnGap={7}
           sx={{ mt: "3rem" }}
-          justifyContent={"space-between"}
+          justifyContent="space-between"
         >
           <Grid
             container

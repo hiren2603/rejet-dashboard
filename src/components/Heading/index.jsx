@@ -10,9 +10,11 @@ const Heading = ({ name, type }) => {
         justifyContent="space-between"
         direction={{
           lg: "row",
-          md: "column",
-          sm: "column",
+          md: "row",
+          sm: "row",
+          xs: "column",
         }}
+        sx={{ marginTop: { lg: 0, md: 0, sm: "1rem", xs: "1rem" } }}
       >
         <Grid item lg={9} md={9}>
           <Typography sx={headingText}>

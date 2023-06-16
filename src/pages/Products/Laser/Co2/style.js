@@ -1,4 +1,5 @@
 import { styled } from "@mui/material";
+
 export const productHeading = {
   fontSize: "36px",
   textTransform: "uppercase",
