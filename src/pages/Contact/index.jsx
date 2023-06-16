@@ -1,9 +1,9 @@
 import Head from "@/components/Head";
+import Map from "@/components/Map";
+import Form from "@/components/Form";
 import { Box, Divider, Grid, Typography } from "@mui/material";
+import { BRANCHES, HO, INQUIRY } from "helpers/contact";
 import { sectionHeadingStyle, subHeadingStyles } from "./style";
-import PageHeading from "@/components/PageHeading";
-import { HO, BRANCHES, INQUIRY } from "helpers/contact";
-import { Fragment } from "react";
 
 const Contact = () => {
   return (
@@ -62,6 +62,8 @@ const Contact = () => {
           ))}
         </Grid>
       </Grid>
+      <Map />
+      <Form />
     </Grid>
   );
 };

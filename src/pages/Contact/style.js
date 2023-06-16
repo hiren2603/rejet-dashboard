@@ -1,5 +1,5 @@
 export const sectionHeadingStyle = {
-  color: "#5b5b5b",
+  color: "#000000",
   textShadow: "2px 2px 2px #0000004f",
   fontWeight: "600",
   textTransform: "uppercase",
@@ -8,7 +8,7 @@ export const sectionHeadingStyle = {
 };
 
 export const subHeadingStyles = {
-  color: "#5b5b5b",
+  color: "#000000",
   textShadow: "2px 2px 2px #0000004f",
   fontWeight: "600",
   textTransform: "uppercase",
