@@ -27,7 +27,14 @@ const Fiber = () => {
         </Typography>
         <Heading name="BETABEAM" type="FIBER LASER" />
 
-        <Grid container item direction="row" sx={{ mt: "3rem" }} columnGap={5}>
+        <Grid
+          container
+          item
+          direction="row"
+          sx={{ mt: "3rem" }}
+          columnGap={5}
+          justifyContent={"space-between"}
+        >
           <Grid
             container
             item

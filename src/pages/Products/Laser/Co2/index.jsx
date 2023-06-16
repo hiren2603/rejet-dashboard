@@ -43,6 +43,7 @@ const Co2 = () => {
           direction={"row"}
           columnGap={7}
           sx={{ mt: "3rem" }}
+          justifyContent={"space-between"}
         >
           <Grid
             container

@@ -31,9 +31,9 @@ const Desktop = () => {
           item
           direction={"row"}
           sx={{ mt: "3rem" }}
-          columnGap={3}
+          columnGap={2}
         >
-          <Grid container item direction={"column"} lg={7} md={6} rowGap={5}>
+          <Grid container item direction={"column"} lg={8} md={6} rowGap={5}>
             <Grid container item>
               <Typography sx={modelHeading} textAlign={{ xs: "center" }}>
                 Specifications
@@ -60,7 +60,7 @@ const Desktop = () => {
             </Grid>
           </Grid>
 
-          <Grid container item direction={"column"} lg={3} md={2} rowGap={4}>
+          <Grid container item direction={"column"} lg={1} md={2} rowGap={4}>
             <Grid
               item
               alignSelf={"center"}
@@ -76,7 +76,7 @@ const Desktop = () => {
 
             <Grid item alignSelf={{ sm: "center" }}>
               <Typography sx={modelHeading}>Print Samples</Typography>
-              <ProductImg src={samples} width={390} height={150} />
+              <ProductImg src={samples} width={350} height={100} />
             </Grid>
 
             <Grid item>

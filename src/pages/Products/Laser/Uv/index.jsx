@@ -28,7 +28,8 @@ const Uv = () => {
         direction={"row"}
         sx={{ mt: "3rem" }}
         rowGap={{ sx: 3 }}
-        columnGap={6}
+        columnGap={7}
+        justifyContent={"space-between"}
       >
         <Grid container item direction={"column"} lg={4} md={5} rowGap={3}>
           <Grid
@@ -53,7 +54,7 @@ const Uv = () => {
           </Grid>
         </Grid>
 
-        <Grid container item direction={"column"} lg={7} md={6} rowGap={9}>
+        <Grid container item direction={"column"} lg={6} md={6} rowGap={9}>
           <Grid container item>
             <Typography sx={modelHeading}>Specifications</Typography>
             {uvData?.map((item) => (
@@ -63,7 +64,7 @@ const Uv = () => {
                     {item.title}
                   </Typography>
                 </Grid>
-                <Grid item lg={6} md={6} sm={5} xs={5}>
+                <Grid item lg={5} md={6} sm={5} xs={5}>
                   {item.content}
                 </Grid>
               </Grid>
