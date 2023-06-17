@@ -1,14 +1,9 @@
-import { useState } from "react";
-import {
-  Typography,
-  Grid,
-  Button,
-  Divider,
-  FormHelperText,
-} from "@mui/material";
+import { useEffect, useState } from "react";
+import { Typography, Grid, Divider, FormHelperText } from "@mui/material";
 import { titleStyle, buttonStyle } from "./style";
 import InputField from "@/components/InputField";
 import FormButton from "@/components/FormButton";
+import { send } from "emailjs-com";
 
 const Form = () => {
   const [form, setForm] = useState({
@@ -18,17 +13,49 @@ const Form = () => {
     city: "",
     message: "",
   });
-  const [errors, setErrors] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    city: "",
-    message: "",
-  });
+  const [errors, setErrors] = useState({});
+  const [isSubmiting, setIsSubmiting] = useState(false);
+  const [success, setSuccess] = useState(false);
+  useEffect(() => {
+    if (Object.keys(errors).length === 0 && isSubmiting) {
+      send(
+        "service_728pi8n",
+        "template_n1df23r",
+        form,
+        "user_L5xYRhbwHzaofEGYMkFhV"
+      )
+        .then((response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          setSuccess(true);
+          setForm({
+            name: "",
+            email: "",
+            phone: "",
+            city: "",
+            message: "",
+          });
+        })
+        .catch((err) => {
+          console.log("FAILED...", err);
+        });
+    }
+  }, [errors]);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
     setForm({ ...form, [name]: value });
+    if (name === "name" && value.trim() !== "") {
+      setErrors({ ...errors, name: "" });
+    }
+    if (name === "email" && value.trim() !== "") {
+      setErrors({ ...errors, email: "" });
+    }
+    if (name === "phone" && value.trim() !== "") {
+      setErrors({ ...errors, phone: "" });
+    }
+    if (name === "city" && value.trim() !== "") {
+      setErrors({ ...errors, city: "" });
+    }
   };
 
   const handleBlur = (event) => {
@@ -54,8 +81,28 @@ const Form = () => {
     }
   };
 
+  const validate = () => {
+    const { name, email, phone, city, message } = form;
+    let formErrors = {};
+    if (!name) {
+      formErrors.name = "Please enter your name";
+    }
+    if (!email) {
+      formErrors.email = "Please enter your email";
+    }
+    if (!phone) {
+      formErrors.phone = "Please enter your phone";
+    }
+    if (!city) {
+      formErrors.city = "Please enter your city";
+    }
+    return formErrors;
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
+    setErrors(validate());
+    setIsSubmiting(true);
   };
   return (
     <Grid
