@@ -3,6 +3,7 @@ import { Typography, Grid, Divider, FormHelperText } from "@mui/material";
 import { titleStyle, buttonStyle } from "./style";
 import InputField from "@/components/InputField";
 import FormButton from "@/components/FormButton";
+// import { send } from "emailjs-com";
 import { send } from "emailjs-com";
 
 const Form = () => {
@@ -108,7 +109,7 @@ const Form = () => {
     <Grid
       container
       sx={{
-        width: "100%",
+        width: "85%",
         m: "auto",
         mt: 0,
         mb: 0,

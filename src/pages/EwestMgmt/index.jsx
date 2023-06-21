@@ -84,7 +84,14 @@ const EwestMgmt = () => {
                   </Grid>
                 </Grid>
               ) : (
-                <Grid container item key={item.id} lg={5} md={5}>
+                <Grid
+                  container
+                  item
+                  key={item.id}
+                  lg={5}
+                  md={5}
+                  direction="column"
+                >
                   <Typography sx={contentStyle}>{item.title}</Typography>
                   <Grid item lg>
                     <Typography sx={{ lineHeight: "2", textAlign: "justify" }}>

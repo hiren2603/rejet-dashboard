@@ -9,17 +9,31 @@ import {
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import MuiPaper from "@mui/material/Paper";
+import MuiLink from "@mui/material/Link";
 import { useContext } from "react";
 import { LayoutContext } from "../../../Context";
 import Logo from "../../../assets/logo.png";
 import CustomDivider from "../CustomDivider";
-import { headerTitle, quickLinkStyle, resQuickLinkStyle } from "./style";
+import {
+  headerTitle,
+  quickLinkStyle,
+  resQuickLinkStyle,
+  footerLinkStyle,
+} from "./style";
+import { Link as RoutingLink } from "react-router-dom";
 
 const Footer = () => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const midScreen = useMediaQuery(theme.breakpoints.down("md"));
   const { drawerwidth, open } = useContext(LayoutContext);
+
+  const StyledLink = styled(MuiLink)`
+    color: "#c0c0c0";
+    &: hover {
+      color: "white";
+    }
+  `;
 
   const footerColumnStyle = {
     alignItems: "center",
@@ -66,11 +80,21 @@ const Footer = () => {
             <Typography sx={headerTitle}>Quick Links</Typography>
             <CustomDivider />
             <Box sx={isSmallScreen ? resQuickLinkStyle : quickLinkStyle}>
-              <Typography>Home</Typography>
-              <Typography>About</Typography>
-              <Typography>Applications</Typography>
-              <Typography>E-Waste Management</Typography>
-              <Typography>Contact</Typography>
+              <RoutingLink to="/" style={footerLinkStyle}>
+                Home
+              </RoutingLink>
+              <RoutingLink to="/about" style={footerLinkStyle}>
+                About
+              </RoutingLink>
+              <RoutingLink to="/applications" style={footerLinkStyle}>
+                Applications
+              </RoutingLink>
+              <RoutingLink to="/ewest-management" style={footerLinkStyle}>
+                E-Waste Management
+              </RoutingLink>
+              <RoutingLink to="/contact" style={footerLinkStyle}>
+                Contact
+              </RoutingLink>
             </Box>
           </Stack>
 
@@ -78,12 +102,24 @@ const Footer = () => {
             <Typography sx={headerTitle}>Products</Typography>
             <CustomDivider />
             <Box sx={isSmallScreen ? resQuickLinkStyle : quickLinkStyle}>
-              <Typography>Inkjet</Typography>
-              <Typography>Co2</Typography>
-              <Typography>Fiber</Typography>
-              <Typography>Desktop</Typography>
-              <Typography>UV</Typography>
-              <Typography>TIJ</Typography>
+              <RoutingLink to="/products/laser/co2" style={footerLinkStyle}>
+                Inkjet
+              </RoutingLink>
+              <RoutingLink to="/products/laser/co2" style={footerLinkStyle}>
+                Co2
+              </RoutingLink>
+              <RoutingLink to="/products/laser/fiber" style={footerLinkStyle}>
+                Fiber
+              </RoutingLink>
+              <RoutingLink to="/products/laser/desktop" style={footerLinkStyle}>
+                Desktop
+              </RoutingLink>
+              <RoutingLink to="/products/laser/uv" style={footerLinkStyle}>
+                UV
+              </RoutingLink>
+              <RoutingLink to="/products/laser/co2" style={footerLinkStyle}>
+                TIJ
+              </RoutingLink>
             </Box>
           </Stack>
 
