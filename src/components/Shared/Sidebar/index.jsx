@@ -86,21 +86,21 @@ const Sidebar = ({
   return (
     <>
       <Box sx={{ display: "flex" }} onKeyDown={closeSideBar}>
-        <ClickAwayListener onClickAway={closeSideBar}>
-          {isSmallScreen ? (
-            <>
-              <PersistSidebar
-                open={open}
-                closeSideBar={closeSideBar}
-                handleDrawerOpen={handleDrawerOpen}
-                handleCategory={handleCategory}
-                handleSubCategory={handleSubCategory}
-                openCategory={openCategory}
-                openSubCategory={openSubCategory}
-              />
-            </>
-          ) : (
-            <>
+        {isSmallScreen ? (
+          <>
+            <PersistSidebar
+              open={open}
+              closeSideBar={closeSideBar}
+              handleDrawerOpen={handleDrawerOpen}
+              handleCategory={handleCategory}
+              handleSubCategory={handleSubCategory}
+              openCategory={openCategory}
+              openSubCategory={openSubCategory}
+            />
+          </>
+        ) : (
+          <>
+            <ClickAwayListener onClickAway={closeSideBar}>
               <Drawer
                 variant={"permanent"}
                 open={open}
@@ -135,9 +135,9 @@ const Sidebar = ({
                   />
                 </Box>
               </Drawer>
-            </>
-          )}
-        </ClickAwayListener>
+            </ClickAwayListener>
+          </>
+        )}
       </Box>
     </>
   );

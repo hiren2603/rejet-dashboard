@@ -1,3 +1,9 @@
+export const footerLinkStyle = {
+  color: "#c0c0c0",
+  "&:hover": { color: "red" },
+  fontSize: "16px",
+};
+
 export const headerTitle = {
   fontWeight: 600,
   fontSize: "22px",

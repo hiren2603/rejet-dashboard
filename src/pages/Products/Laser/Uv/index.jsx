@@ -49,7 +49,7 @@ const Uv = () => {
 
           <Grid item>
             <Typography sx={modelHeading}>Print Samples</Typography>
-            <ProductImg src={sample} width={390} height={170} />
+            <ProductImg src={sample} width={400} style={{ height: "130px" }} />
           </Grid>
 
           <Grid item>

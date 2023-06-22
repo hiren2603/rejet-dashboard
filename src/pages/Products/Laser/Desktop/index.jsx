@@ -82,7 +82,11 @@ const Desktop = () => {
 
             <Grid item alignSelf={{ sm: "center" }}>
               <Typography sx={modelHeading}>Print Samples</Typography>
-              <ProductImg src={samples} width={350} height={100} />
+              <ProductImg
+                src={samples}
+                width={350}
+                style={{ height: "110px" }}
+              />
             </Grid>
 
             <Grid item>

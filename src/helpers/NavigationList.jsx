@@ -3,7 +3,7 @@ import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 import AppRegistrationIcon from "@mui/icons-material/AppRegistration";
 import InvertColorsIcon from "@mui/icons-material/InvertColors";
 import CallIcon from "@mui/icons-material/Call";
-import ProductSvg from "./ProductSvg";
+import ProductSvg from "@/assets/ProductSvg";
 import EWestSvg from "./EWestSvg";
 
 export const NavigationList = [
@@ -26,7 +26,7 @@ export const NavigationList = [
   {
     key: "Products",
     link: "/products",
-    icon: <HomeIcon />,
+    icon: <ProductSvg />,
     id: 3,
     multicomponent: true,
     multicomponents: [
