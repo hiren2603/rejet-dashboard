@@ -15,8 +15,7 @@ export const headingText = {
   fontSize: "30px",
 };
 
-export const DownloadButton = styled("a")({
-  width: "50%",
+export const downloadButton = {
   height: "50px",
   justifySelf: "flex-end",
   display: "flex",
@@ -42,7 +41,7 @@ export const DownloadButton = styled("a")({
     bottom: "0",
     right: "50%",
     opacity: "0",
-    content: "",
+    content: '""',
     backgroundColor: "#E21D25",
     zIndex: 1,
     borderRadius: "4px",
@@ -54,4 +53,4 @@ export const DownloadButton = styled("a")({
     opacity: "1",
     zIndex: "-1",
   },
-});
+};

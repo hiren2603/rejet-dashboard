@@ -79,8 +79,8 @@ const EwestMgmt = () => {
                       {item.content}
                     </Typography>
                   </Grid>
-                  <Grid item>
-                    <img src={image} height={300} />
+                  <Grid item alignSelf="center">
+                    <img src={image} height={400} />
                   </Grid>
                 </Grid>
               ) : (
