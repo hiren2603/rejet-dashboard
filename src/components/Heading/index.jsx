@@ -1,5 +1,6 @@
 import { Grid, Typography, Button, Divider } from "@mui/material";
-import { InnerText, headingText } from "./style";
+import { InnerText, headingText, downloadButton } from "./style";
+import broucher from "@/assets/broucher.pdf";
 
 const Heading = ({ name, type }) => {
   return (
@@ -27,7 +28,16 @@ const Heading = ({ name, type }) => {
         </Grid>
 
         <Grid item>
-          <Button variant="contained" color="error">
+          <Button
+            sx={downloadButton}
+            variant="contained"
+            color="error"
+            component="a"
+            href={broucher}
+            target="_blank"
+            rel="noreferref"
+            download
+          >
             Download Broucher
           </Button>
         </Grid>

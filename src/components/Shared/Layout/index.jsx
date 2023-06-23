@@ -88,6 +88,7 @@ const Layout = ({ children }) => {
               open && {
                 margin: "0px",
                 width: "100%",
+                marginTop: "10vh",
               }),
           }}
         >
