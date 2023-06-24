@@ -9,12 +9,12 @@ export const re200PlusPrintParams = [
   {
     id: 1,
     title: "Conduit Length",
-    contet: "3MTR",
+    content: "3MTR",
   },
   {
     id: 2,
     title: "Nozzle Specification",
-    contet: "60um",
+    content: "60um",
   },
   { id: 3, title: "Printing Height", content: "2mm to 14mm " },
   { id: 4, title: "Printing Distance", content: "1mm to 15mm" },
@@ -61,76 +61,97 @@ export const re200PlusParams = [
     content: "Embedded Linux security operating system",
   },
   {
-    id: 1,
+    id: 2,
     title: "Display Screen",
     content: "10.1-inch colour display, industrial touchscreen",
   },
   {
-    id: 2,
+    id: 3,
     title: "Communication Interface",
     content: "Network port, USB, RS232",
   },
   {
-    id: 3,
+    id: 4,
     title: "Protection Level",
     content: "IP55",
   },
   {
-    id: 4,
+    id: 5,
     title: "Power Parameters",
     content: "Input 220-240V",
   },
   {
-    id: 5,
+    id: 6,
     title: "Rated Power",
     content: "150W",
   },
   {
-    id: 6,
+    id: 7,
     title: "Memory",
     content: "256M",
   },
   {
-    id: 7,
+    id: 8,
     title: "Machine Material",
     content: "304 stainless steel",
   },
   {
-    id: 8,
+    id: 9,
     title: "Machine Specifications",
     content: "447mmx242mmx650mm (L X W X H)",
   },
   {
-    id: 9,
+    id: 10,
     title: "Working Environment",
     content: "Temperature0-45°C/Humidity 30-70%Rh",
   },
   {
-    id: 10,
+    id: 11,
     title: "Related Certification",
     content: "RoHS. CE. BIS",
   },
   {
-    id: 11,
+    id: 12,
     title: "Net Weight",
     content: "30Kg",
   },
   {
-    id: 12,
+    id: 13,
     title: "Main Hardware",
     content:
       "American TIAM3358 industrial grade CPU, American Xilinx Spartan-6 industrial grade FPGA",
   },
   {
-    id: 13,
+    id: 14,
     title: "External Interface",
     content:
       "Optical sensor, Encoder, Reverse and upside down control, Signal light alarm output, Serial number output control, External printing information selection.",
   },
   {
-    id: 14,
+    id: 15,
     title: "Support Language",
     content:
       "Support more than 40 national languages (Chinese, English, Arabic, Danish, German, Russian, French, Finnish, Korean, Japanese, Spanish, Italian, etc).",
   },
+];
+
+export const inkSystem = [
+  { id: 1, title: "Ink Viscosity Control", content: "Automatic Viscometer" },
+  {
+    id: 2,
+    title: "Ink Bleed Control",
+    content: "Automatic Start-Up/Shut-Down",
+  },
+  { id: 3, title: "Ink & Make Up", content: "Automatic metered" },
+  {
+    id: 4,
+    title: "Nozel Auto Flush System",
+    content: "Automatic at Start/Shutdown Time",
+  },
+];
+
+export const cabinetData = [
+  { id: 1, title: "Ip Rating :", content: "IpS3 (1997)" },
+  { id: 2, title: "Conduit Length :", content: "3 to 6 meters" },
+  { id: 3, title: "Dimensions :", content: "446mm X 221mm X 647mm" },
 ];

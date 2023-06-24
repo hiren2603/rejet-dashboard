@@ -26,9 +26,11 @@ export const modelDetails = {
 
 export const headings = {
   color: "#000000",
-  fontWeight: "600",
-  fontSize: "17px",
+  fontWeight: "580",
+  fontSize: "20px",
+  textTransform: "uppercase",
 };
+
 export const ProductImg = styled("img")({
   justifySelf: "center",
   alignSelf: "flex-start",
