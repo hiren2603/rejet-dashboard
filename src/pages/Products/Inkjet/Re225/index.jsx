@@ -1,12 +1,228 @@
 import Head from "@/components/Head";
-import React from "react";
+import ProductButton from "@/components/ProductButton";
+import inkjet from "@/assets/products/inkjet.png";
+import Samples from "@/assets/samples/font_sample.png";
+import Heading from "@/components/Heading";
+import { Grid, Typography, List, Card, Stack } from "@mui/material";
+import {
+  productHeading,
+  modelHeading,
+  modelDetails,
+  headings,
+  ProductImg,
+} from "./style";
+import {
+  re225TechSpec,
+  re225DataSpec,
+  printFunctions,
+  userInterface,
+  nozzleCharacterities,
+  inkSystem,
+  re225Features,
+  re225HardwareSpec,
+  re225SoftwareSystem,
+} from "@/helpers/re225data";
 
 const Re225 = () => {
   return (
-    <div>
+    <>
       <Head title="Re225" description="Radhe Enterprise Re225 Page" />
-      Re225
-    </div>
+      <Grid
+        container
+        width={"90%"}
+        sx={{ margin: "0 auto" }}
+        alignItems={"center"}
+        justifyContent={"center"}
+        rowSpacing={3}
+      >
+        <Typography
+          sx={{
+            ...productHeading,
+            display: { lg: "flex", md: "flex", sm: "flex", xs: "none" },
+          }}
+          align="center"
+        >
+          continuous inkjet printers
+        </Typography>
+        <Heading name="RE 225" type="INKJET PRINTER" />
+
+        <Grid
+          container
+          item
+          direction={"row"}
+          justifyContent="space-between"
+          columnSpacing={3}
+        >
+          <Grid
+            container
+            item
+            direction={"column"}
+            lg={6}
+            md={6}
+            rowSpacing={3}
+          >
+            <Grid
+              item
+              alignSelf={"center"}
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <img src={inkjet} alt="Laser" width={360} />
+              <ProductButton />
+            </Grid>
+
+            <Grid
+              item
+              alignSelf={{
+                lg: "flex-start",
+                md: "flex-start",
+                sm: "center",
+                xs: "center",
+              }}
+            >
+              <Typography sx={modelHeading}>Print Samples</Typography>
+              <ProductImg
+                src={Samples}
+                width={400}
+                style={{ height: "400px" }}
+              />
+            </Grid>
+
+            <Grid container item>
+              <Typography
+                sx={{ ...modelHeading, textAlign: "center" }}
+                textAlign={"center"}
+              >
+                Product Details
+              </Typography>
+              {re225TechSpec?.map((item) => (
+                <Grid container item key={item.id} sx={{ m: "2px 0" }}>
+                  <Grid item lg={6} md={6} sm={7} xs={7}>
+                    <Typography sx={{ fontWeight: "600" }}>
+                      {item.label} :
+                    </Typography>
+                  </Grid>
+                  <Grid item sm={5}>
+                    {item.content}
+                  </Grid>
+                </Grid>
+              ))}
+            </Grid>
+          </Grid>
+
+          <Grid
+            container
+            item
+            direction={"column"}
+            lg={6}
+            md={6}
+            rowSpacing={2}
+          >
+            <Grid container item>
+              <Typography
+                sx={{ ...modelHeading, textAlign: "center" }}
+                textAlign={"center"}
+              >
+                Data Specification
+              </Typography>
+
+              {re225DataSpec?.map((item) => (
+                <Grid container item key={item.id} sx={{ m: "2px 0" }}>
+                  <Grid item lg={6} md={5} sm={6} xs={6}>
+                    <Typography sx={{ fontWeight: "600" }}>
+                      {item.label} :
+                    </Typography>
+                  </Grid>
+                  <Grid item lg={6} md={6} sm={6} xs>
+                    {item.content}
+                  </Grid>
+                </Grid>
+              ))}
+            </Grid>
+
+            <Grid container item>
+              <Typography
+                sx={{ ...modelHeading, textAlign: "center" }}
+                textAlign={"center"}
+              >
+                features
+              </Typography>
+              {re225Features?.map((item) => (
+                <Grid container item key={item.id} sx={{ m: "2px 0" }}>
+                  <Grid item lg={6} md={6} sm={6} xs={6}>
+                    <Typography sx={{ fontWeight: "600" }}>
+                      {item.label} :
+                    </Typography>
+                  </Grid>
+                  <Grid item lg={6} md={5} xs={5}>
+                    {item.content}
+                  </Grid>
+                </Grid>
+              ))}
+            </Grid>
+
+            <Grid container item>
+              <Typography
+                sx={{ ...modelHeading, textAlign: "center" }}
+                textAlign={"center"}
+              >
+                ink system
+              </Typography>
+              {inkSystem?.map((item) => (
+                <Grid container item key={item.id} sx={{ m: "2px 0" }}>
+                  <Grid item lg={6} md={6} sm={6} xs={6}>
+                    <Typography sx={{ fontWeight: "600" }}>
+                      {item.label} :
+                    </Typography>
+                  </Grid>
+                  <Grid item lg={6} md={6} xs={6}>
+                    {item.content}
+                  </Grid>
+                </Grid>
+              ))}
+            </Grid>
+
+            <Grid item>
+              <Typography sx={modelHeading}>print functions</Typography>
+              {printFunctions?.map((item) => {
+                return <List key={item.id}>{item.content}</List>;
+              })}
+            </Grid>
+
+            <Grid item>
+              <Typography sx={modelHeading}>user interface</Typography>
+              {userInterface?.map((item) => {
+                return <List key={item.id}>{item.content}</List>;
+              })}
+            </Grid>
+          </Grid>
+        </Grid>
+
+        <Grid item lg={12} md={12} sm={12}>
+          <Typography sx={modelHeading}>nozzle characterities</Typography>
+          {nozzleCharacterities?.map((item) => {
+            return <List key={item.id}>{item.content}</List>;
+          })}
+        </Grid>
+
+        <Grid item lg={12} md={12} sm={12}>
+          <Typography sx={modelHeading}>hardware specifications</Typography>
+          {re225HardwareSpec?.map((item) => {
+            return <List key={item.id}>{item.content}</List>;
+          })}
+        </Grid>
+
+        <Grid item lg={12} md={12} sm={12}>
+          <Typography sx={modelHeading}>software system</Typography>
+          {re225SoftwareSystem?.map((item) => {
+            return <List key={item.id}>{item.content}</List>;
+          })}
+        </Grid>
+      </Grid>
+    </>
   );
 };
 

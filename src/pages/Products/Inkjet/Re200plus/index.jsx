@@ -80,19 +80,6 @@ const Re200Plus = () => {
                 style={{ height: "400px" }}
               />
             </Grid>
-          </Grid>
-
-          <Grid
-            container
-            item
-            direction="column"
-            alignSelf="center"
-            lg={6}
-            md={5}
-            rowSpacing={4}
-            sx={{ mt: { sm: "10px", xs: "10px" } }}
-          >
-            <Typography sx={modelHeading}>features & specifications</Typography>
 
             <Grid item>
               <Typography sx={headings}>KEY BENIFITS</Typography>
@@ -114,6 +101,56 @@ const Re200Plus = () => {
               <List>Serial Number Printing, USB Logo Input</List>
             </Grid>
 
+            <Grid item>
+              <Typography sx={headings}>data input</Typography>
+              <List>RS232 PCMCIA, USB</List>
+            </Grid>
+          </Grid>
+
+          <Grid container item direction="column" lg={6} md={5} rowSpacing={4}>
+            {/* <Typography sx={modelHeading}>features & specifications</Typography> */}
+            <Grid container item>
+              <Typography
+                sx={{ ...modelHeading, textAlign: "center" }}
+                textAlign={"center"}
+              >
+                Product Details
+              </Typography>
+              {re200PlusPrintParams?.map((item) => (
+                <Grid container item key={item.id} sx={{ m: "2px 0" }}>
+                  <Grid item lg={7} md={7} sm={7} xs={7}>
+                    <Typography sx={{ fontWeight: "600" }}>
+                      {item.title} :
+                    </Typography>
+                  </Grid>
+                  <Grid item lg={5} md={5} sm={5} xs={5}>
+                    {item.content}
+                  </Grid>
+                </Grid>
+              ))}
+            </Grid>
+
+            <Grid container item>
+              <Typography
+                sx={{ ...modelHeading, textAlign: "center" }}
+                textAlign={"center"}
+              >
+                Specifications
+              </Typography>
+              {re200PlusParams?.map((item) => (
+                <Grid container item key={item.id} sx={{ m: "2px 0" }}>
+                  <Grid item lg={7} md={7} sm={7} xs={7}>
+                    <Typography sx={{ fontWeight: "600" }}>
+                      {item.title} :
+                    </Typography>
+                  </Grid>
+                  <Grid item lg={5} md={5} sm={5} xs={5}>
+                    {item.content}
+                  </Grid>
+                </Grid>
+              ))}
+            </Grid>
+
             <Grid item container>
               <Typography sx={headings}>ink system</Typography>
               {inkSystem?.map((item) => (
@@ -128,11 +165,6 @@ const Re200Plus = () => {
                   </Grid>
                 </Grid>
               ))}
-            </Grid>
-
-            <Grid item>
-              <Typography sx={headings}>data input</Typography>
-              <List>RS232 PCMCIA, USB</List>
             </Grid>
 
             <Grid item container direction="column">
@@ -153,48 +185,6 @@ const Re200Plus = () => {
               ))}
             </Grid>
           </Grid>
-        </Grid>
-
-        <Grid container item>
-          <Typography
-            sx={{ ...modelHeading, textAlign: "center" }}
-            textAlign={"center"}
-          >
-            Product Details
-          </Typography>
-          {re200PlusPrintParams?.map((item) => (
-            <Grid container item key={item.id} sx={{ m: "2px 0" }}>
-              <Grid item lg={7} md={7} sm={7} xs={7}>
-                <Typography sx={{ fontWeight: "600" }}>
-                  {item.title} :
-                </Typography>
-              </Grid>
-              <Grid item lg={5} md={5} sm={5} xs={5}>
-                {item.content}
-              </Grid>
-            </Grid>
-          ))}
-        </Grid>
-
-        <Grid container item>
-          <Typography
-            sx={{ ...modelHeading, textAlign: "center" }}
-            textAlign={"center"}
-          >
-            Specifications
-          </Typography>
-          {re200PlusParams?.map((item) => (
-            <Grid container item key={item.id} sx={{ m: "2px 0" }}>
-              <Grid item lg={7} md={7} sm={7} xs={7}>
-                <Typography sx={{ fontWeight: "600" }}>
-                  {item.title} :
-                </Typography>
-              </Grid>
-              <Grid item lg={5} md={5} sm={5} xs={5}>
-                {item.content}
-              </Grid>
-            </Grid>
-          ))}
         </Grid>
 
         <Grid container item direction="row" columnSpacing={10}>
