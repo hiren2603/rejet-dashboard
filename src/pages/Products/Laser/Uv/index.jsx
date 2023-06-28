@@ -1,6 +1,7 @@
 import uvImage from "@/assets/products/uv.png";
 import sample from "@/assets/samples/uv_samples.png";
 import Heading from "@/components/Heading";
+import Details from "@/components/Details";
 import { uvApps, uvData, uvFeatures } from "@/helpers/uvData";
 import { Grid, List, Typography } from "@mui/material";
 import { ProductImg, modelHeading, productHeading } from "./style";
@@ -55,7 +56,7 @@ const Uv = () => {
           <Grid item>
             <Typography sx={modelHeading}>Applicable Products</Typography>
             {uvApps?.map((item, index) => {
-              return <List key={index}>{item}</List>;
+              return <Details key={index} content={item} />;
             })}
           </Grid>
         </Grid>
@@ -80,7 +81,7 @@ const Uv = () => {
           <Grid item>
             <Typography sx={modelHeading}>Features</Typography>
             {uvFeatures?.map((item) => {
-              return <List key={item}>{item}</List>;
+              return <Details key={item} content={item} />;
             })}
           </Grid>
         </Grid>

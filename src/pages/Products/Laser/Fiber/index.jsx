@@ -1,5 +1,6 @@
 import React from "react";
 import Heading from "@/components/Heading";
+import Details from "@/components/Details";
 import ProductButton from "@/components/ProductButton";
 import { Typography, Grid, List } from "@mui/material";
 import { productHeading, ProductImg, modelHeading } from "./style";
@@ -78,7 +79,7 @@ const Fiber = () => {
             <Grid item lg>
               <Typography sx={modelHeading}>Applicable Products</Typography>
               {applications?.map((item, index) => {
-                return <List key={index}>{item}</List>;
+                return <Details key={index} content={item} />;
               })}
             </Grid>
           </Grid>
@@ -110,7 +111,7 @@ const Fiber = () => {
         <Grid item lg md>
           <Typography sx={modelHeading}>Features</Typography>
           {features?.map((item) => {
-            return <List key={item}>{item}</List>;
+            return <Details key={item} content={item} />;
           })}
         </Grid>
       </Grid>

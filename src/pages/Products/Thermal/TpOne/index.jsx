@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "@/components/Head";
 import Heading from "@/components/Heading";
+import Details from "@/components/Details";
 import ProductButton from "@/components/ProductButton";
 import samples from "@/assets/samples/tij_samples.png";
 import TIJProduct from "@/assets/products/TIJ.png";
@@ -146,7 +147,7 @@ const TpOne = () => {
             <Grid item>
               <Typography sx={modelHeading}>Applicable Products</Typography>
               {applications?.map((item) => {
-                return <Typography key={item}>{item}</Typography>;
+                return <Details key={item} content={item} />;
               })}
             </Grid>
           </Grid>
