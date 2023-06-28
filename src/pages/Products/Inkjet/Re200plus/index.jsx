@@ -1,5 +1,6 @@
 import Head from "@/components/Head";
 import ProductButton from "@/components/ProductButton";
+import Details from "@/components/Details";
 import inkjet from "@/assets/products/inkjet.png";
 import Samples from "@/assets/samples/font_sample.png";
 import consumable from "@/assets/products/cij_consumable.png";
@@ -83,32 +84,37 @@ const Re200Plus = () => {
 
             <Grid item>
               <Typography sx={headings}>KEY BENIFITS</Typography>
-              <List>Proven world class Platform</List>
-              <List>Easy to use and Easy to Leave with</List>
-              <List>Inks are Suitable for wide range of Applications</List>
+              <Details content={"Proven world class Platform"} />
+              <Details content={"Easy to use and Easy to Leave with"} />
+              <Details
+                content={"Inks are Suitable for wide range of Applications"}
+              />
             </Grid>
 
             <Grid item>
               <Typography sx={headings}>suitable materials</Typography>
-              <List>Plascic, Composite Board, Paper, Metal</List>
-              <List>Glass, Foil, Tiles</List>
+              <Details content={"Plascic, Composite Board, Paper, Metal"} />
+              <Details content={"Glass, Foil, Tiles"} />
             </Grid>
 
             <Grid item>
               <Typography sx={headings}>standered features</Typography>
-              <List>print Delay, Repeat Printing, Reverse - Inverse</List>
-              <List>Product Counter, User Clock, Change Hight/Weight</List>
-              <List>Serial Number Printing, USB Logo Input</List>
+              <Details
+                content={"print Delay, Repeat Printing, Reverse - Inverse"}
+              />
+              <Details
+                content={"Product Counter, User Clock, Change Hight/Weight"}
+              />
+              <Details content={"Serial Number Printing, USB Logo Input"} />
             </Grid>
 
             <Grid item>
               <Typography sx={headings}>data input</Typography>
-              <List>RS232 PCMCIA, USB</List>
+              <Details content={"RS232 PCMCIA, USB"} />
             </Grid>
           </Grid>
 
           <Grid container item direction="column" lg={6} md={5} rowSpacing={4}>
-            {/* <Typography sx={modelHeading}>features & specifications</Typography> */}
             <Grid container item>
               <Typography
                 sx={{ ...modelHeading, textAlign: "center" }}

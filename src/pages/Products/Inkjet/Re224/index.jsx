@@ -1,5 +1,6 @@
 import Head from "@/components/Head";
 import ProductButton from "@/components/ProductButton";
+import Details from "@/components/Details";
 import inkjet from "@/assets/products/inkjet.png";
 import Samples from "@/assets/samples/font_sample.png";
 import Heading from "@/components/Heading";
@@ -54,7 +55,14 @@ const Re224 = () => {
           justifyContent="space-between"
           columnGap={{ lg: 5, md: 4 }}
         >
-          <Grid container item direction={"column"} lg={6} md={4}>
+          <Grid
+            container
+            item
+            direction={"column"}
+            lg={6}
+            md={4}
+            rowSpacing={5}
+          >
             <Grid
               item
               sx={{
@@ -84,6 +92,15 @@ const Re224 = () => {
               />
             </Grid>
 
+            <Grid item xs>
+              <Typography sx={modelHeading}>Print info</Typography>
+              {re224PrintInfo?.map((item) => {
+                return <Details key={item.id} content={item.info} />;
+              })}
+            </Grid>
+          </Grid>
+
+          <Grid container item direction={"column"} rowSpacing={4} lg md={6}>
             <Grid container item lg md sm>
               <Typography sx={modelHeading}>
                 Technical Specifications
@@ -101,9 +118,7 @@ const Re224 = () => {
                 </Grid>
               ))}
             </Grid>
-          </Grid>
 
-          <Grid container item direction={"column"} rowSpacing={4} lg md={6}>
             <Grid container item>
               <Typography sx={modelHeading}>Specifications</Typography>
               {re224Features?.map((item) => (
@@ -120,70 +135,65 @@ const Re224 = () => {
               ))}
             </Grid>
 
+            <Grid container item>
+              <Typography sx={modelHeading}>Font Specifications</Typography>
+              {re224FontSpec?.map((item) => (
+                <Grid container item key={item.id}>
+                  <Grid item lg={7} md={6} sm={6} xs={6}>
+                    <Typography sx={{ fontWeight: "600" }}>
+                      {item.label} :
+                    </Typography>
+                  </Grid>
+                  <Grid item lg md sm xs>
+                    {item.content}
+                  </Grid>
+                </Grid>
+              ))}
+            </Grid>
+
+            <Grid container item>
+              <Typography sx={modelHeading}>Languages</Typography>
+              {re224Languages?.map((item) => (
+                <Grid container item key={item.id}>
+                  <Grid item lg={6} md={6} sm={6} xs={6}>
+                    <Typography sx={{ fontWeight: "600" }}>
+                      {item.key} :
+                    </Typography>
+                  </Grid>
+                  <Grid item lg={6} md sm xs={6}>
+                    {item.content}
+                  </Grid>
+                </Grid>
+              ))}
+            </Grid>
+
             <Grid item>
               <Typography sx={modelHeading}>Nozel</Typography>
               {re224Nozel?.map((item) => {
-                return <List key={item.id}>{item.characteristics}</List>;
+                return <Details key={item.id} content={item.characteristics} />;
               })}
             </Grid>
 
             <Grid item>
               <Typography sx={modelHeading}>File Functions</Typography>
-              {re224fileFunctions?.map((item) => (
-                <List key={item.id}>{item.content}</List>
-              ))}
+              {re224fileFunctions?.map((item) => {
+                return <Details key={item.id} content={item.content} />;
+              })}
             </Grid>
 
             <Grid item lg>
               <Typography sx={modelHeading}>Software</Typography>
-              {re224Software?.map((item) => (
-                <List key={item.id}>{item.featutre}</List>
-              ))}
+              {re224Software?.map((item) => {
+                return <Details key={item.id} content={item.featutre} />;
+              })}
             </Grid>
           </Grid>
-        </Grid>
-
-        <Grid container item>
-          <Typography sx={modelHeading}>Font Specifications</Typography>
-          {re224FontSpec?.map((item) => (
-            <Grid container item key={item.id}>
-              <Grid item lg={7} md={6} sm={6} xs={6}>
-                <Typography sx={{ fontWeight: "600" }}>
-                  {item.label} :
-                </Typography>
-              </Grid>
-              <Grid item lg md sm xs>
-                {item.content}
-              </Grid>
-            </Grid>
-          ))}
-        </Grid>
-
-        <Grid container item>
-          <Typography sx={modelHeading}>Languages</Typography>
-          {re224Languages?.map((item) => (
-            <Grid container item key={item.id}>
-              <Grid item lg={7} md={6} sm={6} xs={6}>
-                <Typography sx={{ fontWeight: "600" }}>{item.key} :</Typography>
-              </Grid>
-              <Grid item lg={6} md sm xs={6}>
-                {item.content}
-              </Grid>
-            </Grid>
-          ))}
-        </Grid>
-
-        <Grid item lg={12} md={12} alignSelf={{ xs: "center" }}>
-          <Typography sx={modelHeading}>Print info</Typography>
-          {re224PrintInfo?.map((item) => {
-            return <List key={item.id}>{item.info}</List>;
-          })}
         </Grid>
 
         <Grid item lg={12} md={12} sm={12}>
           <Typography sx={modelHeading}>Benifits</Typography>
           {re224Benifits?.map((item) => {
-            return <List key={item.id}>{item.benifit}</List>;
+            return <Details key={item.id} content={item.benifit} />;
           })}
         </Grid>
       </Grid>

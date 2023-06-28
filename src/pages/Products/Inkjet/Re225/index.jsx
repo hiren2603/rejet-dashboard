@@ -1,5 +1,6 @@
 import Head from "@/components/Head";
 import ProductButton from "@/components/ProductButton";
+import Details from "@/components/Details";
 import inkjet from "@/assets/products/inkjet.png";
 import Samples from "@/assets/samples/font_sample.png";
 import Heading from "@/components/Heading";
@@ -91,6 +92,29 @@ const Re225 = () => {
               />
             </Grid>
 
+            <Grid item>
+              <Typography sx={modelHeading}>nozzle characterities</Typography>
+              {nozzleCharacterities?.map((item) => {
+                return <Details key={item.id} content={item.content} />;
+              })}
+            </Grid>
+
+            <Grid item>
+              <Typography sx={modelHeading}>hardware specifications</Typography>
+              {re225HardwareSpec?.map((item) => {
+                return <Details key={item.id} content={item.content} />;
+              })}
+            </Grid>
+          </Grid>
+
+          <Grid
+            container
+            item
+            direction={"column"}
+            lg={6}
+            md={6}
+            rowSpacing={2}
+          >
             <Grid container item>
               <Typography
                 sx={{ ...modelHeading, textAlign: "center" }}
@@ -111,16 +135,7 @@ const Re225 = () => {
                 </Grid>
               ))}
             </Grid>
-          </Grid>
 
-          <Grid
-            container
-            item
-            direction={"column"}
-            lg={6}
-            md={6}
-            rowSpacing={2}
-          >
             <Grid container item>
               <Typography
                 sx={{ ...modelHeading, textAlign: "center" }}
@@ -188,37 +203,24 @@ const Re225 = () => {
             <Grid item>
               <Typography sx={modelHeading}>print functions</Typography>
               {printFunctions?.map((item) => {
-                return <List key={item.id}>{item.content}</List>;
+                return <Details key={item.id} content={item.content} />;
               })}
             </Grid>
 
             <Grid item>
               <Typography sx={modelHeading}>user interface</Typography>
               {userInterface?.map((item) => {
-                return <List key={item.id}>{item.content}</List>;
+                // return <List key={item.id}>{item.content}</List>;
+                return <Details key={item.id} content={item.content} />;
               })}
             </Grid>
           </Grid>
         </Grid>
 
         <Grid item lg={12} md={12} sm={12}>
-          <Typography sx={modelHeading}>nozzle characterities</Typography>
-          {nozzleCharacterities?.map((item) => {
-            return <List key={item.id}>{item.content}</List>;
-          })}
-        </Grid>
-
-        <Grid item lg={12} md={12} sm={12}>
-          <Typography sx={modelHeading}>hardware specifications</Typography>
-          {re225HardwareSpec?.map((item) => {
-            return <List key={item.id}>{item.content}</List>;
-          })}
-        </Grid>
-
-        <Grid item lg={12} md={12} sm={12}>
           <Typography sx={modelHeading}>software system</Typography>
           {re225SoftwareSystem?.map((item) => {
-            return <List key={item.id}>{item.content}</List>;
+            return <Details key={item.id} content={item.content} />;
           })}
         </Grid>
       </Grid>

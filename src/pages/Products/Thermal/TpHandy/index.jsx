@@ -1,9 +1,10 @@
 import Head from "@/components/Head";
 import handy from "@/assets/products/handy.png";
 import Heading from "@/components/Heading";
+import Details from "@/components/Details";
 import { handyData, handyFeatures, handyApp } from "helpers/handyData";
 import { Grid, Typography } from "@mui/material";
-import { modelHeading } from "./style";
+import { modelHeading, productHeading } from "./style";
 
 const TpHandy = () => {
   return (
@@ -16,6 +17,15 @@ const TpHandy = () => {
         alignItems="center"
         justifyContent="center"
       >
+        <Typography
+          sx={{
+            ...productHeading,
+            display: { lg: "flex", md: "flex", sm: "flex", xs: "none" },
+          }}
+          align="center"
+        >
+          Thermal inkjet printers
+        </Typography>
         <Heading name="TP HANDY" type="TIJ PRINTER" />
 
         <Grid
@@ -34,7 +44,8 @@ const TpHandy = () => {
             <Grid item>
               <Typography sx={modelHeading}>Applicable Products</Typography>
               {handyApp?.map((item) => {
-                return <Typography key={item.id}>{item.item}</Typography>;
+                // return <Typography key={item.id}>{item.item}</Typography>;
+                return <Details key={item.id} content={item.item} />;
               })}
             </Grid>
 

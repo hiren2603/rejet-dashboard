@@ -2,6 +2,7 @@ import React from "react";
 import LaserImg from "@/assets/products/co2.png";
 import Samples from "@/assets/samples/co2_samples.png";
 import ProductButton from "@/components/ProductButton";
+import Details from "@/components/Details";
 import Heading from "@/components/Heading";
 import { Grid, Typography, List, Card, Stack } from "@mui/material";
 import {
@@ -77,7 +78,7 @@ const Co2 = () => {
             <Grid item>
               <Typography sx={modelHeading}>Applicable Products</Typography>
               {applications?.map((item, index) => {
-                return <List key={index}>{item}</List>;
+                return <Details key={index} content={item} />;
               })}
             </Grid>
           </Grid>
@@ -148,9 +149,9 @@ const Co2 = () => {
 
         <Grid item lg md>
           <Typography sx={modelHeading}>Benifits</Typography>
-          <List>{benifits[0].marking}</List>
-          <List>{benifits[0].efficiency}</List>
-          <List>{benifits[0].power}</List>
+          <Details content={benifits[0].marking} />
+          <Details content={benifits[0].efficiency} />
+          <Details content={benifits[0].power} />
         </Grid>
       </Grid>
     </>
