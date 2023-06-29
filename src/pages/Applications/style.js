@@ -8,6 +8,7 @@ export const VideoWrapper = styled("div")({
   margin: "4rem auto",
   width: "80%",
   maxWidth: "80%",
+  borderRadius: "5px",
 });
 
 export const productHeading = {

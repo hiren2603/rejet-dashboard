@@ -41,6 +41,7 @@ const Video = () => {
           display="flex"
           alignItems="center"
           justifyContent="center"
+          sx={{ borderRadius: "5px" }}
         >
           <YouTube
             videoId={item.sourceId}

@@ -1,15 +1,9 @@
 import Head from "@/components/Head";
 import { Grid, Typography } from "@mui/material";
-import { videoData } from "helpers/videoData";
 import Video from "@/components/Video";
 import { productHeading, VideoWrapper } from "./style";
 
 const Applications = () => {
-  const opts = {
-    height: "250",
-    width: "300",
-    playerVars: { autoplay: 0, origin: window.location.origin },
-  };
   return (
     <>
       <Grid

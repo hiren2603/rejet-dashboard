@@ -110,31 +110,34 @@ export const re224PrintInfo = [
   },
   {
     id: 3,
-    label: "1D barcode",
-    info: "Code39;Code93;Code128;EAN13;ITF;Codebar;UPC_A&C Single line printing 666 characters",
+    info: "Code39;Code93;Code128;EAN13 Single line printing 666 characters",
   },
   {
     id: 4,
-    info: "Round-trip printing",
+    info: "ITF,Codebar,UPC_A&C Single line printing 666 characters",
   },
   {
     id: 5,
-    info: "Automatic date update, can print hours, minutes, seconds, date, week, month, year",
+    info: "Round-trip printing",
   },
   {
     id: 6,
-    info: "Invert images, barcode and text (such as white on black)",
+    info: "Automatic date update, can print hours, minutes, seconds, date, week, month, year",
   },
   {
     id: 7,
-    info: "Create and edit messages during coding",
+    info: "Invert images, barcode and text (such as white on black)",
   },
   {
     id: 8,
-    info: "Characters are widened by 14 times",
+    info: "Create and edit messages during coding",
   },
   {
     id: 9,
+    info: "Characters are widened by 14 times",
+  },
+  {
+    id: 10,
     info: "5 sets of serial numbers can be printed at the same time",
   },
 ];

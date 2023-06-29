@@ -5,6 +5,23 @@ export const modal = [
   },
 ];
 
+export const benifits = [
+  { id: 1, content: "Proven world class Platform" },
+  { id: 2, content: "Easy to use and Easy to Leave with" },
+  { id: 3, content: "Inks are Suitable for wide range of Applications" },
+];
+
+export const material = [
+  { id: 1, content: "Plastic,Composite Board, Paper,Metal" },
+  { id: 2, content: "Glass, Foil,Tiles" },
+];
+
+export const features = [
+  { id: 1, content: "Print Delay, Repeat Printing, Reverse - Inverse" },
+  { id: 2, content: "Product Counter, User Clock, Change Hight,Weight" },
+  { id: 3, content: "Serial Number Printing, USB Logo Input" },
+];
+
 export const re200PlusPrintParams = [
   {
     id: 1,

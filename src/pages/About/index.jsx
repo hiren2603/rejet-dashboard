@@ -52,7 +52,7 @@ const About = () => {
       </Grid>
       <Grid
         container
-        columnSpacing={0}
+        columnSpacing={{ xs: 1 }}
         rowSpacing={2}
         justifyContent={"space-between"}
       >

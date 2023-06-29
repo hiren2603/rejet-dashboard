@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import Topbar from "../Topbar";
 import Sidebar from "../Sidebar";
 import Footer from "../Footer";
+import Whatsapp from "@/components/Whastapp";
 import { Box, useMediaQuery, useTheme } from "@mui/material";
 import { LayoutContext } from "@/Context";
 
@@ -86,7 +87,7 @@ const Layout = ({ children }) => {
               }),
             ...(isSmallScreen &&
               open && {
-                margin: "0px",
+                // margin: "0px",
                 width: "100%",
                 marginTop: "10vh",
               }),
@@ -94,6 +95,7 @@ const Layout = ({ children }) => {
         >
           {children}
         </Box>
+        <Whatsapp />
         <Footer />
       </Box>
     </>

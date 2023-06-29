@@ -13,6 +13,9 @@ import {
   re200PlusParams,
   inkSystem,
   cabinetData,
+  benifits,
+  material,
+  features,
 } from "@/helpers/re200PlusData";
 import {
   productHeading,
@@ -84,28 +87,23 @@ const Re200Plus = () => {
 
             <Grid item>
               <Typography sx={headings}>KEY BENIFITS</Typography>
-              <Details content={"Proven world class Platform"} />
-              <Details content={"Easy to use and Easy to Leave with"} />
-              <Details
-                content={"Inks are Suitable for wide range of Applications"}
-              />
+              {benifits?.map((item) => {
+                return <Details key={item.id} content={item.content} />;
+              })}
             </Grid>
 
             <Grid item>
               <Typography sx={headings}>suitable materials</Typography>
-              <Details content={"Plascic, Composite Board, Paper, Metal"} />
-              <Details content={"Glass, Foil, Tiles"} />
+              {material?.map((item) => {
+                return <Details key={item.id} content={item.content} />;
+              })}
             </Grid>
 
             <Grid item>
               <Typography sx={headings}>standered features</Typography>
-              <Details
-                content={"print Delay, Repeat Printing, Reverse - Inverse"}
-              />
-              <Details
-                content={"Product Counter, User Clock, Change Hight/Weight"}
-              />
-              <Details content={"Serial Number Printing, USB Logo Input"} />
+              {features?.map((item) => {
+                return <Details key={item.id} content={item.content} />;
+              })}
             </Grid>
 
             <Grid item>

@@ -92,7 +92,7 @@ const Re224 = () => {
               />
             </Grid>
 
-            <Grid item xs>
+            <Grid item>
               <Typography sx={modelHeading}>Print info</Typography>
               {re224PrintInfo?.map((item) => {
                 return <Details key={item.id} content={item.info} />;
