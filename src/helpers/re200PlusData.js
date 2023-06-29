@@ -172,3 +172,57 @@ export const cabinetData = [
   { id: 2, title: "Conduit Length :", content: "3 to 6 meters" },
   { id: 3, title: "Dimensions :", content: "446mm X 221mm X 647mm" },
 ];
+
+export const re200plusBenifits = [
+  {
+    id: 1,
+    content: "Proven world class Platform",
+  },
+  {
+    id: 2,
+    content: "Easy to use and Easy to Leave with",
+  },
+  {
+    id: 3,
+    content: "Inks are Suitable for wide range of Applications",
+  },
+];
+
+export const re200PlusSuitableMaterials = [
+  {
+    id: 1,
+    content: "Plascic, Composite Board, Paper, Metal",
+  },
+  {
+    id: 2,
+    content: "Glass, Foil, Tiles",
+  },
+];
+
+export const re200PlusStanderedFeatures = [
+  {
+    id: 1,
+    content: "print Delay, Repeat Printing, Reverse - Inverse",
+  },
+  {
+    id: 2,
+    content: "Product Counter, User Clock, Change Hight/Weight",
+  },
+  {
+    id: 3,
+    content: "Serial Number Printing, USB Logo Input",
+  },
+];
+
+export const re200PlusSpares = [
+  {
+    id: 1,
+    content:
+      "Smart Print Head, Modular designed still give flexibility to replace individual spare separately. Automatic Calibration function automatically adjusts printing parameters according to the changes in the environment.",
+  },
+  {
+    id: 2,
+    content:
+      "Inteligent Ink Management System of RE200 Inkjet Printer eliminates the wastage of consumables as there is no manual pouring. Easy Insertion and Removal of Cartridges eliminates the risk of Damage",
+  },
+];

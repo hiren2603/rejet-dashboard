@@ -46,7 +46,7 @@ const Re200Plus = () => {
         >
           continuous inkjet printers
         </Typography>
-        <Heading name="RE 200" type="INKJET PRINTER" />
+        <Heading name="RE 200+" type="INKJET PRINTER" />
         <Grid
           container
           item
