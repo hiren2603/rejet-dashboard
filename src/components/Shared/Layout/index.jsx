@@ -86,7 +86,7 @@ const Layout = ({ children }) => {
               }),
             ...(isSmallScreen &&
               open && {
-                margin: "0px",
+                // margin: "0px",
                 width: "100%",
                 marginTop: "10vh",
               }),
