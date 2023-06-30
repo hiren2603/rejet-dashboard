@@ -3,6 +3,7 @@ import samples from "assets/samples/desktop_samples.png";
 import { Grid, Typography, List } from "@mui/material";
 import { productHeading, modelHeading, ProductImg } from "./style";
 import Heading from "@/components/Heading";
+import Details from "@/components/Details";
 import ProductButton from "@/components/ProductButton";
 import { desktopData, features, applications } from "helpers/desktopData";
 import Head from "@/components/Head";
@@ -61,7 +62,7 @@ const Desktop = () => {
             <Grid item>
               <Typography sx={modelHeading}>Features</Typography>
               {features?.map((item) => {
-                return <List key={item}>{item}</List>;
+                return <Details key={item} content={item} />;
               })}
             </Grid>
           </Grid>
@@ -92,7 +93,7 @@ const Desktop = () => {
             <Grid item>
               <Typography sx={modelHeading}>Applicable Products</Typography>
               {applications?.map((item, index) => {
-                return <List key={index}>{item}</List>;
+                return <Details key={item} content={item} />;
               })}
             </Grid>
           </Grid>
