@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Box,
   Container,
@@ -6,14 +7,18 @@ import {
   useTheme,
   useMediaQuery,
 } from "@mui/material";
+import CallIcon from "@mui/icons-material/Call";
+import EmailIcon from "@mui/icons-material/Email";
 import MenuIcon from "@mui/icons-material/Menu";
 import MuiAppBar from "@mui/material/AppBar";
 import { styled } from "@mui/material/styles";
 import Logo from "../../../assets/logo.png";
+import { ContactButton, contactContainer } from "./style";
 
 const Topbar = ({ open, drawerwidth, setOpen }) => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const [isOpen, setIsOpen] = useState(false);
 
   const AppBar = styled(MuiAppBar, {
     shouldForwardProp: (prop) => prop !== open,
@@ -48,7 +53,7 @@ const Topbar = ({ open, drawerwidth, setOpen }) => {
             sx={{ display: "flex", justifyContent: "space-between" }}
           >
             <img src={Logo} width={180} height={60} alt="logo" />
-            {isSmallScreen && (
+            {isSmallScreen ? (
               <>
                 <Box
                   sx={{
@@ -62,6 +67,24 @@ const Topbar = ({ open, drawerwidth, setOpen }) => {
                   </IconButton>
                 </Box>
               </>
+            ) : (
+              <Box sx={contactContainer}>
+                <ContactButton
+                  href="tel:769-827-1412"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <CallIcon />
+                  Call Now
+                </ContactButton>
+
+                <ContactButton
+                  href="mailto:info@rejettech.com"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <EmailIcon color="white" />
+                  Send Mail
+                </ContactButton>
+              </Box>
             )}
           </Toolbar>
         </Container>

@@ -11,6 +11,7 @@ const Details = ({ content }) => {
           flexDirection: "row",
           alignItems: "center",
           justifyContent: "center",
+          gap: 1,
         }}
       >
         <CheckCircleIcon color="success" fontSize="5px" />
