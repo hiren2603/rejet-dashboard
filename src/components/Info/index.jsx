@@ -40,9 +40,8 @@ const Info = () => {
             Today, we are privileged to connect with hundreds of customers
             everyday with exceptional products and more than 5 branches. Today
             Radhe Enterprise is fastest growing company engaged in providing
-            total service & consumable supports to all users of inkjet printers
-            like <b> Markem Image, Domino, Hitachi, Videojet & Willett. </b> We
-            are having head office at Rajkot(Gujarat) and branch offices in{" "}
+            total service & consumable supports to all users of inkjet printers.
+            We are having head office at Rajkot(Gujarat) and branch offices in{" "}
             <b> Ahmedabad, Surat, Morbi, Gandhidham, Vapi. </b>Recently we have
             started our own manufacturing of “RE-Jet” CIJ Printer, Laser
             Machine, and TIJ Printer Machine.

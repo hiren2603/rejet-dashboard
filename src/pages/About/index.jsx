@@ -25,15 +25,16 @@ const About = () => {
                 sx={{
                   lineHeight: 2,
                   fontWeight:
-                    para.id > 2 && para.id < 6 && para.id !== 4
+                    para.id === 5
                       ? "700"
                       : "normal",
                   color:
-                    para.id > 2 && para.id < 6 && para.id !== 4
+                    para.id === 5
                       ? `#ff0000`
                       : "black",
                   textTransform:
-                    para.id > 2 && para.id < 6 && para.id !== 4 && "uppercase",
+                    para.id === 5 ? "uppercase": "none",
+                  pl: para.id === 5 && "5px"
                 }}
               >
                 {para.item}

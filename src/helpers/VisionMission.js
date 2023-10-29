@@ -7,19 +7,19 @@ export const visions = [
   {
     id: 1,
     title: "Vision",
-    info: "Our Vision is to Expand our Business to All over Asia and Africa till 2030 by providing  Excellent Quality of Products and unbeatable services.",
+    info: "To be leading Global coding and marking solutions provider with commitment to providing safe, high quality, and highly-reliable equipment by 2030. Lead with innovation and passion to solve the world's product identification challenges.",
     image: vision,
   },
   {
     id: 2,
     title: "Mission",
-    info: "We are on the mission to expand our business in terms of the Market share as well as the company size by increasing the numbers of quality Employees to 1000.",
+    info: "We collaborate with our customers to protect their customers. We continuously improve our customers' operational reliability, productivity and quality. We succeed as one global team, creating opportunities for our associates to learn and grow. As a company ReJET is committed to upholding our core Values as the founding principles Collaboration- We promote respectful collaboration with colleagues, suppliers, technology partners, distributors and customers",
     image: mission,
   },
   {
     id: 3,
     title: "Values",
-    info: "We are developing a relationships that makes a positive difference in our customers life. We provide Outstanding Quality of our Products and Services that deliver premium value to our customers.",
+    info: "To respect the abilities of every employee and inspire confidence to tackle new challenges. To build a vibrant, enterprising company that is open to new ideas.To encourage speedy and efficient performance through teamwork.",
     image: values,
   },
   {
