@@ -2,7 +2,6 @@ import React from "react";
 import Slider from "@/components/Slider";
 import ProductCard from "@/components/ProductCard";
 import Info from "@/components/Info";
-import Brands from "@/components/Brands";
 import Form from "@/components/Form";
 import Head from "@/components/Head";
 
@@ -13,7 +12,6 @@ const Home = () => {
       <Slider />
       <ProductCard />
       <Info />
-      <Brands />
       <Form />
     </>
   );
