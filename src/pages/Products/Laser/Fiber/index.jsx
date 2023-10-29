@@ -85,6 +85,7 @@ const Fiber = () => {
           </Grid>
 
           <Grid container item lg={5} md={5}>
+            <Typography sx={modelHeading}>Betabeam 6430/6450</Typography>
             <Typography sx={modelHeading}>Specifications</Typography>
             {fiberData?.map((item) => (
               <Grid

@@ -1,7 +1,8 @@
 import Head from "@/components/Head";
 import ProductButton from "@/components/ProductButton";
 import Details from "@/components/Details";
-import inkjet from "@/assets/products/inkjet.png";
+// import inkjet from "@/assets/products/inkjet.png";
+import inkjet from "@/assets/products/inkjet-200plus.png"
 import Samples from "@/assets/samples/font_sample.png";
 import consumable from "@/assets/products/cij_consumable.png";
 import spares from "@/assets/products/cij_spares.png";
@@ -72,7 +73,7 @@ const Re200Plus = () => {
                 alignItems: "center",
               }}
             >
-              <img src={inkjet} alt="Laser" width={360} />
+              <img src={inkjet} alt="Laser" width={500} />
               <ProductButton />
             </Grid>
 

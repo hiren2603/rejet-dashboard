@@ -5,6 +5,8 @@ import Details from "@/components/Details";
 import ProductButton from "@/components/ProductButton";
 import samples from "@/assets/samples/tij_samples.png";
 import TIJProduct from "@/assets/products/TIJ.png";
+import TIJProduct1 from "@/assets/products/tij1.png";
+import TIJProduct2 from "@/assets/products/tij2.png";
 import {
   tijData,
   commonSpace,
@@ -135,7 +137,8 @@ const TpOne = () => {
                 alignItems: "center",
               }}
             >
-              <img src={TIJProduct} alt="TIJ Product" />
+              <img src={TIJProduct1} alt="TIJ Product" width={500} />
+              <img src={TIJProduct2} alt="TIJ Product" width={500} />
               <ProductButton />
             </Grid>
 
