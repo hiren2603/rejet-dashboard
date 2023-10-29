@@ -1,7 +1,7 @@
 import Head from "@/components/Head";
 import ProductButton from "@/components/ProductButton";
 import Details from "@/components/Details";
-import inkjet from "@/assets/products/inkjet.png";
+import inkjet from "@/assets/products/re225.png";
 import Samples from "@/assets/samples/font_sample.png";
 import Heading from "@/components/Heading";
 import { Grid, Typography, List, Card, Stack } from "@mui/material";

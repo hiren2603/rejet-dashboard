@@ -1,7 +1,7 @@
 import Head from "@/components/Head";
 import ProductButton from "@/components/ProductButton";
 import Details from "@/components/Details";
-import inkjet from "@/assets/products/inkjet.png";
+import inkjet from "@/assets/products/re224.png";
 import Samples from "@/assets/samples/font_sample.png";
 import Heading from "@/components/Heading";
 import { Grid, Typography, List, Card, Stack } from "@mui/material";
@@ -71,7 +71,7 @@ const Re224 = () => {
                 alignItems: "center",
               }}
             >
-              <img src={inkjet} alt="Laser" width={360} />
+              <img src={inkjet} alt="Laser" width={500} />
               <ProductButton />
             </Grid>
 
