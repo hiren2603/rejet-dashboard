@@ -14,12 +14,11 @@ const Video = () => {
 
   const video = {
     borderRadius: "20px",
-    margin: "1rem",
+    margin: "1rem"
   };
 
   const handleVideoReady = () => {
     setIsLoading(false);
-    setIsVideoReady(true);
   };
 
   const handleVideoStateChange = (event) => {
@@ -45,15 +44,26 @@ const Video = () => {
         >
           <YouTube
             videoId={item.sourceId}
+            loading="video is loading"
             opts={opts}
-            style={video}
+            style={{
+              borderRadius: "20px",
+              margin: "1rem",
+              display: "none"
+            }}
             onReady={handleVideoReady}
-            onStateChange={handleVideoStateChange}
+          // onStateChange={handleVideoStateChange}
           />
-          {isLoading ||
-            (!isVideoReady ? (
-              <Skeleton variant="rectangular" height={250} width={300} />
-            ) : null)}
+
+          {isLoading ?
+            <Skeleton variant="rectangular" height={250} width={300} />
+            : <YouTube
+              videoId={item.sourceId}
+              opts={opts}
+              style={video}
+              onReady={handleVideoReady}
+            />
+          }
         </Box>
       ))}
     </>
