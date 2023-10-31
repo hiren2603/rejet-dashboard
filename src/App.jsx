@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import {
   About,
   Applications,
@@ -38,6 +38,7 @@ const App = () => {
               <Route exact path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route>
+                <Route exact path="/products/" element={<Navigate replace to="/" />} />
                 <Route path="/products/inkjet/re200+" element={<Re200plus />} />
                 <Route path="/products/inkjet/re224" element={<Re224 />} />
                 <Route path="/products/inkjet/re225" element={<Re225 />} />

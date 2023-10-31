@@ -93,7 +93,7 @@ export const printFunctions = [
 export const userInterface = [
   {
     id: 1,
-    content: "10.1 inch high sensitive TFT touch screen",
+    content: "10.1 inch high sensitive touch screen",
   },
   {
     id: 2,

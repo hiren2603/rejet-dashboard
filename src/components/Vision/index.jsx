@@ -6,7 +6,6 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-import React from "react";
 import { visions } from "../../helpers/VisionMission";
 
 const Vision = () => {

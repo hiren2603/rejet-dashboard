@@ -7,7 +7,7 @@ const Video = () => {
   const [isVideoReady, setIsVideoReady] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const opts = {
-    height: "250",
+    height: "200",
     width: "300",
     playerVars: { autoplay: 0 },
   };
@@ -40,7 +40,7 @@ const Video = () => {
           display="flex"
           alignItems="center"
           justifyContent="center"
-          sx={{ borderRadius: "5px" }}
+          // sx={{ borderRadius: "5px" }}
         >
           <YouTube
             videoId={item.sourceId}
@@ -52,17 +52,11 @@ const Video = () => {
               display: "none"
             }}
             onReady={handleVideoReady}
-          // onStateChange={handleVideoStateChange}
-          />
-
-          {isLoading ?
-            <Skeleton variant="rectangular" height={250} width={300} />
-            : <YouTube
-              videoId={item.sourceId}
-              opts={opts}
-              style={video}
-              onReady={handleVideoReady}
+            onStateChange={handleVideoStateChange}
             />
+          {isLoading && !isVideoReady ? (
+              <Skeleton variant="rectangular" height={250} width={300} />
+            ) : null
           }
         </Box>
       ))}
