@@ -1,15 +1,14 @@
-import React from "react";
+
 import LaserImg from "@/assets/products/co2.png";
 import Samples from "@/assets/samples/co2_samples.png";
 import ProductButton from "@/components/ProductButton";
 import Details from "@/components/Details";
 import Heading from "@/components/Heading";
-import { Grid, Typography, List, Card, Stack } from "@mui/material";
+import { Grid, Typography, Card } from "@mui/material";
 import {
   productHeading,
   modelHeading,
   headings,
-  modelDetails,
   ProductImg,
 } from "./style";
 import {
@@ -62,7 +61,7 @@ const Co2 = () => {
               alignSelf={"center"}
               sx={{ display: "flex", flexDirection: "column" }}
             >
-              <img src={LaserImg} alt="Laser" width={200} />
+              <img src={LaserImg} alt="Laser" width={350} />
               <ProductButton />
             </Grid>
 

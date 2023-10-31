@@ -69,7 +69,7 @@ const Re224 = () => {
                 alignItems: "center",
               }}
             >
-              <img src={inkjet} alt="Laser" width={350} />
+              <img src={inkjet} alt="Laser" width={400} />
               <ProductButton />
             </Grid>
 
