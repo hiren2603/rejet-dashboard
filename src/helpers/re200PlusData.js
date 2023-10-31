@@ -125,7 +125,7 @@ export const re200PlusParams = [
   {
     id: 11,
     title: "Related Certification",
-    content: "RoHS. CE. BIS",
+    content: "RoHS, CE, BIS",
   },
   {
     id: 12,

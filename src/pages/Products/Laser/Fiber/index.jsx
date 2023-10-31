@@ -1,8 +1,7 @@
-import React from "react";
 import Heading from "@/components/Heading";
 import Details from "@/components/Details";
 import ProductButton from "@/components/ProductButton";
-import { Typography, Grid, List } from "@mui/material";
+import { Typography, Grid } from "@mui/material";
 import { productHeading, ProductImg, modelHeading } from "./style";
 import laserImg from "@/assets/products/fiber.png";
 import printSample from "@/assets/samples/fiber_sample.png";

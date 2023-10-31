@@ -1,10 +1,8 @@
-import React from "react";
 import Head from "@/components/Head";
 import Heading from "@/components/Heading";
 import Details from "@/components/Details";
 import ProductButton from "@/components/ProductButton";
 import samples from "@/assets/samples/tij_samples.png";
-import TIJProduct from "@/assets/products/TIJ.png";
 import TIJProduct1 from "@/assets/products/tij1.png";
 import TIJProduct2 from "@/assets/products/tij2.png";
 import {
@@ -36,7 +34,7 @@ const TpOne = () => {
         >
           Thermal inkjet printers
         </Typography>
-        <Heading name="TP 01/02" type="tij printers" />
+        <Heading name="TP01/TP02" type="tij printers" />
 
         <Grid
           container
@@ -137,8 +135,8 @@ const TpOne = () => {
                 alignItems: "center",
               }}
             >
-              <img src={TIJProduct1} alt="TIJ Product" width={500} />
-              <img src={TIJProduct2} alt="TIJ Product" width={500} />
+              <img src={TIJProduct1} alt="TIJ Product" width={400} />
+              <img src={TIJProduct2} alt="TIJ Product" width={400} />
               <ProductButton />
             </Grid>
 

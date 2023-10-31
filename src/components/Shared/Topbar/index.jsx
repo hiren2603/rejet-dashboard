@@ -14,6 +14,7 @@ import MuiAppBar from "@mui/material/AppBar";
 import { styled } from "@mui/material/styles";
 import Logo from "../../../assets/logo.png";
 import { ContactButton, contactContainer } from "./style";
+import { Link } from "react-router-dom";
 
 const Topbar = ({ open, drawerwidth, setOpen }) => {
   const theme = useTheme();
@@ -52,7 +53,9 @@ const Topbar = ({ open, drawerwidth, setOpen }) => {
             disableGutters
             sx={{ display: "flex", justifyContent: "space-between" }}
           >
-            <img src={Logo} width={180} height={60} alt="logo" />
+            <Link to="/">
+              <img src={Logo} width={180} height={60} alt="logo" />
+            </Link>
             {isSmallScreen ? (
               <>
                 <Box

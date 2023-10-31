@@ -4,12 +4,10 @@ import Details from "@/components/Details";
 import inkjet from "@/assets/products/re224.png";
 import Samples from "@/assets/samples/font_sample.png";
 import Heading from "@/components/Heading";
-import { Grid, Typography, List, Card, Stack } from "@mui/material";
+import { Grid, Typography} from "@mui/material";
 import {
   productHeading,
   modelHeading,
-  modelDetails,
-  headings,
   ProductImg,
 } from "./style";
 import {

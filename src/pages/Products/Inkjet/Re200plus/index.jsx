@@ -7,9 +7,8 @@ import Samples from "@/assets/samples/font_sample.png";
 import consumable from "@/assets/products/cij_consumable.png";
 import spares from "@/assets/products/cij_spares.png";
 import Heading from "@/components/Heading";
-import { Grid, Typography, List, Card, Stack } from "@mui/material";
+import { Grid, Typography, List } from "@mui/material";
 import {
-  modal,
   re200PlusPrintParams,
   re200PlusParams,
   inkSystem,
@@ -21,7 +20,6 @@ import {
 import {
   productHeading,
   modelHeading,
-  modelDetails,
   headings,
   ProductImg,
 } from "./style";
@@ -201,7 +199,7 @@ const Re200Plus = () => {
           </Grid>
 
           <Grid item sx={{ display: "flex", flexDirection: "column" }} lg>
-            <Typography sx={modelHeading}>re200 spares</Typography>
+            <Typography sx={modelHeading}>re200+ spares</Typography>
             <List>
               Smart Print Head, Modular designed still give flexibility to
               replace individual spare separately. Automatic Calibration
@@ -221,9 +219,9 @@ const Re200Plus = () => {
           </Grid>
 
           <Grid item sx={{ display: "flex", flexDirection: "column" }} lg>
-            <Typography sx={modelHeading}>re200 consumable</Typography>
+            <Typography sx={modelHeading}>re200+ consumable</Typography>
             <List>
-              Inteligent Ink Management System of RE200 Inkjet Printer
+              Inteligent Ink Management System of RE200+ Inkjet Printer
               eliminates the wastage of consumables as there is no manual
               pouring. Easy Insertion and Removal of Cartridges eliminates the
               risk of Damage
