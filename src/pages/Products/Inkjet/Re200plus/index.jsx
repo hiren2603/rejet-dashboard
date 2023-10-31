@@ -71,7 +71,7 @@ const Re200Plus = () => {
                 alignItems: "center",
               }}
             >
-              <img src={inkjet} alt="Laser" width={500} />
+              <img src={inkjet} alt="Laser" width={350} />
               <ProductButton />
             </Grid>
 
