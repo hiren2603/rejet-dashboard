@@ -70,8 +70,8 @@ const Fiber = () => {
               <Typography sx={modelHeading}>Print Samples</Typography>
               <ProductImg
                 src={printSample}
-                width={390}
-                style={{ height: "130px" }}
+                width={350}
+                // style={{ height: "130px" }}
               />
             </Grid>
 
