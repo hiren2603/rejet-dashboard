@@ -1,4 +1,3 @@
-import React from "react";
 import Slider from "@/components/Slider";
 import ProductCard from "@/components/ProductCard";
 import Info from "@/components/Info";

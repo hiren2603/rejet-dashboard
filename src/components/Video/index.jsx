@@ -24,7 +24,6 @@ const Video = () => {
               src={`https://www.youtube.com/embed/${item.sourceId}`}
               allowFullScreen
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
               title="Embedded youtube"
               style={{ borderRadius: "20px", margin: "1rem" }}
               onLoad={handleVideoReady}

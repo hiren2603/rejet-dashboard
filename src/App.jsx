@@ -45,7 +45,7 @@ const App = () => {
   if (!isComponentReady) {
     return (
       <Box sx={LoaderStyle} >
-        <CircularProgress color="error" size={80} />
+        <CircularProgress color="error" size={40} />
       </Box>
     )
   } else {
