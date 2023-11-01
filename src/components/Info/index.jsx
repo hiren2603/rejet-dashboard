@@ -1,4 +1,5 @@
 import { Button, Divider, Grid, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 import certificate from "@/assets/certificate.png";
 import { infoContent, infoTitle } from "./style";
 
@@ -53,9 +54,11 @@ const Info = () => {
           </Typography>
 
           <Grid item>
-            <Button variant="contained" color="error">
-              Read More
-            </Button>
+            <Link to="/about">
+              <Button variant="contained" color="error">
+                Read More
+              </Button>
+            </Link>
           </Grid>
         </Grid>
       </Grid>

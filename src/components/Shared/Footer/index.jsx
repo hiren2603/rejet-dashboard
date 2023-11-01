@@ -138,8 +138,10 @@ const Footer = () => {
                   alignItems: "center",
                 }}
               >
-                <LocationOn />
-                Find Us On Map
+                <RoutingLink to={"/contact"} style={{...footerLinkStyle, display : "flex", alignItems : "center"}}>
+                  <LocationOn />
+                  Find Us On Map
+                </RoutingLink>
               </Typography>
             </Box>
           </Stack>
