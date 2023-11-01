@@ -1,7 +1,7 @@
 import { styled } from "@mui/material";
 
 export const ContactButton = styled("a")({
-  backgroundColor: "red",
+  backgroundColor: "#e31e25",
   color: "#ffffff",
   width: "7rem",
   height: "2rem",
@@ -25,7 +25,7 @@ export const ContactButton = styled("a")({
     color: "black",
   },
   "&:last-child:hover": {
-    backgroundColor: "red",
+    backgroundColor: "#e31e25",
     color: "#fff",
   },
 });

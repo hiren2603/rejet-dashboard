@@ -38,7 +38,7 @@ const Vision = () => {
               flexDirection: {lg: "row", md: "column", sm: "column", xs: "column"},
               alignItems: "center",
               justifyContent: {lg: "center", md: "start", sm: "start", xs: "start"},
-              height: { lg: 200, md: 500, sm: 500, xs: 600 },
+              height: { lg: 250, md: 500, sm: 500, xs: 600 },
               width: "100%"
               // padding: 2,
             }}
@@ -62,7 +62,7 @@ const Vision = () => {
               component="img"
               image={v.image}
               alt="vision img"
-              sx={{width: {lg: 150, sm: 200, xs: 200}}}
+              sx={{width: {lg: 180, sm: 200, xs: 200}}}
             />
             </Box>
             
