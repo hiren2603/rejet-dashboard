@@ -22,7 +22,7 @@ const Video = () => {
               width="300"
               height="250"
               src={`https://www.youtube.com/embed/${item.sourceId}`}
-              frameBorder="0"
+              allowFullScreen
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               title="Embedded youtube"
               style={{ borderRadius: "20px", margin: "1rem" }}
