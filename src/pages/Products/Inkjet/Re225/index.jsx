@@ -43,7 +43,7 @@ const Re225 = () => {
         >
           continuous inkjet printers
         </Typography>
-        <Heading name="RE 225" type="INKJET PRINTER" />
+        <Heading name="RE225" type="INKJET PRINTER" />
 
         <Grid
           container
@@ -85,7 +85,7 @@ const Re225 = () => {
               <Typography sx={modelHeading}>Print Samples</Typography>
               <ProductImg
                 src={Samples}
-                width={400}
+                width={350}
                 style={{ height: "400px" }}
               />
             </Grid>

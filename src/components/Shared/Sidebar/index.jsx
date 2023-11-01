@@ -17,6 +17,7 @@ import { useContext } from "react";
 import { LayoutContext } from "../../../Context";
 
 const Sidebar = ({
+  // eslint-disable-next-line react/prop-types
   closeSideBar,
   handleDrawerOpen,
   handleCategory,

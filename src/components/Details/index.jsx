@@ -1,6 +1,7 @@
-import CheckIcon from "@mui/icons-material/Check";
+/* eslint-disable react/prop-types */
+// import CheckIcon from "@mui/icons-material/Check";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import { List, ListItemIcon, ListItemText } from "@mui/material";
+import { List, ListItemText } from "@mui/material";
 
 const Details = ({ content }) => {
   return (

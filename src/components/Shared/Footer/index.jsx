@@ -20,7 +20,7 @@ import {
   resQuickLinkStyle,
   footerLinkStyle,
 } from "./style";
-import { Link as RoutingLink } from "react-router-dom";
+import { Link, Link as RoutingLink } from "react-router-dom";
 
 const Footer = () => {
   const theme = useTheme();
@@ -102,7 +102,7 @@ const Footer = () => {
             <Typography sx={headerTitle}>Products</Typography>
             <CustomDivider />
             <Box sx={isSmallScreen ? resQuickLinkStyle : quickLinkStyle}>
-              <RoutingLink to="/products/laser/co2" style={footerLinkStyle}>
+              <RoutingLink to="/products/inkjet/re200+" style={footerLinkStyle}>
                 Inkjet
               </RoutingLink>
               <RoutingLink to="/products/laser/co2" style={footerLinkStyle}>
@@ -117,7 +117,7 @@ const Footer = () => {
               <RoutingLink to="/products/laser/uv" style={footerLinkStyle}>
                 UV
               </RoutingLink>
-              <RoutingLink to="/products/laser/co2" style={footerLinkStyle}>
+              <RoutingLink to="/products/tij/tp01" style={footerLinkStyle}>
                 TIJ
               </RoutingLink>
             </Box>
@@ -148,7 +148,7 @@ const Footer = () => {
             <Typography sx={headerTitle}>Location</Typography>
             <CustomDivider />
             <Box sx={isSmallScreen ? resQuickLinkStyle : quickLinkStyle}>
-              <img src={Logo} alt="logo" height={45} width={130} />
+              <Link to="/"><img src={Logo} alt="logo" height={45} width={130} /></Link>
               <Typography>Plot No. 36, Suvery No. 277/,</Typography>
               <Typography>Opp. Kaneria Oil Industries,</Typography>
               <Typography>Rani Industrial Area,</Typography>

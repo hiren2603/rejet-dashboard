@@ -27,7 +27,7 @@ const Uv = () => {
       >
         uv laser marking system
       </Typography>
-      <Heading name="UV" type="FLYING LASER" />
+      <Heading name="Ultra Violet" type="LASER" />
 
       <Grid
         container

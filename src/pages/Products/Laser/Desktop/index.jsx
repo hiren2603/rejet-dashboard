@@ -1,6 +1,6 @@
 import desktopImg from "assets/products/desktop.png";
 import samples from "assets/samples/desktop_samples.png";
-import { Grid, Typography, List } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import { productHeading, modelHeading, ProductImg } from "./style";
 import Heading from "@/components/Heading";
 import Details from "@/components/Details";
@@ -92,7 +92,7 @@ const Desktop = () => {
 
             <Grid item>
               <Typography sx={modelHeading}>Applicable Products</Typography>
-              {applications?.map((item, index) => {
+              {applications?.map((item) => {
                 return <Details key={item} content={item} />;
               })}
             </Grid>

@@ -45,7 +45,7 @@ const Re200Plus = () => {
         >
           continuous inkjet printers
         </Typography>
-        <Heading name="RE 200+" type="INKJET PRINTER" />
+        <Heading name="RE200+" type="INKJET PRINTER" />
         <Grid
           container
           item
@@ -71,7 +71,7 @@ const Re200Plus = () => {
                 alignItems: "center",
               }}
             >
-              <img src={inkjet} alt="Re200+" width={350}/>
+              <img src={inkjet} alt="Re200+" width={300}/>
               <ProductButton />
             </Grid>
 
@@ -79,7 +79,7 @@ const Re200Plus = () => {
               <Typography sx={modelHeading}>Print Samples</Typography>
               <ProductImg
                 src={Samples}
-                width={400}
+                width={350}
                 style={{ height: "400px" }}
               />
             </Grid>

@@ -53,9 +53,9 @@ const Topbar = ({ open, drawerwidth, setOpen }) => {
             disableGutters
             sx={{ display: "flex", justifyContent: "space-between" }}
           >
-            <Link to="/">
+            {/* <Link to="/"> */}
               <img src={Logo} width={180} height={60} alt="logo" />
-            </Link>
+            {/* </Link> */}
             {isSmallScreen ? (
               <>
                 <Box

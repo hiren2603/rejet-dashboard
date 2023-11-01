@@ -1,4 +1,4 @@
-import { styled, Button } from "@mui/material";
+import { styled } from "@mui/material";
 
 export const InnerText = styled("span")({
   color: "#E21D25",
@@ -13,6 +13,7 @@ export const headingText = {
   fontWeight: "600",
   textTransform: "uppercase",
   fontSize: "30px",
+  textAlign: {lg: "start", sm: "center", xs: "center"}
 };
 
 export const downloadButton = {

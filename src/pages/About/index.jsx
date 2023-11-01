@@ -55,6 +55,7 @@ const About = () => {
         container
         columnSpacing={{ xs: 1 }}
         rowSpacing={2}
+        sx={{justifyContent: {lg: "space-between", md: "center", sm: "center", xs: "center"}}}
         justifyContent={"space-between"}
       >
         <Grid item>

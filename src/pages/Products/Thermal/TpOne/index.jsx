@@ -135,8 +135,8 @@ const TpOne = () => {
                 alignItems: "center",
               }}
             >
-              <img src={TIJProduct1} alt="TIJ Product" width={400} />
-              <img src={TIJProduct2} alt="TIJ Product" width={400} />
+              <img src={TIJProduct1} alt="TIJ Product" width={350} />
+              <img src={TIJProduct2} alt="TIJ Product" width={350} />
               <ProductButton />
             </Grid>
 

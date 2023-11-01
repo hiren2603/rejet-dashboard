@@ -1,4 +1,5 @@
 import {
+  Box,
   Card,
   CardContent,
   CardMedia,
@@ -29,37 +30,43 @@ const Vision = () => {
         <Divider textAlign="center" />
       </Grid>
       {visions.map((v) => (
-        <Grid item lg={6} md={6} sm={6} key={v.id}>
+        <Grid item lg={12} md={12} sm={12} key={v.id}>
           <Card
             raised
             sx={{
               display: "flex",
-              flexDirection: {
-                lg: "row",
-                md: "column",
-                sm: "column",
-                xs: "column",
-              },
+              flexDirection: {lg: "row", md: "column", sm: "column", xs: "column"},
               alignItems: "center",
-              justifyContent: "center",
-              height: { lg: 250, md: 400, sm: 450 },
-              padding: 2,
+              justifyContent: {lg: "center", md: "start", sm: "start", xs: "start"},
+              height: { lg: 200, md: 500, sm: 500, xs: 600 },
+              width: "100%"
+              // padding: 2,
             }}
           >
-            <CardMedia
-              component="img"
+            <Box 
+              component="div"
               sx={{
-                width: { lg: "inherit", md: "inherit", sm: "inherit" },
-                height: { lg: 200, md: 180, sm: 180 },
+                clipPath: {lg: 'polygon(0 0, 80% 0, 100% 50%, 80% 100%, 0 100%)', md: 'polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%)', sm: 'polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%)',  xs: 'polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%)'},
+                background: "#EBEBEB",
+                width: { lg: "30%", md: "100%", sm: "100%", xs: "100%" },
+                height: { lg: "100%", md: "100%", sm: "70%", xs: "50%" },
                 display: "flex",
-                flexDirection: "row",
+                flexDirection: {lg: "row", md: 'column', sm: 'column', xs: 'column'}, 
                 alignItems: "center",
-                p: { sm: 2 },
+                justifyContent: {lg: "center",md: "center", sm: "center", xs: "center"},
+                // p: { sm: 2 },
               }}
+            
+            >
+              <CardMedia
+              component="img"
               image={v.image}
               alt="vision img"
+              sx={{width: {lg: 150, sm: 200, xs: 200}}}
             />
-            <CardContent>
+            </Box>
+            
+            <CardContent sx={{width: {lg: "70%", md: "100%", sm: "100%", xs: "100%"}}}>
               <Typography variant="h5">{v.title}</Typography>
               <Typography align="justify">{v.info}</Typography>
             </CardContent>

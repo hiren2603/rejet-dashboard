@@ -43,7 +43,7 @@ const Re224 = () => {
         >
           continuous inkjet printers
         </Typography>
-        <Heading name="RE 224" type="INKJET PRINTER" />
+        <Heading name="RE224" type="INKJET PRINTER" />
 
         <Grid
           container
@@ -69,7 +69,7 @@ const Re224 = () => {
                 alignItems: "center",
               }}
             >
-              <img src={inkjet} alt="Laser" width={400} />
+              <img src={inkjet} alt="Laser" width={350} />
               <ProductButton />
             </Grid>
 
