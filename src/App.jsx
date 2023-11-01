@@ -18,6 +18,7 @@ import {
 } from "@/pages";
 import { ThemeProvider, CssBaseline, Box, CircularProgress } from "@mui/material";
 import { Layout } from "@/components/Shared";
+import  ScrollToTop  from "@/components/ScrollToTop";
 import { theme } from "@/theme";
 import ErrorPage from "@/pages/ErrorPage";
 import { LayoutContext } from "@/Context";
@@ -54,6 +55,7 @@ const App = () => {
         <ThemeProvider theme={theme}>
           <LayoutContext.Provider value={{ open, setOpen, drawerwidth }}>
             <CssBaseline />
+            <ScrollToTop />
             <Layout>
               <Routes>
                 <Route exact path="/" element={<Home />} />

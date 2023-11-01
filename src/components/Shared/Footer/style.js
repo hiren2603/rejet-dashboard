@@ -1,7 +1,9 @@
+import { styled } from "@mui/material";
+
 export const footerLinkStyle = {
   color: "#c0c0c0",
-  "&:hover": { color: "red" },
   fontSize: "16px",
+  "&:hover": { color: "white" },
 };
 
 export const headerTitle = {
