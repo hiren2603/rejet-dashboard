@@ -1,7 +1,7 @@
 import Heading from "@/components/Heading";
 import Details from "@/components/Details";
 import ProductButton from "@/components/ProductButton";
-import { Typography, Grid } from "@mui/material";
+import { Typography, Grid, Box } from "@mui/material";
 import { productHeading, ProductImg, modelHeading } from "./style";
 import laserImg from "@/assets/products/fiber.png";
 import printSample from "@/assets/samples/fiber_sample.png";
@@ -84,27 +84,29 @@ const Fiber = () => {
           </Grid>
 
           <Grid container item lg={5} md={5}>
-            <Typography sx={modelHeading}>Betabeam 6430/6450</Typography>
-            <Typography sx={modelHeading}>Specifications</Typography>
-            {fiberData?.map((item) => (
-              <Grid
-                container
-                item
-                key={item.id}
-                sx={{
-                  m: { sm: "2px 0", xs: "2px 0", lg: "0px", md: "0px" },
-                }}
-              >
-                <Grid item lg={6} md={7} sm={6} xs={7}>
-                  <Typography sx={{ fontWeight: "600" }}>
-                    {item.title}
-                  </Typography>
+            <Box sx={{ display : "flex", flexDirection : "column"}}>
+              <Typography sx={modelHeading}>Betabeam 6430/6450</Typography>
+              <Typography sx={modelHeading}>Specifications</Typography>
+              {fiberData?.map((item) => (
+                <Grid
+                  container
+                  item
+                  key={item.id}
+                  sx={{
+                    m: { sm: "2px 0", xs: "2px 0", lg: "0px", md: "0px" },
+                  }}
+                >
+                  <Grid item lg={6} md={7} sm={6} xs={7}>
+                    <Typography sx={{ fontWeight: "600" }}>
+                      {item.title}
+                    </Typography>
+                  </Grid>
+                  <Grid item lg={6} md={5} sm={6} xs={5}>
+                    {item.content}
+                  </Grid>
                 </Grid>
-                <Grid item lg={6} md={5} sm={6} xs={5}>
-                  {item.content}
-                </Grid>
-              </Grid>
-            ))}
+              ))}
+            </Box>
           </Grid>
         </Grid>
 
