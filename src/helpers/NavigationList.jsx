@@ -102,16 +102,16 @@ export const NavigationList = [
         nestedcomponents: [
           {
             key: "TP 01",
-            link: "/products/tij/tp01",
+            link: "/products/tij/1",
             icon: <ProductSvg />,
             id: 16,
           },
-          {
-            key: "TP 01.1",
-            link: "/products/tij/tp01.1",
-            icon: <ProductSvg />,
-            id: 17,
-          },
+          // {
+          //   key: "TP 01.1",
+          //   link: "/products/tij/tp01.1",
+          //   icon: <ProductSvg />,
+          //   id: 17,
+          // },
           {
             key: "TP Handy",
             link: "/products/tij/handy",

@@ -107,15 +107,17 @@ const Fiber = () => {
                 </Grid>
               ))}
             </Box>
-          </Grid>
-        </Grid>
-
-        <Grid item lg md>
+            <Grid item lg md mt={4}>
           <Typography sx={modelHeading}>Features</Typography>
           {features?.map((item) => {
             return <Details key={item} content={item} />;
           })}
         </Grid>
+          </Grid>
+        
+        </Grid>
+
+       
       </Grid>
     </>
   );
