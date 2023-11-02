@@ -21,7 +21,7 @@ const Navlist = ({
   return (
     <>
       <List>
-        {NavigationList.map((item, index) => {
+        {NavigationList.map((item) => {
           if (item.multicomponent) {
             return (
               <Fragment key={item.id}>

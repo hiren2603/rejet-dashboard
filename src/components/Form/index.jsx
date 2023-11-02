@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import { Typography, Grid, Divider, FormHelperText } from "@mui/material";
-import { titleStyle, buttonStyle } from "./style";
+import { titleStyle } from "./style";
 import InputField from "@/components/InputField";
 import FormButton from "@/components/FormButton";
-// import { send } from "emailjs-com";
 import { send } from "emailjs-com";
 
 const Form = () => {
@@ -83,7 +82,7 @@ const Form = () => {
   };
 
   const validate = () => {
-    const { name, email, phone, city, message } = form;
+    const { name, email, phone, city } = form;
     let formErrors = {};
     if (!name) {
       formErrors.name = "Please enter your name";
@@ -111,7 +110,7 @@ const Form = () => {
       sx={{
         width: "85%",
         m: "auto",
-        mt: 2,
+        mt: 0,
         mb: 0,
       }}
     >
