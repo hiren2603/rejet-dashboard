@@ -21,6 +21,7 @@ import {
   footerLinkStyle,
 } from "./style";
 import { Link, Link as RoutingLink } from "react-router-dom";
+import Class from "./Footer.module.css";
 
 const Footer = () => {
   const theme = useTheme();
@@ -28,12 +29,20 @@ const Footer = () => {
   const midScreen = useMediaQuery(theme.breakpoints.down("md"));
   const { drawerwidth, open } = useContext(LayoutContext);
 
-  const StyledLink = styled(MuiLink)`
-    color: "#c0c0c0";
-    &: hover {
-      color: "white";
+  // const StyledLink = styled(MuiLink)`
+  //   color: "#c0c0c0";
+  //   &: hover {
+  //     color: "white";
+  //   }
+  // `;
+
+  const StyledLink = {
+    fontSize : "16px",
+    color: "#c0c0c0",
+    "&:hover" : {
+      color: "red"
     }
-  `;
+  }
 
   const footerColumnStyle = {
     alignItems: "center",
@@ -80,19 +89,19 @@ const Footer = () => {
             <Typography sx={headerTitle}>Quick Links</Typography>
             <CustomDivider />
             <Box sx={isSmallScreen ? resQuickLinkStyle : quickLinkStyle}>
-              <RoutingLink to="/" style={footerLinkStyle}>
+              <RoutingLink to="/" className={Class.footerLinkStyle}>
                 Home
               </RoutingLink>
-              <RoutingLink to="/about" style={footerLinkStyle}>
+              <RoutingLink to="/about" className={Class.footerLinkStyle}>
                 About
               </RoutingLink>
-              <RoutingLink to="/applications" style={footerLinkStyle}>
+              <RoutingLink to="/applications" className={Class.footerLinkStyle}>
                 Applications
               </RoutingLink>
-              <RoutingLink to="/ewest-management" style={footerLinkStyle}>
+              <RoutingLink to="/ewest-management" className={Class.footerLinkStyle}>
                 E-Waste Management
               </RoutingLink>
-              <RoutingLink to="/contact" style={footerLinkStyle}>
+              <RoutingLink to="/contact" className={Class.footerLinkStyle}>
                 Contact
               </RoutingLink>
             </Box>
@@ -102,22 +111,22 @@ const Footer = () => {
             <Typography sx={headerTitle}>Products</Typography>
             <CustomDivider />
             <Box sx={isSmallScreen ? resQuickLinkStyle : quickLinkStyle}>
-              <RoutingLink to="/products/inkjet/re200+" style={footerLinkStyle}>
+              <RoutingLink to="/products/inkjet/re200+" className={Class.footerLinkStyle}>
                 Inkjet
               </RoutingLink>
-              <RoutingLink to="/products/laser/co2" style={footerLinkStyle}>
+              <RoutingLink to="/products/laser/co2" className={Class.footerLinkStyle}>
                 Co2
               </RoutingLink>
-              <RoutingLink to="/products/laser/fiber" style={footerLinkStyle}>
+              <RoutingLink to="/products/laser/fiber" className={Class.footerLinkStyle}>
                 Fiber
               </RoutingLink>
-              <RoutingLink to="/products/laser/desktop" style={footerLinkStyle}>
+              <RoutingLink to="/products/laser/desktop" className={Class.footerLinkStyle}>
                 Desktop
               </RoutingLink>
-              <RoutingLink to="/products/laser/uv" style={footerLinkStyle}>
+              <RoutingLink to="/products/laser/uv" className={Class.footerLinkStyle}>
                 UV
               </RoutingLink>
-              <RoutingLink to="/products/tij/tp01" style={footerLinkStyle}>
+              <RoutingLink to="/products/tij/tp01" className={Class.footerLinkStyle}>
                 TIJ
               </RoutingLink>
             </Box>
@@ -138,7 +147,7 @@ const Footer = () => {
                   alignItems: "center",
                 }}
               >
-                <RoutingLink to={"/contact"} style={{...footerLinkStyle, display : "flex", alignItems : "center"}}>
+                <RoutingLink to={"/contact"} style={{ ...footerLinkStyle, display: "flex", alignItems: "center" }}>
                   <LocationOn />
                   Find Us On Map
                 </RoutingLink>

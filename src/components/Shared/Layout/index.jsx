@@ -11,12 +11,21 @@ const Layout = ({ children }) => {
   const { open, setOpen, drawerwidth } = useContext(LayoutContext);
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const [openCategory, setOpenCategory] = useState(false);
+  const [state, setState] = useState(false);
   const [openSubCategory, setOpenSubCategory] = useState({
     inkjet: false,
     laser: false,
     thermal: false,
   });
   const { inkjet, laser, thermal } = openSubCategory;
+
+  const toggleDrawer = (state) => (event) => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+
+    setPersistState(state);
+  }
 
   const handleDrawer = () => {
     setOpen(!open);
@@ -82,15 +91,14 @@ const Layout = ({ children }) => {
             marginLeft: !isSmallScreen && theme.spacing(8),
             ...(!isSmallScreen &&
               open && {
-                marginLeft: `${drawerwidth}px`,
-                width: `calc(100% - (${drawerwidth}px))`,
-              }),
+              marginLeft: `${drawerwidth}px`,
+              width: `calc(100% - (${drawerwidth}px))`,
+            }),
             ...(isSmallScreen &&
               open && {
-                // margin: "0px",
-                width: "100%",
-                marginTop: "10vh",
-              }),
+              width: "100%",
+              marginTop: "10vh",
+            }),
           }}
         >
           {children}

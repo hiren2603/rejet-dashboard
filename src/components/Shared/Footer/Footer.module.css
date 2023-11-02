@@ -1,0 +1,9 @@
+.footerLinkStyle{
+    color : #c0c0c0;
+    font-size : 16px;
+    text-decoration: none;
+}
+
+.footerLinkStyle:hover{
+    color : white;
+}

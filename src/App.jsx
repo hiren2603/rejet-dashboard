@@ -28,6 +28,7 @@ const App = () => {
   const helmetContext = {};
   const [drawerwidth] = useState(200);
   const [open, setOpen] = useState(false);
+  const [persistState, setPersistState] = useState(false);
   const [isComponentReady, setIsComponentReady] = useState(false);
 
   const handleComponentReady = () => { setIsComponentReady(true) };
@@ -53,7 +54,7 @@ const App = () => {
     return (
       <HelmetProvider context={helmetContext}>
         <ThemeProvider theme={theme}>
-          <LayoutContext.Provider value={{ open, setOpen, drawerwidth }}>
+          <LayoutContext.Provider value={{ open, setOpen, drawerwidth, persistState, setPersistState }}>
             <CssBaseline />
             <ScrollToTop />
             <Layout>

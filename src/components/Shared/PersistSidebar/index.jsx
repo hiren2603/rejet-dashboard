@@ -6,6 +6,7 @@ import {
   Stack,
   useTheme,
   styled,
+  ClickAwayListener
 } from "@mui/material";
 import { CloseSharp } from "@mui/icons-material";
 import Navlist from "../Navlist";
@@ -19,9 +20,11 @@ const PersistSidebar = ({
   handleSubCategory,
   openCategory,
   openSubCategory,
+  toggleDrawer,
+  state
 }) => {
   const theme = useTheme();
-  const { open } = useContext(LayoutContext);
+  const { open, persistState, setPersistState } = useContext(LayoutContext);
   const DrawerHeader = styled("div")(({ theme }) => ({
     display: "flex",
     backgroundColor: theme.palette.error.main,

@@ -5,7 +5,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import {
   Stack,
   ClickAwayListener,
-  Divider,
+  Divider, 
   IconButton,
   useMediaQuery,
   useTheme,
@@ -23,7 +23,7 @@ const Sidebar = ({
   handleCategory,
   handleSubCategory,
   openCategory,
-  openSubCategory,
+  openSubCategory
 }) => {
   const theme = useTheme();
   const { open, drawerwidth } = useContext(LayoutContext);
