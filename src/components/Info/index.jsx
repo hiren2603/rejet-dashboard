@@ -6,7 +6,7 @@ import { infoContent, infoTitle } from "./style";
 const Info = () => {
   return (
     <>
-      <Grid container justifyContent={"center"} spacing={4}>
+      <Grid container justifyContent={"center"} spacing={5}>
         <Grid item lg={10} md={10} sm={10} xs={10}>
           <Typography sx={infoTitle}>Who we are?</Typography>
           <Divider />
