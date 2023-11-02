@@ -39,7 +39,7 @@ const Form = () => {
           console.log("FAILED...", err);
         });
     }
-  }, [errors]);
+  }, [errors, form, isSubmiting]);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
