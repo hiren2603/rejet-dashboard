@@ -1,5 +1,5 @@
 export const fiberData = [
-  // { id: 1, title: "Laser Model :", content: "Betabeam 6430/6450" },
+  { id: 1, title: "Laser Model :", content: "Betabeam 6430/6450" },
   { id: 2, title: "Laser Type :", content: "Multimode Fiber Laser" },
   { id: 3, title: "Laser Power :", content: "30W,50W" },
   {

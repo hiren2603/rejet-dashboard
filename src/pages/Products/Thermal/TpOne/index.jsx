@@ -35,7 +35,6 @@ const TpOne = () => {
           Thermal inkjet printers
         </Typography>
         <Heading name="TP01/TP02" type="tij printers" />
-
         <Grid
           container
           item
@@ -47,7 +46,7 @@ const TpOne = () => {
           }}
           justifyContent="space-between"
           columnGap={2}
-          sx={{ m: "4rem 0" }}
+          sx={{ m:{lg: "2rem 0"} }}
         >
           <Grid container item direction="column" lg={6} md={5} rowGap={4}>
             {tijData?.map((item) => {

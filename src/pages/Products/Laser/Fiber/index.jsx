@@ -37,7 +37,7 @@ const Fiber = () => {
           container
           item
           direction="row"
-          sx={{ mt: "3rem" }}
+          sx={{ mt: {lg: "3rem"} }}
           columnGap={5}
           justifyContent={"space-between"}
         >
@@ -85,7 +85,6 @@ const Fiber = () => {
 
           <Grid container item lg={5} md={5}>
             <Box sx={{ display : "flex", flexDirection : "column"}}>
-              <Typography sx={modelHeading}>Betabeam 6430/6450</Typography>
               <Typography sx={modelHeading}>Specifications</Typography>
               {fiberData?.map((item) => (
                 <Grid
