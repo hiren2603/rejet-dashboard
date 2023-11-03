@@ -16,7 +16,7 @@ const Info = () => {
             src={certificate}
             alt="certificate"
             height={"80%"}
-            width={"80%"}
+            width={"90%"}
             style={{
               boxShadow: "2px 2px 2px 10px #2f377a",
             }}

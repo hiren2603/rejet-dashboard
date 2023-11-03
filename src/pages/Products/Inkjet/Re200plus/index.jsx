@@ -34,7 +34,7 @@ const Re200Plus = () => {
         sx={{ margin: "0 auto" }}
         alignItems={"center"}
         justifyContent={"center"}
-        rowSpacing={5}
+        // rowSpacing={5}
       >
         <Typography
           sx={{
@@ -60,7 +60,8 @@ const Re200Plus = () => {
             direction={"column"}
             lg={5}
             md={5}
-            rowSpacing={10}
+            rowSpacing={{lg: 5, sm: 0}} 
+          
           >
             <Grid
               item

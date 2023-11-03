@@ -10,5 +10,6 @@ export const infoContent = {
   fontSize: "16px",
   lineHeight: "2",
   padding: "0.5rem 0",
+  // marginBottom: "2rem",
   color: "#000000",
 };
