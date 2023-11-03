@@ -15,7 +15,7 @@ const ProductButton = () => {
     boxShadow: "inset 0 0 0 0 #E31E25",
     transition: "ease-out 0.3s",
     textAlign: "center",
-    margin: "2rem 0",
+    marginTop: "2rem",
     "&:hover": {
       boxShadow: "inset 168px 0 0 0 #E31E25",
       color: "#ffffff",
