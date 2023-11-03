@@ -4,6 +4,9 @@ import AppRegistrationIcon from "@mui/icons-material/AppRegistration";
 import InvertColorsIcon from "@mui/icons-material/InvertColors";
 import CallIcon from "@mui/icons-material/Call";
 import ProductSvg from "@/assets/ProductSvg";
+import LaserSvg from "../assets/LaserSvg";
+import TharmalSvg from "../assets/TharmalSvg";
+import AllProductsSvg from "../assets/AllProductsSvg";
 import EWestSvg from "./EWestSvg";
 
 export const NavigationList = [
@@ -26,7 +29,7 @@ export const NavigationList = [
   {
     key: "Products",
     link: "/products",
-    icon: <ProductSvg />,
+    icon: <AllProductsSvg />,
     id: 3,
     multicomponent: true,
     multicomponents: [
@@ -64,7 +67,7 @@ export const NavigationList = [
         id: 8,
         nestedcomponent: true,
         componentKey: "laser",
-        icon: <InvertColorsIcon />,
+        icon: <LaserSvg />,
         nestedcomponents: [
           {
             key: "CO2 Laser",
@@ -98,7 +101,7 @@ export const NavigationList = [
         id: 13,
         nestedcomponent: true,
         componentKey: "thermal",
-        icon: <InvertColorsIcon />,
+        icon: <TharmalSvg />,
         nestedcomponents: [
           {
             key: "TP 01",
