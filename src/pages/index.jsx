@@ -12,4 +12,4 @@ export { default as Fiber } from "./Products/Laser/Fiber";
 export { default as Uv } from "./Products/Laser/Uv";
 export { default as TpHandy } from "./Products/Thermal/TpHandy";
 export { default as TpOne } from "./Products/Thermal/TpOne";
-export { default as TpOneOne } from "./Products/Thermal/TpOneOne";
+// export { default as TpOneOne } from "./Products/Thermal/TpOneOne";
