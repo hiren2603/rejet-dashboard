@@ -59,7 +59,7 @@ const Re224 = () => {
             direction={"column"}
             lg={6}
             md={4}
-            rowSpacing={12}
+            rowSpacing={{lg: 12, md: 12}}
           >
             <Grid
               item
