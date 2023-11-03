@@ -8,7 +8,7 @@ export const productHeading = {
   color: "#000000",
   textShadow: "2px 2px 2px #c0c0c0",
   fontWeight: "600",
-  marginBottom: "2rem",
+  margin: "2rem 0",
 };
 
 export const modelHeading = {
@@ -22,5 +22,5 @@ export const modelHeading = {
 export const ProductImg = styled("img")({
   justifySelf: "center",
   alignSelf: "flex-start",
-  height: "80%",
+  height: "80%"
 });

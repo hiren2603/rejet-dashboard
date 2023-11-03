@@ -47,7 +47,7 @@ const Topbar = ({ open, drawerwidth, setOpen }) => {
 
   return (
     <>
-      <AppBar position="fixed" open={open} drawerwidth={drawerwidth}>
+      <AppBar position="fixed" open={open} drawerwidth={drawerwidth} sx={{height: 80}}>
         <Container sx={{ maxWidth: "1900px!important" }}>
           <Toolbar
             disableGutters

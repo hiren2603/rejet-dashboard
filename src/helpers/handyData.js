@@ -23,7 +23,7 @@ export const handyData = [
 export const handyFeatures = [
   {
     id: 1,
-    title: "Available Languages :",
+    title: "Language Support:",
     content: "English,Arabic,Chinis,Turkish",
   },
   {

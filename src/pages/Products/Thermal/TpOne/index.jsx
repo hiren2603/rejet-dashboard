@@ -141,7 +141,7 @@ const TpOne = () => {
 
             <Grid item>
               <Typography sx={modelHeading}>Print Samples</Typography>
-              <img src={samples} alt="Product Samples" />
+              <img src={samples} alt="Product Samples" style={{width: 350}}/>
             </Grid>
 
             <Grid item>

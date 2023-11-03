@@ -44,13 +44,13 @@ const Uv = () => {
             alignSelf={"center"}
             sx={{ display: "flex", flexDirection: "column" }}
           >
-            <ProductImg src={uvImage} />
+            <ProductImg src={uvImage} width={350}/>
             <ProductButton />
           </Grid>
 
           <Grid item>
             <Typography sx={modelHeading}>Print Samples</Typography>
-            <ProductImg src={sample} width={400} style={{ height: "130px" }} />
+            <ProductImg src={sample} width={350} style={{ height: "130px" }} />
           </Grid>
 
           <Grid item>

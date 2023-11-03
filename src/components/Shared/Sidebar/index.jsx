@@ -55,7 +55,7 @@ const Sidebar = ({
     display: "flex",
     backgroundColor: theme.palette.error.main,
     alignItems: "center",
-    height: "10vh",
+    height: "11vh",
     justifyContent: "flex-end",
     padding: theme.spacing(0, 1),
     // necessary for content to be below app bar

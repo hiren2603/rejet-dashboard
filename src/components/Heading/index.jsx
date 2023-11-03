@@ -14,7 +14,7 @@ const Heading = ({ name, type }) => {
           sm: "row",
           xs: "column",
         }}
-        sx={{ marginTop: { lg: 0, md: 0, sm: "1rem", xs: "1rem" }, justifyContent: {lg: "space-between", sm: "center"}}}
+        sx={{ marginTop: { lg: 0, md: 0, sm: 5, xs: 5 },justifyContent: {lg: "space-between", sm: "center"}}}
       >
         <Grid item lg={9} md={9} sm={12} xs={12}>
           <Typography sx={headingText}>
