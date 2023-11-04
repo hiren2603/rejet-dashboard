@@ -5,6 +5,7 @@ import inkjet from "@/assets/products/re225.png";
 import Samples from "@/assets/samples/font_sample.png";
 import Heading from "@/components/Heading";
 import { Grid, Typography} from "@mui/material";
+import CatalougFile from "@/assets/catalouge/CIJ_RE225.pdf";
 import {
   productHeading,
   modelHeading,
@@ -43,7 +44,7 @@ const Re225 = () => {
         >
           continuous inkjet printers
         </Typography>
-        <Heading name="RE225" type="INKJET PRINTER" />
+        <Heading name="RE225" type="INKJET PRINTER" pdf={CatalougFile}/>
 
         <Grid
           container

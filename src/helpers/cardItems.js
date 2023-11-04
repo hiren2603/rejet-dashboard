@@ -1,6 +1,6 @@
-import inkjet from "../assets/products/inkjet-200plus.png";
+import inkjet from "../assets/products/re200plus.jpg";
 import fiber from "../assets/products/fiber.png";
-import thermal from "../assets/products/thermal.png";
+import thermal from "../assets/products/tij2.png";
 
 export const cardItems = [
   {
@@ -21,7 +21,7 @@ export const cardItems = [
     id: 13,
     image: thermal,
     button: "Thermal",
-    link: "/products/tij/tp01",
+    link: "/products/tij/1",
     text: "Know More",
   },
 ];

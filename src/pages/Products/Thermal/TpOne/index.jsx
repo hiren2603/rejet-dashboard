@@ -13,6 +13,7 @@ import {
 } from "@/helpers/tijData";
 import { Grid, Typography } from "@mui/material";
 import { productHeading, modelHeading } from "./style";
+import CatalougFile from "@/assets/catalouge/TIJ_OneInchPrinter.pdf";
 
 const TpOne = () => {
   return (
@@ -34,7 +35,7 @@ const TpOne = () => {
         >
           Thermal inkjet printers
         </Typography>
-        <Heading name="TP01/TP02" type="tij printers" />
+        <Heading name="TP01/TP02" type="tij printers" pdf={CatalougFile}/>
         <Grid
           container
           item

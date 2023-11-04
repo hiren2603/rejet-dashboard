@@ -7,6 +7,7 @@ import laserImg from "@/assets/products/fiber.png";
 import printSample from "@/assets/samples/fiber_sample.png";
 import { fiberData, features, applications } from "@/helpers/fiberData";
 import Head from "@/components/Head";
+import CatalougFile from "@/assets/catalouge/Fiber_Flying_Laser.pdf";
 
 const Fiber = () => {
   return (
@@ -31,7 +32,7 @@ const Fiber = () => {
         >
           fiber laser marking system
         </Typography>
-        <Heading name="BETABEAM" type="FIBER LASER" />
+        <Heading name="BETABEAM" type="FIBER LASER" pdf={CatalougFile}/>
 
         <Grid
           container

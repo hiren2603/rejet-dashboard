@@ -1,8 +1,7 @@
 import { Grid, Typography, Button, Divider } from "@mui/material";
 import { InnerText, headingText, downloadButton } from "./style";
-import broucher from "@/assets/broucher.pdf";
 
-const Heading = ({ name, type }) => {
+const Heading = ({ name, type, pdf }) => {
   return (
     <>
       <Grid
@@ -32,7 +31,7 @@ const Heading = ({ name, type }) => {
             variant="contained"
             color="error"
             component="a"
-            href={broucher}
+            href={pdf}
             target="_blank"
             rel="noreferref"
             download

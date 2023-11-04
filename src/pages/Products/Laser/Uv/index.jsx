@@ -7,6 +7,7 @@ import { Grid, List, Typography } from "@mui/material";
 import { ProductImg, modelHeading, productHeading } from "./style";
 import ProductButton from "@/components/ProductButton";
 import Head from "@/components/Head";
+import CatalougFile from "@/assets/catalouge/UV_Laser.pdf";
 
 const Uv = () => {
   return (
@@ -27,7 +28,7 @@ const Uv = () => {
       >
         uv laser marking system
       </Typography>
-      <Heading name="Ultra Violet" type="LASER" />
+      <Heading name="Ultra Violet" type="LASER" pdf={CatalougFile}/>
 
       <Grid
         container

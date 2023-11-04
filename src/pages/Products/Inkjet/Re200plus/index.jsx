@@ -1,12 +1,12 @@
 import Head from "@/components/Head";
 import ProductButton from "@/components/ProductButton";
 import Details from "@/components/Details";
-// import inkjet from "@/assets/products/inkjet.png";
-import inkjet from "@/assets/products/inkjet-200plus.png"
+import inkjet from "@/assets/products/re200plus.jpg"
 import Samples from "@/assets/samples/font_sample.png";
 import consumable from "@/assets/products/cij_consumable.png";
 import spares from "@/assets/products/cij_spares.png";
 import Heading from "@/components/Heading";
+import CatalougFile from "@/assets/catalouge/CIJ_RE200_Plus.pdf";
 import { Grid, Typography, List } from "@mui/material";
 import {
   re200PlusPrintParams,
@@ -45,7 +45,7 @@ const Re200Plus = () => {
         >
           continuous inkjet printers
         </Typography>
-        <Heading name="RE200+" type="INKJET PRINTER" />
+        <Heading name="RE200+" type="INKJET PRINTER" pdf={CatalougFile}/>
         <Grid
           container
           item
@@ -72,7 +72,7 @@ const Re200Plus = () => {
                 alignItems: "center",
               }}
             >
-              <img src={inkjet} alt="Re200+" width={300}/>
+              <img src={inkjet} alt="Re200+" width={350}/>
               <ProductButton />
             </Grid>
 
@@ -191,15 +191,17 @@ const Re200Plus = () => {
           </Grid>
         </Grid>
 
-        <Grid container item direction="row" columnSpacing={10}>
+        <Grid container item direction="row" columnSpacing={10} >
           <Grid
             item
+            lg={5}
             justifyContent={{ xs: "center", sm: "center", md: "center" }}
+            mt={4}
           >
-            <img src={spares} alt="spares" width={300} height={150} />
+            <img src={spares} alt="spares" width={"60%"} />
           </Grid>
 
-          <Grid item sx={{ display: "flex", flexDirection: "column" }} lg>
+          <Grid item sx={{ display: "flex", flexDirection: "column" }} lg={5} mt={4}>
             <Typography sx={modelHeading}>re200+ spares</Typography>
             <List>
               Smart Print Head, Modular designed still give flexibility to
@@ -210,16 +212,18 @@ const Re200Plus = () => {
           </Grid>
         </Grid>
 
-        <Grid container item direction="row" columnSpacing={10}>
+        <Grid container item direction="row" columnSpacing={10} mb={4}>
           <Grid
             item
+            lg={5}
+            mt={5}
             sx={{ justifySelf: { md: "center" } }}
             justifyContent={{ xs: "center", sm: "center", md: "center" }}
           >
-            <img src={consumable} alt="spares" width={300} height={150} />
+            <img src={consumable} alt="consumable Image" width={"90%"} />
           </Grid>
 
-          <Grid item sx={{ display: "flex", flexDirection: "column" }} lg>
+          <Grid item sx={{ display: "flex", flexDirection: "column" }} lg={5} mt={5}>
             <Typography sx={modelHeading}>re200+ consumable</Typography>
             <List>
               Inteligent Ink Management System of RE200+ Inkjet Printer

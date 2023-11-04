@@ -4,6 +4,7 @@ import Samples from "@/assets/samples/co2_samples.png";
 import ProductButton from "@/components/ProductButton";
 import Details from "@/components/Details";
 import Heading from "@/components/Heading";
+import CatalougFile from "@/assets/catalouge/CO2_Flying_Laser.pdf";
 import { Grid, Typography, Card } from "@mui/material";
 import {
   productHeading,
@@ -39,7 +40,7 @@ const Co2 = () => {
         >
           co2 laser marking system
         </Typography>
-        <Heading name="PETMARK" type="FLYING LASER" />
+        <Heading name="PETMARK" type="FLYING LASER" pdf={CatalougFile}/>
         <Grid
           container
           item

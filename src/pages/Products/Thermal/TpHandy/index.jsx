@@ -1,10 +1,11 @@
 import Head from "@/components/Head";
-import handy from "@/assets/products/handy.png";
+import handy from "@/assets/products/handy.jpg";
 import Heading from "@/components/Heading";
 import Details from "@/components/Details";
 import { handyData, handyFeatures, handyApp } from "helpers/handyData";
 import { Grid, Typography } from "@mui/material";
 import { modelHeading, productHeading } from "./style";
+import CatalougFile from "@/assets/catalouge/TIJ_Handy_Machine.pdf";
 
 const TpHandy = () => {
   return (
@@ -26,7 +27,7 @@ const TpHandy = () => {
         >
           Thermal inkjet printers
         </Typography>
-        <Heading name="TP HANDY" type="TIJ PRINTER" />
+        <Heading name="TP HANDY" type="TIJ PRINTER" pdf={CatalougFile}/>
         <Grid
           container
           item
@@ -37,7 +38,7 @@ const TpHandy = () => {
         >
           <Grid container item direction="column" lg={5} md={5} rowGap={4}>
             <Grid item alignSelf={"center"}>
-              <img src={handy} alt="Handy" height={130} width={200} />
+              <img src={handy} alt="Handy" width={200} />
             </Grid>
 
             <Grid item>

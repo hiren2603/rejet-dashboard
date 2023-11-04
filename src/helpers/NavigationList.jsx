@@ -48,14 +48,14 @@ export const NavigationList = [
             id: 13,
           },
           {
-            key: "RE225",
-            link: "/products/inkjet/re225",
+            key: "RE224",
+            link: "/products/inkjet/re224",
             icon: <ProductSvg />,
             id: 14,
           },
           {
-            key: "RE224",
-            link: "/products/inkjet/re224",
+            key: "RE225",
+            link: "/products/inkjet/re225",
             icon: <ProductSvg />,
             id: 15,
           },

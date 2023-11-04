@@ -7,6 +7,7 @@ import Details from "@/components/Details";
 import ProductButton from "@/components/ProductButton";
 import { desktopData, features, applications } from "helpers/desktopData";
 import Head from "@/components/Head";
+import CatalougFile from "@/assets/catalouge/Fiber_Desktop_Laser.pdf";
 
 const Desktop = () => {
   return (
@@ -31,7 +32,7 @@ const Desktop = () => {
         >
           desktop laser marking system
         </Typography>
-        <Heading name="PLUTO" type="DESKTOP LASER" />
+        <Heading name="PLUTO" type="DESKTOP LASER" pdf={CatalougFile} />
 
         <Grid
           container

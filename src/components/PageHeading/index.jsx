@@ -1,5 +1,6 @@
 import { Button, Divider, Grid, Typography } from "@mui/material";
-import React from "react";
+import pdf from "@/assets/catalouge/product_catalouge.pdf";
+import { downloadButton } from "./style";
 
 const PageHeading = ({ heading }) => {
   return (
@@ -8,9 +9,18 @@ const PageHeading = ({ heading }) => {
         <Typography variant="h4">{heading}</Typography>
       </Grid>
       <Grid item>
-        <Button variant="contained" color="error">
-          Download Broucher
-        </Button>
+      <Button
+            sx={downloadButton}
+            variant="contained"
+            color="error"
+            component="a"
+            href={pdf}
+            target="_blank"
+            rel="noreferref"
+            download
+          >
+            Download Broucher
+          </Button>
       </Grid>
       <Divider style={{ width: "100%" }} />
     </Grid>
