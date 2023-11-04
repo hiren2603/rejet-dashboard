@@ -1,4 +1,4 @@
-import inkjet from "../assets/products/re200plus.jpg";
+import inkjet from "../assets/products/re200plus.png";
 import fiber from "../assets/products/fiber.png";
 import thermal from "../assets/products/tij2.png";
 

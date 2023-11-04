@@ -38,7 +38,7 @@ const ProductCard = () => {
               onMouseLeave={() => hideTextHandler(cardDetails.id)}
             >
               <Stack sx={cardImgContainer}>
-                <CardImageComponent src={cardDetails.image} alt="item" />
+                <CardImageComponent src={cardDetails.image} alt="card image" />
                 <Link
                   to={cardDetails.link}
                   style={
