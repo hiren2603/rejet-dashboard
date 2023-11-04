@@ -69,7 +69,7 @@ const Co2 = () => {
               <Typography sx={modelHeading}>Print Samples</Typography>
               <ProductImg
                 src={Samples}
-                width={400}
+                width={360}
                 style={{ height: "130px" }}
               />
             </Grid>

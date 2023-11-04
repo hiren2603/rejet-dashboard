@@ -10,10 +10,8 @@ import {
   TableBody,
   TableCell,
   TableContainer,
-  Box,
   Card,
 } from "@mui/material";
-import PageHeading from "@/components/PageHeading";
 import { productHeading, modelHeading, contentStyle, cellStyle } from "./style";
 import { benefits, ewasteRules, dos, donts, data } from "helpers/ewasteManage";
 import image from "@/assets/recycle.svg";
@@ -80,7 +78,7 @@ const EwestMgmt = () => {
                     </Typography>
                   </Grid>
                   <Grid item alignSelf="center">
-                    <img src={image} height={400} />
+                    <img src={image} height={350} />
                   </Grid>
                 </Grid>
               ) : (

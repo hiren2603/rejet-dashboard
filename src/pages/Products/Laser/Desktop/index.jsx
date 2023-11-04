@@ -31,7 +31,7 @@ const Desktop = () => {
         >
           desktop laser marking system
         </Typography>
-        <Heading name="PLUTO" type="FLYING LASER" />
+        <Heading name="PLUTO" type="DESKTOP LASER" />
 
         <Grid
           container

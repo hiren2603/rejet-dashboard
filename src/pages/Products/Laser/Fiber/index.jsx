@@ -62,7 +62,7 @@ const Fiber = () => {
               }}
               lg={4}
             >
-              <ProductImg src={laserImg} />
+              <ProductImg src={laserImg} width={350}/>
               <ProductButton />
             </Grid>
 
@@ -71,7 +71,7 @@ const Fiber = () => {
               <ProductImg
                 src={printSample}
                 width={350}
-                // style={{ height: "130px" }}
+                style={{ height: "130px" }}
               />
             </Grid>
 
