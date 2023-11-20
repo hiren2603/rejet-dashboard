@@ -110,7 +110,7 @@ const Form = () => {
       sx={{
         width: "85%",
         m: "auto",
-        mt: {lg: 0, sm: 2, xs: 4},
+        mt: {xl: 0, lg: 0, sm: 2, xs: 4},
         mb: 0,
 
       }}

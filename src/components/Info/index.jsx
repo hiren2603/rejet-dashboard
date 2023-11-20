@@ -1,25 +1,21 @@
-import { Button, Divider, Grid, Typography } from "@mui/material";
+import { Box, Button, Divider, Grid, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import certificate from "@/assets/certificate.png";
-import { infoContent, infoTitle } from "./style";
+import { imageContainerStyle, certificateStyle, contentStyle, infoContent, infoTitle } from "./style";
 
 const Info = () => {
   return (
     <>
-      <Grid container justifyContent={"center"} spacing={5}>
+      <Grid container justifyContent={"center"} height={'content-height'}>
         <Grid item lg={10} md={10} sm={10} xs={10}>
           <Typography sx={infoTitle}>Who we are?</Typography>
           <Divider />
         </Grid>
-        <Grid item lg={5} md={5} sm={10} xs={10}>
-          <img
+        <Grid item lg={5} md={5} sm={10} xs={10} pt={5} sx={imageContainerStyle}>
+          <Box component="img"
             src={certificate}
             alt="certificate"
-            height={"80%"}
-            width={"90%"}
-            style={{
-              boxShadow: "2px 2px 2px 10px #2f377a",
-            }}
+            sx={certificateStyle}
           />
         </Grid>
         <Grid
@@ -28,8 +24,8 @@ const Info = () => {
           md={5}
           sm={10}
           xs={10}
-          alignItems="center"
-          justifyContent={"center"}
+          pt={2}
+          sx={{contentStyle}}
         >
           <Typography sx={infoContent}>
             Our story began in 2011. Back then we were roadster and service
