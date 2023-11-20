@@ -87,7 +87,7 @@ const Re224 = () => {
               <ProductImg
                 src={Samples}
                 width={350}
-                style={{ height: "400px" }}
+                style={{ height: "auto" }}
               />
             </Grid>
 

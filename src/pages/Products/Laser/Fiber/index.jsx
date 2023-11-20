@@ -72,7 +72,7 @@ const Fiber = () => {
               <ProductImg
                 src={printSample}
                 width={350}
-                style={{ height: "130px" }}
+                style={{ height: "auto" }}
               />
             </Grid>
 

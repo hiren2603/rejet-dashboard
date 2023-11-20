@@ -76,7 +76,7 @@ const Re200Plus = () => {
               <ProductButton />
             </Grid>
 
-            <Grid item lg={2} md={1} sm={2} xs={2} alignSelf={"center"}>
+            <Grid item lg={2} md={1} sm={2} xs={2} >
               <Typography sx={modelHeading}>Print Samples</Typography>
               <ProductImg
                 src={Samples}
