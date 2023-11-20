@@ -82,7 +82,7 @@ export const cardButtonStyle = {
 
 export const CardImageComponent = styled("img")({
   transition: "all 0.5s ease",
-  // height: "80%",
+  maxHeight: "80%",
   width: "70%",
   "&:hover": {
     transform: "scale(1.2)",
