@@ -8,12 +8,12 @@ const ErrorPage = () => {
   useEffect(() => {
     const timer = setTimeout(()=>{
       navigate("/");
-    }, 1000)
+    }, 5000)
     return ()=> clearTimeout(timer)
   },[]);
 
   return (
-    <Grid container justifyContent="center" alignItems="center" >
+    <Grid container justifyContent="center" alignItems="center" pt={5}>
         <Typography variant="h4" sx={{fontWeight: 600, color: "#FF725E"}}>Opps!! Page Not Found!</Typography>
       <Grid item lg={12} sx={{ display: "flex", justifyContent: "center", alignItems: "center", mb: 2}}>
         <img src={ErrorImage} alt="error" style={{width: "60%"}}/>
