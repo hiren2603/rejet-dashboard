@@ -1,6 +1,6 @@
 export const imageContainerStyle ={
   display: 'flex',
-  justifyContent: {lg: "space-between", md: "space-between", xs: 'center'},
+  justifyContent: {lg: "space-between", md: "space-between",sm: "center", xs: "center"},
 }
 
 

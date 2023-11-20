@@ -6,7 +6,7 @@ import { imageContainerStyle, certificateStyle, contentStyle, infoContent, infoT
 const Info = () => {
   return (
     <>
-      <Grid container justifyContent={"center"} height={'content-height'}>
+      <Grid container justifyContent={"center"} height={'content-height'} mb={3}>
         <Grid item lg={10} md={10} sm={10} xs={10}>
           <Typography sx={infoTitle}>Who we are?</Typography>
           <Divider />
