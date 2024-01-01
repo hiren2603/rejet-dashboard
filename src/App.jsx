@@ -125,10 +125,9 @@ const App = () => {
                   />
                   <Route
                     exact
-                    path="/products/tij/re10.1"
+                    path="/products/tij/re10"
                     element={<ReTenOne />}
                   />
-                  {/* <Route path="/products/tij/tp01.1" element={<TpOneOne />} /> */}
                   <Route
                     exact
                     path="/products/tij/re-handy"

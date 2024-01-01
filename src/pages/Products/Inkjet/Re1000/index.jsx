@@ -4,7 +4,7 @@ import Details from "@/components/Details";
 import image from "@/assets/products/re1000.png";
 import Samples from "@/assets/samples/font_sample.png";
 import Heading from "@/components/Heading";
-import CatalougFile from "@/assets/catalouge/CIJ_RE2000P.pdf";
+import CatalougFile from "@/assets/catalouge/DOD_RE_1000.pdf";
 import { Grid, Typography } from "@mui/material";
 import {
   re1000PrintParams,
