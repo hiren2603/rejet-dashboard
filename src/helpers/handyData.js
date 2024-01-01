@@ -16,8 +16,8 @@ export const handyData = [
     title: "Conditions :",
     content: "Temperature 5-45 \u00B0 C, Humidity 40% To 60%",
   },
-  { id: 10, title: "Ink Type :", content: "Solvent Base/42ml" },
-  { id: 11, title: "Ink Colors :", content: "Black, White,Red,Blue,Yellow" },
+  { id: 10, title: "Ink Type :", content: "Solvent Base/42ml, Water Base" },
+  { id: 11, title: "Ink Colors :", content: "Black, White,Red,Blue,Yellow, Green" },
 ];
 
 export const handyFeatures = [
@@ -32,7 +32,7 @@ export const handyFeatures = [
     content: "Numbers,Symboles,QR Code,Bar Code,Date,Time,Counter",
   },
   { id: 3, title: "Print Distance :", content: "2 To 5mm" },
-  { id: 4, title: "Print Resolution :", content: "300dpi Maximum" },
+  { id: 4, title: "Print Resolution :", content: "600dpi Maximum" },
   { id: 5, title: "Max. Print Height :", content: "2 To 12.5mm" },
 ];
 export const handyApp = [

@@ -16,7 +16,8 @@ export const commonSpace = [
   {
     id: 2,
     title: "Electrical Requirement :",
-    content: "AC 100V–240V, 50/60Hz, DC 24V 2.5A",
+    // content: "AC 100V–240V, 50/60Hz, DC 24V 2.5A",
+    content: "100-230 ACV, 5A, 50/60Hz, 1PH",
   },
   {
     id: 3, 
