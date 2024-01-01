@@ -8,17 +8,25 @@ import {
   Re200plus,
   Re224,
   Re225,
+  Re2000,
+  Re2000p,
+  Re1000,
   Co2,
   Desktop,
   Fiber,
   Uv,
-  TpHandy,
-  TpOne,
+  ReTenOne,
+  ReHandy,
   EwestMgmt,
 } from "@/pages";
-import { ThemeProvider, CssBaseline, Box, CircularProgress } from "@mui/material";
+import {
+  ThemeProvider,
+  CssBaseline,
+  Box,
+  CircularProgress,
+} from "@mui/material";
 import { Layout } from "@/components/Shared";
-import  ScrollToTop  from "@/components/ScrollToTop";
+import ScrollToTop from "@/components/ScrollToTop";
 import { theme } from "@/theme";
 import ErrorPage from "@/pages/ErrorPage";
 import { LayoutContext } from "@/Context";
@@ -31,14 +39,16 @@ const App = () => {
   const [persistState, setPersistState] = useState(false);
   const [isComponentReady, setIsComponentReady] = useState(false);
 
-  const handleComponentReady = () => { setIsComponentReady(true) };
+  const handleComponentReady = () => {
+    setIsComponentReady(true);
+  };
 
   const LoaderStyle = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     height: "100vh",
-  }
+  };
 
   useEffect(() => {
     setTimeout(handleComponentReady, 2000);
@@ -46,15 +56,23 @@ const App = () => {
 
   if (!isComponentReady) {
     return (
-      <Box sx={LoaderStyle} >
+      <Box sx={LoaderStyle}>
         <CircularProgress color="error" size={40} />
       </Box>
-    )
+    );
   } else {
     return (
       <HelmetProvider context={helmetContext}>
         <ThemeProvider theme={theme}>
-          <LayoutContext.Provider value={{ open, setOpen, drawerwidth, persistState, setPersistState }}>
+          <LayoutContext.Provider
+            value={{
+              open,
+              setOpen,
+              drawerwidth,
+              persistState,
+              setPersistState,
+            }}
+          >
             <CssBaseline />
             <ScrollToTop />
             <Layout>
@@ -63,16 +81,59 @@ const App = () => {
                 <Route exact path="/about" element={<About />} />
                 <Route>
                   {/* <Route exact path="/products/" element={<Navigate replace to="/" />} /> */}
-                  <Route exact path="/products/inkjet/re200+" element={<Re200plus />} />
-                  <Route exact path="/products/inkjet/re224" element={<Re224 />} />
-                  <Route exact path="/products/inkjet/re225" element={<Re225 />} />
+                  <Route
+                    exact
+                    path="/products/inkjet/re200+"
+                    element={<Re200plus />}
+                  />
+                  <Route
+                    exact
+                    path="/products/inkjet/re224"
+                    element={<Re224 />}
+                  />
+                  <Route
+                    exact
+                    path="/products/inkjet/re225"
+                    element={<Re225 />}
+                  />
+                  <Route
+                    exact
+                    path="/products/inkjet/re2000"
+                    element={<Re2000 />}
+                  />
+                  <Route
+                    exact
+                    path="/products/inkjet/re2000p"
+                    element={<Re2000p />}
+                  />
+                  <Route
+                    exact
+                    path="/products/inkjet/re1000"
+                    element={<Re1000 />}
+                  />
                   <Route exact path="/products/laser/co2" element={<Co2 />} />
-                  <Route exact path="/products/laser/fiber" element={<Fiber />} />
+                  <Route
+                    exact
+                    path="/products/laser/fiber"
+                    element={<Fiber />}
+                  />
                   <Route exact path="/products/laser/uv" element={<Uv />} />
-                  <Route exact path="/products/laser/desktop" element={<Desktop />} />
-                  <Route exact path="/products/tij/1" element={<TpOne />} />
+                  <Route
+                    exact
+                    path="/products/laser/desktop"
+                    element={<Desktop />}
+                  />
+                  <Route
+                    exact
+                    path="/products/tij/re10.1"
+                    element={<ReTenOne />}
+                  />
                   {/* <Route path="/products/tij/tp01.1" element={<TpOneOne />} /> */}
-                  <Route exact path="/products/tij/handy" element={<TpHandy />} />
+                  <Route
+                    exact
+                    path="/products/tij/re-handy"
+                    element={<ReHandy />}
+                  />
                 </Route>
                 <Route exact path="/applications" element={<Applications />} />
                 <Route exact path="/ewest-management" element={<EwestMgmt />} />
@@ -83,7 +144,7 @@ const App = () => {
           </LayoutContext.Provider>
         </ThemeProvider>
       </HelmetProvider>
-    )
+    );
   }
 };
 

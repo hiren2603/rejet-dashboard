@@ -2,7 +2,7 @@ import { styled } from "@mui/material";
 
 export const InnerText = styled("span")({
   color: "#E21D25",
-  fontWeight: "600",
+  fontWeight: 700,
   textTransform: "uppercase",
   fontSize: "30px",
 });
@@ -10,7 +10,7 @@ export const InnerText = styled("span")({
 export const headingText = {
   color: "#000000",
   textShadow: "2px 2px 2px #0000004f",
-  fontWeight: "600",
+  fontWeight: 700,
   textTransform: "uppercase",
   fontSize: "30px",
   textAlign: {lg: "start", sm: "center", xs: "center"}
@@ -24,7 +24,7 @@ export const downloadButton = {
   justifyContent: "center",
   color: "#ffffff",
   backgroundColor: "#5b5b5b",
-  fontWeight: "500",
+  fontWeight: 500,
   outline: "none",
   borderRadius: "4px",
   position: "relative",

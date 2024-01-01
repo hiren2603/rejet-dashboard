@@ -19,7 +19,7 @@ const Applications = () => {
               title="Applications"
               description="Radhe Enterprise Application Page"
             />
-            Applications of RE200 Inkjet Printers
+            Applications of Rejet Printers and Coders
           </Typography>
         </Grid>
 

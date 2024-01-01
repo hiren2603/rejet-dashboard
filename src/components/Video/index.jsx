@@ -5,7 +5,9 @@ import { videoData } from "helpers/videoData";
 const Video = () => {
   const [isVideoReady, setIsVideoReady] = useState(false);
 
-  const handleVideoReady = () => { setIsVideoReady(true) };
+  const handleVideoReady = () => {
+    setIsVideoReady(true);
+  };
 
   useEffect(() => {
     setTimeout(handleVideoReady, 2000);
@@ -14,9 +16,20 @@ const Video = () => {
   return (
     <>
       {videoData?.map((item) => (
-        <Box key={item.id} display={"flex"} alignItems="center" justifyContent={"center"} sx={{ borderRadius: "5px" }}>
+        <Box
+          key={item.id}
+          display={"flex"}
+          alignItems="center"
+          justifyContent={"center"}
+          sx={{ borderRadius: "5px" }}
+        >
           {!isVideoReady ? (
-            <Skeleton variant="rectangular" height={250} width={300} sx={{ borderRadius: "20px", margin: "1rem" }} />
+            <Skeleton
+              variant="rectangular"
+              height={250}
+              width={300}
+              sx={{ borderRadius: "20px", margin: "1rem" }}
+            />
           ) : (
             <iframe
               width="300"
