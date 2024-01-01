@@ -17,6 +17,7 @@ const ReHandy = () => {
         sx={{ margin: "0 auto" }}
         alignItems="center"
         justifyContent="center"
+        pb={5}
       >
         <Typography
           sx={{
@@ -48,22 +49,6 @@ const ReHandy = () => {
                 return <Details key={item.id} content={item.item} />;
               })}
             </Grid>
-
-            <Grid container item>
-              <Typography sx={modelHeading}>Features</Typography>
-              {handyFeatures?.map((item) => (
-                <Grid container item key={item.id} sx={{ m: "2px 0" }}>
-                  <Grid item lg={6} md={6} sm={6} xs={4}>
-                    <Typography sx={{ fontWeight: "580" }}>
-                      {item.title}
-                    </Typography>
-                  </Grid>
-                  <Grid item lg={6} md={6} sm={6} xs={8}>
-                    {item.content}
-                  </Grid>
-                </Grid>
-              ))}
-            </Grid>
           </Grid>
 
           <Grid container item direction="column" lg={6} md={6} rowGap={5}>
@@ -77,6 +62,21 @@ const ReHandy = () => {
                     </Typography>
                   </Grid>
                   <Grid item lg={6} md={6} sm={6} xs={6}>
+                    {item.content}
+                  </Grid>
+                </Grid>
+              ))}
+            </Grid>
+            <Grid container item>
+              <Typography sx={modelHeading}>Features</Typography>
+              {handyFeatures?.map((item) => (
+                <Grid container item key={item.id} sx={{ m: "2px 0" }}>
+                  <Grid item lg={6} md={6} sm={6} xs={4}>
+                    <Typography sx={{ fontWeight: "580" }}>
+                      {item.title}
+                    </Typography>
+                  </Grid>
+                  <Grid item lg={6} md={6} sm={6} xs={8}>
                     {item.content}
                   </Grid>
                 </Grid>

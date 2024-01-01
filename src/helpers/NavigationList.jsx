@@ -135,7 +135,7 @@ export const NavigationList = [
           },
           {
             key: "RE Handy",
-            link: "/products/tij/handy",
+            link: "/products/tij/re-handy",
             icon: <ProductSvg />,
             id: 33,
           },
