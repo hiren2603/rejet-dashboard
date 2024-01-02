@@ -7,7 +7,7 @@ import { ThemeProvider, colors, createTheme } from "@mui/material";
 export const theme = createTheme({
   palette: {
     primary: {
-      main: colors.grey[300],
+      main: "#161922",
     },
     secondary: {
       main: "#5b5b5b",
@@ -20,8 +20,14 @@ export const theme = createTheme({
       main: "#00D84A",
     },
     error: {
-      main: colors.red[600],
+      main: "#ea232e",
     },
+    background:{
+      default: "#161922"
+    },
+    text:{
+      default: "#ffffff"
+    }
   },
   components: {
     MuiDrawer: {
@@ -32,10 +38,11 @@ export const theme = createTheme({
           },
           "&::-webkit-scrollbar-track": {
             WebkitBoxShadow: "inset 0 0 6px rgba(255,255,255,0.00)",
-            backgroundColor: colors.red[400],
+            backgroundColor: "#161922",
+            // backgroundColor: colors.red[400],
           },
           "&::-webkit-scrollbar-thumb": {
-            backgroundColor: colors.grey[300],
+            backgroundColor: colors.grey[700],
             borderRadius: "5px",
           },
         },

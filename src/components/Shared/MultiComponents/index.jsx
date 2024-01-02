@@ -19,7 +19,7 @@ const MultiComponents = ({ open, closeSideBar, item }) => {
           <ListItemButton
             sx={{
               "&:hover": {
-                background: "linear-gradient(145deg, #E31E25, #E31E25);",
+                background: "linear-gradient(145deg, #EA232E, #EA232E);",
                 WebkitBoxShadow:
                   "inset 0px 0px 0px black, inset 0px 0px 4px black",
                 transition: "0.2s ease-in-out",

@@ -11,7 +11,7 @@ import { gridItemStyle } from "./style";
 
 const About = () => {
   return (
-    <Stack width="90%" sx={{ m: "0 auto", mt: 5 }}>
+    <Stack width="90%" sx={{ m: "0 auto", mt: 5, color: "#ffffff" }}>
       <Head title="About" description="Radhe Enterprise About Page" />
       <PageHeading heading="About Us" />
       <Grid container pt={2}>
@@ -24,17 +24,10 @@ const About = () => {
                 key={para.id}
                 sx={{
                   lineHeight: 2,
-                  fontWeight:
-                    para.id === 5
-                      ? "700"
-                      : "normal",
-                  color:
-                    para.id === 5
-                      ? `#ff0000`
-                      : "black",
-                  textTransform:
-                    para.id === 5 ? "uppercase": "none",
-                  pl: para.id === 5 && "5px"
+                  fontWeight: para.id === 5 ? "700" : "normal",
+                  color: para.id === 5 ? `#EA232E` : "#ffffff",
+                  textTransform: para.id === 5 ? "uppercase" : "none",
+                  pl: para.id === 5 && "5px",
                 }}
               >
                 {para.item}
@@ -55,7 +48,14 @@ const About = () => {
         container
         columnSpacing={{ xs: 1 }}
         rowSpacing={2}
-        sx={{justifyContent: {lg: "space-between", md: "center", sm: "center", xs: "center"}}}
+        sx={{
+          justifyContent: {
+            lg: "space-between",
+            md: "center",
+            sm: "center",
+            xs: "center",
+          },
+        }}
         justifyContent={"space-between"}
       >
         <Grid item>

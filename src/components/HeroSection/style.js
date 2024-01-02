@@ -1,3 +1,5 @@
+import Bg from "@/assets/hero_bg.jpg"
+
 export const slideTextStyle = {
   position: {lg: "absolute", md: "absolute", sm: "absolute", xs: "absolute"},
   top: "50%",
@@ -65,12 +67,42 @@ export const rightIconContainer = {
   right: "10px",
 };
 
+export const heroContainerStyle ={
+  position: "relative",
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center center',
+  backgroundRepeat: 'no-repeat',
+  height: {
+    xl: "100vh",
+    lg: "100vh",
+    md: "80vh",
+    sm: "80vh",
+  }
+}
+
 export const overlayStyle = {
   position: "absolute",
-  top: 0,
-  left: 0,
   width: "100%",
   height: "100%",
-  backgroundColor: "rgba(0,0,0,.4)",
+  backgroundColor: "rgba(0,0,0,.7)",
   backgroundRepeat: "no-repeat",
+
+}
+
+export const videoContainerStyle ={
+  position: 'absolute',
+  width: "75%",
+  height: "85%",
+  border: '10px solid rgba(0, 0, 0, 0.4)',
+  borderRadius: '5px',
+  overflow: 'hidden'
+}
+
+export const videoStyle ={
+  width: "100%",
+  height: "100%",
+  objectFit: "cover"
 }

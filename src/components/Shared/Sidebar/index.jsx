@@ -5,7 +5,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import {
   Stack,
   ClickAwayListener,
-  Divider, 
+  Divider,
   IconButton,
   useMediaQuery,
   useTheme,
@@ -23,14 +23,14 @@ const Sidebar = ({
   handleCategory,
   handleSubCategory,
   openCategory,
-  openSubCategory
+  openSubCategory,
 }) => {
   const theme = useTheme();
   const { open, drawerwidth } = useContext(LayoutContext);
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const openedMixin = (theme) => ({
     width: drawerwidth,
-    backgroundColor: theme.palette.error.main,
+    backgroundColor: theme.palette.primary.main,
     transition: theme.transitions.create("width", {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
@@ -43,7 +43,7 @@ const Sidebar = ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-    backgroundColor: theme.palette.error.main,
+    backgroundColor: theme.palette.primary.main,
     overflowX: "hidden",
     width: `calc(${theme.spacing(7)} + 1px)`,
     [theme.breakpoints.up("sm")]: {
@@ -53,7 +53,7 @@ const Sidebar = ({
 
   const DrawerHeader = styled("div")(({ theme }) => ({
     display: "flex",
-    backgroundColor: theme.palette.error.main,
+    backgroundColor: theme.palette.primary.main,
     alignItems: "center",
     height: "11vh",
     justifyContent: "flex-end",

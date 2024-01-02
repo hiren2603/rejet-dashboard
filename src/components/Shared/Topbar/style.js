@@ -1,7 +1,7 @@
 import { styled } from "@mui/material";
 
 export const ContactButton = styled("a")({
-  backgroundColor: "#e31e25",
+  backgroundColor: "#ea232e",
   color: "#ffffff",
   width: "7rem",
   height: "2rem",
@@ -9,7 +9,7 @@ export const ContactButton = styled("a")({
   textTransform: "capitalize",
   fontWeight: "500",
   borderRadius: "2px",
-  border: "1px solid #e31e25",
+  border: "1px solid #ea232e",
   cursor: "pointer",
   display: "flex",
   alignItems: "center",
@@ -17,12 +17,12 @@ export const ContactButton = styled("a")({
   marginLeft: "1rem",
   "&:hover": {
     backgroundColor: "transparent",
-    border: "1px solid #e31e25",
-    color: "#000",
+    border: "1px solid #ea232e",
+    color: "#fff",
   },
   "&:last-child": {
     backgroundColor: "transparent",
-    color: "black",
+    color: "#fff",
   },
   "&:last-child:hover": {
     backgroundColor: "#e31e25",

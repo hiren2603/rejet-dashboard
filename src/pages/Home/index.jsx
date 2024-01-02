@@ -1,4 +1,4 @@
-import Slider from "@/components/Slider";
+import HeroSection from "@/components/HeroSection";
 import ProductCard from "@/components/ProductCard";
 import Info from "@/components/Info";
 import Form from "@/components/Form";
@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <>
       <Head title="Home" description="Radhe Enterprise Home Page" />
-      <Slider />
+      <HeroSection />
       <ProductCard />
       <Info />
       <Form />

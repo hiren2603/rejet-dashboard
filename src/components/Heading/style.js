@@ -8,7 +8,7 @@ export const InnerText = styled("span")({
 });
 
 export const headingText = {
-  color: "#000000",
+  color: "#ffffff",
   textShadow: "2px 2px 2px #0000004f",
   fontWeight: 700,
   textTransform: "uppercase",

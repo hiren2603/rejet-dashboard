@@ -1,5 +1,7 @@
 export const gridItemStyle = {
-  boxShadow: 5,
+  // boxShadow: 5,
+  backgroundColor: "#ffffff",
+  boxShadow: "2px 2px 4px rgba(10, 10, 10, 0.4)",
   width: { xl: "200px", lg: "200px", md: "200px", sm: "300px", xs: "350px" },
   height: "240px",
   borderRadius: "10px",

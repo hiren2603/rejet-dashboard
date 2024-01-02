@@ -23,10 +23,11 @@ export const cardRow = {
 
 export const cardContainer = {
   position: "relative",
+  background: "#ffffff",
   alignItems: "center",
   justifyContent: "center",
   borderRadius: "3px",
-  boxShadow: "2px 2px 20px 1px #b6b6b6",
+  boxShadow: "2px 2px 20px 1px rgba(0, 0, 0, 0.5)",
   height: { lg: "500px", md: "400px", sm: "300px", xs: "350px" },
   width: { lg: "30%", md: "30%", sm: "30%", xs: "100%" },
 };
@@ -38,21 +39,22 @@ export const cardImgContainer = {
   height: "450px",
   transition: "all 0.5s ease",
   "&:hover": {
-    backgroundColor: "#ffe7e7",
+    backgroundColor: "rgba(0, 0, 0, 0.4)",
     opacity: "0.5",
     transition: "all 0.5s ease",
   },
 };
 
 export const cardBtnContainer = {
-  background: "#5b5b5b",
+  background: "#161922",
+  color: "#000000",
   width: "100%",
   height: "50px",
   justifyContent: "center",
   alignItems: "center",
   borderRadius: "3px",
   "&:hover": {
-    background: "#e31e25",
+    background: "#EA232E",
     transition: "all 0.3s ease",
   },
 };
@@ -73,6 +75,7 @@ export const hideMoreText = {
 
 export const cardButtonStyle = {
   color: "#ffffff",
+  background: "#161922",
   overflowX: "hidden",
   fontSize: "18px",
   fontWeight: 600,
