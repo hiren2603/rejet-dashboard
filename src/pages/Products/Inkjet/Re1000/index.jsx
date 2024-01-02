@@ -32,6 +32,7 @@ const Re1000 = () => {
           sx={{
             ...productHeading,
             display: { lg: "flex", md: "flex", sm: "flex", xs: "none" },
+            color : "white"
           }}
           align="center"
         >
@@ -84,11 +85,11 @@ const Re1000 = () => {
             </Grid>
             <Grid item container>
               <Typography sx={headings}>Ink system</Typography>
-              <Typography>{inkSystem.content}</Typography>
+              <Typography sx={{color : "white"}}>{inkSystem.content}</Typography>
             </Grid>
             <Grid item container>
               <Typography sx={headings}>{mainHardware.title}</Typography>
-              <Typography>{mainHardware.content}</Typography>
+              <Typography sx={{color : "white"}}>{mainHardware.content}</Typography>
             </Grid>
           </Grid>
 
@@ -101,7 +102,7 @@ const Re1000 = () => {
                 Product Details
               </Typography>
               {re1000PrintParams?.map((item) => (
-                <Grid container item key={item.id} sx={{ m: "2px 0" }}>
+                <Grid container item key={item.id} sx={{ m: "2px 0", color : "white" }}>
                   <Grid item lg={7} md={7} sm={7} xs={7}>
                     <Typography sx={{ fontWeight: "600" }}>
                       {item.title} :
@@ -122,7 +123,7 @@ const Re1000 = () => {
                 Specifications
               </Typography>
               {re1000Params?.map((item) => (
-                <Grid container item key={item.id} sx={{ m: "2px 0" }}>
+                <Grid container item key={item.id} sx={{ m: "2px 0", color : "white" }}>
                   <Grid item lg={7} md={7} sm={7} xs={6}>
                     <Typography sx={{ fontWeight: "600" }}>
                       {item.title} :
@@ -137,7 +138,7 @@ const Re1000 = () => {
 
             <Grid item container>
               <Typography sx={headings}>{printHead.title}</Typography>
-              <Typography>{printHead.content}</Typography>
+              <Typography sx={{color : "white"}}>{printHead.content}</Typography>
             </Grid>
           </Grid>
         </Grid>

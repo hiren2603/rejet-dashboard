@@ -32,6 +32,7 @@ const Re2000p = () => {
           sx={{
             ...productHeading,
             display: { lg: "flex", md: "flex", sm: "flex", xs: "none" },
+            color : "white"
           }}
           align="center"
         >
@@ -82,7 +83,7 @@ const Re2000p = () => {
                 return <Details key={item.id} content={item.content} />;
               })}
             </Grid>
-            <Grid item>
+            <Grid item sx={{color : "white"}}>
               <Typography sx={headings}>INK SYSTEM</Typography>
               {inkSystem.content}
             </Grid>
@@ -97,7 +98,7 @@ const Re2000p = () => {
                 Product Details
               </Typography>
               {re2000pPrintParams?.map((item) => (
-                <Grid container item key={item.id} sx={{ m: "2px 0" }}>
+                <Grid container item key={item.id} sx={{ m: "2px 0", color : "white" }}>
                   <Grid item lg={7} md={7} sm={7} xs={7}>
                     <Typography sx={{ fontWeight: "600" }}>
                       {item.title} :
@@ -118,7 +119,7 @@ const Re2000p = () => {
                 Specifications
               </Typography>
               {re2000pParams?.map((item) => (
-                <Grid container item key={item.id} sx={{ m: "2px 0" }}>
+                <Grid container item key={item.id} sx={{ m: "2px 0", color : "white" }}>
                   <Grid item lg={7} md={7} sm={7} xs={6}>
                     <Typography sx={{ fontWeight: "600" }}>
                       {item.title} :
@@ -132,7 +133,7 @@ const Re2000p = () => {
             </Grid>
             <Grid item>
               <Typography sx={headings}>Print Head</Typography>
-              <Typography>{printHead.content}</Typography>
+              <Typography sx={{color : "white"}}>{printHead.content}</Typography>
             </Grid>
           </Grid>
         </Grid>

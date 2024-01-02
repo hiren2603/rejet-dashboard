@@ -4,7 +4,7 @@ export const productHeading = {
   fontSize: "36px",
   textTransform: "uppercase",
   textAlign: "center",
-  color: "#000000",
+  color: "#ffffff",
   textShadow: "2px 2px 2px #c0c0c0",
   fontWeight: "600",
   margin: "2rem 0",
@@ -14,7 +14,7 @@ export const modelHeading = {
   fontSize: "26px",
   textTransform: "uppercase",
   marginBottom: "0.5rem",
-  color: "#000000",
+  color: "#ffffff",
   fontWeight: "600",
 };
 
@@ -25,7 +25,7 @@ export const modelDetails = {
 };
 
 export const headings = {
-  color: "#000000",
+  color: "#ffffff",
   fontWeight: "580",
   fontSize: "20px",
   textTransform: "uppercase",

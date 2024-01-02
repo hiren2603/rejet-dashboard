@@ -33,6 +33,7 @@ const ReTenOne = () => {
           sx={{
             ...productHeading,
             display: { lg: "flex", md: "flex", sm: "flex", xs: "none" },
+            color : "white"
           }}
           align="center"
         >
@@ -55,7 +56,7 @@ const ReTenOne = () => {
           <Grid container item direction="column" lg={6} md={5} rowGap={4}>
             {tijData?.map((item) => {
               return (
-                <Grid container item key={item.id}>
+                <Grid container item key={item.id} sx={{color : "white"}}>
                   <Typography sx={modelHeading}>{item.model}</Typography>
                   <Grid container item>
                     <Grid item lg={6} md={5} sm={5} xs={5}>
@@ -75,7 +76,7 @@ const ReTenOne = () => {
               <Typography sx={modelHeading}>Specifications</Typography>
               {commonSpace?.map((item) => {
                 return (
-                  <Grid key={item.id} container item>
+                  <Grid key={item.id} container item sx={{color : "white"}}>
                     <Grid
                       item
                       lg={6}
@@ -98,7 +99,7 @@ const ReTenOne = () => {
               <Typography sx={modelHeading}>features</Typography>
               {features?.map((item) => {
                 return (
-                  <Grid key={item.id} container item>
+                  <Grid key={item.id} container item sx={{color : "white"}}>
                     <Grid
                       item
                       lg={6}

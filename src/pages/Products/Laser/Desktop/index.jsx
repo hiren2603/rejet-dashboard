@@ -27,6 +27,7 @@ const Desktop = () => {
           sx={{
             ...productHeading,
             display: { lg: "flex", md: "flex", sm: "flex", xs: "none" },
+            color : "white"
           }}
           align="center"
         >
@@ -47,7 +48,7 @@ const Desktop = () => {
                 Specifications
               </Typography>
               {desktopData?.map((item) => (
-                <Grid key={item.id} container item sx={{ margin: "2px 0" }}>
+                <Grid key={item.id} container item sx={{ margin: "2px 0", color : "white" }}>
                   <Grid item lg={5} md={6} sm={5} xs={7}>
                     <Typography sx={{ fontWeight: "580" }}>
                       {item.title}
