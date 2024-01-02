@@ -16,17 +16,23 @@ const Form = () => {
   const [errors, setErrors] = useState({});
   const [isSubmiting, setIsSubmiting] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [failed, setFailed] = useState(false);
+
   useEffect(() => {
+    // console.log(Object.keys(errors).length);
+    // console.log(isSubmiting);
     if (Object.keys(errors).length === 0 && isSubmiting) {
       send(
-        "service_728pi8n",
-        "template_n1df23r",
+        "default_service",
+        `${import.meta.env.VITE_APP_EMAIL_TEMPLATE}`,
         form,
-        "user_L5xYRhbwHzaofEGYMkFhV"
+        `${import.meta.env.VITE_APP_EMAIL_API}`
       )
         .then((response) => {
-          console.log("SUCCESS!", response.status, response.text);
+          // console.log("SUCCESS!", response.status, response.text);
+          setFailed(false);
           setSuccess(true);
+          setIsSubmiting(false);
           setForm({
             name: "",
             email: "",
@@ -36,6 +42,7 @@ const Form = () => {
           });
         })
         .catch((err) => {
+          setFailed(true);
           console.log("FAILED...", err);
         });
     }
@@ -110,9 +117,8 @@ const Form = () => {
       sx={{
         width: "85%",
         m: "auto",
-        mt: {xl: 0, lg: 0, sm: 2, xs: 4},
+        mt: { xl: 0, lg: 0, sm: 2, xs: 4 },
         mb: 0,
-
       }}
     >
       <Grid item lg={12} md={12} sm={12} xs={12}>
@@ -125,6 +131,16 @@ const Form = () => {
           Get In Touch
         </Typography>
         <Divider />
+        {success && (
+          <Typography variant="p" color="success">
+            Your message has been sent. Thanks!
+          </Typography>
+        )}
+        {failed && (
+          <FormHelperText error>
+            Opps! something went wrong. Failed to send Inquiry!!
+          </FormHelperText>
+        )}
       </Grid>
       <Grid container spacing={2} pt={2} pb={2}>
         <Grid item lg={3} md={6} sm={12} xs={12}>

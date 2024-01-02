@@ -15,9 +15,9 @@ export const contentStyle ={
   justifyContent: "center",
 }
 export const infoTitle = {
-  color: "#000000",
+  color: "#ffffff",
   fontWeight: "500",
-  textShadow: "2px 2px 2px #5b5b5b70",
+  textShadow: "2px 2px 2px rgba(255, 255, 255, 0.3)",
   fontSize: "36px",
 };
 
@@ -26,5 +26,5 @@ export const infoContent = {
   fontSize: "16px",
   lineHeight: {lg: "2.5", md: "1.8", sm: "2", xs: "2"},
   padding: "0.5rem 0",
-  color: "#000000",
+  color: "#ffffff",
 };

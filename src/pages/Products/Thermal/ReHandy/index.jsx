@@ -1,11 +1,11 @@
 import Head from "@/components/Head";
-import handy from "@/assets/products/handy.jpg";
+import handy from "@/assets/products/handy.png";
 import Heading from "@/components/Heading";
 import Details from "@/components/Details";
 import { handyData, handyFeatures, handyApp } from "helpers/handyData";
 import { Grid, Typography } from "@mui/material";
 import { modelHeading, productHeading } from "./style";
-import CatalougFile from "@/assets/catalouge/TIJ_Handy_Machine.pdf";
+import CatalougFile from "@/assets/catalouge/TIJ.pdf";
 
 const ReHandy = () => {
   return (
@@ -39,7 +39,7 @@ const ReHandy = () => {
         >
           <Grid container item direction="column" lg={5} md={5} rowGap={4}>
             <Grid item alignSelf={"center"}>
-              <img src={handy} alt="Handy" width={200} />
+              <img src={handy} alt="Handy" width="100%" height="100%" />
             </Grid>
 
             <Grid item>

@@ -123,21 +123,15 @@ export const NavigationList = [
         nestedcomponents: [
           {
             key: "RE 10.1",
-            link: "/products/tij/re10.1",
+            link: "/products/tij/re10",
             icon: <ProductSvg />,
             id: 31,
-          },
-          {
-            key: "RE 10.2",
-            link: "/products/tij/re10.2",
-            icon: <ProductSvg />,
-            id: 32,
           },
           {
             key: "RE Handy",
             link: "/products/tij/re-handy",
             icon: <ProductSvg />,
-            id: 33,
+            id: 32,
           },
         ],
       },

@@ -3,8 +3,8 @@ import Heading from "@/components/Heading";
 import Details from "@/components/Details";
 import ProductButton from "@/components/ProductButton";
 import samples from "@/assets/samples/tij_samples.png";
-import TIJProduct1 from "@/assets/products/tij1.png";
-import TIJProduct2 from "@/assets/products/tij2.png";
+import TIJProduct1 from "@/assets/products/re_tenOne.png";
+import TIJProduct2 from "@/assets/products/re10.2.png";
 import {
   tijData,
   commonSpace,
@@ -13,7 +13,7 @@ import {
 } from "@/helpers/tijData";
 import { Grid, Typography } from "@mui/material";
 import { productHeading, modelHeading } from "./style";
-import CatalougFile from "@/assets/catalouge/TIJ_OneInchPrinter.pdf";
+import CatalougFile from "@/assets/catalouge/TIJ.pdf";
 
 const ReTenOne = () => {
   return (
