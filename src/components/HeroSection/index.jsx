@@ -10,11 +10,8 @@ import Hero from "@/assets/videos/intro.mp4";
 
 const HeroSection = () => {
   return (
-    <Stack
-      direction="row"
-      sx={{ ...heroContainerStyle, backgroundImage: `url(${Bg})` }}
-    >
-      {/* <Box sx={overlayStyle}></Box> */}
+    <Stack direction="row" sx={{ ...heroContainerStyle }}>
+      <Box sx={overlayStyle}></Box>
       <Box sx={videoContainerStyle}>
         <video autoPlay loop muted style={videoStyle}>
           <source src={Hero} type="video/mp4" />

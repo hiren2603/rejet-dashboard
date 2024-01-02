@@ -72,9 +72,12 @@ export const heroContainerStyle ={
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
+  objectFit: 'cover',
   backgroundSize: 'cover',
   backgroundPosition: 'center center',
   backgroundRepeat: 'no-repeat',
+  backgroundColor: "rgba(0, 0, 0, 0.8)",
+  zIndex: "2",
   height: {
     xl: "100vh",
     lg: "100vh",
@@ -87,18 +90,19 @@ export const overlayStyle = {
   position: "absolute",
   width: "100%",
   height: "100%",
-  backgroundColor: "rgba(0,0,0,.7)",
+  objectFit: 'cover',
+  backgroundColor: "rgba(255,255,255,0.2)",
   backgroundRepeat: "no-repeat",
-
+  zIndex: 3
 }
 
 export const videoContainerStyle ={
   position: 'absolute',
-  width: "75%",
-  height: "85%",
-  border: '10px solid rgba(0, 0, 0, 0.4)',
+  width: "100%",
+  height: "100%",
+  objectFit: 'cover',
   borderRadius: '5px',
-  overflow: 'hidden'
+  overflow: 'hidden',
 }
 
 export const videoStyle ={
