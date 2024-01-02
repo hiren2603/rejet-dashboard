@@ -37,12 +37,12 @@ const Footer = () => {
   // `;
 
   const StyledLink = {
-    fontSize : "16px",
+    fontSize: "16px",
     color: "#c0c0c0",
-    "&:hover" : {
-      color: "red"
-    }
-  }
+    "&:hover": {
+      color: "red",
+    },
+  };
 
   const footerColumnStyle = {
     alignItems: "center",
@@ -58,7 +58,8 @@ const Footer = () => {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    backgroundColor: "#000000",
+    backgroundColor: "#161922",
+    boxShadow: "0px -1px 2px 1px rgba(0, 0, 0, 0.4)",
     transition: theme.transitions.create(["width", "margin"], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
@@ -98,7 +99,10 @@ const Footer = () => {
               <RoutingLink to="/applications" className={Class.footerLinkStyle}>
                 Applications
               </RoutingLink>
-              <RoutingLink to="/ewest-management" className={Class.footerLinkStyle}>
+              <RoutingLink
+                to="/ewest-management"
+                className={Class.footerLinkStyle}
+              >
                 E-Waste Management
               </RoutingLink>
               <RoutingLink to="/contact" className={Class.footerLinkStyle}>
@@ -111,22 +115,40 @@ const Footer = () => {
             <Typography sx={headerTitle}>Products</Typography>
             <CustomDivider />
             <Box sx={isSmallScreen ? resQuickLinkStyle : quickLinkStyle}>
-              <RoutingLink to="/products/inkjet/re200+" className={Class.footerLinkStyle}>
+              <RoutingLink
+                to="/products/inkjet/re200+"
+                className={Class.footerLinkStyle}
+              >
                 Inkjet
               </RoutingLink>
-              <RoutingLink to="/products/laser/co2" className={Class.footerLinkStyle}>
+              <RoutingLink
+                to="/products/laser/co2"
+                className={Class.footerLinkStyle}
+              >
                 Co2
               </RoutingLink>
-              <RoutingLink to="/products/laser/fiber" className={Class.footerLinkStyle}>
+              <RoutingLink
+                to="/products/laser/fiber"
+                className={Class.footerLinkStyle}
+              >
                 Fiber
               </RoutingLink>
-              <RoutingLink to="/products/laser/desktop" className={Class.footerLinkStyle}>
+              <RoutingLink
+                to="/products/laser/desktop"
+                className={Class.footerLinkStyle}
+              >
                 Desktop
               </RoutingLink>
-              <RoutingLink to="/products/laser/uv" className={Class.footerLinkStyle}>
+              <RoutingLink
+                to="/products/laser/uv"
+                className={Class.footerLinkStyle}
+              >
                 UV
               </RoutingLink>
-              <RoutingLink to="/products/tij/tp01" className={Class.footerLinkStyle}>
+              <RoutingLink
+                to="/products/tij/tp01"
+                className={Class.footerLinkStyle}
+              >
                 TIJ
               </RoutingLink>
             </Box>
@@ -147,7 +169,14 @@ const Footer = () => {
                   alignItems: "center",
                 }}
               >
-                <RoutingLink to={"/contact"} style={{ ...footerLinkStyle, display: "flex", alignItems: "center" }}>
+                <RoutingLink
+                  to={"/contact"}
+                  style={{
+                    ...footerLinkStyle,
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
                   <LocationOn />
                   Find Us On Map
                 </RoutingLink>
@@ -159,7 +188,9 @@ const Footer = () => {
             <Typography sx={headerTitle}>Location</Typography>
             <CustomDivider />
             <Box sx={isSmallScreen ? resQuickLinkStyle : quickLinkStyle}>
-              <Link to="/"><img src={Logo} alt="logo" height={45} width={130} /></Link>
+              <Link to="/">
+                <img src={Logo} alt="logo" height={45} width={130} />
+              </Link>
               <Typography>Plot No. 36, Suvery No. 277/,</Typography>
               <Typography>Opp. Kaneria Oil Industries,</Typography>
               <Typography>Rani Industrial Area,</Typography>

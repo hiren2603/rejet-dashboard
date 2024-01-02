@@ -3,7 +3,7 @@ export const contactInput = {
 };
 
 export const titleStyle = {
-  color: "#ffffff",
+  color: "#000000",
   fontWeight: "400",
   textShadow: "2px 2px 2px #5b5b5b70",
   fontSize: "36px",

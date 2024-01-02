@@ -1,5 +1,5 @@
 export const mapHeadStyle = {
-  color: "#000000",
+  color: "#ffffff",
   textShadow: "2px 2px 2px #0000004f",
   fontWeight: "600",
   fontSize: "32px",

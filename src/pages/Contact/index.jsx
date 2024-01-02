@@ -22,7 +22,7 @@ const Contact = () => {
             {HO.head}
           </Typography>
           <img src={HO.image} alt="company_logo" width="auto" />
-          <Typography fontWeight={600} lineHeight={2}>
+          <Typography fontWeight={600} lineHeight={2} color="#ffffff">
             {HO.address}
           </Typography>
         </Grid>
@@ -31,7 +31,12 @@ const Contact = () => {
             {BRANCHES.head}
           </Typography>
           {BRANCHES.branchList.map((branch) => (
-            <Typography fontWeight={600} lineHeight={2} key={branch.id}>
+            <Typography
+              fontWeight={600}
+              lineHeight={2}
+              key={branch.id}
+              color="#ffffff"
+            >
               {branch.name}
             </Typography>
           ))}
@@ -52,10 +57,20 @@ const Contact = () => {
                     item.id === 1 ? "green" : item.id === 2 ? "red" : "blue",
                 }}
               />
-              <Typography component="span" fontWeight={600} lineHeight={2}>
+              <Typography
+                component="span"
+                fontWeight={600}
+                lineHeight={2}
+                color="#ffffff"
+              >
                 {item.key}:
               </Typography>
-              <Typography component="span" fontWeight={600} lineHeight={2}>
+              <Typography
+                component="span"
+                fontWeight={600}
+                lineHeight={2}
+                color="#ffffff"
+              >
                 {item.text}
               </Typography>
             </Box>

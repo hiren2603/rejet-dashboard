@@ -118,7 +118,12 @@ const Form = () => {
         width: "85%",
         m: "auto",
         mt: { xl: 0, lg: 0, sm: 2, xs: 4 },
-        mb: 0,
+        mb: 4,
+        backgroundColor: "#ffffff",
+        borderRadius: "5px",
+        boxShadow:
+          "2px 2px 2px 2px rgba(0, 0, 0, 0.4), -2px -2px 2px 2px rgba(0, 0, 0, 0.4) ",
+        p: 5,
       }}
     >
       <Grid item lg={12} md={12} sm={12} xs={12}>

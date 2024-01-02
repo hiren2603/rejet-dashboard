@@ -38,13 +38,13 @@ const EwestMgmt = () => {
             E-WASTE MANAGEMENT
           </Typography>
         </Grid>
-        <Divider sx={{ width: "100%", backgroundColor: "black" }} />
+        <Divider sx={{ width: "100%", backgroundColor: "#ffffff" }} />
 
         <Grid item>
           <Typography sx={modelHeading}>
             E-WASTE MANAGEMENT AND HANDLING RULES
           </Typography>
-          <Typography variant="p" sx={{ lineHeight: "2" }}>
+          <Typography variant="p" sx={{ lineHeight: "2", color: "#ffffff" }}>
             {ewasteRules[0]}
           </Typography>
         </Grid>
@@ -73,7 +73,13 @@ const EwestMgmt = () => {
                 >
                   <Grid item lg={6} md={5}>
                     <Typography sx={contentStyle}>{item.title}</Typography>
-                    <Typography sx={{ lineHeight: "2", textAlign: "justify" }}>
+                    <Typography
+                      sx={{
+                        lineHeight: "2",
+                        textAlign: "justify",
+                        color: "#ffffff",
+                      }}
+                    >
                       {item.content}
                     </Typography>
                   </Grid>
@@ -92,7 +98,13 @@ const EwestMgmt = () => {
                 >
                   <Typography sx={contentStyle}>{item.title}</Typography>
                   <Grid item lg>
-                    <Typography sx={{ lineHeight: "2", textAlign: "justify" }}>
+                    <Typography
+                      sx={{
+                        lineHeight: "2",
+                        textAlign: "justify",
+                        color: "#ffffff",
+                      }}
+                    >
                       {item.content}
                     </Typography>
                   </Grid>
@@ -111,7 +123,11 @@ const EwestMgmt = () => {
               return (
                 <Typography
                   key={item}
-                  sx={{ lineHeight: "2", textAlign: "justify" }}
+                  sx={{
+                    lineHeight: "2",
+                    textAlign: "justify",
+                    color: "#ffffff",
+                  }}
                 >
                   {item}
                 </Typography>
@@ -127,7 +143,11 @@ const EwestMgmt = () => {
               return (
                 <Typography
                   key={item}
-                  sx={{ lineHeight: "2", textAlign: "justify" }}
+                  sx={{
+                    lineHeight: "2",
+                    textAlign: "justify",
+                    color: "#ffffff",
+                  }}
                 >
                   {item}
                 </Typography>
@@ -140,7 +160,9 @@ const EwestMgmt = () => {
           <Typography sx={{ ...modelHeading, textAlign: "center" }}>
             E-WASTE MANAGEMENT PLAN
           </Typography>
-          <Typography sx={{ lineHeight: "2", textAlign: "justify" }}>
+          <Typography
+            sx={{ lineHeight: "2", textAlign: "justify", color: "#ffffff" }}
+          >
             In developing country like India, most E-Waste lands up in the
             informal sector where it is recycled without any consideration to
             health and environment. We, being responsible citizen contributes
@@ -164,7 +186,9 @@ const EwestMgmt = () => {
           <Typography sx={{ ...modelHeading, fontSize: "20px" }}>
             WHERE AND HOW CAN YOU RECYCLE YOUR E-WASTE?
           </Typography>
-          <Typography sx={{ lineHeight: "2", textAlign: "justify" }}>
+          <Typography
+            sx={{ lineHeight: "2", textAlign: "justify", color: "#ffffff" }}
+          >
             Our E-Waste program starts with receiving E-Waste pickup request
             from our end customers through toll free number after which our
             Authorized PRO Partner collects it and transports it to the

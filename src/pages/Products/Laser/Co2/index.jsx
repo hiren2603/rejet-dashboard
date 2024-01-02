@@ -1,4 +1,3 @@
-
 import LaserImg from "@/assets/products/co2.png";
 import Samples from "@/assets/samples/co2_samples.png";
 import ProductButton from "@/components/ProductButton";
@@ -6,12 +5,7 @@ import Details from "@/components/Details";
 import Heading from "@/components/Heading";
 import CatalougFile from "@/assets/catalouge/CO2_Flying_Laser.pdf";
 import { Grid, Typography, Card } from "@mui/material";
-import {
-  productHeading,
-  modelHeading,
-  headings,
-  ProductImg,
-} from "./style";
+import { productHeading, modelHeading, headings, ProductImg } from "./style";
 import {
   Co2laserData,
   commonSpace,
@@ -35,13 +29,13 @@ const Co2 = () => {
           sx={{
             ...productHeading,
             display: { lg: "flex", md: "flex", sm: "flex", xs: "none" },
-            color : "white"
+            color: "white",
           }}
           align="center"
         >
           co2 laser marking system
         </Typography>
-        <Heading name="PETMARK" type="FLYING LASER" pdf={CatalougFile}/>
+        <Heading name="PETMARK" type="FLYING LASER" pdf={CatalougFile} />
         <Grid
           container
           item
@@ -67,8 +61,10 @@ const Co2 = () => {
               <ProductButton />
             </Grid>
 
-            <Grid item lg={2} md={1} sm={2} xs={2} >
-              <Typography sx={modelHeading}>Print Samples</Typography>
+            <Grid item lg={2} md={1} sm={2} xs={2}>
+              <Typography sx={{ ...modelHeading, color: "#ffffff" }}>
+                Print Samples
+              </Typography>
               <ProductImg
                 src={Samples}
                 width={360}
@@ -77,7 +73,9 @@ const Co2 = () => {
             </Grid>
 
             <Grid item>
-              <Typography sx={modelHeading}>Applicable Products</Typography>
+              <Typography sx={{ ...modelHeading, color: "#ffffff" }}>
+                Applicable Products
+              </Typography>
               {applications?.map((item, index) => {
                 return <Details key={index} content={item} />;
               })}
@@ -87,7 +85,7 @@ const Co2 = () => {
           <Grid container item direction={"column"} rowGap={3} lg={6} md={6}>
             {Co2laserData?.map((item) => (
               <Grid item key={item.id}>
-                <Card elevation={7} sx={{ p: "1rem", }}>
+                <Card elevation={7} sx={{ p: "1rem" }}>
                   <Typography sx={modelHeading}>{item.model}</Typography>
                   <Grid item container>
                     <Grid item lg={7} md={6} sm={6} xs={6}>
@@ -131,9 +129,16 @@ const Co2 = () => {
             ))}
 
             <Grid container item lg={5} justifySelf={"flex-end"}>
-              <Typography sx={modelHeading}>Specifications</Typography>
+              <Typography sx={{ ...modelHeading, color: "#ffffff" }}>
+                Specifications
+              </Typography>
               {commonSpace?.map((item) => (
-                <Grid container item key={item.id} sx={{ m: "2px 0", color : "white" }}>
+                <Grid
+                  container
+                  item
+                  key={item.id}
+                  sx={{ m: "2px 0", color: "#ffffff" }}
+                >
                   <Grid item lg={6} md={7} sm={6} xs={7}>
                     <Typography sx={{ fontWeight: "580" }}>
                       {item.title}:
@@ -149,7 +154,9 @@ const Co2 = () => {
         </Grid>
 
         <Grid item lg md>
-          <Typography sx={modelHeading}>Benifits</Typography>
+          <Typography sx={{ ...modelHeading, color: "#ffffff" }}>
+            Benifits
+          </Typography>
           <Details content={benifits[0].marking} />
           <Details content={benifits[0].efficiency} />
           <Details content={benifits[0].power} />
