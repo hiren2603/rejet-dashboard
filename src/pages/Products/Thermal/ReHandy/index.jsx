@@ -23,6 +23,7 @@ const ReHandy = () => {
           sx={{
             ...productHeading,
             display: { lg: "flex", md: "flex", sm: "flex", xs: "none" },
+            color : "white"
           }}
           align="center"
         >
@@ -55,7 +56,7 @@ const ReHandy = () => {
             <Grid container item>
               <Typography sx={modelHeading}>Specifications</Typography>
               {handyData?.map((item) => (
-                <Grid container item key={item.id} sx={{ m: "3px 0" }}>
+                <Grid container item key={item.id} sx={{ m: "3px 0", color : "white" }}>
                   <Grid item lg={6} md={6} sm={6} xs={6}>
                     <Typography sx={{ fontWeight: "580" }}>
                       {item.title}
@@ -70,7 +71,7 @@ const ReHandy = () => {
             <Grid container item>
               <Typography sx={modelHeading}>Features</Typography>
               {handyFeatures?.map((item) => (
-                <Grid container item key={item.id} sx={{ m: "2px 0" }}>
+                <Grid container item key={item.id} sx={{ m: "2px 0", color : "white" }}>
                   <Grid item lg={6} md={6} sm={6} xs={4}>
                     <Typography sx={{ fontWeight: "580" }}>
                       {item.title}

@@ -39,6 +39,7 @@ const Re224 = () => {
           sx={{
             ...productHeading,
             display: { lg: "flex", md: "flex", sm: "flex", xs: "none" },
+            color : "white"
           }}
           align="center"
         >
@@ -107,11 +108,11 @@ const Re224 = () => {
               {re224TechSpec?.map((item) => (
                 <Grid container item key={item.id}>
                   <Grid item lg={7} md={7} sm={6} xs={8}>
-                    <Typography sx={{ fontWeight: "600" }}>
+                    <Typography sx={{ fontWeight: "600", color : "white" }}>
                       {item.label} :
                     </Typography>
                   </Grid>
-                  <Grid item md={4}>
+                  <Grid item md={4} sx={{ color : "white"}}>
                     {item.content}
                   </Grid>
                 </Grid>
@@ -123,11 +124,11 @@ const Re224 = () => {
               {re224Features?.map((item) => (
                 <Grid container item key={item.id} sx={{ mt: "3px" }}>
                   <Grid item lg={7} md={6} sm={6} xs={6}>
-                    <Typography sx={{ fontWeight: "600" }}>
+                    <Typography sx={{ fontWeight: "600", color : "white" }}>
                       {item.label} :
                     </Typography>
                   </Grid>
-                  <Grid item lg={5} md={5} sm={5} xs={5}>
+                  <Grid item lg={5} md={5} sm={5} xs={5} sx={{color : "white"}}>
                     {item.feature}
                   </Grid>
                 </Grid>
@@ -139,11 +140,11 @@ const Re224 = () => {
               {re224FontSpec?.map((item) => (
                 <Grid container item key={item.id}>
                   <Grid item lg={7} md={6} sm={6} xs={6}>
-                    <Typography sx={{ fontWeight: "600" }}>
+                    <Typography sx={{ fontWeight: "600", color : "white" }}>
                       {item.label} :
                     </Typography>
                   </Grid>
-                  <Grid item lg md sm xs>
+                  <Grid item lg md sm xs sx={{color : "white"}}>
                     {item.content}
                   </Grid>
                 </Grid>
@@ -155,11 +156,11 @@ const Re224 = () => {
               {re224Languages?.map((item) => (
                 <Grid container item key={item.id}>
                   <Grid item lg={6} md={6} sm={6} xs={6}>
-                    <Typography sx={{ fontWeight: "600" }}>
+                    <Typography sx={{ fontWeight: "600", color : "white" }}>
                       {item.key} :
                     </Typography>
                   </Grid>
-                  <Grid item lg={6} md sm xs={6}>
+                  <Grid item lg={6} md sm xs={6} sx={{color : "white"}}>
                     {item.content}
                   </Grid>
                 </Grid>

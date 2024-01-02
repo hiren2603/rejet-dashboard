@@ -39,6 +39,7 @@ const Re225 = () => {
           sx={{
             ...productHeading,
             display: { lg: "flex", md: "flex", sm: "flex", xs: "none" },
+            color : "white"
           }}
           align="center"
         >
@@ -122,9 +123,9 @@ const Re225 = () => {
                 Product Details
               </Typography>
               {re225TechSpec?.map((item) => (
-                <Grid container item key={item.id} sx={{ m: "2px 0" }}>
+                <Grid container item key={item.id} sx={{ m: "2px 0", color : "white" }}>
                   <Grid item lg={6} md={6} sm={7} xs={7}>
-                    <Typography sx={{ fontWeight: "600" }}>
+                    <Typography sx={{ fontWeight: "600", color : "white" }}>
                       {item.label} :
                     </Typography>
                   </Grid>
@@ -144,7 +145,7 @@ const Re225 = () => {
               </Typography>
 
               {re225DataSpec?.map((item) => (
-                <Grid container item key={item.id} sx={{ m: "2px 0" }}>
+                <Grid container item key={item.id} sx={{ m: "2px 0", color : "white" }}>
                   <Grid item lg={6} md={5} sm={6} xs={6}>
                     <Typography sx={{ fontWeight: "600" }}>
                       {item.label} :
@@ -165,7 +166,7 @@ const Re225 = () => {
                 features
               </Typography>
               {re225Features?.map((item) => (
-                <Grid container item key={item.id} sx={{ m: "2px 0" }}>
+                <Grid container item key={item.id} sx={{ m: "2px 0", color : "white" }}>
                   <Grid item lg={6} md={6} sm={6} xs={6}>
                     <Typography sx={{ fontWeight: "600" }}>
                       {item.label} :
@@ -186,7 +187,7 @@ const Re225 = () => {
                 ink system
               </Typography>
               {inkSystem?.map((item) => (
-                <Grid container item key={item.id} sx={{ m: "2px 0" }}>
+                <Grid container item key={item.id} sx={{ m: "2px 0", color : "white" }}>
                   <Grid item lg={6} md={6} sm={6} xs={6}>
                     <Typography sx={{ fontWeight: "600" }}>
                       {item.label} :

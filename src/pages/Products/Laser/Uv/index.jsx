@@ -23,6 +23,7 @@ const Uv = () => {
         sx={{
           ...productHeading,
           display: { lg: "flex", md: "flex", sm: "flex", xs: "none" },
+          color : "white"
         }}
         align="center"
       >
@@ -66,7 +67,7 @@ const Uv = () => {
           <Grid container item>
             <Typography sx={modelHeading}>Specifications</Typography>
             {uvData?.map((item) => (
-              <Grid container item key={item.id} sx={{ margin: "1px 0" }}>
+              <Grid container item key={item.id} sx={{ margin: "1px 0", color : "white" }}>
                 <Grid item lg={5} md={6} sm={7} xs={7}>
                   <Typography sx={{ fontWeight: "580" }}>
                     {item.title}

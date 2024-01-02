@@ -5,6 +5,9 @@ import { ThemeProvider, colors, createTheme } from "@mui/material";
 // };
 
 export const theme = createTheme({
+  typography : {
+    color : "white"
+  },
   palette: {
     primary: {
       main: "#161922",

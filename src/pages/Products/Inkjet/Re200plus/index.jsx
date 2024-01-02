@@ -123,11 +123,11 @@ const Re200Plus = () => {
               {re200PlusPrintParams?.map((item) => (
                 <Grid container item key={item.id} sx={{ m: "2px 0" }}>
                   <Grid item lg={7} md={7} sm={7} xs={7}>
-                    <Typography sx={{ fontWeight: "600" }}>
+                    <Typography sx={{ fontWeight: "600", color : "white" }}>
                       {item.title} :
                     </Typography>
                   </Grid>
-                  <Grid item lg={5} md={5} sm={5} xs={5}>
+                  <Grid item lg={5} md={5} sm={5} xs={5} sx={{ color : "white"}}>
                     {item.content}
                   </Grid>
                 </Grid>
@@ -136,7 +136,7 @@ const Re200Plus = () => {
 
             <Grid container item>
               <Typography
-                sx={{ ...modelHeading, textAlign: "center" }}
+                sx={{ ...modelHeading, textAlign: "center", color : "white" }}
                 textAlign={"center"}
               >
                 Specifications
@@ -144,11 +144,11 @@ const Re200Plus = () => {
               {re200PlusParams?.map((item) => (
                 <Grid container item key={item.id} sx={{ m: "2px 0" }}>
                   <Grid item lg={7} md={7} sm={7} xs={6}>
-                    <Typography sx={{ fontWeight: "600" }}>
+                    <Typography sx={{ fontWeight: "600", color : "white" }}>
                       {item.title} :
                     </Typography>
                   </Grid>
-                  <Grid item lg={5} md={5} sm={5} xs={6}>
+                  <Grid item lg={5} md={5} sm={5} xs={6} sx={{ color : "white"}}>
                     {item.content}
                   </Grid>
                 </Grid>
@@ -160,11 +160,11 @@ const Re200Plus = () => {
               {inkSystem?.map((item) => (
                 <Grid item container key={item.id}>
                   <Grid item lg={5} md={6} sm={6} xs={6}>
-                    <Typography sx={{ fontWeight: "600" }}>
+                    <Typography sx={{ fontWeight: "600", color : "white" }}>
                       {item.title} :
                     </Typography>
                   </Grid>
-                  <Grid item md={6} sm={6} xs={6}>
+                  <Grid item md={6} sm={6} xs={6} sx={{ color : "white"}}>
                     {item.content}
                   </Grid>
                 </Grid>
@@ -173,16 +173,16 @@ const Re200Plus = () => {
 
             <Grid item container direction="column">
               <Typography sx={headings}>cabinet</Typography>
-              <List>Standered Finish L Grained 304 stainless steel</List>
+              <List sx={{ color : "white" }}>Standered Finish L Grained 304 stainless steel</List>
 
               {cabinetData?.map((item) => (
                 <Grid item container key={item.id}>
                   <Grid item lg={5} md={6} sm={6}>
-                    <Typography sx={{ fontWeight: "600" }}>
+                    <Typography sx={{ fontWeight: "600", color : "white" }}>
                       {item.title}
                     </Typography>
                   </Grid>
-                  <Grid item md={5} sm={6}>
+                  <Grid item md={5} sm={6} sx={{ color : "white"}}>
                     {item.content}
                   </Grid>
                 </Grid>
@@ -203,7 +203,7 @@ const Re200Plus = () => {
 
           <Grid item sx={{ display: "flex", flexDirection: "column" }} lg={5} mt={4}>
             <Typography sx={modelHeading}>re200+ spares</Typography>
-            <List>
+            <List sx={{ color : "white"}}>
               Smart Print Head, Modular designed still give flexibility to
               replace individual spare separately. Automatic Calibration
               function automatically adjusts printing parameters according to
@@ -225,7 +225,7 @@ const Re200Plus = () => {
 
           <Grid item sx={{ display: "flex", flexDirection: "column" }} lg={5} mt={5}>
             <Typography sx={modelHeading}>re200+ consumable</Typography>
-            <List>
+            <List sx={{ color : "white"}}>
               Inteligent Ink Management System of RE200+ Inkjet Printer
               eliminates the wastage of consumables as there is no manual
               pouring. Easy Insertion and Removal of Cartridges eliminates the

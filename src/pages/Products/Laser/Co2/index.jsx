@@ -35,6 +35,7 @@ const Co2 = () => {
           sx={{
             ...productHeading,
             display: { lg: "flex", md: "flex", sm: "flex", xs: "none" },
+            color : "white"
           }}
           align="center"
         >
@@ -86,7 +87,7 @@ const Co2 = () => {
           <Grid container item direction={"column"} rowGap={3} lg={6} md={6}>
             {Co2laserData?.map((item) => (
               <Grid item key={item.id}>
-                <Card elevation={7} sx={{ p: "1rem" }}>
+                <Card elevation={7} sx={{ p: "1rem", }}>
                   <Typography sx={modelHeading}>{item.model}</Typography>
                   <Grid item container>
                     <Grid item lg={7} md={6} sm={6} xs={6}>
@@ -132,7 +133,7 @@ const Co2 = () => {
             <Grid container item lg={5} justifySelf={"flex-end"}>
               <Typography sx={modelHeading}>Specifications</Typography>
               {commonSpace?.map((item) => (
-                <Grid container item key={item.id} sx={{ m: "2px 0" }}>
+                <Grid container item key={item.id} sx={{ m: "2px 0", color : "white" }}>
                   <Grid item lg={6} md={7} sm={6} xs={7}>
                     <Typography sx={{ fontWeight: "580" }}>
                       {item.title}:

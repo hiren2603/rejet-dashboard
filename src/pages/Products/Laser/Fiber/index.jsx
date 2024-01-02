@@ -27,6 +27,7 @@ const Fiber = () => {
           sx={{
             ...productHeading,
             display: { lg: "flex", md: "flex", sm: "flex", xs: "none" },
+            color : "white"
           }}
           align="center"
         >
@@ -94,6 +95,7 @@ const Fiber = () => {
                   key={item.id}
                   sx={{
                     m: { sm: "2px 0", xs: "2px 0", lg: "0px", md: "0px" },
+                    color : "white"
                   }}
                 >
                   <Grid item lg={6} md={7} sm={6} xs={7}>
