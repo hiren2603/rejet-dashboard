@@ -76,7 +76,7 @@ export const heroContainerStyle ={
   backgroundSize: 'cover',
   backgroundPosition: 'center center',
   backgroundRepeat: 'no-repeat',
-  backgroundColor: "rgba(0, 0, 0, 0.8)",
+  backgroundColor: "rgba(0, 0, 0, 0.2)",
   zIndex: "2",
   height: {
     xl: "100vh",

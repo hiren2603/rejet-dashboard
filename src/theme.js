@@ -6,7 +6,12 @@ import { ThemeProvider, colors, createTheme } from "@mui/material";
 
 export const theme = createTheme({
   typography : {
-    color : "white"
+    color : "white",
+    // fontFamily: [
+    //   'Roboto',
+    //   'poppins',
+    //   'sans-serif'
+    // ]
   },
   palette: {
     primary: {

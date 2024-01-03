@@ -1,17 +1,18 @@
 import { useState } from "react";
-import { Stack } from "@mui/material";
+import { Button, Stack, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import { cardItems } from "@/helpers/cardItems";
 import {
+  cardInfoContainer,
   CardImageComponent,
   cardBtnContainer,
+  cardDetail,
+  cardTitle,
   cardButtonStyle,
   cardContainer,
   cardImgContainer,
   cardRow,
   cardSection,
-  hideMoreText,
-  showMoreText,
 } from "./style";
 
 const ProductCard = () => {
@@ -30,31 +31,42 @@ const ProductCard = () => {
         {cardItems.map((cardDetails) => {
           return (
             <Stack
-              direction="column"
+              direction="row"
               mb={4}
               key={cardDetails.id}
               sx={cardContainer}
-              onMouseOver={() => showTexteHandler(cardDetails.id)}
-              onMouseLeave={() => hideTextHandler(cardDetails.id)}
             >
               <Stack sx={cardImgContainer}>
                 <CardImageComponent src={cardDetails.image} alt="card image" />
-                <Link
-                  to={cardDetails.link}
-                  style={
-                    hoverState.isHover && hoverState.id == cardDetails.id
-                      ? showMoreText
-                      : hideMoreText
-                  }
-                >
-                  View More
-                </Link>
               </Stack>
-
-              <Stack sx={cardBtnContainer}>
-                <Link to={cardDetails.link} style={cardButtonStyle}>
-                  {cardDetails.button}
-                </Link>
+              <Stack sx={cardInfoContainer}>
+                <Typography variant="h4" sx={cardTitle}>
+                  {cardDetails.slideTitle}
+                </Typography>
+                <Typography variant="p" sx={cardDetail}>
+                  {cardDetails.slideContent}
+                </Typography>
+                <Stack sx={cardBtnContainer}>
+                  <Button
+                    variant="contained"
+                    // color="primary"
+                    size="large"
+                    sx={{
+                      width: "30%",
+                      height: "100%",
+                      textDecoration: "none",
+                      color: "#ffffff",
+                      background: "#EA232E",
+                      "&:hover": {
+                        background: "#EA232E",
+                      },
+                    }}
+                  >
+                    <Link style={{ color: "#ffffff" }} to={cardDetails.link}>
+                      {cardDetails.button}
+                    </Link>
+                  </Button>
+                </Stack>
               </Stack>
             </Stack>
           );
