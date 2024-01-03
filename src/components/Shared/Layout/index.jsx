@@ -75,34 +75,7 @@ const Layout = ({ children }) => {
         sx={{ position: "relative", display: "flex", flexDirection: "column" }}
       >
         <Topbar open={open} drawerwidth={drawerwidth} setOpen={handleDrawer} />
-        <Sidebar
-          handleDrawerOpen={handleDrawer}
-          closeSideBar={closeSideBar}
-          handleCategory={handleCategory}
-          handleSubCategory={handleSubCategory}
-          openCategory={openCategory}
-          openSubCategory={openSubCategory}
-        />
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            marginTop: "10vh",
-            marginLeft: !isSmallScreen && theme.spacing(8),
-            ...(!isSmallScreen &&
-              open && {
-              marginLeft: `${drawerwidth}px`,
-              width: `calc(100% - (${drawerwidth}px))`,
-            }),
-            ...(isSmallScreen &&
-              open && {
-              width: "100%",
-              marginTop: "10vh",
-            }),
-          }}
-        >
           {children}
-        </Box>
         <Whatsapp />
         <Footer />
       </Box>

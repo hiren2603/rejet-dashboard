@@ -1,5 +1,79 @@
 import { styled } from "@mui/material";
 
+export const NavLinkContainer = styled("div")({
+  gridColumn : "3/4",
+  flex : "80%",
+  display: "flex",
+  alignItems : "center",
+  justifyContent : "space-evenly",
+  position : "relative"
+})
+
+export const LinkContainer = styled("div")({
+  position: "relative",
+  alignItems: "center",
+  textTransform: "capitalize",
+  fontSize: "18px",
+  letterSpacing: "1px",
+  color: "#ffffff",
+  transition: "all 0.3s ease",
+  "& a": {
+    color: "#ffffff",
+    fontSize: "18px",
+    transition: "all 0.5s ease-in",
+  },
+  "& a:hover": {
+    color: "#E31E25",
+    transition: "all 0.5s ease",
+    fontWeight: "500"
+  }
+})
+
+export const DropDown = styled("div")({
+    display : "flex",
+    flexDirection : 'column',
+    alignItems : "center",
+    justifyContent : "center",
+    position : "absolute",
+    left : "-30%",
+    width : "130px",
+    backgroundColor : "#161922",
+    zIndex : "10"
+})
+
+export const DropDownLink = styled("div")({
+    padding : "5px 10px",
+    display : "flex",
+    position : "relative",
+    alignItems : "center",
+    justifyCenter : "center",
+    width : "100%",
+    borderBottom : "1px solid #ffffff",
+    "& a" : {
+      color : "#ffffff",
+      fontSize : "18px",
+      textTransform : "capitalize",
+      transition : "1s ease-in"
+    },
+    "& a:hover" : {
+      color : "#ffcfcf",
+      transition : "all 0.5s ease",
+      fontWeight : "500"
+    }
+})
+
+export const SubDropDown = styled("div")({
+  display : "flex",
+  flexDirection : "column",
+  alignItems : "center",
+  justifyContent : "center",
+  position : 'absolute',
+  left : "101%",
+  top : "0rem",
+  width : "150px",
+  backgroundColor : "#161922",
+})
+
 export const ContactButton = styled("a")({
   backgroundColor: "#ea232e",
   color: "#ffffff",
