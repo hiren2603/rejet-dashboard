@@ -1,81 +1,20 @@
-import { useContext, useState } from "react";
 import Topbar from "../Topbar";
-import Sidebar from "../Sidebar";
 import Footer from "../Footer";
 import Whatsapp from "@/components/Whastapp";
-import { Box, useMediaQuery, useTheme } from "@mui/material";
-import { LayoutContext } from "@/Context";
+import { Box} from "@mui/material";
 
 const Layout = ({ children }) => {
-  const theme = useTheme();
-  const { open, setOpen, drawerwidth } = useContext(LayoutContext);
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
-  const [openCategory, setOpenCategory] = useState(false);
-  const [state, setState] = useState(false);
-  const [openSubCategory, setOpenSubCategory] = useState({
-    inkjet: false,
-    laser: false,
-    thermal: false,
-  });
-  const { inkjet, laser, thermal } = openSubCategory;
-
-  const toggleDrawer = (state) => (event) => {
-    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-      return;
-    }
-
-    setPersistState(state);
-  }
-
-  const handleDrawer = () => {
-    setOpen(!open);
-  };
-
-  const closeSideBar = () => {
-    setOpen(false);
-    setOpenCategory(false);
-    setOpenSubCategory({
-      inkjet: false,
-      laser: false,
-      thermal: false,
-    });
-  };
-
-  const handleCategory = () => {
-    if (!open) handleDrawer();
-    setOpenCategory(!openCategory);
-  };
-
-  const handleSubCategory = (componentKey) => {
-    if (!open) handleDrawer();
-    if (componentKey === "inkjet") {
-      setOpenSubCategory({
-        inkjet: !inkjet,
-        laser: false,
-        thermal: false,
-      });
-    } else if (componentKey === "laser") {
-      setOpenSubCategory({
-        inkjet: false,
-        laser: !laser,
-        thermal: false,
-      });
-    } else if (componentKey === "thermal") {
-      setOpenSubCategory({
-        inkjet: false,
-        laser: false,
-        thermal: !thermal,
-      });
-    }
-  };
-
   return (
     <>
       <Box
         sx={{ position: "relative", display: "flex", flexDirection: "column" }}
       >
-        <Topbar open={open} drawerwidth={drawerwidth} setOpen={handleDrawer} />
+        <Topbar />
+        <Box
+          sx={{ marginTop : "10vh"}}
+        >
           {children}
+        </Box>
         <Whatsapp />
         <Footer />
       </Box>
