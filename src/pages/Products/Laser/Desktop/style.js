@@ -6,7 +6,7 @@ export const productHeading = {
   alignSelf: "center",
   justifySelf: "center",
   color: "#000000",
-  textShadow: "2px 2px 2px #c0c0c0",
+  textShadow: "2px 2px 4px rgba(255, 100, 100, 0.8)",
   fontWeight: "600",
   margin: "2rem 0",
 };

@@ -93,6 +93,7 @@ const Slider = () => {
                 xs: "100%",
               },
               minWidth: "50%",
+              mb: { lg: 0, md: 0, sm: 4, xs: 4 },
             }}
           >
             <Typography
@@ -104,6 +105,7 @@ const Slider = () => {
                 fontFamily: "poppins, san-serif",
                 textTransform: "uppercase",
                 lineHeight: "1.3",
+                mb: 2,
               }}
             >
               {slide.title}

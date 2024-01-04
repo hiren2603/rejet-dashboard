@@ -2,7 +2,7 @@ export const productHeading = {
   fontSize: "36px",
   textTransform: "uppercase",
   color: "#ffffff",
-  textShadow: "2px 2px 2px rgba(255, 255, 255, 0.4)",
+  textShadow: "2px 2px 4px rgba(255, 100, 100, 0.8)",
   fontWeight: "600",
   // marginBottom: "2rem",
 };
