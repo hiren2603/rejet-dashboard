@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Box,
   Container,
@@ -19,7 +19,6 @@ import {
   contactContainer, NavLinkContainer, MobileLinkContainer,
 } from "./style";
 import { Link } from "react-router-dom";
-import { MenuOpenOutlined } from "@mui/icons-material";
 
 const Topbar = () => {
   const theme = useTheme();
@@ -32,6 +31,20 @@ const Topbar = () => {
     laser: false,
   });
   let { inkjet, thermal, laser } = menu;
+
+  useEffect(() => {
+    // Add and remove 'no-scroll' class to body based on the drawer state
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    // Cleanup function to reset overflow when the component unmounts
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
 
   const toggleDrawer = () => {
     setIsOpen(!isOpen);
