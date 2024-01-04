@@ -81,7 +81,7 @@ const Topbar = () => {
 
   return (
     <>
-      <AppBar position="fixed" sx={{ height: 75 }}>
+      <AppBar elevation={0} position="fixed" sx={{ height: 75 }}>
         <Container sx={{ maxWidth: "1900px!important" }}>
           <Toolbar
             disableGutters

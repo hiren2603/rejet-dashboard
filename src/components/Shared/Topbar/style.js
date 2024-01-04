@@ -23,17 +23,17 @@ export const MobileLinkContainer = styled("div")(({ theme }) => ({
   position: "absolute",
   left: "-7vh",
   // top: "6vh",
-  height: "50vh",
+  height: "80vh",
   width: "120vw",
   transition: "all .5s ease-in",
   zIndex: "9",
-  // backgroundColor: "#161922",
-  backgroundColor: "white",
+  backgroundColor: "#161922",
+
   '&' : {
-    color : "#161922",
+    color : "#ffffff",
   },
   '& a' : {
-    color : "#161922",
+    color : "#ffffff",
   },
 
   [theme.breakpoints.down("sm")]: {
@@ -47,13 +47,13 @@ export const LinkContainer = styled("div")({
   position: "relative",
   alignItems: "center",
   textTransform: "capitalize",
-  fontSize: "18px",
+  fontSize: "16px",
   letterSpacing: "1px",
   color: "#ffffff",
   transition: "all 0.3s ease",
   "& a": {
     color: "#ffffff",
-    fontSize: "18px",
+    fontSize: "16px",
     transition: "all 0.5s ease-in",
   },
   "& a:hover": {
@@ -76,7 +76,7 @@ export const DropDown = styled("div")(({ theme }) => ({
 }))
 
 export const DropDownLink = styled("div")({
-  padding: "5px 10px",
+  padding: "8px 10px",
   display: "flex",
   position: "relative",
   alignItems: "center",
@@ -85,7 +85,7 @@ export const DropDownLink = styled("div")({
   borderBottom: "1px solid #ffffff",
   "& a": {
     color: "#ffffff",
-    fontSize: "18px",
+    fontSize: "16px",
     textTransform: "capitalize",
     transition: "1s ease-in"
   },
