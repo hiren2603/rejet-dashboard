@@ -23,18 +23,12 @@ export const MobileLinkContainer = styled("div")(({ theme }) => ({
   position: "absolute",
   left: "-7vh",
   // top: "6vh",
-  height: "50vh",
+  height: "80vh",
   width: "120vw",
   transition: "all .5s ease-in",
   zIndex: "9",
-  // backgroundColor: "#161922",
-  backgroundColor: "white",
-  '&' : {
-    color : "#161922",
-  },
-  '& a' : {
-    color : "#161922",
-  },
+  backgroundColor: "#161922",
+ 
 
   [theme.breakpoints.down("sm")]: {
     top: "0",
