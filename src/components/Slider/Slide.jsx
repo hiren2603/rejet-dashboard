@@ -2,12 +2,17 @@ import { Stack, Box, Typography } from "@mui/material";
 
 const Slide = ({ slide }) => {
   return (
-    <Stack direction={"row"} sx={{ flex: "100%", width: "inherit" }}>
+    <Stack
+      direction="row"
+      width={"100%"}
+      sx={{ justifyContent: "space-between" }}
+    >
       <Box
         sx={{
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
+          alignItems: "flex-end",
         }}
       >
         <Typography
@@ -16,17 +21,15 @@ const Slide = ({ slide }) => {
             fontSize: "50px",
             fontWeight: "bold",
             whiteSpace: "wrap",
-            textAlign: "left",
           }}
         >
           {slide.title}
         </Typography>
-        <Typography>{slide.info}</Typography>
+        <Typography sx={{ whiteSpace: "nowrap" }}>{slide.info}</Typography>
       </Box>
       <Box
         sx={{
           display: "flex",
-          border: "2px solid white",
           height: "100%",
           position: "relative",
         }}
