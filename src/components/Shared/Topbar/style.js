@@ -21,32 +21,39 @@ export const MobileLinkContainer = styled("div")(({ theme }) => ({
   justifyContent: "space-evenly",
   alignItems: "center",
   position: "absolute",
-  // left: "-10px",
-  top: 0,
-  // border: "2px solid red",
-  // left: "-7vh",
+  left: "-7vh",
   // top: "6vh",
-  height: "80vh",
-  width: "101vw",
+  height: "50vh",
+  width: "120vw",
   transition: "all .5s ease-in",
-  zIndex: 5,
+  zIndex: "9",
   // backgroundColor: "#161922",
-  background: "gray",
-  // [theme.breakpoints.down("sm")]: { top: "0", left : "0"},
-  [theme.breakpoints.down("md")]: { top: "70px", left : "-5vw" },
+  backgroundColor: "white",
+  '&' : {
+    color : "#161922",
+  },
+  '& a' : {
+    color : "#161922",
+  },
+
+  [theme.breakpoints.down("sm")]: {
+    top: "0",
+    left: "-12vh",
+  },
+  [theme.breakpoints.down("md")]: { top: "13vh", left: "-16vh" },
 }))
 
 export const LinkContainer = styled("div")({
   position: "relative",
   alignItems: "center",
   textTransform: "capitalize",
-  fontSize: "16px",
+  fontSize: "18px",
   letterSpacing: "1px",
   color: "#ffffff",
   transition: "all 0.3s ease",
   "& a": {
     color: "#ffffff",
-    fontSize: "16px",
+    fontSize: "18px",
     transition: "all 0.5s ease-in",
   },
   "& a:hover": {
@@ -56,20 +63,20 @@ export const LinkContainer = styled("div")({
   }
 })
 
-export const DropDown = styled("div")({
+export const DropDown = styled("div")(({ theme }) => ({
   display: "flex",
   flexDirection: 'column',
   alignItems: "center",
   justifyContent: "center",
   position: "absolute",
-  left: "-10%",
+  left: "-30%",
   width: "130px",
   backgroundColor: "#161922",
   zIndex: "10"
-})
+}))
 
 export const DropDownLink = styled("div")({
-  padding: "10px 10px",
+  padding: "5px 10px",
   display: "flex",
   position: "relative",
   alignItems: "center",
@@ -78,13 +85,13 @@ export const DropDownLink = styled("div")({
   borderBottom: "1px solid #ffffff",
   "& a": {
     color: "#ffffff",
-    fontSize: "16px",
+    fontSize: "18px",
     textTransform: "capitalize",
-    transition: "1s 0.3s ease-in"
+    transition: "1s ease-in"
   },
   "& a:hover": {
     color: "#E31E25",
-    transition: "all 0.3s ease-in",
+    transition: "all 0.5s ease",
     fontWeight: "500"
   }
 })

@@ -1,3 +1,6 @@
+import { useState } from "react";
+import { INKJET_LIST, TIJ_LIST, LASER_LIST } from "helpers/Link";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import {
   ContactButton,
   contactContainer,
@@ -8,15 +11,36 @@ import {
 } from "./style";
 import { Link } from "react-router-dom";
 
-const LinkSection = ({
-  dropDown,
-  setDropDown,
-  menu,
-  toggleDrawer,
-  handleMenu,
-  multiToggle,
-}) => {
+const LinkSection = ({ dropDown, setDropDown, multiToggle }) => {
+  // const [dropDown, setDropDown] = useState(false);
+  const [menu, setMenu] = useState({
+    inkjet: [],
+    thermal: [],
+    laser: [],
+  });
   let { inkjet, thermal, laser } = menu;
+
+  const handleMenu = (name, value) => {
+    if (name === "inkjet") {
+      setMenu({
+        inkjet: value,
+        thermal: [],
+        laser: [],
+      });
+    } else if (name === "thermal") {
+      setMenu({
+        inkjet: [],
+        thermal: value,
+        laser: [],
+      });
+    } else if (name === "laser") {
+      setMenu({
+        inkjet: [],
+        thermal: [],
+        laser: value,
+      });
+    }
+  };
   return (
     <>
       <LinkContainer>
@@ -33,138 +57,96 @@ const LinkSection = ({
           setDropDown(false);
         }}
       >
-        <Link to="#">Products</Link>
+        <Link
+          to="#"
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+          }}
+        >
+          Products <ArrowDropDownIcon sx={{ color: "white" }} />
+        </Link>
 
         {dropDown && (
           <DropDown>
             <DropDownLink
               onMouseEnter={() => {
-                handleMenu("inkjet", true);
+                handleMenu("inkjet", INKJET_LIST);
               }}
               onMouseLeave={() => {
-                handleMenu("inkjet", false);
+                handleMenu("inkjet", []);
               }}
             >
               <Link to="#">Inkjet</Link>
 
-              {inkjet && (
-                <SubDropDown>
-                  <DropDownLink>
-                    <Link
-                      to="/products/inkjet/re200+"
-                      onClick={() => multiToggle()}
-                    >
-                      Re200+
-                    </Link>
-                  </DropDownLink>
-                  <DropDownLink>
-                    <Link
-                      to="/products/inkjet/re224"
-                      onClick={() => multiToggle()}
-                    >
-                      Re224
-                    </Link>
-                  </DropDownLink>
-                  <DropDownLink>
-                    <Link
-                      to="/products/inkjet/re225"
-                      onClick={() => multiToggle()}
-                    >
-                      Re225
-                    </Link>
-                  </DropDownLink>
-                  <DropDownLink>
-                    <Link
-                      to="/products/inkjet/re2000"
-                      onClick={() => multiToggle}
-                    >
-                      Re2000
-                    </Link>
-                  </DropDownLink>
-                  <DropDownLink>
-                    <Link
-                      to="/products/inkjet/re2000p"
-                      onClick={() => multiToggle()}
-                    >
-                      Re2000p
-                    </Link>
-                  </DropDownLink>
-                  <DropDownLink>
-                    <Link
-                      to="/products/inkjet/re1000"
-                      onClick={() => {
-                        multiToggle();
-                      }}
-                    >
-                      Re1000
-                    </Link>
-                  </DropDownLink>
-                </SubDropDown>
-              )}
+              <SubDropDown>
+                {inkjet &&
+                  inkjet?.map((link) => (
+                    <DropDownLink key={link.text}>
+                      <Link
+                        to={link.link}
+                        onClick={() => {
+                          multiToggle();
+                        }}
+                      >
+                        {link.text}
+                      </Link>
+                    </DropDownLink>
+                  ))}
+              </SubDropDown>
             </DropDownLink>
             <DropDownLink
-              onMouseEnter={() => handleMenu("thermal", true)}
-              onMouseLeave={() => handleMenu("thermal", false)}
+              onMouseEnter={() => {
+                handleMenu("thermal", TIJ_LIST);
+              }}
+              onMouseLeave={() => {
+                handleMenu("thermal", []);
+              }}
             >
               <Link to="#">Thermal</Link>
 
-              {thermal && (
-                <SubDropDown>
-                  <DropDownLink>
-                    <Link to="/products/tij/re10" onClick={() => multiToggle()}>
-                      Re10.1
-                    </Link>
-                  </DropDownLink>
-                  <DropDownLink>
-                    <Link
-                      to="/products/tij/re-handy"
-                      onClick={() => multiToggle()}
-                    >
-                      ReHandy
-                    </Link>
-                  </DropDownLink>
-                </SubDropDown>
-              )}
+              <SubDropDown>
+                {thermal &&
+                  thermal?.map((link) => (
+                    <DropDownLink key={link.text}>
+                      <Link
+                        to={link.link}
+                        onClick={() => {
+                          multiToggle();
+                        }}
+                      >
+                        {link.text}
+                      </Link>
+                    </DropDownLink>
+                  ))}
+              </SubDropDown>
             </DropDownLink>
             <DropDownLink
-              onMouseEnter={() => handleMenu("laser", true)}
-              onMouseLeave={() => handleMenu("laser", false)}
+              onMouseEnter={() => {
+                handleMenu("laser", LASER_LIST);
+              }}
+              onMouseLeave={() => {
+                handleMenu("laser", []);
+              }}
             >
               <Link to="#">Laser</Link>
 
-              {laser && (
-                <SubDropDown>
-                  <DropDownLink>
-                    <Link
-                      to="/products/laser/co2"
-                      onClick={() => multiToggle()}
-                    >
-                      Co2
-                    </Link>
-                  </DropDownLink>
-                  <DropDownLink>
-                    <Link
-                      to="/products/laser/desktop"
-                      onClick={() => multiToggle()}
-                    >
-                      Desktop
-                    </Link>
-                  </DropDownLink>
-                  <DropDownLink>
-                    <Link
-                      to="/products/laser/fiber"
-                      onClick={() => multiToggle()}
-                    >
-                      Fiber
-                    </Link>
-                  </DropDownLink>
-                  <DropDownLink>
-                    <Link to="/products/laser/uv" onClick={() => multiToggle()}>
-                      UV
-                    </Link>
-                  </DropDownLink>
-                </SubDropDown>
-              )}
+              <SubDropDown>
+                {laser &&
+                  laser?.map((link) => (
+                    <DropDownLink key={link.text}>
+                      <Link
+                        to={link.link}
+                        onClick={() => {
+                          multiToggle();
+                        }}
+                      >
+                        {link.text}
+                      </Link>
+                    </DropDownLink>
+                  ))}
+              </SubDropDown>
             </DropDownLink>
           </DropDown>
         )}
@@ -178,7 +160,7 @@ const LinkSection = ({
 
       <LinkContainer>
         <Link to="/ewest-management" onClick={() => multiToggle()}>
-          E-Waste Mgmt.
+          E-Waste Mangement
         </Link>
       </LinkContainer>
 
