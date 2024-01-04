@@ -3,7 +3,6 @@ import {
   Box,
   Container,
   Drawer,
-  Drawer,
   Toolbar,
   IconButton,
   useTheme,
@@ -11,23 +10,17 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from '@mui/icons-material/Close';
-import CloseIcon from "@mui/icons-material/Close";
 import MuiAppBar from "@mui/material/AppBar";
 import { styled } from "@mui/material/styles";
 import Logo from "../../../assets/logo.png";
 import LinkSection from "./LinkSection";
-import LinkSection from "./LinkSection";
 import {
   ContactButton,
   contactContainer, NavLinkContainer, MobileLinkContainer,
-  NavLinkContainer,
-  MobileLinkContainer,
 } from "./style";
 import { Link } from "react-router-dom";
 import { MenuOpenOutlined } from "@mui/icons-material";
-import { MenuOpenOutlined } from "@mui/icons-material";
 
-const Topbar = () => {
 const Topbar = () => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.between("xs", "md"));
@@ -153,16 +146,6 @@ const Topbar = () => {
                   >
                     <MenuIcon color="white" />
                   </IconButton>
-                )}
-                ) : (
-                <IconButton
-                  sx={{ color: "white" }}
-                  onClick={() => {
-                    toggleDrawer();
-                  }}
-                >
-                  <MenuIcon color="white" />
-                </IconButton>
                 )}
               </Box>
             )}
