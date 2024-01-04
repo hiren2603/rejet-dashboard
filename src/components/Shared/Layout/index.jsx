@@ -2,7 +2,6 @@ import Topbar from "../Topbar";
 import Footer from "../Footer";
 import Whatsapp from "@/components/Whastapp";
 import { Box } from "@mui/material";
-import { Box } from "@mui/material";
 
 const Layout = ({ children }) => {
   return (

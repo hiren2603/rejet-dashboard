@@ -3,31 +3,26 @@ import {
   Box,
   Container,
   Drawer,
-  Drawer,
   Toolbar,
   IconButton,
   useTheme,
   useMediaQuery,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from '@mui/icons-material/Close';
 import CloseIcon from "@mui/icons-material/Close";
 import MuiAppBar from "@mui/material/AppBar";
 import { styled } from "@mui/material/styles";
 import Logo from "../../../assets/logo.png";
 import LinkSection from "./LinkSection";
-import LinkSection from "./LinkSection";
 import {
   ContactButton,
-  contactContainer, NavLinkContainer, MobileLinkContainer,
+  contactContainer,
   NavLinkContainer,
   MobileLinkContainer,
 } from "./style";
 import { Link } from "react-router-dom";
 import { MenuOpenOutlined } from "@mui/icons-material";
-import { MenuOpenOutlined } from "@mui/icons-material";
 
-const Topbar = () => {
 const Topbar = () => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.between("xs", "md"));
@@ -36,7 +31,7 @@ const Topbar = () => {
   const [menu, setMenu] = useState({
     inkjet: false,
     thermal: false,
-    laser: false
+    laser: false,
   });
   let { inkjet, thermal, laser } = menu;
 
@@ -49,32 +44,32 @@ const Topbar = () => {
       setMenu({
         inkjet: value,
         thermal: false,
-        laser: false
-      })
+        laser: false,
+      });
     } else if (name === "thermal") {
       setMenu({
         inkjet: false,
         thermal: value,
-        laser: false
-      })
+        laser: false,
+      });
     } else if (name === "laser") {
       setMenu({
         inkjet: false,
         thermal: false,
-        laser: value
-      })
+        laser: value,
+      });
     }
-  }
+  };
 
   const multiToggle = () => {
     setMenu({
       inkjet: false,
       thermal: false,
-      laser: false
+      laser: false,
     });
     setDropDown(false);
     setIsOpen(false);
-  }
+  };
 
   const AppBar = styled(MuiAppBar)(() => ({
     // width: isSmallScreen ? "100%" : `calc(100% - (${theme.spacing(8)} + 1px))`,
@@ -82,29 +77,11 @@ const Topbar = () => {
     height: "10vh",
     display: "flex",
     justifyContent: "center",
-    transition: theme.transitions.create(["width", "margin"], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-    ...(open && {
-      marginLeft: drawerwidth,
-      width: isSmallScreen ? "100%" : `calc(100% - ${drawerwidth}px)`,
-      transition: theme.transitions.create(["width", "margin"], {
-        easing: theme.transitions.easing.sharp,
-        duration: theme.transitions.duration.enteringScreen,
-      }),
-    }),
-    // ...(theme.breakpoints.down("sm") && {
-    // width: "100%",
-    // }),
   }));
 
   return (
     <>
-      <AppBar
-        position="fixed"
-        sx={{ height: 75 }}
-      >
+      <AppBar position="fixed" sx={{ height: 75 }}>
         <Container sx={{ maxWidth: "1900px!important" }}>
           <Toolbar
             disableGutters
@@ -141,7 +118,12 @@ const Topbar = () => {
                 }}
               >
                 {isOpen ? (
-                  <IconButton sx={{ color: "white" }} onClick={() => { toggleDrawer() }}>
+                  <IconButton
+                    sx={{ color: "white" }}
+                    onClick={() => {
+                      toggleDrawer();
+                    }}
+                  >
                     <CloseIcon color="white" />
                   </IconButton>
                 ) : (
@@ -153,16 +135,6 @@ const Topbar = () => {
                   >
                     <MenuIcon color="white" />
                   </IconButton>
-                )}
-                ) : (
-                <IconButton
-                  sx={{ color: "white" }}
-                  onClick={() => {
-                    toggleDrawer();
-                  }}
-                >
-                  <MenuIcon color="white" />
-                </IconButton>
                 )}
               </Box>
             )}
