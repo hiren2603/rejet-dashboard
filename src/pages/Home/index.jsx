@@ -10,7 +10,7 @@ const Home = () => {
     <>
       <Head title="Home" description="Radhe Enterprise Home Page" />
       <HeroSection />
-      <ProductCard />
+      <Slider />
       <Info />
       <Form />
     </>

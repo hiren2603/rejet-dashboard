@@ -29,13 +29,6 @@ const Footer = () => {
   const midScreen = useMediaQuery(theme.breakpoints.down("md"));
   const { drawerwidth, open } = useContext(LayoutContext);
 
-  // const StyledLink = styled(MuiLink)`
-  //   color: "#c0c0c0";
-  //   &: hover {
-  //     color: "white";
-  //   }
-  // `;
-
   const StyledLink = {
     fontSize: "16px",
     color: "#c0c0c0",
@@ -52,8 +45,9 @@ const Footer = () => {
   const FooterContainer = styled(MuiPaper, {
     shouldForwardProp: (prop) => prop !== open,
   })(({ theme }) => ({
-    width: isSmallScreen ? "100%" : `calc(100% - (${theme.spacing(8)}))`,
-    marginLeft: !isSmallScreen ? "4rem" : 0,
+    // width: isSmallScreen ? "100%" : `calc(100% - (${theme.spacing(8)}))`,
+    width : "100%",
+    marginLeft:  0,
     padding: "20px 4px",
     display: "flex",
     flexDirection: "column",

@@ -7,8 +7,8 @@ const CustomDivider = () => {
   return (
     <Divider
       sx={{
-        backgroundColor: "#c9c9c9",
-        height: "2px",
+        backgroundColor: "#5b5b5b",
+        height: "1px",
         width: "100%",
         // ...(smallSize ? { width: "100%" } : { width: "70%" }),
       }}

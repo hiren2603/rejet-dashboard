@@ -35,11 +35,12 @@ export const slideTitle = {
   userSelect: "none",
 };
 export const slideDetails ={
-  color: "#efefef",
+  color: "#ffffff",
   display: {lg: 'block', md: "block", sm: "block", xs: "block"},
-  fontSize: {lg: "26px", md: "22px", sm: "20px", xs: "14px"},
+  fontSize: {lg: "16px", md: "20px", sm: "18px", xs: "14px"},
   lineHeight: 1.5,
-  userSelect: "none"
+  userSelect: "none",
+  mb: 5
 }
 
 export const slideTag ={

@@ -2,39 +2,41 @@ import { styled } from "@mui/material";
 import { theme } from "../../theme";
 
 export const cardSection = {
-  width: "95%",
+  width: "90vw",
   height: "80vh",
   justifySelf: "center",
   display: "flex",
+  flexDirection: "row",
   alignItems: "center",
   justifyContent: "center",
   // marginTop: "3rem",
   marginBottom: "3rem",
   marginLeft: "auto",
   marginRight: "auto",
+  overflow: "hidden"
  
 };
 
-export const cardRow = {
-  // flex: 1,
-  margin: "auto",
-  alignItems: "center",
-  justifyContent: "space-between",
-  height: { md: "100%", sm: "auto" },
-  width: { lg: "90%", sm: "95%" },
-  position: "relative"
-};
+// export const cardRow = {
+//   // flex: 1,
+//   margin: "auto",
+//   alignItems: "center",
+//   justifyContent: "space-between",
+//   height: { md: "100%", sm: "auto" },
+//   width: { lg: "100%", sm: "100%" },
+//   // position: "relative",
+//   flexDirection: "row",
+// };
 
 export const cardContainer = {
-  position: "absolute",
-  // background: "#ffffff",
+  display: 'none',
+  // position: "relative",
   alignItems: "center",
   justifyContent: "center",
   borderRadius: "3px",
-  // boxShadow: "2px 2px 20px 1px rgba(0, 0, 0, 0.5)",
   height: { lg: "500px", md: "400px", sm: "300px", xs: "350px" },
   width: { lg: "100%", md: "100%", sm: "100%", xs: "100%" },
-  overflowX: 'hidden'
+
 };
 
 export const cardImgContainer = {
@@ -85,10 +87,14 @@ export const CardImageComponent = styled("img")({
 });
 
 export const cardDetail ={
-  color: "#ffffff"
+  color: "#ffffff",
+  fontSize: "18px",
+  fontWeight: 300
 }
 
 export const cardTitle = {
+  textTransform: "uppercase",
+  fontSize: "72px",
   color: "#ffffff",
   fontWeight: 700,
   mb: 2

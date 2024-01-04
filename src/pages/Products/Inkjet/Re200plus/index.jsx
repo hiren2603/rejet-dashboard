@@ -1,7 +1,7 @@
 import Head from "@/components/Head";
 import ProductButton from "@/components/ProductButton";
 import Details from "@/components/Details";
-import inkjet from "@/assets/products/re200plus.jpg"
+import inkjet from "@/assets/products/re200plus.png";
 import Samples from "@/assets/samples/font_sample.png";
 import consumable from "@/assets/products/cij_consumable.png";
 import spares from "@/assets/products/cij_spares.png";
@@ -17,12 +17,7 @@ import {
   material,
   features,
 } from "@/helpers/re200PlusData";
-import {
-  productHeading,
-  modelHeading,
-  headings,
-  ProductImg,
-} from "./style";
+import { productHeading, modelHeading, headings, ProductImg } from "./style";
 
 const Re200Plus = () => {
   return (
@@ -45,7 +40,7 @@ const Re200Plus = () => {
         >
           continuous inkjet printers
         </Typography>
-        <Heading name="RE200+" type="INKJET PRINTER" pdf={CatalougFile}/>
+        <Heading name="RE200+" type="INKJET PRINTER" pdf={CatalougFile} />
         <Grid
           container
           item
@@ -60,8 +55,7 @@ const Re200Plus = () => {
             direction={"column"}
             lg={5}
             md={5}
-            rowSpacing={{lg: 5, sm: 0}} 
-          
+            rowSpacing={{ lg: 5, sm: 0 }}
           >
             <Grid
               item
@@ -72,11 +66,11 @@ const Re200Plus = () => {
                 alignItems: "center",
               }}
             >
-              <img src={inkjet} alt="Re200+" width={350}/>
+              <img src={inkjet} alt="Re200+" width={350} />
               <ProductButton />
             </Grid>
 
-            <Grid item lg={2} md={1} sm={2} xs={2} >
+            <Grid item lg={2} md={1} sm={2} xs={2}>
               <Typography sx={modelHeading}>Print Samples</Typography>
               <ProductImg
                 src={Samples}
@@ -123,11 +117,18 @@ const Re200Plus = () => {
               {re200PlusPrintParams?.map((item) => (
                 <Grid container item key={item.id} sx={{ m: "2px 0" }}>
                   <Grid item lg={7} md={7} sm={7} xs={7}>
-                    <Typography sx={{ fontWeight: "600", color : "white" }}>
+                    <Typography sx={{ fontWeight: "600", color: "white" }}>
                       {item.title} :
                     </Typography>
                   </Grid>
-                  <Grid item lg={5} md={5} sm={5} xs={5} sx={{ color : "white"}}>
+                  <Grid
+                    item
+                    lg={5}
+                    md={5}
+                    sm={5}
+                    xs={5}
+                    sx={{ color: "white" }}
+                  >
                     {item.content}
                   </Grid>
                 </Grid>
@@ -136,7 +137,7 @@ const Re200Plus = () => {
 
             <Grid container item>
               <Typography
-                sx={{ ...modelHeading, textAlign: "center", color : "white" }}
+                sx={{ ...modelHeading, textAlign: "center", color: "white" }}
                 textAlign={"center"}
               >
                 Specifications
@@ -144,11 +145,18 @@ const Re200Plus = () => {
               {re200PlusParams?.map((item) => (
                 <Grid container item key={item.id} sx={{ m: "2px 0" }}>
                   <Grid item lg={7} md={7} sm={7} xs={6}>
-                    <Typography sx={{ fontWeight: "600", color : "white" }}>
+                    <Typography sx={{ fontWeight: "600", color: "white" }}>
                       {item.title} :
                     </Typography>
                   </Grid>
-                  <Grid item lg={5} md={5} sm={5} xs={6} sx={{ color : "white"}}>
+                  <Grid
+                    item
+                    lg={5}
+                    md={5}
+                    sm={5}
+                    xs={6}
+                    sx={{ color: "white" }}
+                  >
                     {item.content}
                   </Grid>
                 </Grid>
@@ -160,11 +168,11 @@ const Re200Plus = () => {
               {inkSystem?.map((item) => (
                 <Grid item container key={item.id}>
                   <Grid item lg={5} md={6} sm={6} xs={6}>
-                    <Typography sx={{ fontWeight: "600", color : "white" }}>
+                    <Typography sx={{ fontWeight: "600", color: "white" }}>
                       {item.title} :
                     </Typography>
                   </Grid>
-                  <Grid item md={6} sm={6} xs={6} sx={{ color : "white"}}>
+                  <Grid item md={6} sm={6} xs={6} sx={{ color: "white" }}>
                     {item.content}
                   </Grid>
                 </Grid>
@@ -173,16 +181,18 @@ const Re200Plus = () => {
 
             <Grid item container direction="column">
               <Typography sx={headings}>cabinet</Typography>
-              <List sx={{ color : "white" }}>Standered Finish L Grained 304 stainless steel</List>
+              <List sx={{ color: "white" }}>
+                Standered Finish L Grained 304 stainless steel
+              </List>
 
               {cabinetData?.map((item) => (
                 <Grid item container key={item.id}>
                   <Grid item lg={5} md={6} sm={6}>
-                    <Typography sx={{ fontWeight: "600", color : "white" }}>
+                    <Typography sx={{ fontWeight: "600", color: "white" }}>
                       {item.title}
                     </Typography>
                   </Grid>
-                  <Grid item md={5} sm={6} sx={{ color : "white"}}>
+                  <Grid item md={5} sm={6} sx={{ color: "white" }}>
                     {item.content}
                   </Grid>
                 </Grid>
@@ -191,7 +201,7 @@ const Re200Plus = () => {
           </Grid>
         </Grid>
 
-        <Grid container item direction="row" columnSpacing={10} >
+        <Grid container item direction="row" columnSpacing={10}>
           <Grid
             item
             lg={5}
@@ -201,9 +211,14 @@ const Re200Plus = () => {
             <img src={spares} alt="spares" width={"60%"} />
           </Grid>
 
-          <Grid item sx={{ display: "flex", flexDirection: "column" }} lg={5} mt={4}>
+          <Grid
+            item
+            sx={{ display: "flex", flexDirection: "column" }}
+            lg={5}
+            mt={4}
+          >
             <Typography sx={modelHeading}>re200+ spares</Typography>
-            <List sx={{ color : "white"}}>
+            <List sx={{ color: "white" }}>
               Smart Print Head, Modular designed still give flexibility to
               replace individual spare separately. Automatic Calibration
               function automatically adjusts printing parameters according to
@@ -223,9 +238,14 @@ const Re200Plus = () => {
             <img src={consumable} alt="consumable Image" width={"90%"} />
           </Grid>
 
-          <Grid item sx={{ display: "flex", flexDirection: "column" }} lg={5} mt={5}>
+          <Grid
+            item
+            sx={{ display: "flex", flexDirection: "column" }}
+            lg={5}
+            mt={5}
+          >
             <Typography sx={modelHeading}>re200+ consumable</Typography>
-            <List sx={{ color : "white"}}>
+            <List sx={{ color: "white" }}>
               Inteligent Ink Management System of RE200+ Inkjet Printer
               eliminates the wastage of consumables as there is no manual
               pouring. Easy Insertion and Removal of Cartridges eliminates the

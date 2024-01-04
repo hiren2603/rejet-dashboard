@@ -30,43 +30,6 @@ export const slideDetails ={
   userSelect: "none"
 }
 
-export const slideTag ={
-  color: "#ffbd3a",
-  display: {lg: "block", md: "block", sm: "block" , xs: "block"},
-  fontSize:{ lg: "24px", md: "20px", sm: "18px", xs: "16px"},
-  lineHeight: 2,
-  textTransform: "uppercase",
-  fontWeight: 600,
-  userSelect: "none",
-}
-
-export const imageTypeStyle = {
-  color: "white",
-  textShadow: "4px 2px 2px rgba(255, 0, 0, 0.781)",
-  fontSize: { lg: "90px", md: "70px", sm: "50px", xs: "30px" },
-};
-
-export const iconContainerStyle = {
-  display: {lg: "flex", md: "flex", sm: "none", xs: 'none' },
-  alignItems: "center",
-  justifyContent: "center",
-  background: "#fcfcfc",
-  position: "absolute",
-  top: "47%",
-  height: "2.5rem",
-  width: "2.5rem",
-  borderRadius: "50%",
-  cursor: "pointer",
-  zIndex:10
-};
-export const leftIconContainer = {
-  left: "10px",
-};
-
-export const rightIconContainer = {
-  right: "10px",
-};
-
 export const heroContainerStyle ={
   position: "relative",
   display: 'flex',
@@ -82,7 +45,8 @@ export const heroContainerStyle ={
     xl: "100vh",
     lg: "100vh",
     md: "80vh",
-    sm: "80vh",
+    sm: "60vh",
+    xs: "60vh"
   }
 }
 
@@ -91,7 +55,7 @@ export const overlayStyle = {
   width: "100%",
   height: "100%",
   objectFit: 'cover',
-  backgroundColor: "rgba(255,255,255,0.2)",
+  backgroundColor: "rgba(0,0,0,0.4)",
   backgroundRepeat: "no-repeat",
   zIndex: 3
 }
@@ -110,3 +74,45 @@ export const videoStyle ={
   height: "100%",
   objectFit: "cover"
 }
+
+
+
+
+
+// export const slideTag ={
+//   color: "#ffbd3a",
+//   display: {lg: "block", md: "block", sm: "block" , xs: "block"},
+//   fontSize:{ lg: "24px", md: "20px", sm: "18px", xs: "16px"},
+//   lineHeight: 2,
+//   textTransform: "uppercase",
+//   fontWeight: 600,
+//   userSelect: "none",
+// }
+
+// export const imageTypeStyle = {
+//   color: "white",
+//   textShadow: "4px 2px 2px rgba(255, 0, 0, 0.781)",
+//   fontSize: { lg: "90px", md: "70px", sm: "50px", xs: "30px" },
+// };
+
+// export const iconContainerStyle = {
+//   display: {lg: "flex", md: "flex", sm: "none", xs: 'none' },
+//   alignItems: "center",
+//   justifyContent: "center",
+//   background: "#fcfcfc",
+//   position: "absolute",
+//   top: "47%",
+//   height: "2.5rem",
+//   width: "2.5rem",
+//   borderRadius: "50%",
+//   cursor: "pointer",
+//   zIndex:10
+// };
+// export const leftIconContainer = {
+//   left: "10px",
+// };
+
+// export const rightIconContainer = {
+//   right: "10px",
+// };
+

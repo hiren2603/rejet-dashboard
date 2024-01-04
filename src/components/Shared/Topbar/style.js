@@ -1,4 +1,105 @@
-import { styled } from "@mui/material";
+import { styled, useTheme } from "@mui/material";
+// const theme = useTheme();
+
+export const NavLinkContainer = styled("div")(({ theme }) => ({
+  gridColumn: "3/4",
+  flex: "80%",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-evenly",
+  position: "relative",
+  [theme.breakpoints.down("sm")]: {
+    display: "none"
+  },
+  [theme.breakpoints.down("md")]: { display: "none" }
+}))
+
+export const MobileLinkContainer = styled("div")(({ theme }) => ({
+  display: "flex",
+  flex: "100%",
+  flexDirection: "column",
+  justifyContent: "space-evenly",
+  alignItems: "center",
+  position: "absolute",
+  // left: "-10px",
+  top: 0,
+  // border: "2px solid red",
+  // left: "-7vh",
+  // top: "6vh",
+  height: "80vh",
+  width: "101vw",
+  transition: "all .5s ease-in",
+  zIndex: 5,
+  // backgroundColor: "#161922",
+  background: "gray",
+  // [theme.breakpoints.down("sm")]: { top: "0", left : "0"},
+  [theme.breakpoints.down("md")]: { top: "70px", left : "-5vw" },
+}))
+
+export const LinkContainer = styled("div")({
+  position: "relative",
+  alignItems: "center",
+  textTransform: "capitalize",
+  fontSize: "16px",
+  letterSpacing: "1px",
+  color: "#ffffff",
+  transition: "all 0.3s ease",
+  "& a": {
+    color: "#ffffff",
+    fontSize: "16px",
+    transition: "all 0.5s ease-in",
+  },
+  "& a:hover": {
+    color: "#E31E25",
+    transition: "all 0.5s ease",
+    fontWeight: "500"
+  }
+})
+
+export const DropDown = styled("div")({
+  display: "flex",
+  flexDirection: 'column',
+  alignItems: "center",
+  justifyContent: "center",
+  position: "absolute",
+  left: "-10%",
+  width: "130px",
+  backgroundColor: "#161922",
+  zIndex: "10"
+})
+
+export const DropDownLink = styled("div")({
+  padding: "10px 10px",
+  display: "flex",
+  position: "relative",
+  alignItems: "center",
+  justifyCenter: "center",
+  width: "100%",
+  borderBottom: "1px solid #ffffff",
+  "& a": {
+    color: "#ffffff",
+    fontSize: "16px",
+    textTransform: "capitalize",
+    transition: "1s 0.3s ease-in"
+  },
+  "& a:hover": {
+    color: "#E31E25",
+    transition: "all 0.3s ease-in",
+    fontWeight: "500"
+  }
+})
+
+export const SubDropDown = styled("div")({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  position: 'absolute',
+  left: "101%",
+  top: "0rem",
+  width: "150px",
+  backgroundColor: "#161922",
+})
 
 export const ContactButton = styled("a")({
   backgroundColor: "#ea232e",
