@@ -160,7 +160,7 @@ const LinkSection = ({ dropDown, setDropDown, multiToggle }) => {
 
       <LinkContainer>
         <Link to="/ewest-management" onClick={() => multiToggle()}>
-          E-Waste Mangement
+          E-Waste Mgmt
         </Link>
       </LinkContainer>
 
