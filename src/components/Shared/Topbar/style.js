@@ -14,23 +14,23 @@ export const NavLinkContainer = styled("div")(({ theme }) => ({
   [theme.breakpoints.down("md")]: { display: "none" }
 }))
 
-export const MobileLinkContainer = styled("div")({
-  // width : "100%",
-  // gridColumn: "1/3",
+export const MobileLinkContainer = styled("div")(({ theme }) => ({
   display: "flex",
   flex: "100%",
   flexDirection: "column",
   justifyContent: "space-evenly",
   alignItems: "center",
   position: "absolute",
-  left: "-5vh",
-  top: "11.5vh",
+  left: "-7vh",
+  // top: "6vh",
   height: "50vh",
-  width: "100vw",
+  width: "120vw",
   transition: "all .5s ease-in",
   zIndex: "9",
-  backgroundColor: "#161922"
-})
+  backgroundColor: "#161922",
+  [theme.breakpoints.down("sm")]: { top: "0", left : "-12vh"},
+  [theme.breakpoints.down("md")]: { top: "13vh", left : "-16vh" },
+}))
 
 export const LinkContainer = styled("div")({
   position: "relative",
