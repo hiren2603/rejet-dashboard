@@ -1,10 +1,14 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Box, Button, Grid, Stack, Typography } from "@mui/material";
 import { SlideItems } from "@/helpers/SlideItems";
-import { slideDetails, overlayStyle } from "./style";
-import { motion } from "framer-motion";
-import inkjet from "@/assets/products/re200plus.png";
-import Slide from "./Slide";
+import { AnimatePresence, motion } from "framer-motion";
+
+// animation start //
+
+const variant = {
+  visible: { opacity: 1 },
+  hidden: { opacity: 0 },
+};
 
 const delay = 5000;
 const Slider = () => {
@@ -64,7 +68,10 @@ const Slider = () => {
       }}
     >
       {SlideItems.map((slide) => (
-        <div
+        <motion.div
+          variants={variant}
+          transition={{ duration: 8, delay: 0.2 }}
+          animate={slideId == slide.id ? "visible" : "hidden"}
           key={slide.id}
           style={{
             flexWrap: "wrap",
@@ -110,7 +117,10 @@ const Slider = () => {
             >
               {slide.title}
             </Typography>
-            <Typography sx={{ color: "#c5c5c5", whiteSpace: "wrap" }}>
+            <Typography
+              component={motion.p}
+              sx={{ color: "#c5c5c5", whiteSpace: "wrap" }}
+            >
               {slide.info}
             </Typography>
             <Button
@@ -125,13 +135,13 @@ const Slider = () => {
             sx={{
               display: "flex",
               justifyContent: {
-                lg: "space-around",
+                lg: "flex-end",
                 md: "center",
                 sm: "center",
                 xs: "center",
               },
               height: "inherit",
-              backgroundColor: "#5c5c5c",
+              // backgroundColor: "#5c5c5c",
               flex: "50%",
             }}
           >
@@ -141,7 +151,7 @@ const Slider = () => {
               style={{ height: "auto", width: "50%" }}
             />
           </Box>
-        </div>
+        </motion.div>
       ))}
     </div>
   );

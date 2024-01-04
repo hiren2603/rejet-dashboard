@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { INKJET_LIST, TIJ_LIST, LASER_LIST } from "helpers/Link";
+import { INKJET_LIST, TIJ_LIST, LASER_LIST, DOD_LIST } from "helpers/Link";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import {
   ContactButton,
@@ -17,8 +17,9 @@ const LinkSection = ({ dropDown, setDropDown, multiToggle }) => {
     inkjet: [],
     thermal: [],
     laser: [],
+    dod: [],
   });
-  let { inkjet, thermal, laser } = menu;
+  let { inkjet, thermal, laser, dod } = menu;
 
   const handleMenu = (name, value) => {
     if (name === "inkjet") {
@@ -26,18 +27,28 @@ const LinkSection = ({ dropDown, setDropDown, multiToggle }) => {
         inkjet: value,
         thermal: [],
         laser: [],
+        dod: [],
       });
     } else if (name === "thermal") {
       setMenu({
         inkjet: [],
         thermal: value,
         laser: [],
+        dod: [],
       });
     } else if (name === "laser") {
       setMenu({
         inkjet: [],
         thermal: [],
+        dod: [],
         laser: value,
+      });
+    } else if (name === "dod") {
+      setMenu({
+        inkjet: [],
+        thermal: [],
+        laser: [],
+        dod: value,
       });
     }
   };
@@ -79,10 +90,36 @@ const LinkSection = ({ dropDown, setDropDown, multiToggle }) => {
               }}
             >
               <Link to="#">Inkjet</Link>
-
               <SubDropDown>
                 {inkjet &&
                   inkjet?.map((link) => (
+                    <DropDownLink key={link.text}>
+                      <Link
+                        to={link.link}
+                        onClick={() => {
+                          multiToggle();
+                        }}
+                      >
+                        {link.text}
+                      </Link>
+                    </DropDownLink>
+                  ))}
+              </SubDropDown>
+            </DropDownLink>
+
+            <DropDownLink
+              onMouseEnter={() => {
+                handleMenu("laser", LASER_LIST);
+              }}
+              onMouseLeave={() => {
+                handleMenu("laser", []);
+              }}
+            >
+              <Link to="#">Laser</Link>
+
+              <SubDropDown>
+                {laser &&
+                  laser?.map((link) => (
                     <DropDownLink key={link.text}>
                       <Link
                         to={link.link}
@@ -122,26 +159,21 @@ const LinkSection = ({ dropDown, setDropDown, multiToggle }) => {
                   ))}
               </SubDropDown>
             </DropDownLink>
+            {/*  */}
             <DropDownLink
               onMouseEnter={() => {
-                handleMenu("laser", LASER_LIST);
+                handleMenu("dod", DOD_LIST);
               }}
               onMouseLeave={() => {
-                handleMenu("laser", []);
+                handleMenu("dod", []);
               }}
             >
-              <Link to="#">Laser</Link>
-
+              <Link to="#">DOD</Link>
               <SubDropDown>
-                {laser &&
-                  laser?.map((link) => (
+                {dod &&
+                  dod?.map((link) => (
                     <DropDownLink key={link.text}>
-                      <Link
-                        to={link.link}
-                        onClick={() => {
-                          multiToggle();
-                        }}
-                      >
+                      <Link to={link.link} onClick={() => multiToggle()}>
                         {link.text}
                       </Link>
                     </DropDownLink>
