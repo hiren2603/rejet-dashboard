@@ -19,7 +19,6 @@ import {
   contactContainer, NavLinkContainer, MobileLinkContainer,
 } from "./style";
 import { Link } from "react-router-dom";
-import { MenuOpenOutlined } from "@mui/icons-material";
 
 const Topbar = () => {
   const theme = useTheme();
