@@ -27,9 +27,20 @@ export const MobileLinkContainer = styled("div")(({ theme }) => ({
   width: "120vw",
   transition: "all .5s ease-in",
   zIndex: "9",
-  backgroundColor: "#161922",
-  [theme.breakpoints.down("sm")]: { top: "0", left : "-12vh"},
-  [theme.breakpoints.down("md")]: { top: "13vh", left : "-16vh" },
+  // backgroundColor: "#161922",
+  backgroundColor: "white",
+  '&' : {
+    color : "#161922",
+  },
+  '& a' : {
+    color : "#161922",
+  },
+
+  [theme.breakpoints.down("sm")]: {
+    top: "0",
+    left: "-12vh",
+  },
+  [theme.breakpoints.down("md")]: { top: "13vh", left: "-16vh" },
 }))
 
 export const LinkContainer = styled("div")({
@@ -52,7 +63,7 @@ export const LinkContainer = styled("div")({
   }
 })
 
-export const DropDown = styled("div")({
+export const DropDown = styled("div")(({ theme }) => ({
   display: "flex",
   flexDirection: 'column',
   alignItems: "center",
@@ -62,7 +73,7 @@ export const DropDown = styled("div")({
   width: "130px",
   backgroundColor: "#161922",
   zIndex: "10"
-})
+}))
 
 export const DropDownLink = styled("div")({
   padding: "5px 10px",

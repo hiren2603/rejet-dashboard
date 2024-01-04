@@ -94,9 +94,6 @@ const Topbar = () => {
                 <LinkSection
                   dropDown={dropDown}
                   setDropDown={setDropDown}
-                  menu={menu}
-                  toggleDrawer={toggleDrawer}
-                  handleMenu={handleMenu}
                   multiToggle={multiToggle}
                 />
               </MobileLinkContainer>
@@ -105,9 +102,6 @@ const Topbar = () => {
                 <LinkSection
                   dropDown={dropDown}
                   setDropDown={setDropDown}
-                  menu={menu}
-                  toggleDrawer={toggleDrawer}
-                  handleMenu={handleMenu}
                   multiToggle={multiToggle}
                 />
               </NavLinkContainer>
