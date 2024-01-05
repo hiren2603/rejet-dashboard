@@ -51,7 +51,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    setTimeout(handleComponentReady, 2000);
+    setTimeout(handleComponentReady, 1000);
   }, []);
 
   if (!isComponentReady) {
