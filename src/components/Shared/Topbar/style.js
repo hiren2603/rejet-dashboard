@@ -40,7 +40,7 @@ export const MobileLinkContainer = styled("div")(({ theme }) => ({
   [theme.breakpoints.down("md")]: { top: "13vh", left: "-16vh" },
   [theme.breakpoints.down("sm")]: {
     top: "75px",
-    left: "-12vh",
+    left: "-13vh",
   },
   [theme.breakpoints.down("lg")] : { top : "75px", left : "-16vh"}
 }))

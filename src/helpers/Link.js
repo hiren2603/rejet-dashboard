@@ -4,7 +4,6 @@ export const INKJET_LIST = [
     { text : "Re225", link : "/products/inkjet/re225" },
     { text : "Re2000", link : "/products/inkjet/re2000" },
     { text : "Re2000p", link : "/products/inkjet/re2000p" },
-    { text : "Re1000", link : "/products/inkjet/re1000" },
 ]
 
 export const LASER_LIST = [
