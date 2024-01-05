@@ -27,9 +27,12 @@ import { Link } from "react-router-dom";
 const Topbar = () => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.between("xs", "lg"));
+  const isLargeScreen = useMediaQuery(theme.breakpoints.up("lg"))
   const [isOpen, setIsOpen] = useState(false);
   const [dropDown, setDropDown] = useState(false);
-  
+
+  useEffect(() => { setIsOpen(false) }, [isLargeScreen])
+
   useEffect(() => {
     // Add and remove 'no-scroll' class to body based on the drawer state
     if (isOpen) {
