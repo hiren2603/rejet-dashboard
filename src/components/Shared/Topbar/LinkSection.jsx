@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ClickAwayListener } from "@mui/material";
 import { INKJET_LIST, TIJ_LIST, LASER_LIST, DOD_LIST } from "helpers/Link";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import {
@@ -52,6 +53,7 @@ const LinkSection = ({ dropDown, setDropDown, multiToggle }) => {
       });
     }
   };
+
   return (
     <>
       <LinkContainer>
@@ -60,129 +62,131 @@ const LinkSection = ({ dropDown, setDropDown, multiToggle }) => {
         </Link>
       </LinkContainer>
 
-      <LinkContainer
-        onMouseEnter={() => {
-          setDropDown(true);
-        }}
-        onMouseLeave={() => {
-          setDropDown(false);
-        }}
-      >
-        <Link
-          to="#"
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
+      <ClickAwayListener onClickAway={() => { setDropDown(false) }}>
+        <LinkContainer
+          onMouseEnter={() => {
+            setDropDown(true);
+          }}
+          onMouseLeave={() => {
+            setDropDown(false);
           }}
         >
-          Products <ArrowDropDownIcon sx={{ color: "white" }} />
-        </Link>
+          <Link
+            to="#"
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+            }}
+          >
+            Products <ArrowDropDownIcon sx={{ color: "white" }} />
+          </Link>
 
-        {dropDown && (
-          <DropDown>
-            <DropDownLink
-              onMouseEnter={() => {
-                handleMenu("inkjet", INKJET_LIST);
-              }}
-              onMouseLeave={() => {
-                handleMenu("inkjet", []);
-              }}
-            >
-              <Link to="#">Inkjet</Link>
-              <SubDropDown>
-                {inkjet &&
-                  inkjet?.map((link) => (
-                    <DropDownLink key={link.text}>
-                      <Link
-                        to={link.link}
-                        onClick={() => {
-                          multiToggle();
-                        }}
-                      >
-                        {link.text}
-                      </Link>
-                    </DropDownLink>
-                  ))}
-              </SubDropDown>
-            </DropDownLink>
+          {dropDown && (
+            <DropDown>
+              <DropDownLink
+                onMouseEnter={() => {
+                  handleMenu("inkjet", INKJET_LIST);
+                }}
+                onMouseLeave={() => {
+                  handleMenu("inkjet", []);
+                }}
+              >
+                <Link to="#">Inkjet</Link>
+                <SubDropDown>
+                  {inkjet &&
+                    inkjet?.map((link) => (
+                      <DropDownLink key={link.text}>
+                        <Link
+                          to={link.link}
+                          onClick={() => {
+                            multiToggle();
+                          }}
+                        >
+                          {link.text}
+                        </Link>
+                      </DropDownLink>
+                    ))}
+                </SubDropDown>
+              </DropDownLink>
 
-            <DropDownLink
-              onMouseEnter={() => {
-                handleMenu("laser", LASER_LIST);
-              }}
-              onMouseLeave={() => {
-                handleMenu("laser", []);
-              }}
-            >
-              <Link to="#">Laser</Link>
+              <DropDownLink
+                onMouseEnter={() => {
+                  handleMenu("laser", LASER_LIST);
+                }}
+                onMouseLeave={() => {
+                  handleMenu("laser", []);
+                }}
+              >
+                <Link to="#">Laser</Link>
 
-              <SubDropDown>
-                {laser &&
-                  laser?.map((link) => (
-                    <DropDownLink key={link.text}>
-                      <Link
-                        to={link.link}
-                        onClick={() => {
-                          multiToggle();
-                        }}
-                      >
-                        {link.text}
-                      </Link>
-                    </DropDownLink>
-                  ))}
-              </SubDropDown>
-            </DropDownLink>
-            <DropDownLink
-              onMouseEnter={() => {
-                handleMenu("thermal", TIJ_LIST);
-              }}
-              onMouseLeave={() => {
-                handleMenu("thermal", []);
-              }}
-            >
-              <Link to="#">Thermal</Link>
+                <SubDropDown>
+                  {laser &&
+                    laser?.map((link) => (
+                      <DropDownLink key={link.text}>
+                        <Link
+                          to={link.link}
+                          onClick={() => {
+                            multiToggle();
+                          }}
+                        >
+                          {link.text}
+                        </Link>
+                      </DropDownLink>
+                    ))}
+                </SubDropDown>
+              </DropDownLink>
+              <DropDownLink
+                onMouseEnter={() => {
+                  handleMenu("thermal", TIJ_LIST);
+                }}
+                onMouseLeave={() => {
+                  handleMenu("thermal", []);
+                }}
+              >
+                <Link to="#">Thermal</Link>
 
-              <SubDropDown>
-                {thermal &&
-                  thermal?.map((link) => (
-                    <DropDownLink key={link.text}>
-                      <Link
-                        to={link.link}
-                        onClick={() => {
-                          multiToggle();
-                        }}
-                      >
-                        {link.text}
-                      </Link>
-                    </DropDownLink>
-                  ))}
-              </SubDropDown>
-            </DropDownLink>
-            {/*  */}
-            <DropDownLink
-              onMouseEnter={() => {
-                handleMenu("dod", DOD_LIST);
-              }}
-              onMouseLeave={() => {
-                handleMenu("dod", []);
-              }}
-            >
-              <Link to="#">DOD</Link>
-              <SubDropDown>
-                {dod &&
-                  dod?.map((link) => (
-                    <DropDownLink key={link.text}>
-                      <Link to={link.link} onClick={() => multiToggle()}>
-                        {link.text}
-                      </Link>
-                    </DropDownLink>
-                  ))}
-              </SubDropDown>
-            </DropDownLink>
-          </DropDown>
-        )}
-      </LinkContainer>
+                <SubDropDown>
+                  {thermal &&
+                    thermal?.map((link) => (
+                      <DropDownLink key={link.text}>
+                        <Link
+                          to={link.link}
+                          onClick={() => {
+                            multiToggle();
+                          }}
+                        >
+                          {link.text}
+                        </Link>
+                      </DropDownLink>
+                    ))}
+                </SubDropDown>
+              </DropDownLink>
+              {/*  */}
+              <DropDownLink
+                onMouseEnter={() => {
+                  handleMenu("dod", DOD_LIST);
+                }}
+                onMouseLeave={() => {
+                  handleMenu("dod", []);
+                }}
+              >
+                <Link to="#">DOD</Link>
+                <SubDropDown>
+                  {dod &&
+                    dod?.map((link) => (
+                      <DropDownLink key={link.text}>
+                        <Link to={link.link} onClick={() => multiToggle()}>
+                          {link.text}
+                        </Link>
+                      </DropDownLink>
+                    ))}
+                </SubDropDown>
+              </DropDownLink>
+            </DropDown>
+          )}
+        </LinkContainer>
+      </ClickAwayListener>
 
       <LinkContainer>
         <Link to="/applications" onClick={() => multiToggle()}>
