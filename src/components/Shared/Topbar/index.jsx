@@ -9,14 +9,18 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from '@mui/icons-material/Close';
+import CallIcon from "@mui/icons-material/Call";
+import EmailIcon from "@mui/icons-material/Email";
+import CloseIcon from "@mui/icons-material/Close";
 import MuiAppBar from "@mui/material/AppBar";
 import { styled } from "@mui/material/styles";
 import Logo from "../../../assets/logo.png";
 import LinkSection from "./LinkSection";
 import {
   ContactButton,
-  contactContainer, NavLinkContainer, MobileLinkContainer,
+  contactContainer,
+  NavLinkContainer,
+  MobileLinkContainer,
 } from "./style";
 import { Link } from "react-router-dom";
 
@@ -29,6 +33,7 @@ const Topbar = () => {
     inkjet: false,
     thermal: false,
     laser: false,
+    dod: false,
   });
   let { inkjet, thermal, laser } = menu;
 
@@ -54,20 +59,30 @@ const Topbar = () => {
     if (name === "inkjet") {
       setMenu({
         inkjet: value,
-        thermal: false,
         laser: false,
+        thermal: false,
+        dod: false,
       });
     } else if (name === "thermal") {
       setMenu({
         inkjet: false,
-        thermal: value,
         laser: false,
+        thermal: value,
+        dod: false,
       });
     } else if (name === "laser") {
       setMenu({
         inkjet: false,
         thermal: false,
+        dod: false,
         laser: value,
+      });
+    } else if (name === "dod") {
+      setMenu({
+        inkjet: false,
+        thermal: false,
+        laser: false,
+        dod: value,
       });
     }
   };
@@ -77,6 +92,7 @@ const Topbar = () => {
       inkjet: false,
       thermal: false,
       laser: false,
+      dod: false,
     });
     setDropDown(false);
     setIsOpen(false);
@@ -120,7 +136,7 @@ const Topbar = () => {
               </NavLinkContainer>
             )}
 
-            {isSmallScreen && (
+            {isSmallScreen ? (
               <Box
                 sx={{
                   flexGrow: 3,
@@ -147,6 +163,24 @@ const Topbar = () => {
                     <MenuIcon color="white" />
                   </IconButton>
                 )}
+              </Box>
+            ) : (
+              <Box sx={contactContainer}>
+                <ContactButton
+                  href="tel:769-827-1412"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <CallIcon />
+                  Call Now
+                </ContactButton>
+
+                <ContactButton
+                  href="mailto:info@rejettech.com"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <EmailIcon color="white" />
+                  Send Mail
+                </ContactButton>
               </Box>
             )}
           </Toolbar>

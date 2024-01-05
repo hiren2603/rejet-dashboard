@@ -15,7 +15,7 @@ export const productHeading = {
   textTransform: "uppercase",
   textAlign: "center",
   color: "#ffffff",
-  textShadow: "2px 2px 2px rgba(255, 255, 255, 0.4)",
+  textShadow: "2px 2px 4px rgba(255, 100, 100, 0.8)",
   fontWeight: "600",
   marginTop: "2rem",
 };

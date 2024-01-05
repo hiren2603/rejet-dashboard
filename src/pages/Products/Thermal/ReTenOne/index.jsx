@@ -33,7 +33,7 @@ const ReTenOne = () => {
           sx={{
             ...productHeading,
             display: { lg: "flex", md: "flex", sm: "flex", xs: "none" },
-            color : "white"
+            color: "white",
           }}
           align="center"
         >
@@ -56,7 +56,7 @@ const ReTenOne = () => {
           <Grid container item direction="column" lg={6} md={5} rowGap={4}>
             {tijData?.map((item) => {
               return (
-                <Grid container item key={item.id} sx={{color : "white"}}>
+                <Grid container item key={item.id} sx={{ color: "white" }}>
                   <Typography sx={modelHeading}>{item.model}</Typography>
                   <Grid container item>
                     <Grid item lg={6} md={5} sm={5} xs={5}>
@@ -76,7 +76,7 @@ const ReTenOne = () => {
               <Typography sx={modelHeading}>Specifications</Typography>
               {commonSpace?.map((item) => {
                 return (
-                  <Grid key={item.id} container item sx={{color : "white"}}>
+                  <Grid key={item.id} container item sx={{ color: "white" }}>
                     <Grid
                       item
                       lg={6}
@@ -99,7 +99,7 @@ const ReTenOne = () => {
               <Typography sx={modelHeading}>features</Typography>
               {features?.map((item) => {
                 return (
-                  <Grid key={item.id} container item sx={{color : "white"}}>
+                  <Grid key={item.id} container item sx={{ color: "white" }}>
                     <Grid
                       item
                       lg={6}
@@ -128,8 +128,18 @@ const ReTenOne = () => {
                 alignItems: "center",
               }}
             >
-              <img src={TIJProduct1} alt="TIJ Product" width={350} />
-              <img src={TIJProduct2} alt="TIJ Product" width={350} />
+              <img
+                src={TIJProduct1}
+                alt="TIJ Product"
+                width={350}
+                style={{ marginBottom: "4rem" }}
+              />
+              <img
+                src={TIJProduct2}
+                alt="TIJ Product"
+                width={350}
+                style={{ marginBottom: "2rem" }}
+              />
               <ProductButton />
             </Grid>
 

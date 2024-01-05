@@ -108,7 +108,7 @@ const App = () => {
                   />
                   <Route
                     exact
-                    path="/products/inkjet/re1000"
+                    path="/products/dod/re1000"
                     element={<Re1000 />}
                   />
                   <Route exact path="/products/laser/co2" element={<Co2 />} />

@@ -8,7 +8,7 @@ export { default as Re224 } from "./Products/Inkjet/Re224";
 export { default as Re225 } from "./Products/Inkjet/Re225";
 export { default as Re2000 } from "./Products/Inkjet/Re2000";
 export { default as Re2000p } from "./Products/Inkjet/Re2000p";
-export { default as Re1000 } from "./Products/Inkjet/Re1000";
+export { default as Re1000 } from "./Products/DoD/Re1000";
 export { default as Co2 } from "./Products/Laser/Co2";
 export { default as Desktop } from "./Products/Laser/Desktop";
 export { default as Fiber } from "./Products/Laser/Fiber";

@@ -7,14 +7,18 @@ export const INKJET_LIST = [
     { text : "Re1000", link : "/products/inkjet/re1000" },
 ]
 
-export const TIJ_LIST = [
-    { text : "Re10.1", link : "/products/tij/re10"},
-    { text : "ReHandy", link : "/products/tij/re-handy"}
-]
-
 export const LASER_LIST = [
     { text : "Co2", link : "/products/laser/co2"},
     { text : "Desktop", link : "/products/laser/desktop"},
     { text : "Fiber", link : "/products/laser/fiber"},
     { text : "UV", link : "/products/laser/uv"}
+]
+
+export const DOD_LIST = [
+    {text: "Re1000", link: "/products/dod/re1000"}
+]
+
+export const TIJ_LIST = [
+    { text : "Re10.1", link : "/products/tij/re10"},
+    { text : "ReHandy", link : "/products/tij/re-handy"}
 ]

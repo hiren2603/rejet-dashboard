@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-// import CheckIcon from "@mui/icons-material/Check";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { List, ListItemText } from "@mui/material";
 
@@ -16,7 +14,9 @@ const Details = ({ content }) => {
         }}
       >
         <CheckCircleIcon color="success" fontSize="5px" />
-        <ListItemText sx={{ justifyContent: "start", color : "white" }}>{content}</ListItemText>
+        <ListItemText sx={{ justifyContent: "start", color: "white" }}>
+          {content}
+        </ListItemText>
       </List>
     </>
   );

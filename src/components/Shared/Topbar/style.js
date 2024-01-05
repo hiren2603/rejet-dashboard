@@ -36,11 +36,11 @@ export const MobileLinkContainer = styled("div")(({ theme }) => ({
     color : "#ffffff",
   },
 
-  [theme.breakpoints.down("sm")]: {
-    top: "0",
-    left: "-12vh",
-  },
   [theme.breakpoints.down("md")]: { top: "13vh", left: "-16vh" },
+  [theme.breakpoints.down("sm")]: {
+    top: "75px",
+    left: "-12vh",
+  }
 }))
 
 export const LinkContainer = styled("div")({
@@ -69,7 +69,7 @@ export const DropDown = styled("div")(({ theme }) => ({
   alignItems: "center",
   justifyContent: "center",
   position: "absolute",
-  left: "-30%",
+  left: "-10%",
   width: "130px",
   backgroundColor: "#161922",
   zIndex: "10"

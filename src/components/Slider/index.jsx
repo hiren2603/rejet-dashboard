@@ -1,12 +1,17 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Box, Button, Grid, Stack, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 import { SlideItems } from "@/helpers/SlideItems";
-import { slideDetails, overlayStyle } from "./style";
-import { motion, AnimatePresence } from "framer-motion";
-import inkjet from "@/assets/products/re200plus.png";
-import Slide from "./Slide";
+import { AnimatePresence, motion } from "framer-motion";
 
-const delay = 5000;
+// animation start //
+
+const variant = {
+  visible: { opacity: 1 },
+  hidden: { opacity: 0 },
+};
+
+const delay = 8000;
 const Slider = () => {
   const length = SlideItems.length;
   const [slideId, setSlideId] = useState(1);
@@ -48,13 +53,17 @@ const Slider = () => {
       }}
     >
       {SlideItems.map((slide) => (
-        <div
+        <motion.div
+          variants={variant}
+          transition={{ duration: 6, delay: 0.1 }}
+          exit={{ opacity: 0 }}
+          animate={slideId == slide.id ? "visible" : "hidden"}
           key={slide.id}
           style={{
             flexWrap: "wrap",
             flexDirection: {
               lg: "row",
-              md: "column",
+              md: "row",
               sm: "column",
               xs: "column",
             },
@@ -68,7 +77,12 @@ const Slider = () => {
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
-              alignItems: { lg: "flex-start", md: "center" },
+              alignItems: {
+                xl: "flex-start",
+                lg: "flex-start",
+                md: "center",
+              },
+              order: { lg: 1, sm: 2, xs: 2 },
               width: {
                 xl: "50%",
                 lg: "50%",
@@ -77,25 +91,41 @@ const Slider = () => {
                 xs: "100%",
               },
               minWidth: "50%",
+              mb: { lg: 0, md: 0, sm: 4, xs: 4 },
             }}
           >
             <Typography
               sx={{
-                fontSize: "50px",
+                fontSize: {
+                  lg: "50px",
+                  md: "50px",
+                  sm: "40px",
+                  xs: "30px",
+                },
                 fontWeight: "700",
                 whiteSpace: "wrap",
-                color: "#c5c5c5",
-                fontFamily: "poppins, san-serif",
+                color: "#ffffff",
+                fontFamily: "poppins, sans-serif",
                 textTransform: "uppercase",
                 lineHeight: "1.3",
+                mb: 2,
               }}
             >
               {slide.title}
             </Typography>
-            <Typography sx={{ color: "#c5c5c5", whiteSpace: "wrap" }}>
+            <Typography
+              // component={motion.p}
+              sx={{
+                color: "#ffffff",
+                whiteSpace: "wrap",
+                fontFamily: "poppins, sans-serif",
+              }}
+            >
               {slide.info}
             </Typography>
             <Button
+              component={Link}
+              to={slide.link}
               variant="contained"
               color="error"
               sx={{ pt: 2, pb: 2, mt: 4 }}
@@ -107,23 +137,30 @@ const Slider = () => {
             sx={{
               display: "flex",
               justifyContent: {
-                lg: "space-around",
+                lg: "flex-end",
                 md: "center",
                 sm: "center",
                 xs: "center",
               },
               height: "inherit",
-              backgroundColor: "#5c5c5c",
+              order: { lg: 1, sm: 1, xs: 1 },
+              mb: { xl: 0, lg: 0, md: 2, sm: 4, xs: 4 },
+              // backgroundColor: "#5c5c5c",
               flex: "50%",
             }}
           >
-            <img
+            <Box
+              component="img"
               src={slide.image}
               alt="product"
-              style={{ height: "auto", width: "50%" }}
+              sx={{
+                height: "auto",
+                width: { lg: "60%", md: "60%", sm: "60%", xs: "80%" },
+                objectFit: "cover",
+              }}
             />
           </Box>
-        </div>
+        </motion.div>
       ))}
     </div>
   );
