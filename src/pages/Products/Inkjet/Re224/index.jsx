@@ -2,7 +2,7 @@ import Head from "@/components/Head";
 import ProductButton from "@/components/ProductButton";
 import Details from "@/components/Details";
 import inkjet from "@/assets/products/re224.png";
-import Samples from "@/assets/samples/font_sample.png";
+import Samples from "@/assets/samples/re200_samples.png";
 import Heading from "@/components/Heading";
 import { Grid, Typography } from "@mui/material";
 import CatalougFile from "@/assets/catalouge/CIJ_RE224.pdf";
@@ -57,7 +57,7 @@ const Re224 = () => {
             direction={"column"}
             lg={6}
             md={4}
-            rowSpacing={{ lg: 12, md: 12 }}
+            rowSpacing={{ lg: 5, sm: 0 }}
           >
             <Grid
               item
@@ -73,19 +73,14 @@ const Re224 = () => {
 
             <Grid
               item
-              alignSelf={{
-                lg: "flex-start",
-                md: "flex-start",
-                sm: "center",
-                xs: "center",
-              }}
+              lg={2}
+              md={1}
+              sm={2}
+              xs={2}
+              sx={{ mb: { xl: 0, lg: 0, sm: 4, xs: 4 } }}
             >
               <Typography sx={modelHeading}>Print Samples</Typography>
-              <ProductImg
-                src={Samples}
-                width={350}
-                style={{ height: "auto" }}
-              />
+              <ProductImg src={Samples} sx={{ height: "90%", width: "90%" }} />
             </Grid>
 
             <Grid item>

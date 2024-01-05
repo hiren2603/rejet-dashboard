@@ -16,6 +16,7 @@ export const modelHeading = {
   marginBottom: "0.5rem",
   color: "#ffffff",
   fontWeight: "600",
+
 };
 
 export const modelDetails = {

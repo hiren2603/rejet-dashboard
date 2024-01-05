@@ -72,11 +72,7 @@ const Re200Plus = () => {
 
             <Grid item lg={2} md={1} sm={2} xs={2} mb={5}>
               <Typography sx={modelHeading}>Print Samples</Typography>
-              <ProductImg
-                src={Samples}
-                width={350}
-                sx={{ height: "90%", width: "90%" }}
-              />
+              <ProductImg src={Samples} sx={{ height: "90%", width: "90%" }} />
             </Grid>
 
             <Grid item>

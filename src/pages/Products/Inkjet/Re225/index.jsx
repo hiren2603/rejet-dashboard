@@ -2,15 +2,11 @@ import Head from "@/components/Head";
 import ProductButton from "@/components/ProductButton";
 import Details from "@/components/Details";
 import inkjet from "@/assets/products/re225.png";
-import Samples from "@/assets/samples/font_sample.png";
+import Samples from "@/assets/samples/re200_samples.png";
 import Heading from "@/components/Heading";
-import { Grid, Typography} from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import CatalougFile from "@/assets/catalouge/CIJ_RE225.pdf";
-import {
-  productHeading,
-  modelHeading,
-  ProductImg,
-} from "./style";
+import { productHeading, modelHeading, ProductImg } from "./style";
 import {
   re225TechSpec,
   re225DataSpec,
@@ -39,13 +35,13 @@ const Re225 = () => {
           sx={{
             ...productHeading,
             display: { lg: "flex", md: "flex", sm: "flex", xs: "none" },
-            color : "white"
+            color: "white",
           }}
           align="center"
         >
           continuous inkjet printers
         </Typography>
-        <Heading name="RE225" type="INKJET PRINTER" pdf={CatalougFile}/>
+        <Heading name="RE225" type="INKJET PRINTER" pdf={CatalougFile} />
 
         <Grid
           container
@@ -71,25 +67,20 @@ const Re225 = () => {
                 alignItems: "center",
               }}
             >
-              <img src={inkjet} alt="Laser" width={350}/>
+              <img src={inkjet} alt="Laser" width={350} />
               <ProductButton />
             </Grid>
 
             <Grid
               item
-              alignSelf={{
-                lg: "flex-start",
-                md: "flex-start",
-                sm: "center",
-                xs: "center",
-              }}
+              lg={2}
+              md={1}
+              sm={2}
+              xs={2}
+              sx={{ mb: { xl: 0, lg: 0, sm: 4, xs: 4 } }}
             >
               <Typography sx={modelHeading}>Print Samples</Typography>
-              <ProductImg
-                src={Samples}
-                width={350}
-                style={{ height: "400px" }}
-              />
+              <ProductImg src={Samples} sx={{ height: "90%", width: "90%" }} />
             </Grid>
 
             <Grid item>
@@ -123,9 +114,14 @@ const Re225 = () => {
                 Product Details
               </Typography>
               {re225TechSpec?.map((item) => (
-                <Grid container item key={item.id} sx={{ m: "2px 0", color : "white" }}>
+                <Grid
+                  container
+                  item
+                  key={item.id}
+                  sx={{ m: "2px 0", color: "white" }}
+                >
                   <Grid item lg={6} md={6} sm={7} xs={7}>
-                    <Typography sx={{ fontWeight: "600", color : "white" }}>
+                    <Typography sx={{ fontWeight: "600", color: "white" }}>
                       {item.label} :
                     </Typography>
                   </Grid>
@@ -145,7 +141,12 @@ const Re225 = () => {
               </Typography>
 
               {re225DataSpec?.map((item) => (
-                <Grid container item key={item.id} sx={{ m: "2px 0", color : "white" }}>
+                <Grid
+                  container
+                  item
+                  key={item.id}
+                  sx={{ m: "2px 0", color: "white" }}
+                >
                   <Grid item lg={6} md={5} sm={6} xs={6}>
                     <Typography sx={{ fontWeight: "600" }}>
                       {item.label} :
@@ -166,7 +167,12 @@ const Re225 = () => {
                 features
               </Typography>
               {re225Features?.map((item) => (
-                <Grid container item key={item.id} sx={{ m: "2px 0", color : "white" }}>
+                <Grid
+                  container
+                  item
+                  key={item.id}
+                  sx={{ m: "2px 0", color: "white" }}
+                >
                   <Grid item lg={6} md={6} sm={6} xs={6}>
                     <Typography sx={{ fontWeight: "600" }}>
                       {item.label} :
@@ -187,7 +193,12 @@ const Re225 = () => {
                 ink system
               </Typography>
               {inkSystem?.map((item) => (
-                <Grid container item key={item.id} sx={{ m: "2px 0", color : "white" }}>
+                <Grid
+                  container
+                  item
+                  key={item.id}
+                  sx={{ m: "2px 0", color: "white" }}
+                >
                   <Grid item lg={6} md={6} sm={6} xs={6}>
                     <Typography sx={{ fontWeight: "600" }}>
                       {item.label} :
