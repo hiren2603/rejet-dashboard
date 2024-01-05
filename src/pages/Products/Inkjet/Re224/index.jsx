@@ -99,7 +99,7 @@ const Re224 = () => {
               {re224TechSpec?.map((item) => (
                 <Grid container item key={item.id}>
                   <Grid item lg={7} md={7} sm={6} xs={8}>
-                    <Typography sx={{ fontWeight: "600", color: "white" }}>
+                    <Typography sx={{ fontWeight: "500", color: "white" }}>
                       {item.label} :
                     </Typography>
                   </Grid>
@@ -115,7 +115,7 @@ const Re224 = () => {
               {re224Features?.map((item) => (
                 <Grid container item key={item.id} sx={{ mt: "3px" }}>
                   <Grid item lg={7} md={6} sm={6} xs={6}>
-                    <Typography sx={{ fontWeight: "600", color: "white" }}>
+                    <Typography sx={{ fontWeight: "500", color: "white" }}>
                       {item.label} :
                     </Typography>
                   </Grid>
@@ -138,7 +138,7 @@ const Re224 = () => {
               {re224FontSpec?.map((item) => (
                 <Grid container item key={item.id}>
                   <Grid item lg={7} md={6} sm={6} xs={6}>
-                    <Typography sx={{ fontWeight: "600", color: "white" }}>
+                    <Typography sx={{ fontWeight: "500", color: "white" }}>
                       {item.label} :
                     </Typography>
                   </Grid>
@@ -154,7 +154,7 @@ const Re224 = () => {
               {re224Languages?.map((item) => (
                 <Grid container item key={item.id}>
                   <Grid item lg={6} md={6} sm={6} xs={6}>
-                    <Typography sx={{ fontWeight: "600", color: "white" }}>
+                    <Typography sx={{ fontWeight: "500", color: "white" }}>
                       {item.key} :
                     </Typography>
                   </Grid>

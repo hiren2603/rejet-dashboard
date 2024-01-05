@@ -104,7 +104,7 @@ const Fiber = () => {
                   }}
                 >
                   <Grid item lg={6} md={7} sm={6} xs={7}>
-                    <Typography sx={{ fontWeight: "600" }}>
+                    <Typography sx={{ fontWeight: "500" }}>
                       {item.title}
                     </Typography>
                   </Grid>

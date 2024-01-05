@@ -2,7 +2,7 @@ export const re225TechSpec = [
   {
     id: 1,
     label: "Product Model",
-    content: "RE224",
+    content: "RE225",
   },
   {
     id: 2,

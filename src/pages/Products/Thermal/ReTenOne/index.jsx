@@ -60,7 +60,7 @@ const ReTenOne = () => {
                   <Typography sx={modelHeading}>{item.model}</Typography>
                   <Grid container item>
                     <Grid item lg={6} md={5} sm={5} xs={5}>
-                      <Typography sx={{ fontWeight: "600" }}>
+                      <Typography sx={{ fontWeight: "500" }}>
                         printHeight
                       </Typography>
                     </Grid>
@@ -83,12 +83,14 @@ const ReTenOne = () => {
                       md={7}
                       sm={6}
                       xs={6}
-                      sx={{ fontWeight: "600" }}
+                      sx={{ fontWeight: "550" }}
                     >
-                      {item.title}
+                      <Typography sx={{ fontWeight: "500" }}>
+                        {item.title}
+                      </Typography>
                     </Grid>
                     <Grid item lg={5} md={5} sm={6} xs={6}>
-                      {item.content}
+                      <Typography>{item.content}</Typography>
                     </Grid>
                   </Grid>
                 );
@@ -106,7 +108,7 @@ const ReTenOne = () => {
                       md={6}
                       sm={6}
                       xs={6}
-                      sx={{ fontWeight: "600" }}
+                      sx={{ fontWeight: 520 }}
                     >
                       {item.title}
                     </Grid>

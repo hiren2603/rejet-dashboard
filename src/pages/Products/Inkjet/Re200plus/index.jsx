@@ -113,7 +113,7 @@ const Re200Plus = () => {
               {re200PlusPrintParams?.map((item) => (
                 <Grid container item key={item.id} sx={{ m: "2px 0" }}>
                   <Grid item lg={7} md={7} sm={7} xs={7}>
-                    <Typography sx={{ fontWeight: "600", color: "white" }}>
+                    <Typography sx={{ fontWeight: "500", color: "white" }}>
                       {item.title} :
                     </Typography>
                   </Grid>
@@ -164,7 +164,7 @@ const Re200Plus = () => {
               {inkSystem?.map((item) => (
                 <Grid item container key={item.id}>
                   <Grid item lg={5} md={6} sm={6} xs={6}>
-                    <Typography sx={{ fontWeight: "600", color: "white" }}>
+                    <Typography sx={{ fontWeight: "500", color: "white" }}>
                       {item.title} :
                     </Typography>
                   </Grid>
@@ -184,7 +184,7 @@ const Re200Plus = () => {
               {cabinetData?.map((item) => (
                 <Grid item container key={item.id}>
                   <Grid item lg={5} md={6} sm={6}>
-                    <Typography sx={{ fontWeight: "600", color: "white" }}>
+                    <Typography sx={{ fontWeight: "500", color: "white" }}>
                       {item.title}
                     </Typography>
                   </Grid>
@@ -196,59 +196,6 @@ const Re200Plus = () => {
             </Grid>
           </Grid>
         </Grid>
-
-        {/* <Grid container item direction="row" columnSpacing={10}>
-          <Grid
-            item
-            lg={5}
-            justifyContent={{ xs: "center", sm: "center", md: "center" }}
-            mt={4}
-          >
-            <img src={spares} alt="spares" width={"60%"} />
-          </Grid>
-
-          <Grid
-            item
-            sx={{ display: "flex", flexDirection: "column" }}
-            lg={5}
-            mt={4}
-          >
-            <Typography sx={modelHeading}>re200+ spares</Typography>
-            <List sx={{ color: "white" }}>
-              Smart Print Head, Modular designed still give flexibility to
-              replace individual spare separately. Automatic Calibration
-              function automatically adjusts printing parameters according to
-              the changes in the environment.
-            </List>
-          </Grid>
-        </Grid> */}
-
-        {/* <Grid container item direction="row" columnSpacing={10} mb={4}>
-          <Grid
-            item
-            lg={5}
-            mt={5}
-            sx={{ justifySelf: { md: "center" } }}
-            justifyContent={{ xs: "center", sm: "center", md: "center" }}
-          >
-            <img src={consumable} alt="consumable Image" width={"90%"} />
-          </Grid>
-
-          <Grid
-            item
-            sx={{ display: "flex", flexDirection: "column" }}
-            lg={5}
-            mt={5}
-          >
-            <Typography sx={modelHeading}>re200+ consumable</Typography>
-            <List sx={{ color: "white" }}>
-              Inteligent Ink Management System of RE200+ Inkjet Printer
-              eliminates the wastage of consumables as there is no manual
-              pouring. Easy Insertion and Removal of Cartridges eliminates the
-              risk of Damage
-            </List>
-          </Grid>
-        </Grid> */}
       </Grid>
     </div>
   );

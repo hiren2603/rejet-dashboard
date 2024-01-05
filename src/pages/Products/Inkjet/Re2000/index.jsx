@@ -107,7 +107,7 @@ const Re2000 = () => {
                   sx={{ m: "2px 0", color: "white" }}
                 >
                   <Grid item lg={7} md={7} sm={7} xs={7}>
-                    <Typography sx={{ fontWeight: "600" }}>
+                    <Typography sx={{ fontWeight: "500" }}>
                       {item.title} :
                     </Typography>
                   </Grid>
@@ -133,7 +133,7 @@ const Re2000 = () => {
                   sx={{ m: "2px 0", color: "white" }}
                 >
                   <Grid item lg={7} md={7} sm={7} xs={6}>
-                    <Typography sx={{ fontWeight: "600" }}>
+                    <Typography sx={{ fontWeight: "500" }}>
                       {item.title} :
                     </Typography>
                   </Grid>

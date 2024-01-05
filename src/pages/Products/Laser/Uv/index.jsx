@@ -23,13 +23,13 @@ const Uv = () => {
         sx={{
           ...productHeading,
           display: { lg: "flex", md: "flex", sm: "flex", xs: "none" },
-          color : "white"
+          color: "white",
         }}
         align="center"
       >
         uv laser marking system
       </Typography>
-      <Heading name="Ultra Violet" type="LASER" pdf={CatalougFile}/>
+      <Heading name="Ultra Violet" type="LASER" pdf={CatalougFile} />
 
       <Grid
         container
@@ -46,7 +46,7 @@ const Uv = () => {
             alignSelf={"center"}
             sx={{ display: "flex", flexDirection: "column" }}
           >
-            <ProductImg src={uvImage} width={350}/>
+            <ProductImg src={uvImage} width={350} />
             <ProductButton />
           </Grid>
 
@@ -67,9 +67,14 @@ const Uv = () => {
           <Grid container item>
             <Typography sx={modelHeading}>Specifications</Typography>
             {uvData?.map((item) => (
-              <Grid container item key={item.id} sx={{ margin: "1px 0", color : "white" }}>
+              <Grid
+                container
+                item
+                key={item.id}
+                sx={{ margin: "1px 0", color: "white" }}
+              >
                 <Grid item lg={5} md={6} sm={7} xs={7}>
-                  <Typography sx={{ fontWeight: "580" }}>
+                  <Typography sx={{ fontWeight: "500" }}>
                     {item.title}
                   </Typography>
                 </Grid>

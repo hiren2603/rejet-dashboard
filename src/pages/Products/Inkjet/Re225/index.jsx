@@ -121,7 +121,7 @@ const Re225 = () => {
                   sx={{ m: "2px 0", color: "white" }}
                 >
                   <Grid item lg={6} md={6} sm={7} xs={7}>
-                    <Typography sx={{ fontWeight: "600", color: "white" }}>
+                    <Typography sx={{ fontWeight: "500", color: "white" }}>
                       {item.label} :
                     </Typography>
                   </Grid>
@@ -148,7 +148,7 @@ const Re225 = () => {
                   sx={{ m: "2px 0", color: "white" }}
                 >
                   <Grid item lg={6} md={5} sm={6} xs={6}>
-                    <Typography sx={{ fontWeight: "600" }}>
+                    <Typography sx={{ fontWeight: "500" }}>
                       {item.label} :
                     </Typography>
                   </Grid>
@@ -228,7 +228,7 @@ const Re225 = () => {
           </Grid>
         </Grid>
 
-        <Grid item lg={12} md={12} sm={12}>
+        <Grid item lg={12} md={12} sm={12} mb={4}>
           <Typography sx={modelHeading}>software system</Typography>
           {re225SoftwareSystem?.map((item) => {
             return <Details key={item.id} content={item.content} />;
