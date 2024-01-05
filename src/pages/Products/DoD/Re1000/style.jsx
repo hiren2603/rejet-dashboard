@@ -16,6 +16,8 @@ export const modelHeading = {
   marginBottom: "0.5rem",
   color: "#ffffff",
   fontWeight: 600,
+  mb: 2,
+  mt: 2,
 };
 
 export const modelDetails = {
@@ -29,6 +31,8 @@ export const headings = {
   fontWeight: "580",
   fontSize: "20px",
   textTransform: "uppercase",
+  mb: 2,
+  mt: 2,
 };
 
 export const ProductImg = styled("img")({
