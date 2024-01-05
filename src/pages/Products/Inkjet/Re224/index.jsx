@@ -4,13 +4,9 @@ import Details from "@/components/Details";
 import inkjet from "@/assets/products/re224.png";
 import Samples from "@/assets/samples/font_sample.png";
 import Heading from "@/components/Heading";
-import { Grid, Typography} from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import CatalougFile from "@/assets/catalouge/CIJ_RE224.pdf";
-import {
-  productHeading,
-  modelHeading,
-  ProductImg,
-} from "./style";
+import { productHeading, modelHeading, ProductImg } from "./style";
 import {
   re224TechSpec,
   re224FontSpec,
@@ -39,7 +35,7 @@ const Re224 = () => {
           sx={{
             ...productHeading,
             display: { lg: "flex", md: "flex", sm: "flex", xs: "none" },
-            color : "white"
+            color: "white",
           }}
           align="center"
         >
@@ -61,7 +57,7 @@ const Re224 = () => {
             direction={"column"}
             lg={6}
             md={4}
-            rowSpacing={{lg: 12, md: 12}}
+            rowSpacing={{ lg: 12, md: 12 }}
           >
             <Grid
               item
@@ -108,11 +104,11 @@ const Re224 = () => {
               {re224TechSpec?.map((item) => (
                 <Grid container item key={item.id}>
                   <Grid item lg={7} md={7} sm={6} xs={8}>
-                    <Typography sx={{ fontWeight: "600", color : "white" }}>
+                    <Typography sx={{ fontWeight: "600", color: "white" }}>
                       {item.label} :
                     </Typography>
                   </Grid>
-                  <Grid item md={4} sx={{ color : "white"}}>
+                  <Grid item md={4} sx={{ color: "white" }}>
                     {item.content}
                   </Grid>
                 </Grid>
@@ -124,11 +120,18 @@ const Re224 = () => {
               {re224Features?.map((item) => (
                 <Grid container item key={item.id} sx={{ mt: "3px" }}>
                   <Grid item lg={7} md={6} sm={6} xs={6}>
-                    <Typography sx={{ fontWeight: "600", color : "white" }}>
+                    <Typography sx={{ fontWeight: "600", color: "white" }}>
                       {item.label} :
                     </Typography>
                   </Grid>
-                  <Grid item lg={5} md={5} sm={5} xs={5} sx={{color : "white"}}>
+                  <Grid
+                    item
+                    lg={5}
+                    md={5}
+                    sm={5}
+                    xs={5}
+                    sx={{ color: "white" }}
+                  >
                     {item.feature}
                   </Grid>
                 </Grid>
@@ -140,11 +143,11 @@ const Re224 = () => {
               {re224FontSpec?.map((item) => (
                 <Grid container item key={item.id}>
                   <Grid item lg={7} md={6} sm={6} xs={6}>
-                    <Typography sx={{ fontWeight: "600", color : "white" }}>
+                    <Typography sx={{ fontWeight: "600", color: "white" }}>
                       {item.label} :
                     </Typography>
                   </Grid>
-                  <Grid item lg md sm xs sx={{color : "white"}}>
+                  <Grid item lg md sm xs sx={{ color: "white" }}>
                     {item.content}
                   </Grid>
                 </Grid>
@@ -156,11 +159,11 @@ const Re224 = () => {
               {re224Languages?.map((item) => (
                 <Grid container item key={item.id}>
                   <Grid item lg={6} md={6} sm={6} xs={6}>
-                    <Typography sx={{ fontWeight: "600", color : "white" }}>
+                    <Typography sx={{ fontWeight: "600", color: "white" }}>
                       {item.key} :
                     </Typography>
                   </Grid>
-                  <Grid item lg={6} md sm xs={6} sx={{color : "white"}}>
+                  <Grid item lg={6} md sm xs={6} sx={{ color: "white" }}>
                     {item.content}
                   </Grid>
                 </Grid>

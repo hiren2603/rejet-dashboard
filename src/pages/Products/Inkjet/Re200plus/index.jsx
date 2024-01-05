@@ -2,7 +2,7 @@ import Head from "@/components/Head";
 import ProductButton from "@/components/ProductButton";
 import Details from "@/components/Details";
 import inkjet from "@/assets/products/re200plus.png";
-import Samples from "@/assets/samples/font_sample.png";
+import Samples from "@/assets/samples/re200_samples.png";
 import consumable from "@/assets/products/cij_consumable.png";
 import spares from "@/assets/products/cij_spares.png";
 import Heading from "@/components/Heading";
@@ -46,7 +46,7 @@ const Re200Plus = () => {
           item
           direction={"row"}
           columnGap={9}
-          sx={{ mt: "3rem" }}
+          sx={{ mt: "3rem", mb: 5 }}
           justifyContent="space-between"
         >
           <Grid
@@ -70,12 +70,12 @@ const Re200Plus = () => {
               <ProductButton />
             </Grid>
 
-            <Grid item lg={2} md={1} sm={2} xs={2}>
+            <Grid item lg={2} md={1} sm={2} xs={2} mb={5}>
               <Typography sx={modelHeading}>Print Samples</Typography>
               <ProductImg
                 src={Samples}
                 width={350}
-                style={{ height: "400px" }}
+                sx={{ height: "90%", width: "90%" }}
               />
             </Grid>
 
@@ -201,7 +201,7 @@ const Re200Plus = () => {
           </Grid>
         </Grid>
 
-        <Grid container item direction="row" columnSpacing={10}>
+        {/* <Grid container item direction="row" columnSpacing={10}>
           <Grid
             item
             lg={5}
@@ -225,9 +225,9 @@ const Re200Plus = () => {
               the changes in the environment.
             </List>
           </Grid>
-        </Grid>
+        </Grid> */}
 
-        <Grid container item direction="row" columnSpacing={10} mb={4}>
+        {/* <Grid container item direction="row" columnSpacing={10} mb={4}>
           <Grid
             item
             lg={5}
@@ -252,7 +252,7 @@ const Re200Plus = () => {
               risk of Damage
             </List>
           </Grid>
-        </Grid>
+        </Grid> */}
       </Grid>
     </div>
   );

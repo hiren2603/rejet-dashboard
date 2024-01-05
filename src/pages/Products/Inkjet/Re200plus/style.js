@@ -13,7 +13,7 @@ export const productHeading = {
 export const modelHeading = {
   fontSize: "26px",
   textTransform: "uppercase",
-  marginBottom: "0.5rem",
+  marginBottom: "1rem",
   color: "#ffffff",
   fontWeight: "600",
 };
