@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { Box, Button, Grid, Stack, Typography } from "@mui/material";
 import { SlideItems } from "@/helpers/SlideItems";
 import { slideDetails, overlayStyle } from "./style";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import inkjet from "@/assets/products/re200plus.png";
 import Slide from "./Slide";
 
@@ -33,22 +33,6 @@ const Slider = () => {
     };
   }, [slideId, length]);
 
-  // const nextSlide = () => {
-  //   if (slideId === length) {
-  //     setSlideId(1);
-  //     console.log(slideId);
-  //   } else {
-  //     setSlideId(slideId + 1);
-  //   }
-  // };
-  // const prevSlide = () => {
-  //   if (slideId === 1) {
-  //     console.log(slideId);
-  //     setSlideId(length);
-  //   } else {
-  //     setSlideId(slideId - 1);
-  //   }
-  // };
 
   return (
     <div
