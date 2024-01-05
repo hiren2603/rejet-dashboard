@@ -22,13 +22,14 @@ export const MobileLinkContainer = styled("div")(({ theme }) => ({
   justifyContent: "space-evenly",
   alignItems: "center",
   position: "absolute",
-  left: "-7vh",
+  left: "-2vw",
   // top: "6vh",
   height: "80vh",
-  width: "120vw",
+  width: "100vw",
   transition: "all .5s ease-in",
   zIndex: "9",
   backgroundColor: "#161922",
+  // border:"2px solid red",
 
   '&' : {
     color : "#ffffff",
@@ -37,12 +38,9 @@ export const MobileLinkContainer = styled("div")(({ theme }) => ({
     color : "#ffffff",
   },
 
-  [theme.breakpoints.down("sm")]: {
-    top: "75px",
-    left: "-14vh",
-  },
-  [theme.breakpoints.down("md")]: { top: "13vh", left: "-16vh" },
-  [theme.breakpoints.down("lg")] : { top : "75px", left : "-16vh"}
+  [theme.breakpoints.down("sm")]: {top: "75px", left: "-3vw"},
+  [theme.breakpoints.down("md")]: { top: "75px", left: "-16vw" },
+  [theme.breakpoints.down("lg")] : { top : "75px", left : "-3vw"}
 }))
 
 export const LinkContainer = styled("div")({
