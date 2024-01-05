@@ -40,41 +40,9 @@ const Desktop = () => {
           item
           direction={"row"}
           sx={{ mt: "3rem" }}
-          columnGap={2}
+          columnGap={10}
         >
-          <Grid container item direction={"column"} lg={8} md={6} rowGap={5}>
-            <Grid container item>
-              <Typography sx={modelHeading} textAlign={{ xs: "center" }}>
-                Specifications
-              </Typography>
-              {desktopData?.map((item) => (
-                <Grid
-                  key={item.id}
-                  container
-                  item
-                  sx={{ margin: "2px 0", color: "white" }}
-                >
-                  <Grid item lg={5} md={6} sm={5} xs={7}>
-                    <Typography sx={{ fontWeight: "580" }}>
-                      {item.title}
-                    </Typography>
-                  </Grid>
-                  <Grid item lg={6} md={6} sm={5} xs={5}>
-                    {item.content}
-                  </Grid>
-                </Grid>
-              ))}
-            </Grid>
-
-            <Grid item>
-              <Typography sx={modelHeading}>Features</Typography>
-              {features?.map((item) => {
-                return <Details key={item} content={item} />;
-              })}
-            </Grid>
-          </Grid>
-
-          <Grid container item direction={"column"} lg={1} md={2} rowGap={4}>
+          <Grid container item direction={"column"} lg={6} md={5} rowGap={4}>
             <Grid
               item
               alignSelf={"center"}
@@ -88,7 +56,7 @@ const Desktop = () => {
               <ProductButton />
             </Grid>
 
-            <Grid item alignSelf={{ sm: "center" }}>
+            <Grid item alignSelf={{ sm: "center",md : "start", lg : "start" }}>
               <Typography sx={modelHeading}>Print Samples</Typography>
               <ProductImg src={samples} sx={{ height: "90%", width: "90%" }} />
             </Grid>
@@ -96,6 +64,38 @@ const Desktop = () => {
             <Grid item>
               <Typography sx={modelHeading}>Applicable Products</Typography>
               {applications?.map((item) => {
+                return <Details key={item} content={item} />;
+              })}
+            </Grid>
+          </Grid>
+
+          <Grid container item direction={"column"} lg={5} md={5} rowGap={5}>
+            <Grid container item>
+              <Typography sx={modelHeading} textAlign={{ xs: "center" }}>
+                Specifications
+              </Typography>
+              {desktopData?.map((item) => (
+                <Grid
+                  key={item.id}
+                  container
+                  item
+                  sx={{ margin: "2px 0", color: "white" }}
+                >
+                  <Grid item lg={7} md={8} sm={5} xs={7}>
+                    <Typography sx={{ fontWeight: "580" }}>
+                      {item.title}
+                    </Typography>
+                  </Grid>
+                  <Grid item lg={5} md={4} sm={5} xs={5}>
+                    {item.content}
+                  </Grid>
+                </Grid>
+              ))}
+            </Grid>
+
+            <Grid item>
+              <Typography sx={modelHeading}>Features</Typography>
+              {features?.map((item) => {
                 return <Details key={item} content={item} />;
               })}
             </Grid>
