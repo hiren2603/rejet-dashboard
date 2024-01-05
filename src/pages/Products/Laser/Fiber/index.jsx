@@ -4,7 +4,7 @@ import ProductButton from "@/components/ProductButton";
 import { Typography, Grid, Box } from "@mui/material";
 import { productHeading, ProductImg, modelHeading } from "./style";
 import laserImg from "@/assets/products/fiber.png";
-import printSample from "@/assets/samples/fiber_sample.png";
+import Samples from "@/assets/samples/fiber_samples.png";
 import { fiberData, features, applications } from "@/helpers/fiberData";
 import Head from "@/components/Head";
 import CatalougFile from "@/assets/catalouge/Fiber_Flying_Laser.pdf";
@@ -27,19 +27,19 @@ const Fiber = () => {
           sx={{
             ...productHeading,
             display: { lg: "flex", md: "flex", sm: "flex", xs: "none" },
-            color : "white"
+            color: "white",
           }}
           align="center"
         >
           fiber laser marking system
         </Typography>
-        <Heading name="BETABEAM" type="FIBER LASER" pdf={CatalougFile}/>
+        <Heading name="BETABEAM" type="FIBER LASER" pdf={CatalougFile} />
 
         <Grid
           container
           item
           direction="row"
-          sx={{ mt: {lg: "3rem"} }}
+          sx={{ mt: { lg: "3rem" } }}
           columnGap={5}
           justifyContent={"space-between"}
         >
@@ -64,17 +64,22 @@ const Fiber = () => {
               }}
               lg={4}
             >
-              <ProductImg src={laserImg} width={350}/>
+              <ProductImg src={laserImg} width={350} />
               <ProductButton />
             </Grid>
 
-            <Grid item lg={1}>
-              <Typography sx={modelHeading}>Print Samples</Typography>
-              <ProductImg
-                src={printSample}
-                width={350}
-                style={{ height: "auto" }}
-              />
+            <Grid
+              item
+              lg={2}
+              md={1}
+              sm={2}
+              xs={2}
+              sx={{ mb: { xl: 0, lg: 0, sm: 4, xs: 4 } }}
+            >
+              <Typography sx={{ ...modelHeading, color: "#ffffff" }}>
+                Print Samples
+              </Typography>
+              <ProductImg src={Samples} sx={{ height: "90%", width: "90%" }} />
             </Grid>
 
             <Grid item lg>
@@ -86,7 +91,7 @@ const Fiber = () => {
           </Grid>
 
           <Grid container item lg={5} md={5}>
-            <Box sx={{ display : "flex", flexDirection : "column"}}>
+            <Box sx={{ display: "flex", flexDirection: "column" }}>
               <Typography sx={modelHeading}>Specifications</Typography>
               {fiberData?.map((item) => (
                 <Grid
@@ -95,7 +100,7 @@ const Fiber = () => {
                   key={item.id}
                   sx={{
                     m: { sm: "2px 0", xs: "2px 0", lg: "0px", md: "0px" },
-                    color : "white"
+                    color: "white",
                   }}
                 >
                   <Grid item lg={6} md={7} sm={6} xs={7}>
@@ -110,16 +115,13 @@ const Fiber = () => {
               ))}
             </Box>
             <Grid item lg md mt={4}>
-          <Typography sx={modelHeading}>Features</Typography>
-          {features?.map((item) => {
-            return <Details key={item} content={item} />;
-          })}
-        </Grid>
+              <Typography sx={modelHeading}>Features</Typography>
+              {features?.map((item) => {
+                return <Details key={item} content={item} />;
+              })}
+            </Grid>
           </Grid>
-        
         </Grid>
-
-       
       </Grid>
     </>
   );

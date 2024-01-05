@@ -2,7 +2,7 @@ import Head from "@/components/Head";
 import ProductButton from "@/components/ProductButton";
 import Details from "@/components/Details";
 import image from "@/assets/products/re2000.png";
-import Samples from "@/assets/samples/font_sample.png";
+import Samples from "@/assets/samples/re200_samples.png";
 import Heading from "@/components/Heading";
 import CatalougFile from "@/assets/catalouge/CIJ_RE2000.pdf";
 import { Grid, Typography } from "@mui/material";
@@ -31,7 +31,7 @@ const Re2000 = () => {
           sx={{
             ...productHeading,
             display: { lg: "flex", md: "flex", sm: "flex", xs: "none" },
-            color : "white"
+            color: "white",
           }}
           align="center"
         >
@@ -67,13 +67,16 @@ const Re2000 = () => {
               <ProductButton />
             </Grid>
 
-            <Grid item lg={2} md={1} sm={2} xs={2}>
+            <Grid
+              item
+              lg={2}
+              md={1}
+              sm={2}
+              xs={2}
+              sx={{ mb: { xl: 0, lg: 0, sm: 4, xs: 4 } }}
+            >
               <Typography sx={modelHeading}>Print Samples</Typography>
-              <ProductImg
-                src={Samples}
-                width={350}
-                style={{ height: "400px" }}
-              />
+              <ProductImg src={Samples} sx={{ height: "90%", width: "90%" }} />
             </Grid>
 
             <Grid item>
@@ -82,7 +85,7 @@ const Re2000 = () => {
                 return <Details key={item.id} content={item.content} />;
               })}
             </Grid>
-            <Grid item sx={{color : "white"}}>
+            <Grid item sx={{ color: "white" }}>
               <Typography sx={headings}>Ink System</Typography>
               {inkSystem.content}
             </Grid>
@@ -97,7 +100,12 @@ const Re2000 = () => {
                 Product Details
               </Typography>
               {re2000PrintParams?.map((item) => (
-                <Grid container item key={item.id} sx={{ m: "2px 0", color : "white" }}>
+                <Grid
+                  container
+                  item
+                  key={item.id}
+                  sx={{ m: "2px 0", color: "white" }}
+                >
                   <Grid item lg={7} md={7} sm={7} xs={7}>
                     <Typography sx={{ fontWeight: "600" }}>
                       {item.title} :
@@ -118,7 +126,12 @@ const Re2000 = () => {
                 Specifications
               </Typography>
               {re2000Params?.map((item) => (
-                <Grid container item key={item.id} sx={{ m: "2px 0", color : "white" }}>
+                <Grid
+                  container
+                  item
+                  key={item.id}
+                  sx={{ m: "2px 0", color: "white" }}
+                >
                   <Grid item lg={7} md={7} sm={7} xs={6}>
                     <Typography sx={{ fontWeight: "600" }}>
                       {item.title} :
@@ -132,7 +145,9 @@ const Re2000 = () => {
             </Grid>
             <Grid item>
               <Typography sx={headings}>Print Head</Typography>
-              <Typography sx={{color : "white"}}>{printHead.content}</Typography>
+              <Typography sx={{ color: "white" }}>
+                {printHead.content}
+              </Typography>
             </Grid>
           </Grid>
         </Grid>

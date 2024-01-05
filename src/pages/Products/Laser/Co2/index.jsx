@@ -1,5 +1,5 @@
 import LaserImg from "@/assets/products/co2.png";
-import Samples from "@/assets/samples/co2_samples.png";
+import Samples from "@/assets/samples/co2_sample.png";
 import ProductButton from "@/components/ProductButton";
 import Details from "@/components/Details";
 import Heading from "@/components/Heading";
@@ -21,7 +21,7 @@ const Co2 = () => {
       <Grid
         container
         width={"90%"}
-        sx={{ margin: "0 auto" }}
+        sx={{ margin: "0 auto", marginBottom: "2rem" }}
         alignItems="center"
         justifyContent="center"
       >
@@ -50,26 +50,33 @@ const Co2 = () => {
             direction={"column"}
             lg={5}
             md={5}
-            rowSpacing={10}
+            rowSpacing={{ lg: 5, sm: 0 }}
           >
             <Grid
               item
               alignSelf={"center"}
-              sx={{ display: "flex", flexDirection: "column" }}
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
             >
               <img src={LaserImg} alt="Laser" width={350} />
               <ProductButton />
             </Grid>
 
-            <Grid item lg={2} md={1} sm={2} xs={2}>
+            <Grid
+              item
+              lg={2}
+              md={1}
+              sm={2}
+              xs={2}
+              sx={{ mb: { xl: 0, lg: 0, sm: 4, xs: 4 } }}
+            >
               <Typography sx={{ ...modelHeading, color: "#ffffff" }}>
                 Print Samples
               </Typography>
-              <ProductImg
-                src={Samples}
-                width={360}
-                style={{ height: "auto" }}
-              />
+              <ProductImg src={Samples} sx={{ height: "90%", width: "90%" }} />
             </Grid>
 
             <Grid item>
