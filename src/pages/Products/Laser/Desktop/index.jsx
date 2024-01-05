@@ -50,13 +50,14 @@ const Desktop = () => {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
+                alignItems: "center",
               }}
             >
               <ProductImg src={desktopImg} />
               <ProductButton />
             </Grid>
 
-            <Grid item alignSelf={{ sm: "center",md : "start", lg : "start" }}>
+            <Grid item alignSelf={{ sm: "center", md: "start", lg: "start" }}>
               <Typography sx={modelHeading}>Print Samples</Typography>
               <ProductImg src={samples} sx={{ height: "90%", width: "90%" }} />
             </Grid>
