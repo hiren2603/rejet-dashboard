@@ -1,3 +1,5 @@
+import { styled } from "@mui/material";
+
 export const productHeading = {
   fontSize: "36px",
   textTransform: "uppercase",
@@ -15,3 +17,9 @@ export const modelHeading = {
   color: "#fff",
   fontWeight: "600",
 };
+
+export const ProductImg = styled("img")({
+  justifySelf: "center",
+  alignSelf: "flex-start",
+  height: "80%",
+});

@@ -2,7 +2,7 @@ import Head from "@/components/Head";
 import Heading from "@/components/Heading";
 import Details from "@/components/Details";
 import ProductButton from "@/components/ProductButton";
-import samples from "@/assets/samples/tij_samples.png";
+import Samples from "@/assets/samples/re10.1_samples.png";
 import TIJProduct1 from "@/assets/products/re_tenOne.png";
 import TIJProduct2 from "@/assets/products/re10.2.png";
 import {
@@ -12,7 +12,7 @@ import {
   applications,
 } from "@/helpers/tijData";
 import { Grid, Typography } from "@mui/material";
-import { productHeading, modelHeading } from "./style";
+import { productHeading, modelHeading, ProductImg } from "./style";
 import CatalougFile from "@/assets/catalouge/TIJ.pdf";
 
 const ReTenOne = () => {
@@ -143,9 +143,17 @@ const ReTenOne = () => {
               <ProductButton />
             </Grid>
 
-            <Grid item>
+            <Grid
+              item
+              lg={2}
+              md={1}
+              sm={2}
+              xs={2}
+              sx={{ mb: { xl: 0, lg: 0, sm: 4, xs: 4 } }}
+            >
               <Typography sx={modelHeading}>Print Samples</Typography>
-              <img src={samples} alt="Product Samples" style={{ width: 350 }} />
+              {/* <img src={samples} alt="Product Samples" style={{ width: 350 }} /> */}
+              <ProductImg src={Samples} sx={{ height: "90%", width: "90%" }} />
             </Grid>
 
             <Grid item>
