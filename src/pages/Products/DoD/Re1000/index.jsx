@@ -2,7 +2,7 @@ import Head from "@/components/Head";
 import ProductButton from "@/components/ProductButton";
 import Details from "@/components/Details";
 import image from "@/assets/products/re1000.png";
-import Samples from "@/assets/samples/font_sample.png";
+import Samples from "@/assets/samples/dod_samples.png";
 import Heading from "@/components/Heading";
 import CatalougFile from "@/assets/catalouge/DOD_RE_1000.pdf";
 import { Grid, Typography } from "@mui/material";
@@ -32,7 +32,7 @@ const Re1000 = () => {
           sx={{
             ...productHeading,
             display: { lg: "flex", md: "flex", sm: "flex", xs: "none" },
-            color : "white"
+            color: "white",
           }}
           align="center"
         >
@@ -64,17 +64,20 @@ const Re1000 = () => {
                 alignItems: "center",
               }}
             >
-              <img src={image} alt="Re200+" width={350} />
+              <img src={image} alt="re1000_Image+" width={350} />
               <ProductButton />
             </Grid>
 
-            <Grid item lg={2} md={1} sm={2} xs={2}>
+            <Grid
+              item
+              lg={2}
+              md={1}
+              sm={2}
+              xs={2}
+              sx={{ mb: { xl: 0, lg: 0, sm: 4, xs: 4 } }}
+            >
               <Typography sx={modelHeading}>Print Samples</Typography>
-              <ProductImg
-                src={Samples}
-                width={350}
-                style={{ height: "400px" }}
-              />
+              <ProductImg src={Samples} sx={{ height: "90%", width: "90%" }} />
             </Grid>
 
             <Grid item>
@@ -85,11 +88,15 @@ const Re1000 = () => {
             </Grid>
             <Grid item container>
               <Typography sx={headings}>Ink system</Typography>
-              <Typography sx={{color : "white"}}>{inkSystem.content}</Typography>
+              <Typography sx={{ color: "white" }}>
+                {inkSystem.content}
+              </Typography>
             </Grid>
             <Grid item container>
               <Typography sx={headings}>{mainHardware.title}</Typography>
-              <Typography sx={{color : "white"}}>{mainHardware.content}</Typography>
+              <Typography sx={{ color: "white" }}>
+                {mainHardware.content}
+              </Typography>
             </Grid>
           </Grid>
 
@@ -102,7 +109,12 @@ const Re1000 = () => {
                 Product Details
               </Typography>
               {re1000PrintParams?.map((item) => (
-                <Grid container item key={item.id} sx={{ m: "2px 0", color : "white" }}>
+                <Grid
+                  container
+                  item
+                  key={item.id}
+                  sx={{ m: "2px 0", color: "white" }}
+                >
                   <Grid item lg={7} md={7} sm={7} xs={7}>
                     <Typography sx={{ fontWeight: "600" }}>
                       {item.title} :
@@ -123,7 +135,12 @@ const Re1000 = () => {
                 Specifications
               </Typography>
               {re1000Params?.map((item) => (
-                <Grid container item key={item.id} sx={{ m: "2px 0", color : "white" }}>
+                <Grid
+                  container
+                  item
+                  key={item.id}
+                  sx={{ m: "2px 0", color: "white" }}
+                >
                   <Grid item lg={7} md={7} sm={7} xs={6}>
                     <Typography sx={{ fontWeight: "600" }}>
                       {item.title} :
@@ -138,7 +155,9 @@ const Re1000 = () => {
 
             <Grid item container>
               <Typography sx={headings}>{printHead.title}</Typography>
-              <Typography sx={{color : "white"}}>{printHead.content}</Typography>
+              <Typography sx={{ color: "white" }}>
+                {printHead.content}
+              </Typography>
             </Grid>
           </Grid>
         </Grid>
