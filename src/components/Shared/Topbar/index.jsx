@@ -26,17 +26,10 @@ import { Link } from "react-router-dom";
 
 const Topbar = () => {
   const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.between("xs", "md"));
+  const isSmallScreen = useMediaQuery(theme.breakpoints.between("xs", "lg"));
   const [isOpen, setIsOpen] = useState(false);
   const [dropDown, setDropDown] = useState(false);
-  const [menu, setMenu] = useState({
-    inkjet: false,
-    thermal: false,
-    laser: false,
-    dod: false,
-  });
-  let { inkjet, thermal, laser } = menu;
-
+  
   useEffect(() => {
     // Add and remove 'no-scroll' class to body based on the drawer state
     if (isOpen) {
@@ -55,45 +48,7 @@ const Topbar = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleMenu = (name, value) => {
-    if (name === "inkjet") {
-      setMenu({
-        inkjet: value,
-        laser: false,
-        thermal: false,
-        dod: false,
-      });
-    } else if (name === "thermal") {
-      setMenu({
-        inkjet: false,
-        laser: false,
-        thermal: value,
-        dod: false,
-      });
-    } else if (name === "laser") {
-      setMenu({
-        inkjet: false,
-        thermal: false,
-        dod: false,
-        laser: value,
-      });
-    } else if (name === "dod") {
-      setMenu({
-        inkjet: false,
-        thermal: false,
-        laser: false,
-        dod: value,
-      });
-    }
-  };
-
   const multiToggle = () => {
-    setMenu({
-      inkjet: false,
-      thermal: false,
-      laser: false,
-      dod: false,
-    });
     setDropDown(false);
     setIsOpen(false);
   };

@@ -11,7 +11,8 @@ export const NavLinkContainer = styled("div")(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {
     display: "none"
   },
-  [theme.breakpoints.down("md")]: { display: "none" }
+  [theme.breakpoints.down("md")]: { display: "none" },
+  [theme.breakpoints.down("lg")]: { display: "none" }
 }))
 
 export const MobileLinkContainer = styled("div")(({ theme }) => ({
@@ -40,7 +41,8 @@ export const MobileLinkContainer = styled("div")(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {
     top: "75px",
     left: "-12vh",
-  }
+  },
+  [theme.breakpoints.down("lg")] : { top : "75px", left : "-16vh"}
 }))
 
 export const LinkContainer = styled("div")({
