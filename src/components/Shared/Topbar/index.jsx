@@ -9,6 +9,8 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import CallIcon from "@mui/icons-material/Call";
+import EmailIcon from "@mui/icons-material/Email";
 import CloseIcon from "@mui/icons-material/Close";
 import MuiAppBar from "@mui/material/AppBar";
 import { styled } from "@mui/material/styles";
@@ -134,7 +136,7 @@ const Topbar = () => {
               </NavLinkContainer>
             )}
 
-            {isSmallScreen && (
+            {isSmallScreen ? (
               <Box
                 sx={{
                   flexGrow: 3,
@@ -161,6 +163,24 @@ const Topbar = () => {
                     <MenuIcon color="white" />
                   </IconButton>
                 )}
+              </Box>
+            ) : (
+              <Box sx={contactContainer}>
+                <ContactButton
+                  href="tel:769-827-1412"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <CallIcon />
+                  Call Now
+                </ContactButton>
+
+                <ContactButton
+                  href="mailto:info@rejettech.com"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <EmailIcon color="white" />
+                  Send Mail
+                </ContactButton>
               </Box>
             )}
           </Toolbar>

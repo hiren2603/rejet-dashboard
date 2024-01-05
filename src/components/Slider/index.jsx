@@ -31,22 +31,6 @@ const Slider = () => {
     };
   }, [slideId, length]);
 
-  // const nextSlide = () => {
-  //   if (slideId === length) {
-  //     setSlideId(1);
-  //     console.log(slideId);
-  //   } else {
-  //     setSlideId(slideId + 1);
-  //   }
-  // };
-  // const prevSlide = () => {
-  //   if (slideId === 1) {
-  //     console.log(slideId);
-  //     setSlideId(length);
-  //   } else {
-  //     setSlideId(slideId - 1);
-  //   }
-  // };
 
   return (
     <div
