@@ -50,7 +50,6 @@ const Desktop = () => {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
-                alignItems: "center",
               }}
             >
               <ProductImg src={desktopImg} />
@@ -58,15 +57,18 @@ const Desktop = () => {
             </Grid>
 
             <Grid
-              sx={{
-                alignSelf: { sm: "center", md: "start", lg: "start" },
-              }}
+              item
+              lg={2}
+              md={1}
+              sm={2}
+              xs={2}
+              sx={{ mb: { xl: 0, lg: 0, sm: 4, xs: 4 } }}
             >
               <Typography sx={modelHeading}>Print Samples</Typography>
               <ProductImg src={samples} sx={{ height: "90%", width: "90%" }} />
             </Grid>
 
-            <Grid item>
+            <Grid item mt={5}>
               <Typography sx={modelHeading}>Applicable Products</Typography>
               {applications?.map((item) => {
                 return <Details key={item} content={item} />;

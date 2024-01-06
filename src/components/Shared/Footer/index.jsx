@@ -112,7 +112,19 @@ const Footer = () => {
                 to="/products/inkjet/re200+"
                 className={Class.footerLinkStyle}
               >
-                Inkjet
+                RE200+
+              </RoutingLink>
+              <RoutingLink
+                to="/products/inkjet/re200+"
+                className={Class.footerLinkStyle}
+              >
+                RE2000
+              </RoutingLink>
+              <RoutingLink
+                to="/products/dod/re1000"
+                className={Class.footerLinkStyle}
+              >
+                DOD
               </RoutingLink>
               <RoutingLink
                 to="/products/laser/co2"
@@ -138,8 +150,9 @@ const Footer = () => {
               >
                 UV
               </RoutingLink>
+
               <RoutingLink
-                to="/products/tij/tp01"
+                to="/products/tij/re10"
                 className={Class.footerLinkStyle}
               >
                 TIJ
