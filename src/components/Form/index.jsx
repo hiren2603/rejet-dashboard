@@ -3,7 +3,7 @@ import { Typography, Grid, Divider, FormHelperText } from "@mui/material";
 import { titleStyle } from "./style";
 import InputField from "@/components/InputField";
 import FormButton from "@/components/FormButton";
-import { send } from "emailjs-com";
+import emailjs from "@emailjs/browser";
 
 const Form = () => {
   const [form, setForm] = useState({
@@ -22,14 +22,15 @@ const Form = () => {
     // console.log(Object.keys(errors).length);
     // console.log(isSubmiting);
     if (Object.keys(errors).length === 0 && isSubmiting) {
-      send(
-        "default_service",
-        `${import.meta.env.VITE_APP_EMAIL_TEMPLATE}`,
-        form,
-        `${import.meta.env.VITE_APP_EMAIL_API}`
-      )
+      emailjs
+        .send(
+          `${import.meta.env.VITE_APP_SERVICE_ID}`,
+          `${import.meta.env.VITE_APP_EMAIL_TEMPLATE}`,
+          form,
+          `${import.meta.env.VITE_APP_EMAIL_PUBLIC_API}`
+        )
         .then((response) => {
-          // console.log("SUCCESS!", response.status, response.text);
+          console.log("SUCCESS!", response.status, response.text);
           setFailed(false);
           setSuccess(true);
           setIsSubmiting(false);
@@ -137,7 +138,7 @@ const Form = () => {
         </Typography>
         <Divider />
         {success && (
-          <Typography variant="p" color="success">
+          <Typography variant="p" sx={{ color: "#287a00" }}>
             Your message has been sent. Thanks!
           </Typography>
         )}
