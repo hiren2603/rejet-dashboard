@@ -14,7 +14,9 @@ const Details = ({ content }) => {
         }}
       >
         <CheckCircleIcon color="success" fontSize="5px" />
-        <ListItemText sx={{ justifyContent: "start", color: "white" }}>
+        <ListItemText
+          sx={{ justifyContent: "start", color: "white", whiteSpace: "wrap" }}
+        >
           {content}
         </ListItemText>
       </List>

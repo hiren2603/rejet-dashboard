@@ -66,9 +66,17 @@ export const applications = [
 export const benifits = [
   {
     id: 1,
-    marking:
-      "This metal tube CO2 laser system offers superior Marking for even the most demanding production line.",
-    efficiency: "High Efficiency and good beam Quality.",
-    power: "Low Power requirement Compact and low Maintenance.",
+    title: "marking",
+    text: "This metal tube CO2 laser system offers superior Marking for even the most demanding production line.",
   },
+  {
+    id: 2,
+    title: "Efficiency",
+    text: "High Efficiency and good beam Quality."
+  },
+  {
+    id: 3,
+    title: "power",
+    text: "Low Power requirement Compact and low Maintenance."
+  }
 ];

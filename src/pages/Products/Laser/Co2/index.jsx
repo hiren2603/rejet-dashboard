@@ -40,7 +40,7 @@ const Co2 = () => {
           container
           item
           direction={"row"}
-          columnGap={7}
+          columnGap={5}
           sx={{ mt: "3rem" }}
           justifyContent="space-between"
         >
@@ -89,7 +89,15 @@ const Co2 = () => {
             </Grid>
           </Grid>
 
-          <Grid container item direction={"column"} rowGap={3} lg={6} md={6}>
+          <Grid
+            container
+            item
+            direction={"column"}
+            rowGap={3}
+            xl={6}
+            lg={6}
+            md={6}
+          >
             {Co2laserData?.map((item) => (
               <Grid item key={item.id}>
                 <Card elevation={7} sx={{ p: "1rem" }}>
@@ -134,7 +142,6 @@ const Co2 = () => {
                 </Card>
               </Grid>
             ))}
-
             <Grid container item lg={5} justifySelf={"flex-end"}>
               <Typography sx={{ ...modelHeading, color: "#ffffff" }}>
                 Specifications
@@ -157,13 +164,13 @@ const Co2 = () => {
                 </Grid>
               ))}
             </Grid>
-            <Grid item lg md>
+            <Grid container item>
               <Typography sx={{ ...modelHeading, color: "#ffffff" }}>
                 Benifits
               </Typography>
-              <Details content={benifits[0].marking} />
-              <Details content={benifits[0].efficiency} />
-              <Details content={benifits[0].power} />
+              {benifits?.map((item) => {
+                return <Details key={item.id} content={item.text} />;
+              })}
             </Grid>
           </Grid>
         </Grid>
