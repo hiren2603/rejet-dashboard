@@ -1,13 +1,13 @@
+import CatalougFile from "@/assets/catalouge/UV_Laser.pdf";
 import uvImage from "@/assets/products/uv.png";
 import sample from "@/assets/samples/uv_samples.png";
-import Heading from "@/components/Heading";
 import Details from "@/components/Details";
-import { uvApps, uvData, uvFeatures } from "@/helpers/uvData";
-import { Grid, List, Typography } from "@mui/material";
-import { ProductImg, modelHeading, productHeading } from "./style";
-import ProductButton from "@/components/ProductButton";
 import Head from "@/components/Head";
-import CatalougFile from "@/assets/catalouge/UV_Laser.pdf";
+import Heading from "@/components/Heading";
+import ProductButton from "@/components/ProductButton";
+import { uvApps, uvData, uvFeatures } from "@/helpers/uvData";
+import { Grid, Typography } from "@mui/material";
+import { ProductImg, modelHeading, productHeading } from "./style";
 
 const Uv = () => {
   return (

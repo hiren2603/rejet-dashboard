@@ -157,16 +157,15 @@ const Co2 = () => {
                 </Grid>
               ))}
             </Grid>
+            <Grid item lg md>
+              <Typography sx={{ ...modelHeading, color: "#ffffff" }}>
+                Benifits
+              </Typography>
+              <Details content={benifits[0].marking} />
+              <Details content={benifits[0].efficiency} />
+              <Details content={benifits[0].power} />
+            </Grid>
           </Grid>
-        </Grid>
-
-        <Grid item lg md>
-          <Typography sx={{ ...modelHeading, color: "#ffffff" }}>
-            Benifits
-          </Typography>
-          <Details content={benifits[0].marking} />
-          <Details content={benifits[0].efficiency} />
-          <Details content={benifits[0].power} />
         </Grid>
       </Grid>
     </>

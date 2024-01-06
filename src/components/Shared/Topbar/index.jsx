@@ -1,37 +1,38 @@
-import { useState, useEffect } from "react";
+import CallIcon from "@mui/icons-material/Call";
+import CloseIcon from "@mui/icons-material/Close";
+import EmailIcon from "@mui/icons-material/Email";
+import MenuIcon from "@mui/icons-material/Menu";
 import {
   Box,
   Container,
-  Drawer,
-  Toolbar,
   IconButton,
-  useTheme,
+  Toolbar,
   useMediaQuery,
+  useTheme,
 } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
-import CallIcon from "@mui/icons-material/Call";
-import EmailIcon from "@mui/icons-material/Email";
-import CloseIcon from "@mui/icons-material/Close";
 import MuiAppBar from "@mui/material/AppBar";
 import { styled } from "@mui/material/styles";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Logo from "../../../assets/logo.png";
 import LinkSection from "./LinkSection";
 import {
   ContactButton,
-  contactContainer,
-  NavLinkContainer,
   MobileLinkContainer,
+  NavLinkContainer,
+  contactContainer,
 } from "./style";
-import { Link } from "react-router-dom";
 
 const Topbar = () => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.between("xs", "lg"));
-  const isLargeScreen = useMediaQuery(theme.breakpoints.up("lg"))
+  const isLargeScreen = useMediaQuery(theme.breakpoints.up("lg"));
   const [isOpen, setIsOpen] = useState(false);
   const [dropDown, setDropDown] = useState(false);
 
-  useEffect(() => { setIsOpen(false) }, [isLargeScreen])
+  useEffect(() => {
+    setIsOpen(false);
+  }, [isLargeScreen]);
 
   useEffect(() => {
     // Add and remove 'no-scroll' class to body based on the drawer state

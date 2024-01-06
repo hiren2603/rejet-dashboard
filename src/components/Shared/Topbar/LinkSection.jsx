@@ -1,16 +1,9 @@
-import { useState } from "react";
-import { ClickAwayListener } from "@mui/material";
-import { INKJET_LIST, TIJ_LIST, LASER_LIST, DOD_LIST } from "helpers/Link";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import {
-  ContactButton,
-  contactContainer,
-  LinkContainer,
-  DropDownLink,
-  DropDown,
-  SubDropDown,
-} from "./style";
+import { ClickAwayListener } from "@mui/material";
+import { DOD_LIST, INKJET_LIST, LASER_LIST, TIJ_LIST } from "helpers/Link";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { DropDown, DropDownLink, LinkContainer, SubDropDown } from "./style";
 
 const LinkSection = ({ dropDown, setDropDown, multiToggle }) => {
   // const [dropDown, setDropDown] = useState(false);
@@ -62,7 +55,11 @@ const LinkSection = ({ dropDown, setDropDown, multiToggle }) => {
         </Link>
       </LinkContainer>
 
-      <ClickAwayListener onClickAway={() => { setDropDown(false) }}>
+      <ClickAwayListener
+        onClickAway={() => {
+          setDropDown(false);
+        }}
+      >
         <LinkContainer
           onMouseEnter={() => {
             setDropDown(true);

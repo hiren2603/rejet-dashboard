@@ -89,6 +89,12 @@ const Re2000 = () => {
               <Typography sx={headings}>Ink System</Typography>
               {inkSystem.content}
             </Grid>
+            <Grid item>
+              <Typography sx={headings}>Print Head</Typography>
+              <Typography sx={{ color: "white" }}>
+                {printHead.content}
+              </Typography>
+            </Grid>
           </Grid>
 
           <Grid container item direction="column" lg={6} md={5} rowSpacing={4}>
@@ -142,12 +148,6 @@ const Re2000 = () => {
                   </Grid>
                 </Grid>
               ))}
-            </Grid>
-            <Grid item>
-              <Typography sx={headings}>Print Head</Typography>
-              <Typography sx={{ color: "white" }}>
-                {printHead.content}
-              </Typography>
             </Grid>
           </Grid>
         </Grid>

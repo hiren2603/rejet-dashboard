@@ -7,21 +7,20 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import { styled } from "@mui/material/styles";
 import MuiPaper from "@mui/material/Paper";
-import MuiLink from "@mui/material/Link";
+import { styled } from "@mui/material/styles";
 import { useContext } from "react";
+import { Link, Link as RoutingLink } from "react-router-dom";
 import { LayoutContext } from "../../../Context";
 import Logo from "../../../assets/logo.png";
 import CustomDivider from "../CustomDivider";
+import Class from "./Footer.module.css";
 import {
+  footerLinkStyle,
   headerTitle,
   quickLinkStyle,
   resQuickLinkStyle,
-  footerLinkStyle,
 } from "./style";
-import { Link, Link as RoutingLink } from "react-router-dom";
-import Class from "./Footer.module.css";
 
 const Footer = () => {
   const theme = useTheme();
@@ -46,8 +45,8 @@ const Footer = () => {
     shouldForwardProp: (prop) => prop !== open,
   })(({ theme }) => ({
     // width: isSmallScreen ? "100%" : `calc(100% - (${theme.spacing(8)}))`,
-    width : "100%",
-    marginLeft:  0,
+    width: "100%",
+    marginLeft: 0,
     padding: "20px 4px",
     display: "flex",
     flexDirection: "column",

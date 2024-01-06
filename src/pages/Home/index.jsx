@@ -1,8 +1,7 @@
-import HeroSection from "@/components/HeroSection";
-import ProductCard from "@/components/ProductCard";
-import Info from "@/components/Info";
 import Form from "@/components/Form";
 import Head from "@/components/Head";
+import HeroSection from "@/components/HeroSection";
+import Info from "@/components/Info";
 import Slider from "@/components/Slider";
 
 const Home = () => {

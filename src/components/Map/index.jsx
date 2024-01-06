@@ -1,5 +1,4 @@
 import { Divider, Grid, Typography } from "@mui/material";
-import React from "react";
 import { mapHeadStyle, mapStyle } from "./style";
 
 const Map = () => {

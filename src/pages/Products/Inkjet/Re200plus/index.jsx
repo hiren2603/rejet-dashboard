@@ -1,23 +1,21 @@
-import Head from "@/components/Head";
-import ProductButton from "@/components/ProductButton";
-import Details from "@/components/Details";
+import CatalougFile from "@/assets/catalouge/CIJ_RE200_Plus.pdf";
 import inkjet from "@/assets/products/re200plus.png";
 import Samples from "@/assets/samples/re200_samples.png";
-import consumable from "@/assets/products/cij_consumable.png";
-import spares from "@/assets/products/cij_spares.png";
+import Details from "@/components/Details";
+import Head from "@/components/Head";
 import Heading from "@/components/Heading";
-import CatalougFile from "@/assets/catalouge/CIJ_RE200_Plus.pdf";
-import { Grid, Typography, List } from "@mui/material";
+import ProductButton from "@/components/ProductButton";
 import {
-  re200PlusPrintParams,
-  re200PlusParams,
-  inkSystem,
-  cabinetData,
   benifits,
-  material,
+  cabinetData,
   features,
+  inkSystem,
+  material,
+  re200PlusParams,
+  re200PlusPrintParams,
 } from "@/helpers/re200PlusData";
-import { productHeading, modelHeading, headings, ProductImg } from "./style";
+import { Grid, List, Typography } from "@mui/material";
+import { ProductImg, headings, modelHeading, productHeading } from "./style";
 
 const Re200Plus = () => {
   return (
