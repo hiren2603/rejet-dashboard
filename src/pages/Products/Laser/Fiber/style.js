@@ -28,3 +28,10 @@ export const modelHeading = {
 export const listHeading = {
   fontWeight: "600",
 };
+
+export const headings = {
+  color: "#ffffff",
+  fontWeight: "500",
+  fontSize: "16px",
+  lineHeight: 2.5
+};

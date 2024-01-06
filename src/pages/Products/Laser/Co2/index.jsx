@@ -135,7 +135,7 @@ const Co2 = () => {
               </Grid>
             ))}
 
-            <Grid container item lg={5} justifySelf={"flex-end"}>
+            <Grid container item lg={5} md={5} justifySelf={"flex-end"}>
               <Typography sx={{ ...modelHeading, color: "#ffffff" }}>
                 Specifications
               </Typography>
@@ -157,7 +157,7 @@ const Co2 = () => {
                 </Grid>
               ))}
             </Grid>
-            <Grid item lg md>
+            <Grid container item>
               <Typography sx={{ ...modelHeading, color: "#ffffff" }}>
                 Benifits
               </Typography>

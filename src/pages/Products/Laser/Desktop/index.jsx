@@ -57,7 +57,11 @@ const Desktop = () => {
               <ProductButton />
             </Grid>
 
-            <Grid item alignSelf={{ sm: "center", md: "start", lg: "start" }}>
+            <Grid
+              sx={{
+                alignSelf: { sm: "center", md: "start", lg: "start" },
+              }}
+            >
               <Typography sx={modelHeading}>Print Samples</Typography>
               <ProductImg src={samples} sx={{ height: "90%", width: "90%" }} />
             </Grid>

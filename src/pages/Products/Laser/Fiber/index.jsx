@@ -2,7 +2,7 @@ import Heading from "@/components/Heading";
 import Details from "@/components/Details";
 import ProductButton from "@/components/ProductButton";
 import { Typography, Grid, Box } from "@mui/material";
-import { productHeading, ProductImg, modelHeading } from "./style";
+import { productHeading, ProductImg, modelHeading, headings } from "./style";
 import laserImg from "@/assets/products/fiber.png";
 import Samples from "@/assets/samples/fiber_samples.png";
 import { fiberData, features, applications } from "@/helpers/fiberData";
@@ -51,7 +51,6 @@ const Fiber = () => {
             justifyContent={"center"}
             lg={6}
             md={6}
-            rowGap={4}
           >
             <Grid
               item
@@ -79,7 +78,7 @@ const Fiber = () => {
               <Typography sx={{ ...modelHeading, color: "#ffffff" }}>
                 Print Samples
               </Typography>
-              <ProductImg src={Samples} sx={{ height: "90%", width: "90%" }} />
+              <ProductImg src={Samples} sx={{ height: "80%", width: "80%" }} />
             </Grid>
 
             <Grid item lg>
@@ -91,7 +90,13 @@ const Fiber = () => {
           </Grid>
 
           <Grid container item lg={5} md={5}>
-            <Box sx={{ display: "flex", flexDirection: "column" }}>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "flex-start",
+              }}
+            >
               <Typography sx={modelHeading}>Specifications</Typography>
               {fiberData?.map((item) => (
                 <Grid
@@ -99,22 +104,26 @@ const Fiber = () => {
                   item
                   key={item.id}
                   sx={{
-                    m: { sm: "2px 0", xs: "2px 0", lg: "0px", md: "0px" },
+                    m: {
+                      xl: 0,
+                      lg: 0,
+                      md: 0,
+                      sm: "2px 0",
+                      xs: "2px 0",
+                    },
                     color: "white",
                   }}
                 >
                   <Grid item lg={6} md={7} sm={6} xs={7}>
-                    <Typography sx={{ fontWeight: "500" }}>
-                      {item.title}
-                    </Typography>
+                    <Typography sx={headings}>{item.title}</Typography>
                   </Grid>
                   <Grid item lg={6} md={5} sm={6} xs={5}>
-                    {item.content}
+                    <Typography>{item.content}</Typography>
                   </Grid>
                 </Grid>
               ))}
             </Box>
-            <Grid item lg md mt={4}>
+            <Grid item lg md>
               <Typography sx={modelHeading}>Features</Typography>
               {features?.map((item) => {
                 return <Details key={item} content={item} />;
