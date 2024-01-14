@@ -39,7 +39,7 @@ const Heading = ({ name, type, pdf }) => {
             rel="noreferref"
             download
           >
-            Download Broucher
+            Download Brochure
           </Button>
         </Grid>
       </Grid>

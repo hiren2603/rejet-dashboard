@@ -1,6 +1,18 @@
 import { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import {
+  ThemeProvider,
+  CssBaseline,
+  Box,
+  CircularProgress,
+} from "@mui/material";
+import { Layout } from "@/components/Shared";
+import ScrollToTop from "@/components/ScrollToTop";
+import { theme } from "@/theme";
+import ErrorPage from "@/pages/ErrorPage";
+import { LayoutContext } from "@/Context";
+import { HelmetProvider } from "react-helmet-async";
+import {
   About,
   Applications,
   Contact,
@@ -19,18 +31,6 @@ import {
   ReHandy,
   EwestMgmt,
 } from "@/pages";
-import {
-  ThemeProvider,
-  CssBaseline,
-  Box,
-  CircularProgress,
-} from "@mui/material";
-import { Layout } from "@/components/Shared";
-import ScrollToTop from "@/components/ScrollToTop";
-import { theme } from "@/theme";
-import ErrorPage from "@/pages/ErrorPage";
-import { LayoutContext } from "@/Context";
-import { HelmetProvider } from "react-helmet-async";
 
 const App = () => {
   const helmetContext = {};

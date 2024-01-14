@@ -30,6 +30,7 @@ export const downloadButton = {
   position: "relative",
   zIndex: "1",
   transition: "ease-out .3s",
+  textTransform: "capitalize",
   "&:hover": {
     cursor: "hover",
     color: "#ffffff",

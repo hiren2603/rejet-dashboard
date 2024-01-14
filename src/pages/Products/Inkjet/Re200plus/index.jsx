@@ -64,13 +64,17 @@ const Re200Plus = () => {
                 alignItems: "center",
               }}
             >
-              <img src={inkjet} alt="Re200+" width={350} />
+              <img src={inkjet} alt="Re200+" width={350} loading="lazy" />
               <ProductButton />
             </Grid>
 
             <Grid item lg={2} md={1} sm={2} xs={2} mb={5}>
               <Typography sx={modelHeading}>Print Samples</Typography>
-              <ProductImg src={Samples} sx={{ height: "90%", width: "90%" }} />
+              <ProductImg
+                src={Samples}
+                loading="lazy"
+                sx={{ height: "90%", width: "90%" }}
+              />
             </Grid>
 
             <Grid item>
