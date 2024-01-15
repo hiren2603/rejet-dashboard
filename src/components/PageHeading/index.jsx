@@ -9,20 +9,27 @@ const PageHeading = ({ heading }) => {
         <Typography variant="h4">{heading}</Typography>
       </Grid>
       <Grid item>
-      <Button
-            sx={downloadButton}
-            variant="contained"
-            color="error"
-            component="a"
-            href={pdf}
-            target="_blank"
-            rel="noreferref"
-            download
-          >
-            Download Broucher
-          </Button>
+        <Button
+          sx={downloadButton}
+          variant="contained"
+          color="error"
+          component="a"
+          href={pdf}
+          target="_blank"
+          rel="noreferref"
+          download
+        >
+          Download Brochure
+        </Button>
       </Grid>
-      <Divider style={{ width: "100%" }} />
+      <Divider
+        sx={{
+          width: "100%",
+          backgroundColor: "#ffffff",
+          alignItems: "center",
+          mt: "10px",
+        }}
+      />
     </Grid>
   );
 };

@@ -41,7 +41,7 @@ const About = () => {
           <Typography variant="h4" align="left" mb={2}>
             Why Choose Us
           </Typography>
-          <Divider />
+          <Divider sx={{}} />
         </Stack>
       </Grid>
       <Grid
@@ -60,7 +60,7 @@ const About = () => {
       >
         <Grid item>
           <Box sx={gridItemStyle}>
-            <img src={certificate} alt="certificate" />
+            <img src={certificate} alt="certificate" loading="lazy" />
           </Box>
         </Grid>
         <Grid item>

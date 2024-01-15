@@ -6,6 +6,7 @@ export const downloadButton = {
     justifyContent: "center",
     color: "#ffffff",
     backgroundColor: "#5b5b5b",
+    textTransform: "capitalize",
     fontWeight: "500",
     outline: "none",
     borderRadius: "4px",
